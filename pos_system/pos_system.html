@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional POS System</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Barcode Detection Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.20.0/umd/index.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    // SVG Icons
+    const ShoppingCart = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>;
+    const Package = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m0 10v10l8 4m0-10l8 4" /></svg>;
+    const BarChart3 = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>;
+    const Settings = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
+    const Lock = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>;
+    const LogOut = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" /></svg>;
+    const Users = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 12H9m6 0h6M9 12H3M9 12a6 6 0 1112 0" /></svg>;
+    const Download = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>;
+    const Upload = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4-4m0 0l-4 4m4-4v12" /></svg>;
+    const Trash2 = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>;
+    const Plus = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>;
+    const Printer = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>;
+    const Camera = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
+    const X = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>;
+    const Check = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>;
+
+    // Barcode Scanner Component
+    function BarcodeScanner({ onBarcodeDetected, onClose }) {
+      const videoRef = useRef(null);
+      const canvasRef = useRef(null);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState('');
+      const [isScanning, setIsScanning] = useState(false);
+
+      useEffect(() => {
+        const startCamera = async () => {
+          try {
+            const stream = await navigator.mediaDevices.getUserMedia({
+              video: { facingMode: 'environment', width: { ideal: 1280 }, height: { ideal: 720 } }
+            });
+            if (videoRef.current) {
+              videoRef.current.srcObject = stream;
+              setLoading(false);
+            }
+          } catch (err) {
+            setError('Camera access denied: ' + err.message);
+            setLoading(false);
+          }
+        };
+        startCamera();
+
+        return () => {
+          if (videoRef.current?.srcObject) {
+            videoRef.current.srcObject.getTracks().forEach(track => track.stop());
+          }
+        };
+      }, []);
+
+      const scanBarcode = async () => {
+        if (!videoRef.current || !canvasRef.current || isScanning) return;
+
+        setIsScanning(true);
+        try {
+          const canvas = canvasRef.current;
+          const context = canvas.getContext('2d');
+          canvas.width = videoRef.current.videoWidth;
+          canvas.height = videoRef.current.videoHeight;
+          context.drawImage(videoRef.current, 0, 0);
+
+          const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+          const codeReader = new ZXing.BrowserMultiFormatReader();
+          
+          try {
+            const result = await codeReader.decodeFromImageData(imageData);
+            onBarcodeDetected(result.getText());
+            setIsScanning(false);
+          } catch (e) {
+            setIsScanning(false);
+            // Continue scanning if no barcode found
+          }
+        } catch (err) {
+          setError('Scan error: ' + err.message);
+          setIsScanning(false);
+        }
+      };
+
+      useEffect(() => {
+        if (!loading && !error && videoRef.current?.readyState === 4) {
+          const interval = setInterval(scanBarcode, 500);
+          return () => clearInterval(interval);
+        }
+      }, [loading, error, isScanning]);
+
+      return (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg shadow-2xl w-full max-w-md">
+            <div className="flex justify-between items-center p-4 border-b">
+              <h3 className="text-lg font-bold">Scan Barcode</h3>
+              <button onClick={onClose} className="text-gray-600 hover:text-red-600">
+                <X />
+              </button>
+            </div>
+            <div className="p-4">
+              {loading && <div className="text-center py-8">Loading camera...</div>}
+              {error && <div className="bg-red-100 text-red-700 p-3 rounded mb-4">{error}</div>}
+              <div className="relative bg-black rounded-lg overflow-hidden mb-4">
+                <video 
+                  ref={videoRef} 
+                  autoPlay 
+                  playsInline 
+                  className="w-full aspect-video object-cover"
+                />
+                <canvas ref={canvasRef} className="hidden" />
+                <div className="absolute inset-0 border-2 border-yellow-400 m-4 pointer-events-none opacity-50"></div>
+              </div>
+              <div className="text-center text-sm text-gray-600">
+                {isScanning ? 'Scanning...' : 'Point camera at barcode'}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Image Barcode Scanner Component
+    function ImageBarcodeScanner({ onBarcodeDetected, onClose }) {
+      const fileInputRef = useRef(null);
+      const [loading, setLoading] = useState(false);
+      const [error, setError] = useState('');
+      const [previewImage, setPreviewImage] = useState(null);
+
+      const handleImageUpload = async (e) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        setLoading(true);
+        setError('');
+
+        try {
+          const reader = new FileReader();
+          reader.onload = async (event) => {
+            try {
+              const img = new Image();
+              img.onload = async () => {
+                setPreviewImage(img.src);
+
+                const canvas = document.createElement('canvas');
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const context = canvas.getContext('2d');
+                context.drawImage(img, 0, 0);
+
+                const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                const codeReader = new ZXing.BrowserMultiFormatReader();
+
+                try {
+                  const result = await codeReader.decodeFromImageData(imageData);
+                  onBarcodeDetected(result.getText(), img.src);
+                  setLoading(false);
+                } catch (scanErr) {
+                  setError('No barcode found in image. Try another image.');
+                  setLoading(false);
+                }
+              };
+              img.src = event.target.result;
+            } catch (err) {
+              setError('Error processing image: ' + err.message);
+              setLoading(false);
+            }
+          };
+          reader.readAsDataURL(file);
+        } catch (err) {
+          setError('Error reading file: ' + err.message);
+          setLoading(false);
+        }
+      };
+
+      return (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg shadow-2xl w-full max-w-md">
+            <div className="flex justify-between items-center p-4 border-b">
+              <h3 className="text-lg font-bold">Upload Barcode Image</h3>
+              <button onClick={onClose} className="text-gray-600 hover:text-red-600">
+                <X />
+              </button>
+            </div>
+            <div className="p-6 space-y-4">
+              {previewImage && (
+                <div className="bg-gray-100 rounded-lg p-4">
+                  <img src={previewImage} alt="Preview" className="w-full max-h-64 object-contain mx-auto" />
+                </div>
+              )}
+              
+              {error && <div className="bg-red-100 text-red-700 p-3 rounded text-sm">{error}</div>}
+              
+              <label className="block">
+                <div 
+                  onClick={() => fileInputRef.current?.click()}
+                  className="border-2 border-dashed border-indigo-300 rounded-lg p-8 text-center cursor-pointer hover:border-indigo-600 hover:bg-indigo-50 transition"
+                >
+                  <Camera className="w-8 h-8 mx-auto mb-2 text-indigo-600" />
+                  <p className="font-bold text-gray-700">Click to upload</p>
+                  <p className="text-xs text-gray-600 mt-1">or drag and drop</p>
+                  <p className="text-xs text-gray-500 mt-2">PNG, JPG up to 10MB</p>
+                </div>
+                <input 
+                  ref={fileInputRef}
+                  type="file" 
+                  accept="image/*" 
+                  onChange={handleImageUpload}
+                  disabled={loading}
+                  className="hidden" 
+                />
+              </label>
+
+              {loading && (
+                <div className="text-center py-4">
+                  <p className="text-gray-600">Scanning image...</p>
+                  <div className="mt-2 h-1 bg-gray-200 rounded overflow-hidden">
+                    <div className="h-full bg-indigo-600 animate-pulse"></div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function POSSystem() {
+      const [isLoggedIn, setIsLoggedIn] = useState(false);
+      const [currentUser, setCurrentUser] = useState(null);
+      const [users, setUsers] = useState([
+        { id: 1, username: 'admin', password: 'admin123', role: 'Admin' },
+        { id: 2, username: 'cashier1', password: 'cashier123', role: 'Cashier' }
+      ]);
+      const [loginForm, setLoginForm] = useState({ username: '', password: '' });
+      const [loginError, setLoginError] = useState('');
+      const [tab, setTab] = useState('checkout');
+      const [products, setProducts] = useState([]);
+      const [cart, setCart] = useState([]);
+      const [taxRate, setTaxRate] = useState(10);
+      const [barcodeInput, setBarcodeInput] = useState('');
+      const [invoiceNum, setInvoiceNum] = useState(1001);
+      const [inventoryHistory, setInventoryHistory] = useState([]);
+      const [salesHistory, setSalesHistory] = useState([]);
+      const [newUserForm, setNewUserForm] = useState({ username: '', password: '', role: 'Cashier' });
+      const [formData, setFormData] = useState({ barcode: '', name: '', price: '', quantity: '', discount: '', reorderLevel: '', image: '' });
+      const [filterDate, setFilterDate] = useState(new Date().toISOString().split('T')[0]);
+      const [showCameraScanner, setShowCameraScanner] = useState(false);
+      const [showImageScanner, setShowImageScanner] = useState(false);
+
+      useEffect(() => {
+        try {
+          const saved = localStorage.getItem('pos_data');
+          if (saved) {
+            const data = JSON.parse(saved);
+            if (data.users) setUsers(data.users);
+            if (data.products) setProducts(data.products);
+            if (data.taxRate) setTaxRate(data.taxRate);
+            if (data.invoiceNum) setInvoiceNum(data.invoiceNum);
+            if (data.inventoryHistory) setInventoryHistory(data.inventoryHistory);
+            if (data.salesHistory) setSalesHistory(data.salesHistory);
+          }
+        } catch (e) {
+          console.log('Load error:', e);
+        }
+      }, []);
+
+      useEffect(() => {
+        const data = { users, products, taxRate, invoiceNum, inventoryHistory, salesHistory };
+        localStorage.setItem('pos_data', JSON.stringify(data));
+      }, [users, products, taxRate, invoiceNum, inventoryHistory, salesHistory]);
+
+      const handleLogin = () => {
+        setLoginError('');
+        if (!loginForm.username || !loginForm.password) {
+          setLoginError('Enter username and password');
+          return;
+        }
+        const user = users.find(u => u.username === loginForm.username && u.password === loginForm.password);
+        if (user) {
+          setCurrentUser(user);
+          setIsLoggedIn(true);
+          setLoginForm({ username: '', password: '' });
+        } else {
+          setLoginError('Invalid credentials');
+        }
+      };
+
+      const handleLogout = () => {
+        setCurrentUser(null);
+        setIsLoggedIn(false);
+      };
+
+      const createUser = () => {
+        if (!newUserForm.username || !newUserForm.password) {
+          alert('Fill username and password');
+          return;
+        }
+        if (users.some(u => u.username === newUserForm.username)) {
+          alert('Username exists');
+          return;
+        }
+        setUsers([...users, { id: Date.now(), ...newUserForm }]);
+        setNewUserForm({ username: '', password: '', role: 'Cashier' });
+      };
+
+      const deleteUser = (id) => {
+        if (id === currentUser.id) {
+          alert('Cannot delete yourself');
+          return;
+        }
+        setUsers(users.filter(u => u.id !== id));
+      };
+
+      const addProduct = () => {
+        if (!formData.barcode || !formData.name || !formData.price) {
+          alert('Fill barcode, name, price');
+          return;
+        }
+        if (products.some(p => p.barcode === formData.barcode)) {
+          alert('Barcode exists');
+          return;
+        }
+        const newProd = {
+          id: Date.now(),
+          barcode: formData.barcode,
+          name: formData.name,
+          price: parseFloat(formData.price),
+          quantity: parseInt(formData.quantity) || 0,
+          discount: parseFloat(formData.discount) || 0,
+          reorderLevel: parseInt(formData.reorderLevel) || 10,
+          image: formData.image || ''
+        };
+        setProducts([...products, newProd]);
+        setFormData({ barcode: '', name: '', price: '', quantity: '', discount: '', reorderLevel: '', image: '' });
+      };
+
+      const deleteProduct = (id) => {
+        setProducts(products.filter(p => p.id !== id));
+      };
+
+      const adjustStock = (id, adj) => {
+        setProducts(products.map(p => p.id === id ? { ...p, quantity: Math.max(0, p.quantity + adj) } : p));
+      };
+
+      const scanBarcode = (code) => {
+        const prod = products.find(p => p.barcode === code);
+        if (!prod) {
+          alert('Product not found');
+          return;
+        }
+        if (prod.quantity <= 0) {
+          alert('Out of stock');
+          return;
+        }
+        const existing = cart.find(item => item.id === prod.id);
+        if (existing) {
+          if (existing.cartQty + 1 > prod.quantity) {
+            alert('Not enough stock');
+            return;
+          }
+          setCart(cart.map(item => item.id === prod.id ? { ...item, cartQty: item.cartQty + 1 } : item));
+        } else {
+          setCart([...cart, { ...prod, cartQty: 1 }]);
+        }
+      };
+
+      useEffect(() => {
+        const handleKey = (e) => {
+          if (tab === 'checkout' && isLoggedIn) {
+            setBarcodeInput(prev => prev + e.key);
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              scanBarcode(barcodeInput);
+              setBarcodeInput('');
+            }
+          }
+        };
+        window.addEventListener('keypress', handleKey);
+        return () => window.removeEventListener('keypress', handleKey);
+      }, [barcodeInput, tab, isLoggedIn, products, cart]);
+
+      const removeFromCart = (id) => {
+        setCart(cart.filter(item => item.id !== id));
+      };
+
+      const updateQty = (id, qty) => {
+        if (qty <= 0) {
+          removeFromCart(id);
+        } else {
+          const prod = products.find(p => p.id === id);
+          if (qty > prod.quantity) {
+            alert('Not enough stock');
+            return;
+          }
+          setCart(cart.map(item => item.id === id ? { ...item, cartQty: qty } : item));
+        }
+      };
+
+      const getTotals = () => {
+        let subtotal = 0;
+        cart.forEach(item => {
+          const total = item.price * item.cartQty;
+          const disc = (total * item.discount) / 100;
+          subtotal += total - disc;
+        });
+        const tax = (subtotal * taxRate) / 100;
+        return { subtotal, tax, total: subtotal + tax };
+      };
+
+      const { subtotal, tax, total } = getTotals();
+
+      const printInvoice = () => {
+        if (cart.length === 0) return;
+        
+        const saleRecord = {
+          id: Date.now(),
+          invoiceNum: invoiceNum,
+          cashier: currentUser.username,
+          date: new Date().toLocaleDateString(),
+          time: new Date().toLocaleTimeString(),
+          items: cart.map(item => ({
+            name: item.name,
+            price: item.price,
+            quantity: item.cartQty,
+            discount: item.discount
+          })),
+          subtotal: subtotal,
+          tax: tax,
+          total: total,
+          timestamp: new Date().toISOString()
+        };
+        
+        setSalesHistory([saleRecord, ...salesHistory]);
+        setProducts(products.map(p => {
+          const item = cart.find(c => c.id === p.id);
+          return item ? { ...p, quantity: p.quantity - item.cartQty } : p;
+        }));
+        setInvoiceNum(invoiceNum + 1);
+        setCart([]);
+        setBarcodeInput('');
+        alert('Invoice printed');
+      };
+
+      const exportData = () => {
+        const data = { users, products, taxRate, invoiceNum, inventoryHistory, salesHistory };
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `pos_${Date.now()}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+      };
+
+      const importData = (e) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          try {
+            const data = JSON.parse(event.target.result);
+            if (data.users) setUsers(data.users);
+            if (data.products) setProducts(data.products);
+            if (data.taxRate) setTaxRate(data.taxRate);
+            if (data.invoiceNum) setInvoiceNum(data.invoiceNum);
+            if (data.salesHistory) setSalesHistory(data.salesHistory);
+            alert('Data imported');
+          } catch (err) {
+            alert('Import error: ' + err.message);
+          }
+        };
+        reader.readAsText(file);
+      };
+
+      const clearData = () => {
+        if (window.confirm('Clear all data?')) {
+          setProducts([]);
+          setInventoryHistory([]);
+          setSalesHistory([]);
+          setTaxRate(10);
+          setInvoiceNum(1001);
+          localStorage.clear();
+        }
+      };
+
+      const lowStock = products.filter(p => p.quantity <= p.reorderLevel && p.quantity > 0);
+      const outOfStock = products.filter(p => p.quantity === 0);
+      const filteredSales = salesHistory.filter(sale => sale.date === filterDate);
+      const totalSalesByDate = filteredSales.reduce((sum, sale) => sum + sale.total, 0);
+      const totalItemsByDate = filteredSales.reduce((sum, sale) => sum + sale.items.reduce((s, item) => s + item.quantity, 0), 0);
+
+      // LOGIN SCREEN
+      if (!isLoggedIn) {
+        return (
+          <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+            <div className="w-full max-w-md">
+              <div className="bg-white rounded-lg shadow-2xl p-8">
+                <div className="text-center mb-8">
+                  <div className="w-12 h-12 mx-auto mb-4 text-indigo-600"><Lock /></div>
+                  <h1 className="text-3xl font-bold text-gray-800">POS System</h1>
+                  <p className="text-gray-600 mt-2">Professional Point of Sale</p>
+                </div>
+                <div className="space-y-4">
+                  <input 
+                    type="text" 
+                    value={loginForm.username} 
+                    onChange={(e) => setLoginForm({ ...loginForm, username: e.target.value })} 
+                    onKeyPress={(e) => e.key === 'Enter' && handleLogin()} 
+                    placeholder="Username" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg" 
+                    autoFocus 
+                  />
+                  <input 
+                    type="password" 
+                    value={loginForm.password} 
+                    onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })} 
+                    onKeyPress={(e) => e.key === 'Enter' && handleLogin()} 
+                    placeholder="Password" 
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg" 
+                  />
+                  {loginError && <div className="bg-red-100 text-red-700 p-3 rounded text-sm">{loginError}</div>}
+                  <button onClick={handleLogin} className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded-lg">Login</button>
+                </div>
+                <div className="mt-6 pt-6 border-t border-gray-200 text-xs text-gray-600">
+                  <p className="mb-2 font-bold">Demo Credentials:</p>
+                  <p><strong>Admin:</strong> admin / admin123</p>
+                  <p><strong>Cashier:</strong> cashier1 / cashier123</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+
+      // MAIN DASHBOARD
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white p-6">
+            <div className="max-w-7xl mx-auto flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8"><ShoppingCart /></div>
+                <div>
+                  <h1 className="text-3xl font-bold">POS System</h1>
+                  <p className="text-sm opacity-90">{currentUser.username} ({currentUser.role})</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="text-sm">Invoice: #{invoiceNum}</span>
+                <button onClick={handleLogout} className="flex items-center gap-2 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg">
+                  <LogOut /> Logout
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white border-b">
+            <div className="max-w-7xl mx-auto flex flex-wrap">
+              <button onClick={() => setTab('checkout')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'checkout' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><ShoppingCart /> Checkout</button>
+              <button onClick={() => setTab('inventory')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'inventory' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><Package /> Inventory {(lowStock.length > 0 || outOfStock.length > 0) && <span className="bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center ml-2">{lowStock.length + outOfStock.length}</span>}</button>
+              <button onClick={() => setTab('sales')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'sales' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><BarChart3 /> Sales</button>
+              <button onClick={() => setTab('history')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'history' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><BarChart3 /> History</button>
+              {currentUser.role === 'Admin' && <button onClick={() => setTab('users')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'users' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><Users /> Users</button>}
+              <button onClick={() => setTab('settings')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'settings' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><Settings /> Settings</button>
+            </div>
+          </div>
+
+          <div className="max-w-7xl mx-auto p-6">
+            {/* CHECKOUT TAB */}
+            {tab === 'checkout' && (
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="lg:col-span-2 space-y-6">
+                  <div className="bg-white rounded-lg shadow p-6">
+                    <h2 className="text-2xl font-bold mb-4">Scanner</h2>
+                    <div className="space-y-3">
+                      <input 
+                        type="text" 
+                        value={barcodeInput} 
+                        onChange={(e) => setBarcodeInput(e.target.value)} 
+                        placeholder="Scan barcode or enter manually..." 
+                        className="w-full px-4 py-3 border-2 border-indigo-300 rounded-lg bg-blue-50" 
+                        autoFocus 
+                      />
+                      <div className="flex gap-2">
+                        <button 
+                          onClick={() => setShowCameraScanner(true)}
+                          className="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2"
+                        >
+                          <Camera /> Scan Camera
+                        </button>
+                        <button 
+                          onClick={() => setShowImageScanner(true)}
+                          className="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2"
+                        >
+                          <Upload /> Upload Image
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow p-6">
+                    <h2 className="text-2xl font-bold mb-4">Cart</h2>
+                    {cart.length === 0 ? (
+                      <p className="text-gray-500 text-center py-8">Cart is empty</p>
+                    ) : (
+                      <div className="space-y-3 max-h-96 overflow-y-auto">
+                        {cart.map(item => {
+                          const itemTotal = item.price * item.cartQty;
+                          const final = itemTotal - (itemTotal * item.discount / 100);
+                          return (
+                            <div key={item.id} className="border-b pb-3">
+                              <p className="font-bold">{item.name}</p>
+                              <p className="text-sm text-gray-600">${item.price.toFixed(2)} × {item.cartQty} = ${final.toFixed(2)}</p>
+                              <div className="flex gap-2 mt-2">
+                                <input 
+                                  type="number" 
+                                  min="1" 
+                                  value={item.cartQty} 
+                                  onChange={(e) => updateQty(item.id, parseInt(e.target.value))} 
+                                  className="w-12 px-2 py-1 border rounded" 
+                                />
+                                <button 
+                                  onClick={() => removeFromCart(item.id)} 
+                                  className="px-3 py-1 bg-red-500 text-white rounded text-sm"
+                                >
+                                  Remove
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div className="bg-indigo-50 rounded-lg shadow p-6 sticky top-6">
+                  <h2 className="text-2xl font-bold mb-6">Summary</h2>
+                  <div className="space-y-4 mb-6">
+                    <div className="flex justify-between">
+                      <span>Items:</span>
+                      <span className="font-bold">{cart.length}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Subtotal:</span>
+                      <span className="font-bold">${subtotal.toFixed(2)}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Tax ({taxRate}%):</span>
+                      <span className="font-bold">${tax.toFixed(2)}</span>
+                    </div>
+                    <div className="border-t pt-4 flex justify-between">
+                      <span className="text-xl font-bold">Total:</span>
+                      <span className="text-3xl font-bold text-indigo-600">${total.toFixed(2)}</span>
+                    </div>
+                  </div>
+                  <button 
+                    onClick={printInvoice} 
+                    disabled={cart.length === 0} 
+                    className="w-full bg-green-500 hover:bg-green-600 disabled:bg-gray-400 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2"
+                  >
+                    <Printer /> Print Invoice
+                  </button>
+                  <button 
+                    onClick={() => setCart([])} 
+                    disabled={cart.length === 0} 
+                    className="w-full mt-3 bg-gray-300 text-gray-800 font-bold py-2 rounded-lg"
+                  >
+                    Clear Cart
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* INVENTORY TAB */}
+            {tab === 'inventory' && (
+              <div className="space-y-6">
+                {outOfStock.length > 0 && (
+                  <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded">
+                    <h3 className="font-bold text-red-800">Out of Stock: {outOfStock.map(p => p.name).join(', ')}</h3>
+                  </div>
+                )}
+                {lowStock.length > 0 && (
+                  <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded">
+                    <h3 className="font-bold text-yellow-800">Low Stock</h3>
+                    {lowStock.map(p => <p key={p.id} className="text-sm">{p.name}: {p.quantity} units</p>)}
+                  </div>
+                )}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div className="bg-white rounded-lg shadow p-6">
+                    <h2 className="text-2xl font-bold mb-4">Add Product</h2>
+                    <div className="space-y-4">
+                      <input 
+                        type="text" 
+                        placeholder="Barcode" 
+                        value={formData.barcode} 
+                        onChange={(e) => setFormData({ ...formData, barcode: e.target.value })} 
+                        className="w-full px-4 py-2 border rounded-lg" 
+                      />
+                      <input 
+                        type="text" 
+                        placeholder="Product Name" 
+                        value={formData.name} 
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })} 
+                        className="w-full px-4 py-2 border rounded-lg" 
+                      />
+                      <input 
+                        type="number" 
+                        placeholder="Price" 
+                        step="0.01"
+                        value={formData.price} 
+                        onChange={(e) => setFormData({ ...formData, price: e.target.value })} 
+                        className="w-full px-4 py-2 border rounded-lg" 
+                      />
+                      <input 
+                        type="number" 
+                        placeholder="Quantity" 
+                        value={formData.quantity} 
+                        onChange={(e) => setFormData({ ...formData, quantity: e.target.value })} 
+                        className="w-full px-4 py-2 border rounded-lg" 
+                      />
+                      <input 
+                        type="number" 
+                        placeholder="Discount %" 
+                        value={formData.discount} 
+                        onChange={(e) => setFormData({ ...formData, discount: e.target.value })} 
+                        className="w-full px-4 py-2 border rounded-lg" 
+                      />
+                      <input 
+                        type="number" 
+                        placeholder="Reorder Level" 
+                        value={formData.reorderLevel} 
+                        onChange={(e) => setFormData({ ...formData, reorderLevel: e.target.value })} 
+                        className="w-full px-4 py-2 border rounded-lg" 
+                      />
+
+                      {/* Product Image Display */}
+                      {formData.image && (
+                        <div className="border-2 border-indigo-300 rounded-lg p-3 bg-indigo-50">
+                          <img src={formData.image} alt="Product" className="w-full h-24 object-contain mb-2" />
+                          <button 
+                            onClick={() => setFormData({ ...formData, image: '' })}
+                            className="w-full bg-red-500 hover:bg-red-600 text-white text-sm py-1 rounded"
+                          >
+                            Remove Image
+                          </button>
+                        </div>
+                      )}
+
+                      <button 
+                        onClick={() => setShowImageScanner(true)}
+                        className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2"
+                      >
+                        <Upload /> Scan Barcode Image
+                      </button>
+
+                      <button 
+                        onClick={addProduct} 
+                        className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2"
+                      >
+                        <Plus /> Add Product
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg shadow p-6">
+                    <h2 className="text-2xl font-bold mb-4">Products ({products.length})</h2>
+                    <div className="max-h-96 overflow-y-auto space-y-2">
+                      {products.length === 0 ? (
+                        <p className="text-gray-500">No products</p>
+                      ) : (
+                        products.map(prod => (
+                          <div key={prod.id} className="border p-3 rounded">
+                            {prod.image && <img src={prod.image} alt={prod.name} className="w-full h-16 object-contain mb-2 bg-gray-100 rounded" />}
+                            <p className="font-bold text-sm">{prod.name}</p>
+                            <p className="text-xs text-gray-600">Barcode: {prod.barcode}</p>
+                            <p className="text-xs text-gray-600">${prod.price.toFixed(2)} | Qty: {prod.quantity}</p>
+                            <div className="flex gap-1 mt-2">
+                              <button 
+                                onClick={() => adjustStock(prod.id, -1)} 
+                                className="px-2 py-1 bg-yellow-500 text-white text-xs rounded"
+                              >
+                                -
+                              </button>
+                              <button 
+                                onClick={() => adjustStock(prod.id, 1)} 
+                                className="px-2 py-1 bg-green-500 text-white text-xs rounded"
+                              >
+                                +
+                              </button>
+                              <button 
+                                onClick={() => deleteProduct(prod.id)} 
+                                className="px-2 py-1 bg-red-500 text-white text-xs rounded ml-auto"
+                              >
+                                <Trash2 />
+                              </button>
+                            </div>
+                          </div>
+                        ))
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* USERS TAB (Admin Only) */}
+            {tab === 'users' && currentUser.role === 'Admin' && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="bg-white rounded-lg shadow p-6">
+                  <h2 className="text-2xl font-bold mb-4">Create User</h2>
+                  <div className="space-y-4">
+                    <input 
+                      type="text" 
+                      placeholder="Username" 
+                      value={newUserForm.username} 
+                      onChange={(e) => setNewUserForm({ ...newUserForm, username: e.target.value })} 
+                      className="w-full px-4 py-2 border rounded-lg" 
+                    />
+                    <input 
+                      type="password" 
+                      placeholder="Password" 
+                      value={newUserForm.password} 
+                      onChange={(e) => setNewUserForm({ ...newUserForm, password: e.target.value })} 
+                      className="w-full px-4 py-2 border rounded-lg" 
+                    />
+                    <select 
+                      value={newUserForm.role} 
+                      onChange={(e) => setNewUserForm({ ...newUserForm, role: e.target.value })} 
+                      className="w-full px-4 py-2 border rounded-lg"
+                    >
+                      <option>Cashier</option>
+                      <option>Admin</option>
+                    </select>
+                    <button 
+                      onClick={createUser} 
+                      className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded-lg"
+                    >
+                      Create
+                    </button>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow p-6">
+                  <h2 className="text-2xl font-bold mb-4">Users ({users.length})</h2>
+                  <div className="max-h-96 overflow-y-auto space-y-2">
+                    {users.map(user => (
+                      <div key={user.id} className="border p-3 rounded flex justify-between items-center">
+                        <div>
+                          <p className="font-bold text-sm">{user.username}</p>
+                          <p className="text-xs text-gray-600">{user.role}</p>
+                        </div>
+                        <button 
+                          onClick={() => deleteUser(user.id)} 
+                          className="px-3 py-1 bg-red-500 text-white text-xs rounded"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* SETTINGS TAB */}
+            {tab === 'settings' && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="bg-white rounded-lg shadow p-6">
+                  <h2 className="text-2xl font-bold mb-4">Settings</h2>
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-bold mb-2">Tax Rate (%)</label>
+                      <input 
+                        type="number" 
+                        value={taxRate} 
+                        onChange={(e) => setTaxRate(parseFloat(e.target.value))} 
+                        className="w-full px-4 py-2 border rounded-lg" 
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-bold mb-2">Invoice Number</label>
+                      <input 
+                        type="number" 
+                        value={invoiceNum} 
+                        onChange={(e) => setInvoiceNum(parseInt(e.target.value))} 
+                        className="w-full px-4 py-2 border rounded-lg" 
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow p-6">
+                  <h2 className="text-2xl font-bold mb-4">Data Management</h2>
+                  <div className="space-y-3">
+                    <button 
+                      onClick={exportData} 
+                      className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2"
+                    >
+                      <Download /> Export Data
+                    </button>
+                    <label className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2 cursor-pointer">
+                      <Upload /> Import Data
+                      <input type="file" accept=".json" onChange={importData} hidden />
+                    </label>
+                    <button 
+                      onClick={clearData} 
+                      className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 rounded-lg"
+                    >
+                      Clear All Data
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* HISTORY TAB */}
+            {tab === 'history' && (
+              <div className="bg-white rounded-lg shadow p-6">
+                <h2 className="text-2xl font-bold mb-4">Sales History</h2>
+                <div className="mb-4">
+                  <label className="block text-sm font-bold mb-2">Filter by Date</label>
+                  <input 
+                    type="date" 
+                    value={filterDate} 
+                    onChange={(e) => setFilterDate(e.target.value)} 
+                    className="px-4 py-2 border rounded-lg" 
+                  />
+                </div>
+                <div className="text-sm mb-4 bg-blue-50 p-3 rounded">
+                  <p><strong>Total Sales:</strong> ${totalSalesByDate.toFixed(2)}</p>
+                  <p><strong>Total Items:</strong> {totalItemsByDate}</p>
+                </div>
+                <div className="max-h-96 overflow-y-auto space-y-3">
+                  {filteredSales.length === 0 ? (
+                    <p className="text-gray-500">No sales</p>
+                  ) : (
+                    filteredSales.map(sale => (
+                      <div key={sale.id} className="border p-3 rounded">
+                        <p className="font-bold">Invoice #{sale.invoiceNum}</p>
+                        <p className="text-xs text-gray-600">{sale.date} {sale.time}</p>
+                        <p className="text-xs text-gray-600">Cashier: {sale.cashier}</p>
+                        <p className="text-sm mt-2"><strong>Total:</strong> ${sale.total.toFixed(2)}</p>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* MODALS */}
+          {showCameraScanner && (
+            <BarcodeScanner 
+              onBarcodeDetected={(barcode) => {
+                setFormData({ ...formData, barcode });
+                setShowCameraScanner(false);
+              }}
+              onClose={() => setShowCameraScanner(false)}
+            />
+          )}
+
+          {showImageScanner && (
+            <ImageBarcodeScanner 
+              onBarcodeDetected={(barcode, imageData) => {
+                setFormData({ ...formData, barcode, image: imageData });
+                setShowImageScanner(false);
+              }}
+              onClose={() => setShowImageScanner(false)}
+            />
+          )}
+        </div>
+      );
+    }
+
+    // RENDER APP
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<POSSystem />);
+  </script>
+</body>
+</html>
