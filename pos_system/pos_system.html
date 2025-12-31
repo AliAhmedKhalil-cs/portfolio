@@ -8,7 +8,6 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <!-- Barcode Detection Library -->
   <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.20.0/umd/index.min.js"></script>
 </head>
 <body>
@@ -29,10 +28,128 @@
     const Upload = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4-4m0 0l-4 4m4-4v12" /></svg>;
     const Trash2 = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>;
     const Plus = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>;
-    const Printer = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>;
-    const Camera = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
+    const Printer = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLineCap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>;
+    const Camera = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0118.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
     const X = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>;
-    const Check = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>;
+    const Bell = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>;
+    const AlertCircle = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
+    const Shield = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
+    const Info = () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
+
+    // Notification Service
+    class NotificationService {
+      static async sendNotification(userId, userEmail, userPhone, message, type = 'security_alert') {
+        const notification = {
+          id: Date.now(),
+          userId,
+          message,
+          type,
+          timestamp: new Date().toISOString(),
+          channels: {
+            inApp: true,
+            email: userEmail ? await this.sendEmail(userEmail, message, type) : false,
+            sms: userPhone ? await this.sendSMS(userPhone, message) : false,
+            whatsapp: userPhone ? await this.sendWhatsApp(userPhone, message) : false
+          }
+        };
+        return notification;
+      }
+
+      static async sendEmail(email, message, type) {
+        console.log(`📧 Email sent to ${email}: ${message}`);
+        return { success: true, method: 'email', timestamp: new Date().toISOString() };
+      }
+
+      static async sendSMS(phone, message) {
+        console.log(`📱 SMS sent to ${phone}: ${message}`);
+        return { success: true, method: 'sms', timestamp: new Date().toISOString() };
+      }
+
+      static async sendWhatsApp(phone, message) {
+        console.log(`💬 WhatsApp sent to ${phone}: ${message}`);
+        return { success: true, method: 'whatsapp', timestamp: new Date().toISOString() };
+      }
+    }
+
+    // In-App Notification Component
+    function NotificationCenter({ notifications, onClear }) {
+      const [expanded, setExpanded] = useState(false);
+
+      return (
+        <div className="relative">
+          <button 
+            onClick={() => setExpanded(!expanded)}
+            className="relative p-2 text-white hover:bg-white hover:bg-opacity-20 rounded-lg transition"
+          >
+            <Bell className="w-6 h-6" />
+            {notifications.length > 0 && (
+              <span className="absolute top-0 right-0 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                {notifications.length}
+              </span>
+            )}
+          </button>
+
+          {expanded && (
+            <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-2xl z-50 max-h-96 overflow-y-auto">
+              <div className="p-4 border-b border-gray-200">
+                <div className="flex justify-between items-center">
+                  <h3 className="font-bold text-gray-800">Notifications ({notifications.length})</h3>
+                  {notifications.length > 0 && (
+                    <button 
+                      onClick={onClear}
+                      className="text-xs text-red-600 hover:text-red-800"
+                    >
+                      Clear All
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {notifications.length === 0 ? (
+                <div className="p-6 text-center text-gray-500">
+                  <Bell className="w-8 h-8 mx-auto mb-2 opacity-50" />
+                  <p>No notifications</p>
+                </div>
+              ) : (
+                <div className="divide-y">
+                  {notifications.map(notif => (
+                    <div 
+                      key={notif.id}
+                      className={`p-4 ${
+                        notif.type === 'security_alert' 
+                          ? 'bg-red-50 border-l-4 border-red-500' 
+                          : 'bg-blue-50 border-l-4 border-blue-500'
+                      }`}
+                    >
+                      <div className="flex items-start gap-3">
+                        {notif.type === 'security_alert' ? (
+                          <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                        ) : (
+                          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        )}
+                        <div className="flex-1">
+                          <p className={`font-bold text-sm ${
+                            notif.type === 'security_alert' 
+                              ? 'text-red-800' 
+                              : 'text-blue-800'
+                          }`}>
+                            {notif.type === 'security_alert' ? '🔐 Security Alert' : 'ℹ️ Notification'}
+                          </p>
+                          <p className="text-sm text-gray-700 mt-1">{notif.message}</p>
+                          <p className="text-xs text-gray-500 mt-2">
+                            {new Date(notif.timestamp).toLocaleString()}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      );
+    }
 
     // Barcode Scanner Component
     function BarcodeScanner({ onBarcodeDetected, onClose }) {
@@ -86,7 +203,6 @@
             setIsScanning(false);
           } catch (e) {
             setIsScanning(false);
-            // Continue scanning if no barcode found
           }
         } catch (err) {
           setError('Scan error: ' + err.message);
@@ -237,12 +353,202 @@
       );
     }
 
+    // User Management Modal
+    function UserManagementModal({ isOpen, onClose, users, currentUser, onCreateUser, onDeleteUser, primaryAdminId }) {
+      const [newUserForm, setNewUserForm] = useState({ username: '', password: '', email: '', phone: '', role: 'Cashier' });
+      const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);
+
+      const isPrimaryAdmin = (userId) => userId === primaryAdminId;
+
+      const handleDelete = (userId) => {
+        if (isPrimaryAdmin(userId)) {
+          alert('❌ Cannot delete PRIMARY ADMIN\n\nThe primary admin account is protected and cannot be removed for security reasons.');
+          setShowDeleteConfirm(null);
+          return;
+        }
+        onDeleteUser(userId);
+        setShowDeleteConfirm(null);
+      };
+
+      return (
+        <div className={`fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 ${isOpen ? '' : 'hidden'}`}>
+          <div className="bg-white rounded-lg shadow-2xl w-full max-w-4xl max-h-96">
+            <div className="flex justify-between items-center p-6 border-b">
+              <h2 className="text-2xl font-bold">User Management</h2>
+              <button onClick={onClose} className="text-gray-600 hover:text-red-600">
+                <X />
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 max-h-96 overflow-y-auto">
+              {/* Create User Section */}
+              <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                <h3 className="font-bold mb-4 flex items-center gap-2">
+                  <Plus className="w-5 h-5" /> Create User
+                </h3>
+                <div className="space-y-3">
+                  <input 
+                    type="text" 
+                    placeholder="Username" 
+                    value={newUserForm.username} 
+                    onChange={(e) => setNewUserForm({ ...newUserForm, username: e.target.value })} 
+                    className="w-full px-3 py-2 border rounded text-sm" 
+                  />
+                  <input 
+                    type="password" 
+                    placeholder="Password" 
+                    value={newUserForm.password} 
+                    onChange={(e) => setNewUserForm({ ...newUserForm, password: e.target.value })} 
+                    className="w-full px-3 py-2 border rounded text-sm" 
+                  />
+                  <input 
+                    type="email" 
+                    placeholder="Email" 
+                    value={newUserForm.email} 
+                    onChange={(e) => setNewUserForm({ ...newUserForm, email: e.target.value })} 
+                    className="w-full px-3 py-2 border rounded text-sm" 
+                  />
+                  <input 
+                    type="tel" 
+                    placeholder="Phone (for SMS/WhatsApp)" 
+                    value={newUserForm.phone} 
+                    onChange={(e) => setNewUserForm({ ...newUserForm, phone: e.target.value })} 
+                    className="w-full px-3 py-2 border rounded text-sm" 
+                  />
+                  <select 
+                    value={newUserForm.role} 
+                    onChange={(e) => setNewUserForm({ ...newUserForm, role: e.target.value })} 
+                    className="w-full px-3 py-2 border rounded text-sm"
+                  >
+                    <option>Cashier</option>
+                    <option>Admin</option>
+                  </select>
+                  <button 
+                    onClick={() => {
+                      onCreateUser(newUserForm);
+                      setNewUserForm({ username: '', password: '', email: '', phone: '', role: 'Cashier' });
+                    }} 
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded text-sm"
+                  >
+                    Create User
+                  </button>
+                </div>
+              </div>
+
+              {/* Users List Section */}
+              <div className="lg:col-span-2 bg-gray-50 rounded-lg p-4 border border-gray-200">
+                <h3 className="font-bold mb-4">Registered Users ({users.length})</h3>
+                <div className="space-y-2 max-h-80 overflow-y-auto">
+                  {users.map(user => (
+                    <div 
+                      key={user.id} 
+                      className={`p-3 rounded border-l-4 ${
+                        isPrimaryAdmin(user.id)
+                          ? 'bg-yellow-50 border-l-yellow-500 border border-yellow-200'
+                          : 'bg-white border-l-gray-300 border border-gray-200'
+                      }`}
+                    >
+                      <div className="flex justify-between items-start">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2">
+                            <p className="font-bold text-sm">{user.username}</p>
+                            {isPrimaryAdmin(user.id) && (
+                              <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded font-bold flex items-center gap-1">
+                                <Shield className="w-3 h-3" /> PRIMARY ADMIN
+                              </span>
+                            )}
+                            {user.id === currentUser?.id && (
+                              <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                                YOU
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-xs text-gray-600 mt-1">Role: {user.role}</p>
+                          {user.email && <p className="text-xs text-gray-600">📧 {user.email}</p>}
+                          {user.phone && <p className="text-xs text-gray-600">📱 {user.phone}</p>}
+                        </div>
+                        
+                        {!isPrimaryAdmin(user.id) && user.id !== currentUser?.id && (
+                          <button 
+                            onClick={() => setShowDeleteConfirm(user.id)}
+                            className="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-xs font-bold"
+                          >
+                            Delete
+                          </button>
+                        )}
+                        {isPrimaryAdmin(user.id) && (
+                          <button 
+                            disabled
+                            className="px-3 py-1 bg-gray-300 text-gray-600 rounded text-xs font-bold cursor-not-allowed"
+                          >
+                            Protected
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Delete Confirmation */}
+            {showDeleteConfirm && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+                <div className="bg-white rounded-lg shadow-2xl p-6 max-w-sm">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                      <AlertCircle className="w-6 h-6 text-red-600" />
+                    </div>
+                    <h3 className="text-lg font-bold">Confirm Delete</h3>
+                  </div>
+                  <p className="text-gray-700 mb-6">
+                    Are you sure you want to delete this user? This action cannot be undone.
+                  </p>
+                  <div className="flex gap-3">
+                    <button 
+                      onClick={() => setShowDeleteConfirm(null)}
+                      className="flex-1 px-4 py-2 bg-gray-300 text-gray-800 rounded font-bold hover:bg-gray-400"
+                    >
+                      Cancel
+                    </button>
+                    <button 
+                      onClick={() => handleDelete(showDeleteConfirm)}
+                      className="flex-1 px-4 py-2 bg-red-600 text-white rounded font-bold hover:bg-red-700"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    }
+
     function POSSystem() {
       const [isLoggedIn, setIsLoggedIn] = useState(false);
       const [currentUser, setCurrentUser] = useState(null);
+      const [primaryAdminId, setPrimaryAdminId] = useState(1);
       const [users, setUsers] = useState([
-        { id: 1, username: 'admin', password: 'admin123', role: 'Admin' },
-        { id: 2, username: 'cashier1', password: 'cashier123', role: 'Cashier' }
+        { 
+          id: 1, 
+          username: 'admin', 
+          password: 'admin123', 
+          role: 'Admin',
+          email: 'admin@pos.com',
+          phone: '+1234567890',
+          createdAt: new Date().toISOString()
+        },
+        { 
+          id: 2, 
+          username: 'cashier1', 
+          password: 'cashier123', 
+          role: 'Cashier',
+          email: 'cashier1@pos.com',
+          phone: '+0987654321',
+          createdAt: new Date().toISOString()
+        }
       ]);
       const [loginForm, setLoginForm] = useState({ username: '', password: '' });
       const [loginError, setLoginError] = useState('');
@@ -251,14 +557,18 @@
       const [cart, setCart] = useState([]);
       const [taxRate, setTaxRate] = useState(10);
       const [barcodeInput, setBarcodeInput] = useState('');
-      const [invoiceNum, setInvoiceNum] = useState(1001);
+      const invoiceNum = useRef(1001);
       const [inventoryHistory, setInventoryHistory] = useState([]);
       const [salesHistory, setSalesHistory] = useState([]);
-      const [newUserForm, setNewUserForm] = useState({ username: '', password: '', role: 'Cashier' });
       const [formData, setFormData] = useState({ barcode: '', name: '', price: '', quantity: '', discount: '', reorderLevel: '', image: '' });
       const [filterDate, setFilterDate] = useState(new Date().toISOString().split('T')[0]);
       const [showCameraScanner, setShowCameraScanner] = useState(false);
       const [showImageScanner, setShowImageScanner] = useState(false);
+      const [showInventoryCameraScanner, setShowInventoryCameraScanner] = useState(false);
+      const [showInventoryImageScanner, setShowInventoryImageScanner] = useState(false);
+      const [showUserModal, setShowUserModal] = useState(false);
+      const [notifications, setNotifications] = useState([]);
+      const barcodeInputRef = useRef(null);
 
       useEffect(() => {
         try {
@@ -268,8 +578,8 @@
             if (data.users) setUsers(data.users);
             if (data.products) setProducts(data.products);
             if (data.taxRate) setTaxRate(data.taxRate);
-            if (data.invoiceNum) setInvoiceNum(data.invoiceNum);
-            if (data.inventoryHistory) setInventoryHistory(data.inventoryHistory);
+            if (data.invoiceNum) invoiceNum.current = data.invoiceNum;
+            if (data.primaryAdminId) setPrimaryAdminId(data.primaryAdminId);
             if (data.salesHistory) setSalesHistory(data.salesHistory);
           }
         } catch (e) {
@@ -278,9 +588,9 @@
       }, []);
 
       useEffect(() => {
-        const data = { users, products, taxRate, invoiceNum, inventoryHistory, salesHistory };
+        const data = { users, products, taxRate, invoiceNum: invoiceNum.current, primaryAdminId, inventoryHistory, salesHistory };
         localStorage.setItem('pos_data', JSON.stringify(data));
-      }, [users, products, taxRate, invoiceNum, inventoryHistory, salesHistory]);
+      }, [users, products, taxRate, primaryAdminId, inventoryHistory, salesHistory]);
 
       const handleLogin = () => {
         setLoginError('');
@@ -303,7 +613,7 @@
         setIsLoggedIn(false);
       };
 
-      const createUser = () => {
+      const createUser = (newUserForm) => {
         if (!newUserForm.username || !newUserForm.password) {
           alert('Fill username and password');
           return;
@@ -312,16 +622,47 @@
           alert('Username exists');
           return;
         }
-        setUsers([...users, { id: Date.now(), ...newUserForm }]);
-        setNewUserForm({ username: '', password: '', role: 'Cashier' });
+        const newUser = {
+          id: Date.now(),
+          ...newUserForm,
+          createdAt: new Date().toISOString()
+        };
+        setUsers([...users, newUser]);
+        
+        const primaryAdmin = users.find(u => u.id === primaryAdminId);
+        if (primaryAdmin) {
+          NotificationService.sendNotification(
+            primaryAdmin.id,
+            primaryAdmin.email,
+            primaryAdmin.phone,
+            `New ${newUserForm.role} account created: ${newUserForm.username}`,
+            'info'
+          );
+        }
       };
 
-      const deleteUser = (id) => {
-        if (id === currentUser.id) {
-          alert('Cannot delete yourself');
+      const deleteUser = (userId) => {
+        const userToDelete = users.find(u => u.id === userId);
+        if (!userToDelete) return;
+
+        if (userId === primaryAdminId) {
+          alert('❌ Cannot delete PRIMARY ADMIN\n\nThe primary admin account is protected and cannot be removed for security reasons.');
           return;
         }
-        setUsers(users.filter(u => u.id !== id));
+
+        setUsers(users.filter(u => u.id !== userId));
+
+        const primaryAdmin = users.find(u => u.id === primaryAdminId);
+        if (primaryAdmin) {
+          const notification = NotificationService.sendNotification(
+            primaryAdmin.id,
+            primaryAdmin.email,
+            primaryAdmin.phone,
+            `🚨 SECURITY ALERT: User "${userToDelete.username}" (${userToDelete.role}) has been deleted by ${currentUser.username} on ${new Date().toLocaleString()}`,
+            'security_alert'
+          );
+          setNotifications([notification, ...notifications]);
+        }
       };
 
       const addProduct = () => {
@@ -345,6 +686,7 @@
         };
         setProducts([...products, newProd]);
         setFormData({ barcode: '', name: '', price: '', quantity: '', discount: '', reorderLevel: '', image: '' });
+        alert('✅ Product added successfully!');
       };
 
       const deleteProduct = (id) => {
@@ -377,20 +719,15 @@
         }
       };
 
-      useEffect(() => {
-        const handleKey = (e) => {
-          if (tab === 'checkout' && isLoggedIn) {
-            setBarcodeInput(prev => prev + e.key);
-            if (e.key === 'Enter') {
-              e.preventDefault();
-              scanBarcode(barcodeInput);
-              setBarcodeInput('');
-            }
+      const handleBarcodeInputKeyPress = (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          if (barcodeInput.trim()) {
+            scanBarcode(barcodeInput.trim());
+            setBarcodeInput('');
           }
-        };
-        window.addEventListener('keypress', handleKey);
-        return () => window.removeEventListener('keypress', handleKey);
-      }, [barcodeInput, tab, isLoggedIn, products, cart]);
+        }
+      };
 
       const removeFromCart = (id) => {
         setCart(cart.filter(item => item.id !== id));
@@ -423,13 +760,21 @@
       const { subtotal, tax, total } = getTotals();
 
       const printInvoice = () => {
-        if (cart.length === 0) return;
+        if (cart.length === 0) {
+          alert('Cart is empty!');
+          return;
+        }
+        
+        // FIXED: Use proper date format to match filter
+        const today = new Date();
+        const dateStr = `${String(today.getMonth() + 1).padStart(2, '0')}/${String(today.getDate()).padStart(2, '0')}/${today.getFullYear()}`;
         
         const saleRecord = {
           id: Date.now(),
-          invoiceNum: invoiceNum,
+          invoiceNum: invoiceNum.current,
           cashier: currentUser.username,
-          date: new Date().toLocaleDateString(),
+          date: dateStr,
+          dateObj: today.toISOString().split('T')[0], // ISO format for filtering
           time: new Date().toLocaleTimeString(),
           items: cart.map(item => ({
             name: item.name,
@@ -443,19 +788,21 @@
           timestamp: new Date().toISOString()
         };
         
+        console.log('Recording sale:', saleRecord); // DEBUG
+        
         setSalesHistory([saleRecord, ...salesHistory]);
         setProducts(products.map(p => {
           const item = cart.find(c => c.id === p.id);
           return item ? { ...p, quantity: p.quantity - item.cartQty } : p;
         }));
-        setInvoiceNum(invoiceNum + 1);
+        invoiceNum.current += 1;
         setCart([]);
         setBarcodeInput('');
-        alert('Invoice printed');
+        alert(`✅ Invoice #${saleRecord.invoiceNum} printed successfully!\nTotal: $${total.toFixed(2)}`);
       };
 
       const exportData = () => {
-        const data = { users, products, taxRate, invoiceNum, inventoryHistory, salesHistory };
+        const data = { users, products, taxRate, invoiceNum: invoiceNum.current, primaryAdminId, inventoryHistory, salesHistory };
         const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -475,7 +822,8 @@
             if (data.users) setUsers(data.users);
             if (data.products) setProducts(data.products);
             if (data.taxRate) setTaxRate(data.taxRate);
-            if (data.invoiceNum) setInvoiceNum(data.invoiceNum);
+            if (data.invoiceNum) invoiceNum.current = data.invoiceNum;
+            if (data.primaryAdminId) setPrimaryAdminId(data.primaryAdminId);
             if (data.salesHistory) setSalesHistory(data.salesHistory);
             alert('Data imported');
           } catch (err) {
@@ -491,14 +839,20 @@
           setInventoryHistory([]);
           setSalesHistory([]);
           setTaxRate(10);
-          setInvoiceNum(1001);
+          invoiceNum.current = 1001;
           localStorage.clear();
         }
       };
 
       const lowStock = products.filter(p => p.quantity <= p.reorderLevel && p.quantity > 0);
       const outOfStock = products.filter(p => p.quantity === 0);
-      const filteredSales = salesHistory.filter(sale => sale.date === filterDate);
+      
+      // FIXED: Match date format when filtering
+      const filteredSales = salesHistory.filter(sale => {
+        const saleDate = sale.dateObj || sale.date; // Use dateObj for ISO format
+        return saleDate === filterDate;
+      });
+      
       const totalSalesByDate = filteredSales.reduce((sum, sale) => sum + sale.total, 0);
       const totalItemsByDate = filteredSales.reduce((sum, sale) => sum + sale.items.reduce((s, item) => s + item.quantity, 0), 0);
 
@@ -548,6 +902,7 @@
       // MAIN DASHBOARD
       return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+          {/* Header */}
           <div className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white p-6">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
               <div className="flex items-center gap-3">
@@ -557,8 +912,12 @@
                   <p className="text-sm opacity-90">{currentUser.username} ({currentUser.role})</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <span className="text-sm">Invoice: #{invoiceNum}</span>
+              <div className="flex items-center gap-6">
+                <span className="text-sm">Invoice: #{invoiceNum.current}</span>
+                <NotificationCenter 
+                  notifications={notifications}
+                  onClear={() => setNotifications([])}
+                />
                 <button onClick={handleLogout} className="flex items-center gap-2 bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg">
                   <LogOut /> Logout
                 </button>
@@ -566,17 +925,18 @@
             </div>
           </div>
 
+          {/* Navigation Tabs */}
           <div className="bg-white border-b">
             <div className="max-w-7xl mx-auto flex flex-wrap">
               <button onClick={() => setTab('checkout')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'checkout' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><ShoppingCart /> Checkout</button>
               <button onClick={() => setTab('inventory')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'inventory' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><Package /> Inventory {(lowStock.length > 0 || outOfStock.length > 0) && <span className="bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center ml-2">{lowStock.length + outOfStock.length}</span>}</button>
-              <button onClick={() => setTab('sales')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'sales' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><BarChart3 /> Sales</button>
               <button onClick={() => setTab('history')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'history' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><BarChart3 /> History</button>
-              {currentUser.role === 'Admin' && <button onClick={() => setTab('users')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'users' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><Users /> Users</button>}
+              {currentUser.role === 'Admin' && <button onClick={() => setShowUserModal(true)} className={`flex items-center gap-2 px-6 py-4 text-gray-600 hover:text-indigo-600`}><Users /> Users</button>}
               <button onClick={() => setTab('settings')} className={`flex items-center gap-2 px-6 py-4 ${tab === 'settings' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-600'}`}><Settings /> Settings</button>
             </div>
           </div>
 
+          {/* Main Content */}
           <div className="max-w-7xl mx-auto p-6">
             {/* CHECKOUT TAB */}
             {tab === 'checkout' && (
@@ -586,9 +946,11 @@
                     <h2 className="text-2xl font-bold mb-4">Scanner</h2>
                     <div className="space-y-3">
                       <input 
+                        ref={barcodeInputRef}
                         type="text" 
                         value={barcodeInput} 
-                        onChange={(e) => setBarcodeInput(e.target.value)} 
+                        onChange={(e) => setBarcodeInput(e.target.value)}
+                        onKeyPress={handleBarcodeInputKeyPress}
                         placeholder="Scan barcode or enter manually..." 
                         className="w-full px-4 py-3 border-2 border-indigo-300 rounded-lg bg-blue-50" 
                         autoFocus 
@@ -700,13 +1062,16 @@
                   <div className="bg-white rounded-lg shadow p-6">
                     <h2 className="text-2xl font-bold mb-4">Add Product</h2>
                     <div className="space-y-4">
-                      <input 
-                        type="text" 
-                        placeholder="Barcode" 
-                        value={formData.barcode} 
-                        onChange={(e) => setFormData({ ...formData, barcode: e.target.value })} 
-                        className="w-full px-4 py-2 border rounded-lg" 
-                      />
+                      <div>
+                        <label className="block text-xs font-bold text-gray-600 mb-1">Barcode *</label>
+                        <input 
+                          type="text" 
+                          placeholder="Barcode" 
+                          value={formData.barcode} 
+                          onChange={(e) => setFormData({ ...formData, barcode: e.target.value })} 
+                          className="w-full px-4 py-2 border rounded-lg" 
+                        />
+                      </div>
                       <input 
                         type="text" 
                         placeholder="Product Name" 
@@ -744,7 +1109,6 @@
                         className="w-full px-4 py-2 border rounded-lg" 
                       />
 
-                      {/* Product Image Display */}
                       {formData.image && (
                         <div className="border-2 border-indigo-300 rounded-lg p-3 bg-indigo-50">
                           <img src={formData.image} alt="Product" className="w-full h-24 object-contain mb-2" />
@@ -757,12 +1121,20 @@
                         </div>
                       )}
 
-                      <button 
-                        onClick={() => setShowImageScanner(true)}
-                        className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2"
-                      >
-                        <Upload /> Scan Barcode Image
-                      </button>
+                      <div className="flex gap-2">
+                        <button 
+                          onClick={() => setShowInventoryCameraScanner(true)}
+                          className="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2 text-sm"
+                        >
+                          <Camera /> Scan Camera
+                        </button>
+                        <button 
+                          onClick={() => setShowInventoryImageScanner(true)}
+                          className="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2 text-sm"
+                        >
+                          <Upload /> Upload Image
+                        </button>
+                      </div>
 
                       <button 
                         onClick={addProduct} 
@@ -783,7 +1155,7 @@
                           <div key={prod.id} className="border p-3 rounded">
                             {prod.image && <img src={prod.image} alt={prod.name} className="w-full h-16 object-contain mb-2 bg-gray-100 rounded" />}
                             <p className="font-bold text-sm">{prod.name}</p>
-                            <p className="text-xs text-gray-600">Barcode: {prod.barcode}</p>
+                            <p className="text-xs text-gray-600">📦 {prod.barcode}</p>
                             <p className="text-xs text-gray-600">${prod.price.toFixed(2)} | Qty: {prod.quantity}</p>
                             <div className="flex gap-1 mt-2">
                               <button 
@@ -814,61 +1186,41 @@
               </div>
             )}
 
-            {/* USERS TAB (Admin Only) */}
-            {tab === 'users' && currentUser.role === 'Admin' && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="bg-white rounded-lg shadow p-6">
-                  <h2 className="text-2xl font-bold mb-4">Create User</h2>
-                  <div className="space-y-4">
-                    <input 
-                      type="text" 
-                      placeholder="Username" 
-                      value={newUserForm.username} 
-                      onChange={(e) => setNewUserForm({ ...newUserForm, username: e.target.value })} 
-                      className="w-full px-4 py-2 border rounded-lg" 
-                    />
-                    <input 
-                      type="password" 
-                      placeholder="Password" 
-                      value={newUserForm.password} 
-                      onChange={(e) => setNewUserForm({ ...newUserForm, password: e.target.value })} 
-                      className="w-full px-4 py-2 border rounded-lg" 
-                    />
-                    <select 
-                      value={newUserForm.role} 
-                      onChange={(e) => setNewUserForm({ ...newUserForm, role: e.target.value })} 
-                      className="w-full px-4 py-2 border rounded-lg"
-                    >
-                      <option>Cashier</option>
-                      <option>Admin</option>
-                    </select>
-                    <button 
-                      onClick={createUser} 
-                      className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded-lg"
-                    >
-                      Create
-                    </button>
-                  </div>
+            {/* HISTORY TAB */}
+            {tab === 'history' && (
+              <div className="bg-white rounded-lg shadow p-6">
+                <h2 className="text-2xl font-bold mb-4">Sales History</h2>
+                <div className="mb-4">
+                  <label className="block text-sm font-bold mb-2">Filter by Date</label>
+                  <input 
+                    type="date" 
+                    value={filterDate} 
+                    onChange={(e) => setFilterDate(e.target.value)} 
+                    className="px-4 py-2 border rounded-lg" 
+                  />
                 </div>
-
-                <div className="bg-white rounded-lg shadow p-6">
-                  <h2 className="text-2xl font-bold mb-4">Users ({users.length})</h2>
-                  <div className="max-h-96 overflow-y-auto space-y-2">
-                    {users.map(user => (
-                      <div key={user.id} className="border p-3 rounded flex justify-between items-center">
-                        <div>
-                          <p className="font-bold text-sm">{user.username}</p>
-                          <p className="text-xs text-gray-600">{user.role}</p>
-                        </div>
-                        <button 
-                          onClick={() => deleteUser(user.id)} 
-                          className="px-3 py-1 bg-red-500 text-white text-xs rounded"
-                        >
-                          Delete
-                        </button>
+                <div className="text-sm mb-4 bg-blue-50 p-3 rounded">
+                  <p><strong>Total Sales:</strong> ${totalSalesByDate.toFixed(2)}</p>
+                  <p><strong>Total Items:</strong> {totalItemsByDate}</p>
+                  <p className="text-xs text-gray-600 mt-2">Records found: {filteredSales.length}</p>
+                </div>
+                <div className="max-h-96 overflow-y-auto space-y-3">
+                  {filteredSales.length === 0 ? (
+                    <div className="text-center py-8">
+                      <p className="text-gray-500">No sales for this date</p>
+                      <p className="text-xs text-gray-400 mt-2">Total sales in system: {salesHistory.length}</p>
+                    </div>
+                  ) : (
+                    filteredSales.map(sale => (
+                      <div key={sale.id} className="border p-3 rounded bg-gray-50">
+                        <p className="font-bold">Invoice #{sale.invoiceNum}</p>
+                        <p className="text-xs text-gray-600">{sale.date} {sale.time}</p>
+                        <p className="text-xs text-gray-600">Cashier: {sale.cashier}</p>
+                        <p className="text-sm mt-2"><strong>Total:</strong> ${sale.total.toFixed(2)}</p>
+                        <p className="text-xs text-gray-600">Items: {sale.items.length}</p>
                       </div>
-                    ))}
-                  </div>
+                    ))
+                  )}
                 </div>
               </div>
             )}
@@ -892,8 +1244,8 @@
                       <label className="block text-sm font-bold mb-2">Invoice Number</label>
                       <input 
                         type="number" 
-                        value={invoiceNum} 
-                        onChange={(e) => setInvoiceNum(parseInt(e.target.value))} 
+                        value={invoiceNum.current} 
+                        onChange={(e) => invoiceNum.current = parseInt(e.target.value)} 
                         className="w-full px-4 py-2 border rounded-lg" 
                       />
                     </div>
@@ -923,47 +1275,14 @@
                 </div>
               </div>
             )}
-
-            {/* HISTORY TAB */}
-            {tab === 'history' && (
-              <div className="bg-white rounded-lg shadow p-6">
-                <h2 className="text-2xl font-bold mb-4">Sales History</h2>
-                <div className="mb-4">
-                  <label className="block text-sm font-bold mb-2">Filter by Date</label>
-                  <input 
-                    type="date" 
-                    value={filterDate} 
-                    onChange={(e) => setFilterDate(e.target.value)} 
-                    className="px-4 py-2 border rounded-lg" 
-                  />
-                </div>
-                <div className="text-sm mb-4 bg-blue-50 p-3 rounded">
-                  <p><strong>Total Sales:</strong> ${totalSalesByDate.toFixed(2)}</p>
-                  <p><strong>Total Items:</strong> {totalItemsByDate}</p>
-                </div>
-                <div className="max-h-96 overflow-y-auto space-y-3">
-                  {filteredSales.length === 0 ? (
-                    <p className="text-gray-500">No sales</p>
-                  ) : (
-                    filteredSales.map(sale => (
-                      <div key={sale.id} className="border p-3 rounded">
-                        <p className="font-bold">Invoice #{sale.invoiceNum}</p>
-                        <p className="text-xs text-gray-600">{sale.date} {sale.time}</p>
-                        <p className="text-xs text-gray-600">Cashier: {sale.cashier}</p>
-                        <p className="text-sm mt-2"><strong>Total:</strong> ${sale.total.toFixed(2)}</p>
-                      </div>
-                    ))
-                  )}
-                </div>
-              </div>
-            )}
           </div>
 
           {/* MODALS */}
           {showCameraScanner && (
             <BarcodeScanner 
               onBarcodeDetected={(barcode) => {
-                setFormData({ ...formData, barcode });
+                setBarcodeInput(barcode);
+                scanBarcode(barcode);
                 setShowCameraScanner(false);
               }}
               onClose={() => setShowCameraScanner(false)}
@@ -973,12 +1292,44 @@
           {showImageScanner && (
             <ImageBarcodeScanner 
               onBarcodeDetected={(barcode, imageData) => {
-                setFormData({ ...formData, barcode, image: imageData });
+                setBarcodeInput(barcode);
+                scanBarcode(barcode);
                 setShowImageScanner(false);
               }}
               onClose={() => setShowImageScanner(false)}
             />
           )}
+
+          {showInventoryCameraScanner && (
+            <BarcodeScanner 
+              onBarcodeDetected={(barcode) => {
+                setFormData({ ...formData, barcode });
+                setShowInventoryCameraScanner(false);
+              }}
+              onClose={() => setShowInventoryCameraScanner(false)}
+            />
+          )}
+
+          {showInventoryImageScanner && (
+            <ImageBarcodeScanner 
+              onBarcodeDetected={(barcode, imageData) => {
+                setFormData({ ...formData, barcode, image: imageData });
+                setShowInventoryImageScanner(false);
+              }}
+              onClose={() => setShowInventoryImageScanner(false)}
+            />
+          )}
+
+          {/* User Management Modal */}
+          <UserManagementModal 
+            isOpen={showUserModal}
+            onClose={() => setShowUserModal(false)}
+            users={users}
+            currentUser={currentUser}
+            onCreateUser={createUser}
+            onDeleteUser={deleteUser}
+            primaryAdminId={primaryAdminId}
+          />
         </div>
       );
     }
