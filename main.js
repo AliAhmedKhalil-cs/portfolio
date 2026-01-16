@@ -2,8 +2,19 @@
 const menuIcon = document.querySelector('.menu-icon');
 const navMenu = document.querySelector('.navbar ul');
 
-if (menuIcon) {
-    menuIcon.addEventListener('click', () => {
+if (menuIcon && navMenu) {
+    // Ensure menu icon is always visible on mobile
+    const checkMenuIcon = () => {
+        if (window.innerWidth <= 768) {
+            menuIcon.style.display = 'flex';
+        }
+    };
+    
+    checkMenuIcon();
+    window.addEventListener('resize', checkMenuIcon);
+    
+    menuIcon.addEventListener('click', (e) => {
+        e.stopPropagation();
         menuIcon.classList.toggle('active');
         navMenu.classList.toggle('active');
         
@@ -817,6 +828,14 @@ function toggleLanguage() {
     
     // Update page content
     updatePageContent(newLang);
+    
+    // Ensure menu icon stays visible on mobile
+    setTimeout(() => {
+        const menuIcon = document.querySelector('.menu-icon');
+        if (menuIcon && window.innerWidth <= 768) {
+            menuIcon.style.display = 'flex';
+        }
+    }, 100);
 }
 
 function loadLanguage() {

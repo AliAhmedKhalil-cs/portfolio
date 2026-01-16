@@ -43,7 +43,7 @@
                 <div class="article-meta">
                     <span><i class='bx bx-calendar'></i> التاريخ</span>
                     <span><i class='bx bx-time'></i> وقت القراءة</span>
-                    <span><i class='bx bx-user'></i> إبراهيم قصاب</span>
+                    <span><i class='bx bx-user'></i> إبراهيم كساب</span>
                 </div>
             </header>
 

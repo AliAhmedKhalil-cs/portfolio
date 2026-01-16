@@ -104,6 +104,7 @@ ul {
     font-weight: 600;
     color: var(--text-primary);
     letter-spacing: -0.5px;
+    z-index: 1003;
 }
 
 .navbar ul {
@@ -128,6 +129,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
+    z-index: 1003;
 }
 
 .theme-toggle,
@@ -144,6 +146,7 @@ ul {
     transition: all 0.3s ease;
     color: var(--text-primary);
     font-size: 20px;
+    flex-shrink: 0;
 }
 
 .theme-toggle:hover,
@@ -164,6 +167,8 @@ ul {
     flex-direction: column;
     gap: 6px;
     cursor: pointer;
+    z-index: 1003;
+    position: relative;
 }
 
 .menu-icon span {
@@ -1280,43 +1285,66 @@ section {
 }
 
 @media (max-width: 768px) {
-    .menu-icon {
-        display: flex;
-        z-index: 1001;
-    }
-
-    .navbar ul {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: var(--bg-white);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: translateY(-100%);
-        transition: 0.4s ease;
-        padding-top: 60px;
-    }
-
-    .navbar ul.active {
-        transform: translateY(0);
+    .navbar {
+        padding: 0 20px;
     }
     
-    .navbar ul li {
-        margin: 20px 0;
+    .navbar .logo {
+        font-size: 20px;
     }
-
-    .navbar ul li a {
-        font-size: 24px;
+    
+    .menu-icon {
+        display: flex !important;
+        z-index: 1003;
+        order: 2;
     }
     
     .navbar-controls {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        z-index: 1002;
+        order: 3;
+        position: relative;
+        z-index: 1003;
+    }
+    
+    .theme-toggle,
+    .lang-toggle {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .navbar ul {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--bg-white);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 60px;
+        gap: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+        z-index: 999;
+    }
+
+    .navbar ul.active {
+        transform: translateX(0);
+    }
+    
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--bg-light);
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+        display: block;
+        width: 100%;
     }
     
     .chat-window {
@@ -1327,6 +1355,44 @@ section {
     
     .section-header h2 {
         font-size: 32px;
+    }
+    
+    .floating-pricing-btn {
+        bottom: 80px;
+        right: 15px;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+/* RTL Support */
+[dir="rtl"] .navbar {
+    direction: rtl;
+}
+
+[dir="rtl"] .navbar .logo {
+    order: 3;
+}
+
+[dir="rtl"] .menu-icon {
+    order: 2;
+}
+
+[dir="rtl"] .navbar-controls {
+    order: 1;
+}
+
+[dir="rtl"] .navbar ul {
+    direction: rtl;
+}
+
+@media (max-width: 768px) {
+    [dir="rtl"] .navbar ul {
+        transform: translateX(100%);
+    }
+    
+    [dir="rtl"] .navbar ul.active {
+        transform: translateX(0);
     }
 }
 
