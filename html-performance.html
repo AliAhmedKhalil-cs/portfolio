@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحسين أداء HTML | Ibrahem Kassap</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog-arabic.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Portfolio.</a>
+        <div class="menu-icon"><i class='bx bx-menu'></i></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li class="active"><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="arabic-container">
+        <article class="arabic-article">
+            <header class="article-header">
+                <h1>تحسين أداء HTML للمواقع السريعة ⚡</h1>
+                <div class="article-meta">
+                    <span><i class='bx bx-calendar'></i> 13 يناير 2026</span>
+                    <span><i class='bx bx-time'></i> 8 دقائق</span>
+                    <span><i class='bx bx-user'></i> إبراهيم قصاب</span>
+                </div>
+            </header>
+
+            <div class="article-intro">
+                <p>الأداء لا يتعلق فقط بـ JavaScript. بنية HTML الجيدة هي أساس الموقع السريع.</p>
+            </div>
+
+            <div class="table-of-contents">
+                <h3><i class='bx bx-list-ul'></i> المحتويات</h3>
+                <ul>
+                    <li><a href="#html-1">تقليل عمق DOM</a></li>
+                    <li><a href="#html-2">ترتيب الموارد</a></li>
+                    <li><a href="#html-3">تأجيل السكريبتات</a></li>
+                    <li><a href="#html-4">HTML الدلالي</a></li>
+                </ul>
+            </div>
+
+            <section id="html-1" class="tutorial-step">
+                <h2><span class="step-number">1</span> تقليل عمق DOM</h2>
+                <p>التداخل الزائد يبطئ الموقع. حافظ على الكود مسطحاً.</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> مثال سيء</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;مرحباً&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> مثال جيد</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;p&gt;مرحباً&lt;/p&gt;</code></pre>
+                </div>
+                <div class="explanation-box">
+                    <h4><i class='bx bx-info-circle'></i> لماذا؟</h4>
+                    <ul>
+                        <li>يستهلك ذاكرة أقل</li>
+                        <li>حسابات أسرع للأنماط</li>
+                        <li>أداء JavaScript أفضل</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="html-2" class="tutorial-step">
+                <h2><span class="step-number">2</span> ترتيب الموارد</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> preload</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;link rel="preload" href="font.woff2" as="font" crossorigin&gt;</code></pre>
+                </div>
+            </section>
+
+            <section id="html-3" class="tutorial-step">
+                <h2><span class="step-number">3</span> تأجيل السكريبتات</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> defer & async</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;script src="main.js" defer&gt;&lt;/script&gt;
+&lt;script src="analytics.js" async&gt;&lt;/script&gt;</code></pre>
+                </div>
+            </section>
+
+            <section id="html-4" class="tutorial-step">
+                <h2><span class="step-number">4</span> HTML الدلالي</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> semantic HTML</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;header&gt;&lt;nav&gt;...&lt;/nav&gt;&lt;/header&gt;
+&lt;main&gt;&lt;article&gt;...&lt;/article&gt;&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+                </div>
+                <div class="success-box">
+                    <h4><i class='bx bx-trophy'></i> ممتاز!</h4>
+                    <p>الآن تعرف كيفية تحسين HTML. طبقها في مشاريعك!</p>
+                </div>
+            </section>
+
+            <div class="article-footer">
+                <div class="share-section">
+                    <h4>شارك هذا الدرس</h4>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn facebook"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="share-btn twitter"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="share-btn whatsapp"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="#" class="share-btn linkedin"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="blog-arabic.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Title | Ibrahem Kassap</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Portfolio.</a>
+        
+        <div class="menu-icon">
+            <i class='bx bx-menu'></i>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li class="active"><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" style="padding-top: 120px;">
+        <article class="article-content">
+            <header>
+                <h1 class="section-title" style="margin-bottom: 20px; text-align: left;">Article Title Here</h1>
+                <p style="color: var(--text-secondary); margin-bottom: 40px;">Published on Date • Read Time</p>
+            </header>
+
+            <p class="lead">Introduction paragraph goes here. Hook the reader.</p>
+
+            <h2>Section Heading</h2>
+            <p>Content goes here.</p>
+
+            <pre>
+// Code snippet example
+const example = "Hello World";
+            </pre>
+
+            <h2>Conclusion</h2>
+            <p>Wrap up the article.</p>
+        </article>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
+            <i class='bx bx-bot' id="toggleIcon"></i>
+            <span class="notification-badge" id="notificationBadge">1</span>
+        </button>
+
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="bot-avatar">
+                    <i class='bx bx-bot'></i>
+                </div>
+                <div class="bot-info">
+                    <h3>Assistant Bot</h3>
+                    <p><span class="status-dot"></span>Online</p>
+                </div>
+                <button class="close-chat-btn" onclick="toggleChat()">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-avatar">
+                        <i class='bx bx-bot'></i>
+                    </div>
+                    <div class="message-content">
+                        <h3>Assistant Bot</h3>
+                        <p><span class="status-dot"></span>Online</p>
+                        Need help understanding this article?
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                <button class="send-btn" onclick="sendMessage()">
+                    <i class='bx bx-send'></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

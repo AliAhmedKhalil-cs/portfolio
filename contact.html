@@ -4,39 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahem Kassap | Contact Me</title>
+    <title>Contact Ibrahem Kassap | Freelance Web Developer</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://ibrahemkassap.tech/contact">
+    <meta name="description" content="Request a free consultation to discuss your website development or SEO needs. Fast response via email or WhatsApp.">
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="index.html">Portfolio.</a>
+        <a href="index.html" class="logo">Portfolio.</a>
         
-        <!-- Hamburger Menu Icon for Mobile -->
         <div class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
+            <i class='bx bx-menu'></i>
         </div>
         
-        <ul>
-            <li class="active"><a href="index.html">Home</a></li>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
         </ul>
+        
+        <div class="navbar-controls">
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language">
+                <span class="lang-text">AR</span>
+            </button>
+        </div>
     </nav>
-
-    <div class="bars-animation">
-        <div class="bar" style="--i:6;"></div>
-        <div class="bar" style="--i:5;"></div>
-        <div class="bar" style="--i:4;"></div>
-        <div class="bar" style="--i:3;"></div>
-        <div class="bar" style="--i:2;"></div>
-        <div class="bar" style="--i:1;"></div>
-    </div>
 
     <!-- Contact Section -->
     <section class="contact-section">
@@ -88,25 +88,25 @@
                     <h3>Send Me a Message</h3>
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <input type="text" id="name" name="from_name" required>
+                            <input type="text" id="name" name="from_name" required placeholder=" ">
                             <label for="name">Your Name</label>
                             <i class='bx bx-user'></i>
                         </div>
 
                         <div class="form-group">
-                            <input type="email" id="email" name="from_email" required>
+                            <input type="email" id="email" name="from_email" required placeholder=" ">
                             <label for="email">Your Email</label>
                             <i class='bx bx-envelope'></i>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
                             <label for="subject">Subject</label>
                             <i class='bx bx-edit'></i>
                         </div>
 
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
                             <label for="message">Your Message</label>
                             <i class='bx bx-message-dots'></i>
                         </div>
@@ -150,6 +150,50 @@
         </div>
     </section>
 
+    <!-- Internal Links -->
+    <section class="internal-cta">
+        <div class="container">
+            <h3>Before You Go</h3>
+            <div class="quick-links">
+                <a href="pricing.html" class="quick-link-card">
+                    <i class='bx bx-money'></i>
+                    <h4>Pricing</h4>
+                    <p>Transparent rates</p>
+                </a>
+                <a href="portfolio.html" class="quick-link-card">
+                    <i class='bx bx-images'></i>
+                    <h4>Portfolio</h4>
+                    <p>Our best work</p>
+                </a>
+                <a href="audit.html" class="quick-link-card">
+                    <i class='bx bx-analyse'></i>
+                    <h4>Free Audit</h4>
+                    <p>Website analysis</p>
+                </a>
+                <a href="blog.html" class="quick-link-card">
+                    <i class='bx bx-book-reader'></i>
+                    <h4>Blog</h4>
+                    <p>Learn & grow</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Pricing Button -->
+    <a href="pricing.html" class="floating-pricing-btn" title="View Pricing">
+        <i class='bx bx-purchase-tag'></i>
+        <span>Pricing</span>
+    </a>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
     <!-- Add EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
@@ -161,32 +205,6 @@
     </script>
 
     <script src="main.js"></script>
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            }
-        });
-    </script>
     
 </body>
 </html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Ibrahem Kassap</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Learn Web Development, SEO, and Performance Optimization. Free tutorials on HTML, CSS, JavaScript, and modern web technologies by Ibrahem Kassap.">
+    <meta name="keywords" content="web development tutorials, HTML CSS JavaScript, SEO optimization, frontend development, programming articles, web performance">
+    <meta property="og:title" content="Web Development Blog | Ibrahem Kassap">
+    <meta property="og:description" content="Free tutorials and articles on Web Development, SEO, and Performance Optimization.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ibrahemkassap.tech/blog">
+    <link rel="canonical" href="https://ibrahemkassap.tech/blog">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Ibrahem Kassap Blog",
+      "description": "Technical articles on Web Development, SEO, and Performance Optimization",
+      "url": "https://ibrahemkassap.tech/blog",
+      "author": {
+        "@type": "Person",
+        "name": "Ibrahem Kassap"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "HTML Performance Optimization",
+          "description": "Learn how to structure your HTML for maximum speed and SEO impact",
+          "url": "https://ibrahemkassap.tech/articles.html#html-performance"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Modern CSS Techniques",
+          "description": "Explore the power of CSS Variables, Grid, and Flexbox",
+          "url": "https://ibrahemkassap.tech/articles.html#css-modern"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The SEO Checklist for 2026",
+          "description": "A comprehensive guide to technical SEO and Core Web Vitals",
+          "url": "https://ibrahemkassap.tech/articles.html#seo-checklist"
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Portfolio.</a>
+        
+        <div class="menu-icon">
+            <i class='bx bx-menu'></i>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li class="active"><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="navbar-controls">
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language">
+                <span class="lang-text">AR</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="blog-header">
+        <h1>🚀 مدونة تطوير الويب والبرمجة</h1>
+        <p>✨ دروس مجانية شاملة في HTML و CSS و JavaScript و SEO | تعلم البرمجة من الصفر حتى الاحتراف 💻</p>
+    </header>
+
+    <section class="container">
+        <div class="card-grid">
+            <!-- Article 1 -->
+            <article class="card">
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 15px; border-radius: 12px 12px 0 0; margin: -30px -30px 20px -30px;">
+                    <span style="color: white; font-weight: bold; font-size: 0.9rem;">🔥 جديد - باللغة العربية</span>
+                </div>
+                <h3>دليل شامل: كيفية إنشاء صفحة هبوط احترافية</h3>
+                <p>تعلم خطوة بخطوة كيفية بناء صفحة هبوط احترافية باستخدام HTML و CSS و JavaScript مع إمكانية نسخ الأكواد مباشرة.</p>
+                <a href="landing-page-tutorial.html" class="btn">ابدأ التعلم الآن</a>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="card">
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 15px; border-radius: 12px 12px 0 0; margin: -30px -30px 20px -30px;">
+                    <span style="color: white; font-weight: bold; font-size: 0.9rem;">⚡ أداء عالي</span>
+                </div>
+                <h3>تحسين أداء HTML</h3>
+                <p>تعلم كيفية بناء HTML سريع ومحسن لمحركات البحث. شرح تفصيلي مع أمثلة عملية.</p>
+                <a href="html-performance.html" class="btn">ابدأ القراءة</a>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="card">
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 15px; border-radius: 12px 12px 0 0; margin: -30px -30px 20px -30px;">
+                    <span style="color: white; font-weight: bold; font-size: 0.9rem;">🎨 تصميم عصري</span>
+                </div>
+                <h3>تقنيات CSS الحديثة</h3>
+                <p>اكتشف قوة CSS Variables و Grid و Flexbox لإنشاء تخطيطات متجاوبة وسهلة الصيانة.</p>
+                <a href="css-modern.html" class="btn">ابدأ القراءة</a>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="card">
+                <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 15px; border-radius: 12px 12px 0 0; margin: -30px -30px 20px -30px;">
+                    <span style="color: white; font-weight: bold; font-size: 0.9rem;">🚀 تصدر النتائج</span>
+                </div>
+                <h3>دليل SEO الشامل 2026</h3>
+                <p>دليل كامل للـ SEO التقني و Core Web Vitals وإشارات E-E-A-T للمواقع الحديثة.</p>
+                <a href="seo-checklist.html" class="btn">ابدأ القراءة</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Internal Links -->
+    <section class="internal-cta">
+        <div class="container">
+            <h3>Ready to Build?</h3>
+            <div class="quick-links">
+                <a href="pricing.html" class="quick-link-card">
+                    <i class='bx bx-dollar-circle'></i>
+                    <h4>Pricing</h4>
+                    <p>View packages</p>
+                </a>
+                <a href="services.html" class="quick-link-card">
+                    <i class='bx bx-wrench'></i>
+                    <h4>Services</h4>
+                    <p>Our solutions</p>
+                </a>
+                <a href="portfolio.html" class="quick-link-card">
+                    <i class='bx bx-collection'></i>
+                    <h4>Projects</h4>
+                    <p>Live examples</p>
+                </a>
+                <a href="contact.html" class="quick-link-card">
+                    <i class='bx bx-envelope'></i>
+                    <h4>Contact</h4>
+                    <p>Get quote</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Pricing Button -->
+    <a href="pricing.html" class="floating-pricing-btn" title="View Pricing">
+        <i class='bx bx-purchase-tag'></i>
+        <span>Pricing</span>
+    </a>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
+            <i class='bx bx-bot' id="toggleIcon"></i>
+            <span class="notification-badge" id="notificationBadge">1</span>
+        </button>
+
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="bot-avatar">
+                    <i class='bx bx-bot'></i>
+                </div>
+                <div class="bot-info">
+                    <h3>Assistant Bot</h3>
+                    <p><span class="status-dot"></span>Online</p>
+                </div>
+                <button class="close-chat-btn" onclick="toggleChat()">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-avatar">
+                        <i class='bx bx-bot'></i>
+                    </div>
+                    <div class="message-content">
+                        <h3>Assistant Bot</h3>
+                        <p><span class="status-dot"></span>Online</p>
+                        Hi there! 👋 Looking for specific technical topics?
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-replies" id="quickReplies">
+                <button class="quick-reply-btn" onclick="sendQuickReply('HTML Topics')">HTML</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('CSS Topics')">CSS</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('SEO Tips')">SEO</button>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                <button class="send-btn" onclick="sendMessage()">
+                    <i class='bx bx-send'></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دروس تطوير الويب | Ibrahem Kassap</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog-arabic.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Portfolio.</a>
+        <div class="menu-icon"><i class='bx bx-menu'></i></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li class="active"><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-controls">
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language">
+                <span class="lang-text">AR</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="arabic-container">
+        <!-- Article 1: HTML -->
+        <article class="arabic-article" id="html-performance">
+            <header class="article-header">
+                <h1>تحسين أداء HTML للمواقع السريعة ⚡</h1>
+                <div class="article-meta">
+                    <span><i class='bx bx-calendar'></i> 13 يناير 2026</span>
+                    <span><i class='bx bx-time'></i> 8 دقائق</span>
+                    <span><i class='bx bx-user'></i> إبراهيم قصاب</span>
+                </div>
+            </header>
+
+            <div class="article-intro">
+                <p>الأداء لا يتعلق فقط بـ JavaScript. بنية HTML الجيدة هي أساس الموقع السريع.</p>
+            </div>
+
+            <div class="table-of-contents">
+                <h3><i class='bx bx-list-ul'></i> المحتويات</h3>
+                <ul>
+                    <li><a href="#html-1">تقليل عمق DOM</a></li>
+                    <li><a href="#html-2">ترتيب الموارد</a></li>
+                    <li><a href="#html-3">تأجيل السكريبتات</a></li>
+                    <li><a href="#html-4">HTML الدلالي</a></li>
+                </ul>
+            </div>
+
+            <section id="html-1" class="tutorial-step">
+                <h2><span class="step-number">1</span> تقليل عمق DOM</h2>
+                <p>التداخل الزائد يبطئ الموقع. حافظ على الكود مسطحاً.</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> مثال سيء</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;p&gt;مرحباً&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code></pre>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> مثال جيد</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;p&gt;مرحباً&lt;/p&gt;</code></pre>
+                </div>
+                <div class="explanation-box">
+                    <h4><i class='bx bx-info-circle'></i> لماذا؟</h4>
+                    <ul>
+                        <li>يستهلك ذاكرة أقل</li>
+                        <li>حسابات أسرع للأنماط</li>
+                        <li>أداء JavaScript أفضل</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="html-2" class="tutorial-step">
+                <h2><span class="step-number">2</span> ترتيب الموارد</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> preload</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;link rel="preload" href="font.woff2" as="font" crossorigin&gt;</code></pre>
+                </div>
+            </section>
+
+            <section id="html-3" class="tutorial-step">
+                <h2><span class="step-number">3</span> تأجيل السكريبتات</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> defer & async</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;script src="main.js" defer&gt;&lt;/script&gt;
+&lt;script src="analytics.js" async&gt;&lt;/script&gt;</code></pre>
+                </div>
+            </section>
+
+            <section id="html-4" class="tutorial-step">
+                <h2><span class="step-number">4</span> HTML الدلالي</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> semantic HTML</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;header&gt;&lt;nav&gt;...&lt;/nav&gt;&lt;/header&gt;
+&lt;main&gt;&lt;article&gt;...&lt;/article&gt;&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+                </div>
+                <div class="success-box">
+                    <h4><i class='bx bx-trophy'></i> ممتاز!</h4>
+                    <p>الآن تعرف كيفية تحسين HTML. طبقها في مشاريعك!</p>
+                </div>
+            </section>
+        </article>
+
+        <div style="height:80px"></div>
+
+        <!-- Article 2: CSS -->
+        <article class="arabic-article" id="css-modern">
+            <header class="article-header">
+                <h1>تقنيات CSS الحديثة للمطورين 🎨</h1>
+                <div class="article-meta">
+                    <span><i class='bx bx-calendar'></i> 12 يناير 2026</span>
+                    <span><i class='bx bx-time'></i> 10 دقائق</span>
+                    <span><i class='bx bx-user'></i> إبراهيم قصاب</span>
+                </div>
+            </header>
+
+            <div class="article-intro">
+                <p>تعلم أحدث تقنيات CSS لإنشاء تصاميم عصرية وجذابة بكود نظيف وسهل الصيانة.</p>
+            </div>
+
+            <div class="table-of-contents">
+                <h3><i class='bx bx-list-ul'></i> المحتويات</h3>
+                <ul>
+                    <li><a href="#css-1">CSS Variables</a></li>
+                    <li><a href="#css-2">CSS Grid</a></li>
+                    <li><a href="#css-3">Flexbox</a></li>
+                    <li><a href="#css-4">Glassmorphism</a></li>
+                </ul>
+            </div>
+
+            <section id="css-1" class="tutorial-step">
+                <h2><span class="step-number">1</span> CSS Variables</h2>
+                <p>المتغيرات تجعل التصميم أسهل وأسرع في التعديل.</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bxl-css3'></i> variables.css</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>:root {
+    --primary: #0071e3;
+    --spacing: 16px;
+}
+
+.btn {
+    background: var(--primary);
+    padding: var(--spacing);
+}</code></pre>
+                </div>
+                <div class="explanation-box">
+                    <h4><i class='bx bx-info-circle'></i> الفوائد</h4>
+                    <ul>
+                        <li>تغيير الألوان في مكان واحد</li>
+                        <li>سهولة إنشاء Dark Mode</li>
+                        <li>كود أنظف</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="css-2" class="tutorial-step">
+                <h2><span class="step-number">2</span> CSS Grid</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bxl-css3'></i> grid.css</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="css-3" class="tutorial-step">
+                <h2><span class="step-number">3</span> Flexbox</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bxl-css3'></i> flex.css</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="css-4" class="tutorial-step">
+                <h2><span class="step-number">4</span> Glassmorphism</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bxl-css3'></i> glass.css</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+}</code></pre>
+                </div>
+                <div class="success-box">
+                    <h4><i class='bx bx-trophy'></i> رائع!</h4>
+                    <p>الآن تعرف أحدث تقنيات CSS!</p>
+                </div>
+            </section>
+        </article>
+
+        <div style="height:80px"></div>
+
+        <!-- Article 3: SEO -->
+        <article class="arabic-article" id="seo-checklist">
+            <header class="article-header">
+                <h1>دليل SEO الشامل لعام 2026 🚀</h1>
+                <div class="article-meta">
+                    <span><i class='bx bx-calendar'></i> 14 يناير 2026</span>
+                    <span><i class='bx bx-time'></i> 12 دقيقة</span>
+                    <span><i class='bx bx-user'></i> إبراهيم قصاب</span>
+                </div>
+            </header>
+
+            <div class="article-intro">
+                <p>دليلك الكامل لتصدر نتائج البحث في Google. تعلم SEO التقني والمحتوى والأداء.</p>
+            </div>
+
+            <div class="table-of-contents">
+                <h3><i class='bx bx-list-ul'></i> المحتويات</h3>
+                <ul>
+                    <li><a href="#seo-1">Core Web Vitals</a></li>
+                    <li><a href="#seo-2">HTML الدلالي</a></li>
+                    <li><a href="#seo-3">Structured Data</a></li>
+                    <li><a href="#seo-4">تحسين المحتوى</a></li>
+                </ul>
+            </div>
+
+            <section id="seo-1" class="tutorial-step">
+                <h2><span class="step-number">1</span> Core Web Vitals</h2>
+                <p>Google يعطي الأولوية للمواقع السريعة.</p>
+                <div class="explanation-box">
+                    <h4><i class='bx bx-info-circle'></i> المقاييس الأساسية</h4>
+                    <ul>
+                        <li><strong>LCP:</strong> تحميل المحتوى < 2.5 ثانية</li>
+                        <li><strong>INP:</strong> الاستجابة < 200ms</li>
+                        <li><strong>CLS:</strong> استقرار بصري < 0.1</li>
+                    </ul>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> تحسين الصور</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;img src="image.jpg" 
+     srcset="small.jpg 400w, large.jpg 1200w"
+     loading="lazy" 
+     alt="وصف"&gt;</code></pre>
+                </div>
+                <div class="tips-box">
+                    <h4><i class='bx bx-bulb'></i> نصائح</h4>
+                    <ul>
+                        <li>استخدم CDN</li>
+                        <li>ضغط الصور (WebP)</li>
+                        <li>تصغير CSS/JS</li>
+                        <li>Browser Caching</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="seo-2" class="tutorial-step">
+                <h2><span class="step-number">2</span> HTML الدلالي</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> semantic.html</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ar"&gt;
+&lt;head&gt;
+    &lt;title&gt;عنوان الصفحة - اسم الموقع&lt;/title&gt;
+    &lt;meta name="description" content="وصف"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;&lt;nav&gt;...&lt;/nav&gt;&lt;/header&gt;
+    &lt;main&gt;&lt;article&gt;...&lt;/article&gt;&lt;/main&gt;
+    &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+            </section>
+
+            <section id="seo-3" class="tutorial-step">
+                <h2><span class="step-number">3</span> Structured Data</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bx-code-alt'></i> schema.json</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "إبراهيم قصاب",
+  "jobTitle": "مطور ويب",
+  "url": "https://ibrahemkassap.tech"
+}
+&lt;/script&gt;</code></pre>
+                </div>
+            </section>
+
+            <section id="seo-4" class="tutorial-step">
+                <h2><span class="step-number">4</span> تحسين المحتوى</h2>
+                <div class="tips-box">
+                    <h4><i class='bx bx-bulb'></i> نصائح المحتوى</h4>
+                    <ul>
+                        <li>اكتب للبشر أولاً</li>
+                        <li>استخدم الكلمات المفتاحية طبيعياً</li>
+                        <li>محتوى شامل ومفيد</li>
+                        <li>عناوين واضحة (H1, H2)</li>
+                        <li>صور وفيديوهات</li>
+                        <li>روابط داخلية</li>
+                    </ul>
+                </div>
+                <div class="success-box">
+                    <h4><i class='bx bx-trophy'></i> تهانينا!</h4>
+                    <p>الآن لديك دليل SEO كامل. طبقه وشاهد موقعك يتصدر!</p>
+                </div>
+            </section>
+        </article>
+    </div>
+
+    <!-- Floating Pricing Button -->
+    <a href="pricing.html" class="floating-pricing-btn" title="View Pricing">
+        <i class='bx bx-purchase-tag'></i>
+        <span>Pricing</span>
+    </a>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="blog-arabic.js"></script>
+</body>
+</html>

@@ -4,58 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Ibrahem Kassap Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEMF0jL4cvCff0//7mmWAshpdAyA7YMlYWJw/qxjG+qYvn8tUe+sq3vvLkxv+qksDsvZtmSw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- OR if using Boxicons specifically: -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Ibrahem Kassap | Freelance Web Developer & SEO Specialist</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://ibrahemkassap.tech/">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0071e3">
+    <meta name="description" content="Hire a Freelance Web Developer and SEO Specialist. Fast, mobile-first websites that convert. Get a free website audit to boost qualified leads.">
+    <meta property="og:title" content="Ibrahem Kassap | Web Developer & SEO Specialist">
+    <meta property="og:description" content="Conversion-focused websites, performance optimization, and technical SEO.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ibrahemkassap.tech/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Ibrahem Kassap",
+          "url": "https://ibrahemkassap.tech/",
+          "image": "https://ibrahemkassap.tech/home.png",
+          "jobTitle": "Frontend Developer",
+          "sameAs": [
+            "https://github.com/ibrahemkassap",
+            "https://www.linkedin.com/in/ibrahem-kassap/",
+            "https://www.facebook.com/ibrahemka55ap",
+            "https://wa.me/+201017358087",
+            "https://www.instagram.com/ibrahemka55ap/"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cairo",
+            "addressCountry": "EG"
+          }
+        },
+        {
+          "@type": "Website",
+          "name": "Ibrahem Kassap Portfolio",
+          "url": "https://ibrahemkassap.tech/",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ProfessionalService",
+          "name": "Website Development Services",
+          "provider": {
+            "@type": "Person",
+            "name": "Ibrahem Kassap"
+          },
+          "areaServed": "Global",
+          "url": "https://ibrahemkassap.tech/services.html",
+          "serviceType": "Web Development, UI/UX, Technical SEO"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
 
     <nav class="navbar">
-        <a href="index.html">Portfolio.</a>
+        <a href="index.html" class="logo">Portfolio.</a>
         
-        <!-- Hamburger Menu Icon for Mobile -->
         <div class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
+            <i class='bx bx-menu'></i>
         </div>
         
-        <ul>
+        <ul class="nav-links">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        
+        <div class="navbar-controls">
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language">
+                <span class="lang-text">AR</span>
+            </button>
+        </div>
     </nav>
-
-    <div class="bars-animation">
-        <div class="bar" style="--i:6;"></div>
-        <div class="bar" style="--i:5;"></div>
-        <div class="bar" style="--i:4;"></div>
-        <div class="bar" style="--i:3;"></div>
-        <div class="bar" style="--i:2;"></div>
-        <div class="bar" style="--i:1;"></div>
-    </div>
 
     <section class="home">
         <div class="home-info">
             <h1>Ibrahem Kassap</h1>
-            <h2>I'm a
-                <span style="--i:4;" data-text="Frontend Developer">Frontend Developer</span>
-                <span style="--i:3;" data-text="Ui/Ux Designer">Ui/Ux Designer</span>
-                <span style="--i:2;" data-text="AEO & SEO Specialist">AEO & SEO Specialist</span>
-                <span style="--i:1;" data-text="Digital Marketing">Digital Marketing</span>
-            </h2>
-            <p>I graduated from the Sadat Academy for Administrative Sciences in Cairo with a Bachelor's degree in Information Technology Systems. I have specialized in programming, particularly front-end development, and I am currently working on developing my skills to move into back-end development. I work on GitHub, and all my projects are freelance; I am not affiliated with any company.</p>
+            <h2>Growth-Oriented Web Strategist focused on client acquisition</h2>
+            <p>Freelance Web Developer and SEO Specialist building fast, conversion-focused websites. Get a free audit and a clear roadmap to increase qualified leads.</p>
             <div class="btn-sci">
-                <a href="https://drive.google.com/file/d/10dO_xzsQHa2JJQtEXlFGaPLb3-wSzB8F/view?usp=sharing" class="btn">Download CV</a>
+                <a href="audit.html" class="btn">Get a Free Website Audit</a>
+                <a href="contact.html" class="btn" style="margin-left:12px;">Request a Free Consultation</a>
+                <a href="services.html" class="btn" style="margin-left:12px;">Let’s Build Your Project</a>
                 <div class="sci">
                     <a href="https://github.com/ibrahemkassap" target="_blank"><i class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/ibrahem-kassap/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
@@ -74,6 +117,35 @@
         </div>
     </section>
 
+    <!-- Internal Links CTA -->
+    <section class="internal-cta">
+        <div class="container">
+            <h3>Explore More</h3>
+            <div class="quick-links">
+                <a href="services.html" class="quick-link-card">
+                    <i class='bx bx-briefcase'></i>
+                    <h4>Our Services</h4>
+                    <p>Discover what we offer</p>
+                </a>
+                <a href="pricing.html" class="quick-link-card">
+                    <i class='bx bx-dollar-circle'></i>
+                    <h4>Pricing Plans</h4>
+                    <p>Choose your package</p>
+                </a>
+                <a href="portfolio.html" class="quick-link-card">
+                    <i class='bx bx-folder-open'></i>
+                    <h4>Portfolio</h4>
+                    <p>View our projects</p>
+                </a>
+                <a href="contact.html" class="quick-link-card">
+                    <i class='bx bx-message-dots'></i>
+                    <h4>Contact Us</h4>
+                    <p>Get in touch</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Chatbot Widget -->
     <div class="chatbot-container">
         <!-- Chat Toggle Button -->
@@ -81,6 +153,12 @@
             <i class='bx bx-bot' id="toggleIcon"></i>
             <span class="notification-badge" id="notificationBadge">1</span>
         </button>
+
+        <!-- Floating Pricing Button -->
+        <a href="pricing.html" class="floating-pricing-btn" title="View Pricing">
+            <i class='bx bx-purchase-tag'></i>
+            <span>Pricing</span>
+        </a>
 
         <!-- Chat Window -->
         <div class="chat-window" id="chatWindow">
@@ -114,17 +192,17 @@
 
             <!-- Quick Replies -->
             <div class="quick-replies" id="quickReplies">
-                <button class="quick-reply-btn" onclick="sendQuickReply('Tell me about services')">
-                    💼 Services
+                <button class="quick-reply-btn" onclick="sendQuickReply('الخدمات والأسعار')">
+                    💼 الخدمات
                 </button>
-                <button class="quick-reply-btn" onclick="sendQuickReply('View portfolio')">
-                    📁 Portfolio
+                <button class="quick-reply-btn" onclick="sendQuickReply('أعمالي السابقة')">
+                    📁 الأعمال
                 </button>
-                <button class="quick-reply-btn" onclick="sendQuickReply('Contact information')">
-                    📧 Contact
+                <button class="quick-reply-btn" onclick="sendQuickReply('طرق التواصل')">
+                    📧 تواصل
                 </button>
-                <button class="quick-reply-btn" onclick="sendQuickReply('Pricing details')">
-                    💰 Pricing
+                <button class="quick-reply-btn" onclick="sendQuickReply('الدروس التعليمية')">
+                    📚 دروس
                 </button>
             </div>
 
@@ -138,33 +216,16 @@
         </div>
     </div>
 
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            }
-        });
-    </script>
 </body>
 
 </html>

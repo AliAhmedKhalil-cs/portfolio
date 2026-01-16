@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ibrahemkassap.tech/sitemap.xml
+
+# Disallow admin or private directories if any
+# Disallow: /admin/
+# Disallow: /private/

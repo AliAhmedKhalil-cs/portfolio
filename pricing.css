@@ -1,0 +1,628 @@
+/* Pricing Section */
+.pricing-section {
+    padding: 120px 5% 80px;
+    min-height: 100vh;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 120px 5% 80px;
+    min-height: 100vh;
+}
+
+/* Promo Banner */
+.promo-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px 5%;
+    margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.promo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.promo-content i {
+    font-size: 28px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.promo-content p {
+    margin: 0;
+}
+
+.promo-content a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.promo-content a:hover {
+    opacity: 0.8;
+}
+
+.pricing-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+/* Pricing Cards */
+.pricing-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    padding: 40px 30px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.pricing-card.free::before {
+    background: linear-gradient(90deg, #a8a8a8 0%, #6b6b6b 100%);
+}
+
+.pricing-card.silver::before {
+    background: linear-gradient(90deg, #c0c0c0 0%, #8c8c8c 100%);
+}
+
+.pricing-card.gold::before {
+    background: linear-gradient(90deg, #ffd700 0%, #ffed4e 100%);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-blue);
+}
+
+.pricing-card.popular {
+    border-color: var(--accent-blue);
+    transform: scale(1.05);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+/* Popular Badge */
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--accent-blue);
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 113, 227, 0.3);
+}
+
+/* Plan Badge */
+.plan-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background: #f0f0f0;
+    color: #666;
+}
+
+[data-theme="dark"] .plan-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+}
+
+.pricing-card.free .plan-badge {
+    background: linear-gradient(135deg, #e0e0e0 0%, #bdbdbd 100%);
+    color: #424242;
+}
+
+.pricing-card.silver .plan-badge {
+    background: linear-gradient(135deg, #e8e8e8 0%, #c0c0c0 100%);
+    color: #424242;
+}
+
+.pricing-card.gold .plan-badge {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #8b6914;
+}
+
+/* Plan Icon */
+.plan-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #e1f0ff 0%, #cce5ff 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--accent-blue);
+}
+
+.pricing-card.free .plan-icon {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    color: #757575;
+}
+
+.pricing-card.silver .plan-icon {
+    background: linear-gradient(135deg, #f0f0f0 0%, #d4d4d4 100%);
+    color: #616161;
+}
+
+.pricing-card.gold .plan-icon {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffe680 100%);
+    color: #f57f17;
+}
+
+/* Plan Name */
+.plan-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Plan Price */
+.plan-price {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--bg-light);
+}
+
+.plan-price .currency {
+    font-size: 24px;
+    color: var(--text-secondary);
+    vertical-align: top;
+}
+
+.plan-price .amount {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.plan-price .period {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+/* Plan Features */
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.plan-features li {
+    padding: 12px 0;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.plan-features li i {
+    font-size: 20px;
+    color: var(--success);
+    flex-shrink: 0;
+}
+
+.plan-features li.disabled {
+    opacity: 0.4;
+}
+
+.plan-features li.disabled i {
+    color: var(--danger);
+}
+
+/* Plan Button */
+.plan-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: var(--accent-blue);
+    color: white;
+    text-align: center;
+    border-radius: 980px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.plan-btn:hover {
+    background: var(--accent-blue-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.pricing-card.free .plan-btn {
+    background: linear-gradient(135deg, #9e9e9e 0%, #757575 100%);
+}
+
+.pricing-card.silver .plan-btn {
+    background: linear-gradient(135deg, #bdbdbd 0%, #9e9e9e 100%);
+}
+
+.pricing-card.gold .plan-btn {
+    background: linear-gradient(135deg, #ffd700 0%, #ffa000 100%);
+    color: #1a1a1a;
+}
+
+.pricing-card.gold .plan-btn:hover {
+    background: linear-gradient(135deg, #ffed4e 0%, #ffb300 100%);
+}
+
+/* FAQ Section */
+.pricing-faq {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.pricing-faq h3 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+}
+
+.faq-grid {
+    display: grid;
+    gap: 25px;
+}
+
+.faq-item {
+    padding: 25px;
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent-blue);
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-item h4 i {
+    color: var(--accent-blue);
+    font-size: 24px;
+}
+
+.faq-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto 80px;
+    }
+    
+    .pricing-card.popular {
+        transform: scale(1);
+    }
+    
+    .pricing-card.popular:hover {
+        transform: translateY(-10px);
+    }
+}
+
+/* Payment Methods Section */
+.payment-methods {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 60px 30px;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.payment-methods h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.payment-subtitle {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.payment-card {
+    background: var(--bg-light);
+    padding: 30px 20px;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-blue);
+}
+
+.payment-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+}
+
+.payment-icon.etisalat {
+    background: linear-gradient(135deg, #00a651 0%, #008d43 100%);
+}
+
+.payment-icon.vodafone {
+    background: linear-gradient(135deg, #e60000 0%, #c20000 100%);
+}
+
+.payment-icon.orange {
+    background: linear-gradient(135deg, #ff7900 0%, #e66a00 100%);
+}
+
+.payment-icon.instapay {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+.payment-card h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+.payment-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.payment-number {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--accent-blue);
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.payment-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(0, 113, 227, 0.1);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent-blue);
+}
+
+.payment-note i {
+    font-size: 24px;
+    color: var(--accent-blue);
+    flex-shrink: 0;
+}
+
+.payment-note p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: left;
+}
+
+.payment-note a {
+    color: var(--accent-blue);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Pricing CTA Section */
+.pricing-cta-section {
+    text-align: center;
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: var(--radius-lg);
+    color: white;
+    margin-top: 60px;
+}
+
+.pricing-cta-section h3 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.pricing-cta-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    background: white;
+    color: #667eea;
+}
+
+.cta-buttons .btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+.cta-buttons .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 100px 20px 60px;
+    }
+    
+    .pricing-card {
+        padding: 30px 20px;
+    }
+    
+    .plan-price .amount {
+        font-size: 48px;
+    }
+    
+    .pricing-faq {
+        padding: 40px 20px;
+    }
+    
+    .pricing-faq h3 {
+        font-size: 26px;
+    }
+    
+    .payment-methods {
+        padding: 40px 20px;
+    }
+    
+    .payment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .payment-note {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .payment-note p {
+        text-align: center;
+    }
+    
+    .pricing-cta-section {
+        padding: 40px 20px;
+    }
+    
+    .pricing-cta-section h3 {
+        font-size: 28px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-name {
+        font-size: 24px;
+    }
+    
+    .plan-price .amount {
+        font-size: 40px;
+    }
+    
+    .popular-badge {
+        font-size: 10px;
+        padding: 4px 35px;
+    }
+    
+    .payment-methods h3 {
+        font-size: 26px;
+    }
+}

@@ -4,39 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahem Kassap | Services</title>
+    <title>Website Development Services | Ibrahem Kassap</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://ibrahemkassap.tech/services">
+    <meta name="description" content="Hire a freelance web developer for website development, UI/UX, and technical SEO. Conversion-focused builds optimised for speed and Core Web Vitals.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Website Development Services",
+      "url": "https://ibrahemkassap.tech/services",
+      "provider": {
+        "@type": "Person",
+        "name": "Ibrahem Kassap",
+        "url": "https://ibrahemkassap.tech/"
+      },
+      "areaServed": "Global",
+      "serviceType": "Web Development, UI/UX Design, Technical SEO"
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="index.html">Portfolio.</a>
+        <a href="index.html" class="logo">Portfolio.</a>
         
         <!-- Hamburger Menu Icon for Mobile -->
         <div class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
+            <i class='bx bx-menu'></i>
         </div>
         
-        <ul>
-            <li class="active"><a href="index.html">Home</a></li>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li class="active"><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        
+        <div class="navbar-controls">
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language">
+                <span class="lang-text">AR</span>
+            </button>
+        </div>
     </nav>
 
-    <div class="bars-animation">
-        <div class="bar" style="--i:6;"></div>
-        <div class="bar" style="--i:5;"></div>
-        <div class="bar" style="--i:4;"></div>
-        <div class="bar" style="--i:3;"></div>
-        <div class="bar" style="--i:2;"></div>
-        <div class="bar" style="--i:1;"></div>
-    </div>
+
 
     <!-- Services Section -->
     <section class="services-section">
@@ -59,7 +77,7 @@
                         <li><i class='bx bx-check'></i> Modern Technologies</li>
                         <li><i class='bx bx-check'></i> Fast Performance</li>
                     </ul>
-                    <a href="#" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="contact.html" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
 
                 <!-- Service 2 - UI/UX Design -->
@@ -74,7 +92,7 @@
                         <li><i class='bx bx-check'></i> Wireframing & Prototyping</li>
                         <li><i class='bx bx-check'></i> Visual Design</li>
                     </ul>
-                    <a href="#" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="contact.html" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
 
                 <!-- Service 3 - SEO Optimization -->
@@ -89,7 +107,7 @@
                         <li><i class='bx bx-check'></i> On-Page SEO</li>
                         <li><i class='bx bx-check'></i> Technical SEO</li>
                     </ul>
-                    <a href="#" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="audit.html" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
 
                 <!-- Service 4 - Digital Marketing -->
@@ -104,7 +122,7 @@
                         <li><i class='bx bx-check'></i> Content Strategy</li>
                         <li><i class='bx bx-check'></i> Email Marketing</li>
                     </ul>
-                    <a href="#" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="contact.html" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
 
                 <!-- Service 5 - Brand Identity -->
@@ -119,7 +137,7 @@
                         <li><i class='bx bx-check'></i> Brand Guidelines</li>
                         <li><i class='bx bx-check'></i> Visual Identity</li>
                     </ul>
-                    <a href="#" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="contact.html" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
 
                 <!-- Service 6 - Website Maintenance -->
@@ -134,7 +152,7 @@
                         <li><i class='bx bx-check'></i> Security Monitoring</li>
                         <li><i class='bx bx-check'></i> Performance Optimization</li>
                     </ul>
-                    <a href="#" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="contact.html" class="service-btn">Learn More <i class='bx bx-right-arrow-alt'></i></a>
                 </div>
             </div>
 
@@ -147,33 +165,50 @@
         </div>
     </section>
 
+    <!-- Internal Links -->
+    <section class="internal-cta">
+        <div class="container">
+            <h3>Next Steps</h3>
+            <div class="quick-links">
+                <a href="pricing.html" class="quick-link-card">
+                    <i class='bx bx-dollar-circle'></i>
+                    <h4>View Pricing</h4>
+                    <p>Check our packages</p>
+                </a>
+                <a href="portfolio.html" class="quick-link-card">
+                    <i class='bx bx-folder-open'></i>
+                    <h4>Our Work</h4>
+                    <p>See live projects</p>
+                </a>
+                <a href="audit.html" class="quick-link-card">
+                    <i class='bx bx-search-alt'></i>
+                    <h4>Free Audit</h4>
+                    <p>Get SEO analysis</p>
+                </a>
+                <a href="contact.html" class="quick-link-card">
+                    <i class='bx bx-message-dots'></i>
+                    <h4>Contact</h4>
+                    <p>Start your project</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Pricing Button -->
+    <a href="pricing.html" class="floating-pricing-btn" title="View Pricing">
+        <i class='bx bx-purchase-tag'></i>
+        <span>Pricing</span>
+    </a>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
-    <!-- <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            }
-        });
-    </script> -->
-    
 </body>
 </html>

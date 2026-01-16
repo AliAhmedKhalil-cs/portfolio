@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقنيات CSS الحديثة | Ibrahem Kassap</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog-arabic.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Portfolio.</a>
+        <div class="menu-icon"><i class='bx bx-menu'></i></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li class="active"><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="arabic-container">
+        <article class="arabic-article">
+            <header class="article-header">
+                <h1>تقنيات CSS الحديثة للمطورين 🎨</h1>
+                <div class="article-meta">
+                    <span><i class='bx bx-calendar'></i> 12 يناير 2026</span>
+                    <span><i class='bx bx-time'></i> 10 دقائق</span>
+                    <span><i class='bx bx-user'></i> إبراهيم قصاب</span>
+                </div>
+            </header>
+
+            <div class="article-intro">
+                <p>تعلم أحدث تقنيات CSS لإنشاء تصاميم عصرية وجذابة بكود نظيف وسهل الصيانة.</p>
+            </div>
+
+            <div class="table-of-contents">
+                <h3><i class='bx bx-list-ul'></i> المحتويات</h3>
+                <ul>
+                    <li><a href="#css-1">CSS Variables</a></li>
+                    <li><a href="#css-2">CSS Grid</a></li>
+                    <li><a href="#css-3">Flexbox</a></li>
+                    <li><a href="#css-4">Glassmorphism</a></li>
+                </ul>
+            </div>
+
+            <section id="css-1" class="tutorial-step">
+                <h2><span class="step-number">1</span> CSS Variables</h2>
+                <p>المتغيرات تجعل التصميم أسهل وأسرع في التعديل.</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bxl-css3'></i> variables.css</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>:root {
+    --primary: #0071e3;
+    --spacing: 16px;
+}
+
+.btn {
+    background: var(--primary);
+    padding: var(--spacing);
+}</code></pre>
+                </div>
+                <div class="explanation-box">
+                    <h4><i class='bx bx-info-circle'></i> الفوائد</h4>
+                    <ul>
+                        <li>تغيير الألوان في مكان واحد</li>
+                        <li>سهولة إنشاء Dark Mode</li>
+                        <li>كود أنظف</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="css-2" class="tutorial-step">
+                <h2><span class="step-number">2</span> CSS Grid</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bxl-css3'></i> grid.css</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="css-3" class="tutorial-step">
+                <h2><span class="step-number">3</span> Flexbox</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bxl-css3'></i> flex.css</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="css-4" class="tutorial-step">
+                <h2><span class="step-number">4</span> Glassmorphism</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title"><i class='bx bxl-css3'></i> glass.css</span>
+                        <button class="copy-btn" onclick="copyCode(this)"><i class='bx bx-copy'></i> نسخ</button>
+                    </div>
+                    <pre><code>.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+}</code></pre>
+                </div>
+                <div class="success-box">
+                    <h4><i class='bx bx-trophy'></i> رائع!</h4>
+                    <p>الآن تعرف أحدث تقنيات CSS!</p>
+                </div>
+            </section>
+
+            <div class="article-footer">
+                <div class="share-section">
+                    <h4>شارك هذا الدرس</h4>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn facebook"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="share-btn twitter"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="share-btn whatsapp"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="#" class="share-btn linkedin"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="blog-arabic.js"></script>
+</body>
+</html>

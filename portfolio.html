@@ -2,40 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahem Kassap | Portfolio</title>
+    <title>Portfolio Projects | Ibrahem Kassap - Web Developer</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="View my portfolio of 50+ web development projects including 3D portfolios, e-commerce sites, landing pages, and POS systems. Built with HTML, CSS, JavaScript, and React.">
+    <meta name="keywords" content="web development portfolio, JavaScript projects, React applications, responsive websites, frontend projects">
+    <link rel="canonical" href="https://ibrahemkassap.tech/portfolio">
+    <meta property="og:title" content="Web Development Portfolio | Ibrahem Kassap">
+    <meta property="og:description" content="50+ professional web development projects">
+    <meta property="og:type" content="website">
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="index.html">Portfolio.</a>
+        <a href="index.html" class="logo">Portfolio.</a>
         
-        <!-- Hamburger Menu Icon for Mobile -->
         <div class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
+            <i class='bx bx-menu'></i>
         </div>
         
-        <ul>
-            <li class="active"><a href="index.html">Home</a></li>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li class="active"><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        
+        <div class="navbar-controls">
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language">
+                <span class="lang-text">AR</span>
+            </button>
+        </div>
     </nav>
-
-    <div class="bars-animation">
-        <div class="bar" style="--i:6;"></div>
-        <div class="bar" style="--i:5;"></div>
-        <div class="bar" style="--i:4;"></div>
-        <div class="bar" style="--i:3;"></div>
-        <div class="bar" style="--i:2;"></div>
-        <div class="bar" style="--i:1;"></div>
-    </div>
 
     <!-- Portfolio Section -->
     <section class="portfolio-section">
@@ -129,34 +134,51 @@
         </div>
     </section>
 
+    <!-- Internal Links -->
+    <section class="internal-cta">
+        <div class="container">
+            <h3>Like What You See?</h3>
+            <div class="quick-links">
+                <a href="pricing.html" class="quick-link-card">
+                    <i class='bx bx-purchase-tag'></i>
+                    <h4>Get Started</h4>
+                    <p>Choose your plan</p>
+                </a>
+                <a href="services.html" class="quick-link-card">
+                    <i class='bx bx-briefcase'></i>
+                    <h4>Services</h4>
+                    <p>What we offer</p>
+                </a>
+                <a href="blog.html" class="quick-link-card">
+                    <i class='bx bx-book-open'></i>
+                    <h4>Learn</h4>
+                    <p>Free tutorials</p>
+                </a>
+                <a href="contact.html" class="quick-link-card">
+                    <i class='bx bx-chat'></i>
+                    <h4>Discuss</h4>
+                    <p>Your project</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Pricing Button -->
+    <a href="pricing.html" class="floating-pricing-btn" title="View Pricing">
+        <i class='bx bx-purchase-tag'></i>
+        <span>Pricing</span>
+    </a>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            }
-        });
-    </script>
     
 </body>
 </html>
-

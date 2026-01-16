@@ -4,28 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahem Kassap | About Me</title>
+    <title>About Ibrahem Kassap | Frontend Developer & SEO Specialist</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Learn about Ibrahem Kassap - Frontend Developer with 5+ years experience in HTML, CSS, JavaScript, UI/UX Design, and SEO. Based in Cairo, Egypt.">
+    <meta name="keywords" content="frontend developer, web developer Cairo, UI/UX designer, SEO specialist, JavaScript developer">
+    <link rel="canonical" href="https://ibrahemkassap.tech/about">
+    <meta property="og:title" content="About Ibrahem Kassap | Web Developer">
+    <meta property="og:description" content="5+ years experience in web development, 50+ projects, 100+ happy clients">
+    <meta property="og:type" content="profile">
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html">Portfolio.</a>
+        <a href="index.html" class="logo">Portfolio.</a>
         
         <!-- Hamburger Menu Icon for Mobile -->
         <div class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
+            <i class='bx bx-menu'></i>
         </div>
         
-        <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        
+        <div class="navbar-controls">
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language">
+                <span class="lang-text">AR</span>
+            </button>
+        </div>
     </nav>
 
     <div class="bars-animation">
@@ -40,17 +54,17 @@
     <section class="home">
         <div class="home-info">
             <h1>Ibrahem Kassap</h1>
-            <h2>I'm a
-                <span style="--i:4;" data-text="Frontend Developer">Frontend Developer</span>
-                <span style="--i:3;" data-text="Ui/Ux Designer">Ui/Ux Designer</span>
-                <span style="--i:2;" data-text="AEO & SEO Specialist">AEO & SEO Specialist</span>
-                <span style="--i:1;" data-text="Digital Marketing">Digital Marketing</span>
+            <h2 style="position: relative; min-height: 40px; display: inline-block;">I'm a
+                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 0s;" data-text="Frontend Developer">Frontend Developer</span>
+                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 3s;" data-text="Ui/Ux Designer">Ui/Ux Designer</span>
+                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 6s;" data-text="SEO Specialist">SEO Specialist</span>
+                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 9s;" data-text="Digital Marketing">Digital Marketing</span>
             </h2>
             <p>I graduated from the Sadat Academy for Administrative Sciences in Cairo with a Bachelor's degree in Information Technology Systems. I have specialized in programming, particularly front-end development, and I am currently working on developing my skills to move into back-end development.
 
 I work on GitHub, and all my projects are freelance; I am not affiliated with any company.</p>
             <div class="btn-sci">
-                <a href="#" class="btn">Download CV</a>
+                <a href="https://drive.google.com/file/d/10dO_xzsQHa2JJQtEXlFGaPLb3-wSzB8F/view?usp=sharing" class="btn">Download CV</a>
                 <div class="sci">
                     <a href="https://github.com/ibrahemkassap" target="_blank"><i class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/ibrahem-kassap/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
@@ -339,34 +353,52 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
         </div>
     </section>
 
+    <!-- Internal Links -->
+    <section class="internal-cta">
+        <div class="container">
+            <h3>Work With Me</h3>
+            <div class="quick-links">
+                <a href="pricing.html" class="quick-link-card">
+                    <i class='bx bx-purchase-tag'></i>
+                    <h4>Pricing</h4>
+                    <p>Affordable packages</p>
+                </a>
+                <a href="services.html" class="quick-link-card">
+                    <i class='bx bx-code-alt'></i>
+                    <h4>Services</h4>
+                    <p>What I do</p>
+                </a>
+                <a href="portfolio.html" class="quick-link-card">
+                    <i class='bx bx-images'></i>
+                    <h4>Portfolio</h4>
+                    <p>My work</p>
+                </a>
+                <a href="contact.html" class="quick-link-card">
+                    <i class='bx bx-phone'></i>
+                    <h4>Hire Me</h4>
+                    <p>Let's talk</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Pricing Button -->
+    <a href="pricing.html" class="floating-pricing-btn" title="View Pricing">
+        <i class='bx bx-purchase-tag'></i>
+        <span>Pricing</span>
+    </a>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
 
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            }
-        });
-    </script>
     
 </body>
 </html>
-
