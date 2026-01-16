@@ -46,6 +46,10 @@
     --surface-2: #3a3a3a;
 }
 
+[data-theme="dark"] .home-img img {
+    filter: drop-shadow(0 10px 30px rgba(102, 126, 234, 0.5));
+}
+
 /* Global Reset */
 * {
     margin: 0;
@@ -297,24 +301,39 @@ ul {
     flex: 1;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .home-img .img-box {
     width: 400px;
     height: 400px;
-    border-radius: 50%; /* Circle or keep it square with rounded corners */
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    background: var(--bg-white);
+    border-radius: 50%;
+    overflow: visible;
+    box-shadow: none;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: float 6s ease-in-out infinite;
+    position: relative;
+    border: none;
+}
+
+.home-img .img-box::before {
+    display: none;
+}
+
+.home-img .img-box::after {
+    display: none;
 }
 
 .home-img img {
     max-width: 100%;
     height: auto;
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+    filter: drop-shadow(0 10px 30px rgba(0, 113, 227, 0.3));
 }
 
 /* Generic Sections */
@@ -2087,6 +2106,12 @@ section {
     
     .home-info p {
         font-size: 16px;
+    }
+    
+    .home-img .img-box {
+        width: 280px;
+        height: 280px;
+        border-width: 3px;
     }
     
     .about-text h3 {
