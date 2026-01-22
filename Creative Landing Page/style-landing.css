@@ -1,15 +1,17 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-sizing: border-box;
 }
 
 .container{
     background: #000;
-    min-width: 100vh;
+    min-height: 100vh;
     width: 100%;
     overflow: hidden;
     position: relative;
+    transition: background 0.5s ease;
 }
 
 header{
@@ -21,9 +23,22 @@ header{
     padding: 20px 0;
 }
 
+#menu-icon{
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
 .logo{
     width: 40px;
 }
+
+.navbar{
+    display: flex;
+    list-style: none;
+}
+
 ul li{
     display: inline-block;
     list-style: none;
@@ -33,6 +48,11 @@ ul li a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover{
+    color: #0071e3;
 }
 
 .content{
@@ -60,11 +80,20 @@ ul li a {
 }
 
 .content .text a{
+    display: inline-block;
     text-decoration: none;
-    background: #fff;
-    color: #000;
-    padding: 8px 15px;
-    border-radius: 20px;
+    background: #0071e3;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.content .text a:hover{
+    background: #0077ed;
+    transform: scale(1.05);
 }
 
 .content .image{
@@ -77,17 +106,351 @@ ul li a {
 
 .icons{
     position: absolute;
-    bottom: 0px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 10;
 }
 
 .icons img{
     width: 40px;
     transition: 0.5s;
     cursor: pointer;
+    margin: 0 5px;
 }
 
 .icons img:hover{
     transform: scale(1.2);
+}
+
+/* Pricing Section */
+.pricing-section{
+    padding: 80px 0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.section-title{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.pricing-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.pricing-card{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.pricing-card:hover{
+    transform: translateY(-10px);
+    border-color: #0071e3;
+    box-shadow: 0 10px 30px rgba(0, 113, 227, 0.3);
+}
+
+.pricing-card.popular{
+    border: 2px solid #0071e3;
+    transform: scale(1.05);
+}
+
+.pricing-card.popular:hover{
+    transform: scale(1.05) translateY(-10px);
+}
+
+.badge{
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0071e3;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.card-header h3{
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.storage{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.price{
+    margin: 30px 0;
+}
+
+.currency{
+    font-size: 1.5rem;
+    color: #fff;
+    vertical-align: top;
+}
+
+.amount{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.features{
+    list-style: none;
+    text-align: left;
+    margin: 30px 0;
+}
+
+.features li{
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.features i{
+    color: #0071e3;
+    font-size: 1.2rem;
+}
+
+.buy-btn{
+    display: block;
+    background: #0071e3;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.buy-btn:hover{
+    background: #0077ed;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    header{
+        width: 90%;
+        padding: 15px 0;
+    }
+
+    #menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        display: none;
+    }
+
+    .navbar.active{
+        display: flex;
+    }
+
+    .navbar li{
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar li a{
+        font-size: 1.1rem;
+        display: block;
+        padding: 10px;
+    }
+
+    .content{
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .content .text{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .content .text h2{
+        font-size: 35px;
+    }
+
+    .content .text p{
+        font-size: 16px;
+    }
+
+    .content .image{
+        width: 50%;
+    }
+
+    .content .image img{
+        width: 150px;
+    }
+
+    .icons{
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        left: 0;
+        transform: none;
+    }
+
+    .icons img{
+        width: 35px;
+        margin: 0 5px;
+    }
+
+    .pricing-container{
+        width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .section-title{
+        font-size: 2rem;
+    }
+
+    .pricing-card.popular{
+        transform: scale(1);
+    }
+
+    .pricing-card.popular:hover{
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    ul li a{
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .content .text h2{
+        font-size: 30px;
+    }
+
+    .content .text p{
+        font-size: 15px;
+        margin: 15px 0;
+    }
+
+    .content .image{
+        width: 60%;
+    }
+
+    .content .image img{
+        width: 130px;
+    }
+
+    .pricing-container{
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card{
+        padding: 25px;
+    }
+
+    .section-title{
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo{
+        width: 35px;
+    }
+
+    ul li{
+        display: block;
+        margin: 5px 0;
+    }
+
+    ul li a{
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .content .text h2{
+        font-size: 24px;
+    }
+
+    .content .text p{
+        font-size: 14px;
+        margin: 12px 0;
+    }
+
+    .content .text a{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .content .image{
+        width: 70%;
+    }
+
+    .content .image img{
+        width: 110px;
+    }
+
+    .icons img{
+        width: 30px;
+        margin: 0 3px;
+    }
+
+    .pricing-section{
+        padding: 50px 0;
+    }
+
+    .section-title{
+        font-size: 1.5rem;
+    }
+
+    .card-header h3{
+        font-size: 1.5rem;
+    }
+
+    .amount{
+        font-size: 2.5rem;
+    }
+
+    .features li{
+        font-size: 0.9rem;
+    }
 }

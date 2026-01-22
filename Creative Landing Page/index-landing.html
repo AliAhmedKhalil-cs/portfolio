@@ -2,41 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style-landing.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple | Landing Page</title>
+    <meta name="description" content="Discover the new iPhone 13 Pro Max with advanced features and stunning design. Available in multiple colors.">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style-landing.css">
+    <title>iPhone 13 Pro Max - Apple</title>
 </head>
 <body>
     <div class="container">
         <header>
             <a href="#"><img src="images/logo.png" alt="" class="logo"></a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="bx bx-menu" id="menu-icon"></div>
         </header>
 
-        <div class="content">
+        <div class="content" id="home">
             <div class="text">
-                <h2>Iphone 13 Pro Max</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aspernatur esse sint quam.</p>
-                <a href="#">All Products</a>
+                <h2>iPhone 13 Pro Max</h2>
+                <p>Oh. So. Pro. The most advanced iPhone ever with ProMotion, Pro camera system, and all-day battery life.</p>
+                <a href="#pricing">Buy Now</a>
             </div>
             <div class="image">
-                    <img class="img" src="images/0.png" alt="">
-                </div>
+                <img class="img" src="images/0.png" alt="iPhone 13 Pro Max">
+            </div>
         </div>
 
         <div class="icons">
-            <img onclick="phones(this.src); colors('#000')" src="images/0.png">
-            <img onclick="phones(this.src); colors('#247ec8')" src="images/1.png">
-            <img onclick="phones(this.src); colors('#1e1e1e')" src="images/2.png">
-            <img onclick="phones(this.src); colors('#c79b53')" src="images/3.png">
-            <img onclick="phones(this.src); colors('#c82525')" src="images/4.png">
+            <img onclick="phones(this.src); colors('#000')" src="images/0.png" alt="Graphite" title="Graphite">
+            <img onclick="phones(this.src); colors('#247ec8')" src="images/1.png" alt="Sierra Blue" title="Sierra Blue">
+            <img onclick="phones(this.src); colors('#1e1e1e')" src="images/2.png" alt="Space Gray" title="Space Gray">
+            <img onclick="phones(this.src); colors('#c79b53')" src="images/3.png" alt="Gold" title="Gold">
+            <img onclick="phones(this.src); colors('#c82525')" src="images/4.png" alt="Red" title="Product Red">
         </div>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section" id="pricing">
+            <h2 class="section-title">Choose Your iPhone 13 Pro Max</h2>
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>128GB</h3>
+                        <p class="storage">Perfect for everyday use</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">1099</span>
+                    </div>
+                    <ul class="features">
+                        <li><i class='bx bx-check'></i> 6.7" Super Retina XDR</li>
+                        <li><i class='bx bx-check'></i> ProMotion 120Hz</li>
+                        <li><i class='bx bx-check'></i> Pro Camera System</li>
+                        <li><i class='bx bx-check'></i> A15 Bionic Chip</li>
+                        <li><i class='bx bx-check'></i> 5G Capable</li>
+                    </ul>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3>256GB</h3>
+                        <p class="storage">Best for photos & videos</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">1199</span>
+                    </div>
+                    <ul class="features">
+                        <li><i class='bx bx-check'></i> 6.7" Super Retina XDR</li>
+                        <li><i class='bx bx-check'></i> ProMotion 120Hz</li>
+                        <li><i class='bx bx-check'></i> Pro Camera System</li>
+                        <li><i class='bx bx-check'></i> A15 Bionic Chip</li>
+                        <li><i class='bx bx-check'></i> 5G Capable</li>
+                        <li><i class='bx bx-check'></i> ProRAW & ProRes</li>
+                    </ul>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>512GB</h3>
+                        <p class="storage">Maximum storage</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">1399</span>
+                    </div>
+                    <ul class="features">
+                        <li><i class='bx bx-check'></i> 6.7" Super Retina XDR</li>
+                        <li><i class='bx bx-check'></i> ProMotion 120Hz</li>
+                        <li><i class='bx bx-check'></i> Pro Camera System</li>
+                        <li><i class='bx bx-check'></i> A15 Bionic Chip</li>
+                        <li><i class='bx bx-check'></i> 5G Capable</li>
+                        <li><i class='bx bx-check'></i> ProRAW & ProRes</li>
+                        <li><i class='bx bx-check'></i> Cinematic Mode</li>
+                    </ul>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>1TB</h3>
+                        <p class="storage">Ultimate Pro experience</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">1599</span>
+                    </div>
+                    <ul class="features">
+                        <li><i class='bx bx-check'></i> 6.7" Super Retina XDR</li>
+                        <li><i class='bx bx-check'></i> ProMotion 120Hz</li>
+                        <li><i class='bx bx-check'></i> Pro Camera System</li>
+                        <li><i class='bx bx-check'></i> A15 Bionic Chip</li>
+                        <li><i class='bx bx-check'></i> 5G Capable</li>
+                        <li><i class='bx bx-check'></i> ProRAW & ProRes</li>
+                        <li><i class='bx bx-check'></i> Cinematic Mode</li>
+                        <li><i class='bx bx-check'></i> Macro Photography</li>
+                    </ul>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </section>
     </div>
     <script src="main-landing.js"></script>
 </body>
