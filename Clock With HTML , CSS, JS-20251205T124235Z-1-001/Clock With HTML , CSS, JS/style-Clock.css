@@ -165,3 +165,126 @@ body {
     background: white;
     box-shadow: none;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 350px;
+        height: 350px;
+    }
+
+    .bar-seconds span p {
+        width: 1.5px;
+        height: 10px;
+    }
+
+    .bar-seconds span:nth-child(5n) p {
+        width: 4px;
+        height: 14px;
+    }
+
+    .number-hours span p {
+        font-size: 36px;
+    }
+
+    .hands-box .hours {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hands-box .hours i {
+        width: 6px;
+        height: 110px;
+    }
+
+    .hands-box .minutes {
+        width: 310px;
+        height: 310px;
+    }
+
+    .hands-box .minutes::before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hands-box .minutes i {
+        width: 6px;
+        height: 155px;
+    }
+
+    .hands-box .seconds {
+        width: 330px;
+        height: 330px;
+    }
+
+    .hands-box .seconds::before {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hands-box .seconds i {
+        width: 3px;
+        height: calc(165px + 50px);
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .bar-seconds span p {
+        width: 1px;
+        height: 8px;
+    }
+
+    .bar-seconds span:nth-child(5n) p {
+        width: 3px;
+        height: 12px;
+    }
+
+    .number-hours span p {
+        font-size: 28px;
+    }
+
+    .hands-box .hours {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hands-box .hours i {
+        width: 5px;
+        height: 90px;
+    }
+
+    .hands-box .minutes {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hands-box .minutes::before {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hands-box .minutes i {
+        width: 5px;
+        height: 125px;
+    }
+
+    .hands-box .seconds {
+        width: 270px;
+        height: 270px;
+    }
+
+    .hands-box .seconds::before {
+        width: 14px;
+        height: 14px;
+    }
+
+    .hands-box .seconds i {
+        width: 2px;
+        height: calc(135px + 40px);
+    }
+}
