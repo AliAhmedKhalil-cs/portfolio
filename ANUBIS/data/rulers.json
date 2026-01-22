@@ -1,0 +1,672 @@
+[
+  {
+    "id": 1,
+    "name": "Khufu",
+    "name_ar": "خوفو",
+    "era": "Old Kingdom, 4th Dynasty (c. 2589-2566 BCE)",
+    "dynasty": "4",
+    "title": "The Great Builder",
+    "title_ar": "البناء العظيم",
+    "icon": "pyramid",
+    "short_story_en": "Khufu commanded the construction of the Great Pyramid, the most colossal monument ever built by human hands. His vision transformed ancient Egypt into a civilization of legendary builders. For 3,800 years, his pyramid remained the tallest human structure on Earth.",
+    "short_story_ar": "أمر خوفو ببناء الهرم الأكبر، أضخم نصب بناه الإنسان. لـ 3800 سنة، ظل هرمه أطول بناء بشري على الأرض.",
+    "achievements_en": [
+      "Built the Great Pyramid of Giza—only surviving Wonder of the Ancient World",
+      "Unified Egypt under strong centralized authority",
+      "Established Egyptian naval power in the Mediterranean",
+      "Advanced mathematical and engineering techniques that influenced all future pyramid builders",
+      "Created a stable dynasty that ruled for centuries"
+    ],
+    "achievements_ar": [
+      "بناء الهرم الأكبر بالجيزة - الأعجوبة الوحيدة الباقية",
+      "توحيد مصر تحت سلطة مركزية قوية",
+      "تأسيس القوة البحرية المصرية في البحر المتوسط",
+      "تطوير تقنيات رياضية وهندسية متقدمة",
+      "إنشاء أسرة مستقرة حكمت لقرون"
+    ],
+    "related_places": [1, 2, 3, 4],
+    "facts_en": [
+      "Reigned for approximately 23-25 years",
+      "Father of Khafre; grandfather of Menkaure",
+      "Oversaw the labor of over 100,000 workers",
+      "Great Pyramid originally 146.5 meters tall",
+      "Complex mathematical precision in pyramid alignment",
+      "Only surviving Wonder of the Seven Wonders of Ancient World"
+    ],
+    "facts_ar": [
+      "حكم لما يقرب من 23-25 سنة",
+      "والد خفرع؛ جد منقرع",
+      "إشراف على عمل أكثر من 100,000 عامل",
+      "الهرم الأكبر بارتفاع أصلي 146.5 متراً",
+      "دقة رياضية معقدة في محاذاة الهرم"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Khafre",
+    "name_ar": "خفرع",
+    "era": "Old Kingdom, 4th Dynasty (c. 2558-2532 BCE)",
+    "dynasty": "4",
+    "title": "Builder of the Second Pyramid",
+    "title_ar": "باني الهرم الثاني",
+    "icon": "pyramid",
+    "short_story_en": "Son of Khufu, Khafre ruled during Egypt's golden age of pyramid construction. He built the second pyramid of Giza and commissioned the Great Sphinx—monuments that guard the plateau to this day.",
+    "short_story_ar": "ابن خوفو، حكم خفرع خلال العصر الذهبي لبناء الأهرامات. بنى الهرم الثاني بالجيزة وأمر بنحت أبو الهول.",
+    "achievements_en": [
+      "Built the Second Pyramid of Giza (136.5 meters original height)",
+      "Commissioned the Great Sphinx (possibly his portrait)",
+      "Maintained Egypt's stability and prosperity",
+      "Established sophisticated governance systems",
+      "Created iconic temples and mortuary complexes"
+    ],
+    "achievements_ar": [
+      "بناء الهرم الثاني بالجيزة (ارتفاع أصلي 136.5 متر)",
+      "تكليف بناء أبو الهول (قد يكون صورة له)",
+      "الحفاظ على استقرار مصر وازدهارها",
+      "إنشاء أنظمة حكم متطورة",
+      "إنشاء معابد ومجمعات جنائزية أيقونية"
+    ],
+    "related_places": [1, 2, 3, 4],
+    "facts_en": [
+      "Reigned approximately 26 years",
+      "Brother-son relationship complex with Menkaure",
+      "Great Sphinx: 73 meters long, 20 meters high",
+      "Built Valley Temple with red granite",
+      "Pyramid retains original limestone casing stones",
+      "Known for military campaigns in Nubia and Sinai"
+    ],
+    "facts_ar": [
+      "حكم لما يقرب من 26 سنة",
+      "علاقة معقدة مع منقرع",
+      "أبو الهول: 73 متراً طويل، 20 متراً مرتفع",
+      "بنى معبد الوادي من الجرانيت الأحمر",
+      "الهرم يحتفظ بكتل الحجر الجيري الأصلية",
+      "معروف بحملاته العسكرية في النوبة والسيناء"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Menkaure",
+    "name_ar": "منقرع",
+    "era": "Old Kingdom, 4th Dynasty (c. 2532-2503 BCE)",
+    "dynasty": "4",
+    "title": "The Modest Pharaoh",
+    "title_ar": "الفرعون المتواضع",
+    "icon": "pyramid",
+    "short_story_en": "The last great pyramid builder of the 4th Dynasty, Menkaure built the smallest of the three main Giza pyramids—yet it displays the same engineering mastery. His reign marked the transition from the Age of Pyramids to a new era.",
+    "short_story_ar": "آخر بناة الأهرامات العظماء في الأسرة الرابعة، بنى منقرع أصغر الأهرامات الثلاثة الرئيسية بالجيزة.",
+    "achievements_en": [
+      "Built the Third Pyramid of Giza with red granite casing",
+      "Maintained Egypt's prosperity despite smaller military campaigns",
+      "Created numerous statues and sculptures (many survive today)",
+      "Commissioned limestone pyramid complex with full mortuary temple",
+      "Ruled during transitional period of declining pyramid construction"
+    ],
+    "achievements_ar": [
+      "بناء الهرم الثالث بالجيزة مع كسوة من الجرانيت الأحمر",
+      "الحفاظ على ازدهار مصر رغم حملات عسكرية أصغر",
+      "تكليف العديد من التماثيل والمنحوتات",
+      "تكليف مجمع هرمي من الحجر الجيري",
+      "حكم خلال فترة انتقالية من تناقص بناء الأهرامات"
+    ],
+    "related_places": [1, 3, 4],
+    "facts_en": [
+      "Reigned approximately 18-28 years (uncertain)",
+      "Son or grandson of Khafre (genealogy debated)",
+      "Third Pyramid original height: 66 meters",
+      "Red granite blocks quarried from Aswan",
+      "Over 50 statues and sculptures attributed to his reign",
+      "Marked beginning of Old Kingdom decline",
+      "Fewer military expeditions than predecessors"
+    ],
+    "facts_ar": [
+      "حكم لما يقرب من 18-28 سنة (غير مؤكد)",
+      "ابن أو حفيد خفرع (النسب موضع نقاش)",
+      "الهرم الثالث بارتفاع أصلي: 66 متراً",
+      "كتل جرانيت أحمر من أسوان",
+      "أكثر من 50 تمثال ومنحوتة منسوبة لفترة حكمه"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Djoser",
+    "name_ar": "دجوسر",
+    "era": "Old Kingdom, 3rd Dynasty (c. 2670-2650 BCE)",
+    "dynasty": "3",
+    "title": "Pioneer of Stone Architecture",
+    "title_ar": "رائد العمارة الحجرية",
+    "icon": "pyramid",
+    "short_story_en": "Pharaoh Djoser revolutionized architecture by commissioning the world's first large-scale stone structure: the Step Pyramid of Saqqara. His architect Imhotep created the prototype for all pyramids that followed—a genius moment that changed civilization.",
+    "short_story_ar": "أحدث الفرعون دجوسر ثورة في العمارة بتكليف أول هيكل حجري ضخم: هرم سقارة المدرج. أنشأ المهندس إمحتب النموذج الأولي لجميع الأهرامات التالية.",
+    "achievements_en": [
+      "Commissioned the world's first monumental stone structure",
+      "Step Pyramid: revolutionary transition from mastaba to pyramid",
+      "Employed genius architect Imhotep (later deified)",
+      "Created complete mortuary complex with temples and altars",
+      "Established architectural precedent for all future pyramids",
+      "United Egypt during Middle Old Kingdom stability"
+    ],
+    "achievements_ar": [
+      "تكليف أول بناء حجري ضخم في العالم",
+      "هرم مدرج: انتقال ثوري من المصطبة إلى الهرم",
+      "توظيف المهندس البارع إمحتب",
+      "إنشاء مجمع جنائزي كامل مع معابد ومذابح",
+      "إنشاء سابقة معمارية لجميع الأهرامات المستقبلية"
+    ],
+    "related_places": [3, 8],
+    "facts_en": [
+      "Reigned approximately 19 years",
+      "First pharaoh of 3rd Dynasty",
+      "Step Pyramid height: 62 meters (six levels)",
+      "Architect Imhotep became legendary figure in Egyptian history",
+      "Later worshipped as god of medicine and architecture",
+      "Saqqara complex represents architectural revolution",
+      "Oldest large stone structure in world"
+    ],
+    "facts_ar": [
+      "حكم لما يقرب من 19 سنة",
+      "أول فرعون من الأسرة الثالثة",
+      "ارتفاع الهرم المدرج: 62 متراً (ستة مستويات)",
+      "أصبح إمحتب شخصية أسطورية في التاريخ المصري",
+      "عُبد لاحقاً كإله للطب والعمارة",
+      "يمثل مجمع ساقارة ثورة معمارية"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Hatshepsut",
+    "name_ar": "حتشبسوت",
+    "era": "New Kingdom, 18th Dynasty (c. 1479-1458 BCE)",
+    "dynasty": "18",
+    "title": "The Female Pharaoh",
+    "title_ar": "الفرعون الأنثى",
+    "icon": "temple",
+    "short_story_en": "In an age of male domination, Hatshepsut declared herself pharaoh and became Egypt's most successful female ruler. She launched trading expeditions, commanded military campaigns, and left behind the magnificent mortuary temple at Deir el-Bahari—a monument to her vision.",
+    "short_story_ar": "في عصر يهيمن عليه الذكور، أعلنت حتشبسوت نفسها فرعون وأصبحت أنجح حاكمة أنثى في مصر.",
+    "achievements_en": [
+      "Longest reign of any female pharaoh in Egypt",
+      "Launched successful trading expedition to Land of Punt",
+      "Built iconic Mortuary Temple at Deir el-Bahari",
+      "Commanded military campaigns and diplomacy missions",
+      "Expanded Egypt's international trade networks",
+      "Declared herself pharaoh despite opposition",
+      "Commissioned numerous temples and shrines"
+    ],
+    "achievements_ar": [
+      "أطول فترة حكم لأي فرعون أنثى في مصر",
+      "أطلقت بعثة تجارية ناجحة إلى أرض بونت",
+      "بناء معبد جنائزي أيقوني بالدير البحري",
+      "قادت حملات عسكرية وبعثات دبلوماسية",
+      "توسيع شبكات التجارة الدولية لمصر",
+      "أعلنت نفسها فرعون رغم المعارضة"
+    ],
+    "related_places": [8, 6, 7],
+    "facts_en": [
+      "Reigned approximately 22 years",
+      "Born into royal family; became regent for young Thutmose III",
+      "Gradually assumed full pharaonic powers",
+      "Punt Expedition brought incense, myrrh, ebony, gold",
+      "Her successor Thutmose III later defaced her monuments",
+      "Many statues and inscriptions survived at Deir el-Bahari",
+      "Celebrated in hieroglyphics as 'female falcon'"
+    ],
+    "facts_ar": [
+      "حكمت لما يقرب من 22 سنة",
+      "وُلدت في الأسرة الملكية؛ أصبحت وصية لتحوتمس الثالث الصغير",
+      "تولت تدريجياً السلطات الفرعونية الكاملة",
+      "جلبت بعثة بونت البخور والمر والأبنوس والذهب",
+      "خليفتها تحوتمس الثالث شوه آثارها لاحقاً",
+      "نجا العديد من التماثيل والنقوش في الدير البحري"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Thutmose III",
+    "name_ar": "تحوتمس الثالث",
+    "era": "New Kingdom, 18th Dynasty (c. 1479-1425 BCE)",
+    "dynasty": "18",
+    "title": "The Napoleon of Egypt",
+    "title_ar": "نابليون مصر",
+    "icon": "warrior",
+    "short_story_en": "Thutmose III was Egypt's greatest military commander, orchestrating 17 victorious campaigns and expanding Egyptian dominion from Syria to Nubia. His tactical genius earned him comparison to Napoleon. He never lost a battle.",
+    "short_story_ar": "كان تحوتمس الثالث أعظم قائد عسكري مصري، نظم 17 حملة انتصارية.",
+    "achievements_en": [
+      "Won 17 military campaigns (never defeated)",
+      "Expanded Egyptian empire to greatest territorial extent",
+      "Built temples and monuments throughout conquered lands",
+      "Defeated Mitanni kingdom and expanded into Syria",
+      "Created lasting administrative and military systems",
+      "Conquered Nubia, securing southern boundary",
+      "Established Mediterranean naval dominance"
+    ],
+    "achievements_ar": [
+      "فاز بـ 17 حملة عسكرية (لم يُهزم أبداً)",
+      "توسيع الإمبراطورية المصرية إلى أكبر امتداد إقليمي",
+      "بناء معابد وآثار في جميع الأراضي المفتوحة",
+      "هزيمة مملكة ميتاني والتوسع إلى سوريا",
+      "إنشاء أنظمة إدارية وعسكرية دائمة"
+    ],
+    "related_places": [6, 7, 5],
+    "facts_en": [
+      "Reigned approximately 54 years",
+      "Initially co-regent with Hatshepsut",
+      "Small stature but towering military genius",
+      "Battle of Megiddo: his most famous victory",
+      "Took more than 2,000 captives in one campaign",
+      "Created detailed military records on temple walls",
+      "Died during or shortly after 17th campaign"
+    ],
+    "facts_ar": [
+      "حكم لما يقرب من 54 سنة",
+      "كان في البداية نائب حاكم مع حتشبسوت",
+      "قامته صغيرة لكن عبقريته العسكرية ضخمة",
+      "معركة مجدو: أشهر انتصاراته",
+      "أخذ أكثر من 2000 أسير في حملة واحدة",
+      "أنشأ سجلات عسكرية مفصلة على جدران المعابد"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Tutankhamun",
+    "name_ar": "توت عنخ آمون",
+    "era": "New Kingdom, 18th Dynasty (c. 1332-1323 BCE)",
+    "dynasty": "18",
+    "title": "The Boy King",
+    "title_ar": "الملك الصبي",
+    "icon": "pharaoh",
+    "short_story_en": "Tutankhamun ascended to the throne as a child, reigning just nine years before mysterious death at age 19. Yet his untouched tomb, discovered in 1922, revealed over 5,000 artifacts—captivating the world and inspiring a century of fascination with ancient Egypt.",
+    "short_story_ar": "اعتلى توت عنخ آمون العرش طفلاً، وحكم لمدة تسع سنوات فقط. لكن قبره الذي لم يُمس كشف عن 5000+ قطعة أثرية.",
+    "achievements_en": [
+      "Restored traditional polytheistic religion (reversed Akhenaten's monotheism)",
+      "Brought stability after Amarna Period turmoil",
+      "Tomb became most famous archaeological discovery of 20th century",
+      "His mask inspired worldwide fascination with ancient Egypt",
+      "Artifacts revealed New Kingdom wealth and craftsmanship",
+      "Death circumstances remain mysterious and studied today"
+    ],
+    "achievements_ar": [
+      "استعادة الديانة التقليدية متعددة الآلهة",
+      "جلب الاستقرار بعد اضطرابات فترة عمارنة",
+      "أصبح قبره أشهر اكتشاف أثري في القرن العشرين",
+      "ألهمت قناعه الذهبي الاهتمام العالمي بمصر القديمة",
+      "كشفت الآثار عن ثروة وحرفية الدولة الحديثة"
+    ],
+    "related_places": [5, 10, 4],
+    "facts_en": [
+      "Born c. 1341 BCE; became pharaoh at age 8",
+      "Married to his sister Ankhesenamun",
+      "Died mysteriously at age 19; exact cause debated",
+      "Tomb KV62 discovered by Howard Carter in 1922",
+      "Over 5,000 objects found in tomb (most intact royal burial)",
+      "Golden mask remains iconic symbol of ancient Egypt",
+      "Mummy examined multiple times using modern technology"
+    ],
+    "facts_ar": [
+      "وُلد حوالي 1341 قبل الميلاد؛ أصبح فرعون في سن 8 سنوات",
+      "متزوج من أخته عنخس إن آمون",
+      "مات بغموض في سن 19 سنة؛ السبب دقيق موضع نقاش",
+      "قبر KV62 اكتشفه هوارد كارتر في 1922",
+      "أكثر من 5000 قطعة في القبر",
+      "القناع الذهبي يبقى رمزاً أيقونياً لمصر القديمة"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Ramesses II",
+    "name_ar": "رمسيس الثاني",
+    "era": "New Kingdom, 19th Dynasty (c. 1279-1213 BCE)",
+    "dynasty": "19",
+    "title": "Ramesses the Great",
+    "title_ar": "رمسيس العظيم",
+    "icon": "warrior",
+    "short_story_en": "Ramesses II ruled longer than almost any other pharaoh—66 years of unprecedented building and military campaigns. His monuments dominate Egypt's landscape: Abu Simbel, temples of Karnak and Luxor, his capital Pi-Ramesses. His legacy is everywhere you look.",
+    "short_story_ar": "حكم رمسيس الثاني لـ 66 سنة، أطول من أي فرعون آخر تقريباً. آثاره تهيمن على مشهد مصر.",
+    "achievements_en": [
+      "Reigned 66 years—longest reign in Egyptian history",
+      "Battled Hittites at Kadesh; signed first recorded military treaty",
+      "Built colossal Abu Simbel temples with 67-meter statues",
+      "Expanded Karnak Temple with massive hypostyle additions",
+      "Founded capital Pi-Ramesses (modern Qantir)",
+      "Fathered over 100 children, establishing vast dynasty",
+      "Built monuments at nearly every major site in Egypt"
+    ],
+    "achievements_ar": [
+      "حكم لـ 66 سنة - أطول فترة حكم في التاريخ المصري",
+      "قاتل الحيثيين بقادش؛ وقّع أول معاهدة عسكرية مسجلة",
+      "بناء معابد أبو سمبل الضخمة بتماثيل 67 متراً",
+      "توسيع معبد الكرنك بإضافات ضخمة",
+      "تأسيس عاصمة بي-رمسيس",
+      "أب لأكثر من 100 طفل"
+    ],
+    "related_places": [6, 7, 9, 1],
+    "facts_en": [
+      "Born c. 1303 BCE; died c. 1213 BCE at age 90",
+      "One of ancient world's longest-lived rulers",
+      "Took throne at age 25 after father Seti I",
+      "Mummy still preserved in Cairo Museum",
+      "Hittite Treaty recognized balance of power",
+      "Built or added to more structures than any pharaoh",
+      "Contemporary of Hittite King Hattusili III and Muwatalli"
+    ],
+    "facts_ar": [
+      "وُلد حوالي 1303 قبل الميلاد؛ مات حوالي 1213 في سن 90",
+      "أحد أطول الحكام الأحياء في العالم القديم",
+      "تولى العرش في سن 25 بعد والده سيتي الأول",
+      "لا تزال مومياؤه محفوظة بمتحف القاهرة",
+      "معاهدة الحيثيين اعترفت بتوازن القوى"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Seti I",
+    "name_ar": "سيتي الأول",
+    "era": "New Kingdom, 19th Dynasty (c. 1294-1279 BCE)",
+    "dynasty": "19",
+    "title": "Restorer of Empire",
+    "title_ar": "مستعيد الإمبراطورية",
+    "icon": "warrior",
+    "short_story_en": "Seti I restored Egypt's military dominance after a period of decline. His campaigns in Nubia and Syria expanded the empire; his temple reliefs are among the finest in all of Egypt. He fathered Ramesses II, Egypt's greatest pharaoh.",
+    "short_story_ar": "استعاد سيتي الأول الهيمنة العسكرية المصرية. حملاته وسعت الإمبراطورية؛ زخارف معبده من بين الأفضل.",
+    "achievements_en": [
+      "Restored Egypt's military power after decline",
+      "Campaigned in Nubia, Syria, and Canaan",
+      "Built magnificent temple at Abydos",
+      "Created stunning reliefs and wall decorations",
+      "Established stability before son Ramesses II's reign",
+      "Commissioned Hypostyle Hall extensions at Karnak",
+      "Father of Ramesses II, Egypt's greatest pharaoh"
+    ],
+    "achievements_ar": [
+      "استعاد القوة العسكرية المصرية بعد التراجع",
+      "حملات في النوبة وسوريا وكنعان",
+      "بناء معبد مذهل بأبيدوس",
+      "إنشاء زخارف وديكورات جدارية مذهلة",
+      "تأسيس الاستقرار قبل عهد ابنه"
+    ],
+    "related_places": [6, 7, 1],
+    "facts_en": [
+      "Reigned approximately 15-16 years",
+      "Preceded by Horemheb; followed by Ramesses II",
+      "Extensive military campaigns in multiple directions",
+      "Temple of Abydos one of Egypt's most beautiful",
+      "Mummy found in Valley of the Kings (KV7)",
+      "Known for diplomatic and military achievements",
+      "Established prosperity that enabled Ramesses II's reign"
+    ],
+    "facts_ar": [
+      "حكم لما يقرب من 15-16 سنة",
+      "سبقه حورمحب؛ تبعه رمسيس الثاني",
+      "حملات عسكرية واسعة في اتجاهات متعددة",
+      "معبد أبيدوس من أجمل معابد مصر",
+      "وجدت مومياؤه في وادي الملوك"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Akhenaten",
+    "name_ar": "إخناتون",
+    "era": "New Kingdom, 18th Dynasty (c. 1353-1336 BCE)",
+    "dynasty": "18",
+    "title": "The Heretic Pharaoh",
+    "title_ar": "الفرعون الهرطيقي",
+    "icon": "sun",
+    "short_story_en": "Akhenaten revolutionized Egyptian religion by introducing monotheism—the worship of only Aten (sun disk). He moved the capital to Akhetaten and transformed art and spirituality. His radical reforms left an enigmatic, controversial legacy.",
+    "short_story_ar": "أحدث إخناتون ثورة في الديانة المصرية بإدخال التوحيد - عبادة آتون الوحيد.",
+    "achievements_en": [
+      "Introduced revolutionary monotheistic religion (worship of Aten only)",
+      "Moved capital from Thebes to Akhetaten (Tel el-Amarna)",
+      "Revolutionized Egyptian art toward naturalism",
+      "Broke with 1,500 years of religious tradition",
+      "Produced famous bust and love letters artifacts",
+      "Challenged priestly authority of Amun temples",
+      "Influenced later religious thought and monotheism"
+    ],
+    "achievements_ar": [
+      "إدخال ديانة ثورية توحيدية",
+      "نقل العاصمة من طيبة إلى أخت آتون",
+      "ثورة في الفن المصري نحو الطبيعية",
+      "كسر 1500 سنة من التقليد الديني",
+      "إنتاج تمثال شهير ورسائل حب",
+      "تحدي سلطة كهنة آمون"
+    ],
+    "related_places": [11, 5],
+    "facts_en": [
+      "Reigned approximately 17 years",
+      "Birth name: Amenhotep IV; changed to Akhenaten",
+      "Married to Nefertiti (famous bust in Berlin Museum)",
+      "Father of Tutankhamun (possibly Tutankhamun's father)",
+      "Reign considered anomaly in Egyptian history",
+      "After death, successors reversed his reforms",
+      "Capital of Akhetaten abandoned after his death"
+    ],
+    "facts_ar": [
+      "حكم لما يقرب من 17 سنة",
+      "اسمه الأصلي: أمنحتب الرابع؛ تغير إلى إخناتون",
+      "متزوج من نفرتيتي (التمثال الشهير في متحف برلين)",
+      "والد توت عنخ آمون",
+      "يُعتبر عهده شذوذاً في التاريخ المصري"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Ramesses III",
+    "name_ar": "رمسيس الثالث",
+    "era": "New Kingdom, 20th Dynasty (c. 1186-1155 BCE)",
+    "dynasty": "20",
+    "title": "The Last Great Pharaoh",
+    "title_ar": "آخر فرعون عظيم",
+    "icon": "warrior",
+    "short_story_en": "Last of the great New Kingdom pharaohs, Ramesses III defended Egypt against invasions of Sea Peoples. Though his reign witnessed Egypt's power waning, his military victories and temple construction maintained the kingdom's glory for one final generation.",
+    "short_story_ar": "آخر الفراعنة العظماء في الدولة الحديثة، دافع رمسيس الثالث عن مصر ضد غزوات شعوب البحر.",
+    "achievements_en": [
+      "Defended Egypt against invasions of Sea Peoples",
+      "Maintained Egypt's stability during decline period",
+      "Built Temple of Medinet Habu (finest New Kingdom temple)",
+      "Commanded military campaigns to Canaan and Nubia",
+      "Commissioned extensive relief decorations",
+      "Managed administration despite economic pressures",
+      "Last pharaoh capable of major construction projects"
+    ],
+    "achievements_ar": [
+      "دفاع عن مصر ضد غزوات شعوب البحر",
+      "الحفاظ على استقرار مصر خلال فترة التراجع",
+      "بناء معبد مدينة هابو (أفضل معبد بالدولة الحديثة)",
+      "قيادة حملات عسكرية إلى كنعان والنوبة",
+      "تكليف زخارف ديكورية واسعة"
+    ],
+    "related_places": [6, 7],
+    "facts_en": [
+      "Reigned approximately 31 years",
+      "First pharaoh to be assassinated (failed plot)",
+      "Temple of Medinet Habu masterpiece of relief carving",
+      "Battle reliefs show detailed naval combat scenes",
+      "Faced economic difficulties and labor unrest",
+      "Mummy shows signs of injury from assassination attempt",
+      "Last pharaoh of true pharaonic power"
+    ],
+    "facts_ar": [
+      "حكم لما يقرب من 31 سنة",
+      "أول فرعون يحاول اغتياله",
+      "معبد مدينة هابو تحفة منحوتات",
+      "زخارف معارك توضح مشاهد قتال بحري مفصلة",
+      "واجه صعوبات اقتصادية واضطراباً عمالياً"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Cleopatra VII",
+    "name_ar": "كليوباترا السابعة",
+    "era": "Ptolemaic Period (c. 51-30 BCE)",
+    "dynasty": "Ptolemaic",
+    "title": "The Last Pharaoh",
+    "title_ar": "آخر فرعون",
+    "icon": "pharaoh",
+    "short_story_en": "Cleopatra VII was the last pharaoh of Egypt, a brilliant diplomat and strategist. She seduced Caesar and Antony to preserve Egypt's independence. When Rome conquered Egypt, she chose death over submission—a tragic end to 3,000 years of pharaonic rule.",
+    "short_story_ar": "كانت كليوباترا السابعة آخر فرعون لمصر، دبلوماسية وإستراتيجية بارعة.",
+    "achievements_en": [
+      "Last pharaoh of Egypt; ruled 21 years",
+      "Fluent in 9 languages (brilliant intellectual)",
+      "Strategic alliance with Julius Caesar",
+      "Later relationship with Mark Antony",
+      "Attempted to preserve Egyptian independence against Rome",
+      "Became symbol of ancient Egypt in Western culture",
+      "Maintained stability during tumultuous Ptolemaic period"
+    ],
+    "achievements_ar": [
+      "آخر فرعون لمصر؛ حكمت 21 سنة",
+      "إجادة 9 لغات (مثقفة بارعة)",
+      "تحالف استراتيجي مع جوليوس قيصر",
+      "العلاقة لاحقاً مع مارك أنطوني",
+      "محاولة الحفاظ على استقلال مصر ضد روما"
+    ],
+    "related_places": [4, 12],
+    "facts_en": [
+      "Born 69 BCE; died 30 BCE at age 39",
+      "Greek Macedonian descent (Ptolemaic dynasty)",
+      "Her mother likely a concubine (paternity debated)",
+      "Fled Egypt after family political conflicts",
+      "Returned to power with Caesar's military backing",
+      "Bore Caesarion (son with Caesar)",
+      "With Antony, bore twins and another son"
+    ],
+    "facts_ar": [
+      "وُلدت 69 قبل الميلاد؛ ماتت 30 قبل الميلاد في سن 39",
+      "نسب يوناني مقدوني (الأسرة البطلمية)",
+      "أمها على الأغلب جارية",
+      "فرت من مصر بعد نزاعات سياسية عائلية",
+      "عادت للسلطة بدعم عسكري من قيصر"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Amenhotep III",
+    "name_ar": "أمنحتب الثالث",
+    "era": "New Kingdom, 18th Dynasty (c. 1390-1352 BCE)",
+    "dynasty": "18",
+    "title": "The Magnificent",
+    "title_ar": "البهي",
+    "icon": "temple",
+    "short_story_en": "Amenhotep III ruled during Egypt's most prosperous period. Luxor Temple was built under his vision; the Colossi of Memnon still guard his mortuary temple. His reign epitomized New Kingdom magnificence—a golden age of art, architecture, and diplomacy.",
+    "short_story_ar": "حكم أمنحتب الثالث خلال أزهى فترة مصرية. معبد الأقصر بُني برؤيته.",
+    "achievements_en": [
+      "Reigned during Egypt's most prosperous era",
+      "Built magnificent Luxor Temple",
+      "Commissioned Colossi of Memnon (17-meter statues)",
+      "Negotiated diplomatic marriages with foreign princesses",
+      "Supported Egyptian arts and scholarship",
+      "Expanded temples at Karnak and other sites",
+      "Reign epitomized New Kingdom golden age"
+    ],
+    "achievements_ar": [
+      "حكم خلال أزهى عصور مصر",
+      "بناء معبد الأقصر الرائع",
+      "تكليف تماثيل ممنون (17 متراً)",
+      "تفاوض على زيجات دبلوماسية",
+      "دعم الفنون والعلوم المصرية"
+    ],
+    "related_places": [7, 6, 1],
+    "facts_en": [
+      "Reigned approximately 38-39 years",
+      "Father of Akhenaten",
+      "Married Tiye (commoner—unusual for pharaohs)",
+      "Fathered multiple children; eldest Thutmose predeceased",
+      "Suffered from gout and dental problems (mummy analysis)",
+      "Extensive diplomatic correspondence preserved",
+      "Death marked beginning of New Kingdom decline"
+    ],
+    "facts_ar": [
+      "حكم لما يقرب من 38-39 سنة",
+      "والد إخناتون",
+      "متزوج من تية (عامة - غير معتاد للفراعنة)",
+      "أب لأطفال متعددين؛ الأكبر توت مات قبله",
+      "عاني من النقرس ومشاكل الأسنان"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Sneferu",
+    "name_ar": "سنفرو",
+    "era": "Old Kingdom, 4th Dynasty (c. 2613-2589 BCE)",
+    "dynasty": "4",
+    "title": "Pioneer of the Pyramid Form",
+    "title_ar": "رائد شكل الهرم",
+    "icon": "pyramid",
+    "short_story_en": "Sneferu perfected the pyramid form, building the first true pyramids. His Bent Pyramid and Red Pyramid at Dahshur showcase the transition from step pyramids to smooth-sided pyramids. His son Khufu would use these innovations to build the Great Pyramid.",
+    "short_story_ar": "أتقن سنفرو شكل الهرم، بناء الأهرامات الحقيقية الأولى.",
+    "achievements_en": [
+      "Built the Bent Pyramid at Dahshur (revolutionary design)",
+      "Built the Red Pyramid (first true smooth-sided pyramid)",
+      "Pioneered mathematical precision in pyramid construction",
+      "Established construction techniques used by successors",
+      "Created a stable kingdom; founded 4th Dynasty prosperity",
+      "Legacy directly influenced Khufu's Great Pyramid",
+      "Over 355 meters of pyramids constructed"
+    ],
+    "achievements_ar": [
+      "بناء الهرم الأحمج في دهشور (تصميم ثوري)",
+      "بناء الهرم الأحمر (أول هرم حقيقي ناعم الجانبين)",
+      "تطوير الدقة الرياضية في بناء الأهرام",
+      "إنشاء تقنيات البناء المستخدمة من قبل الخلفاء"
+    ],
+    "related_places": [1, 3],
+    "facts_en": [
+      "Reigned approximately 24 years",
+      "Father of Khufu (builder of Great Pyramid)",
+      "Built at least three pyramids (possibly four)",
+      "Military expeditions to Nubia and Sinai Peninsula",
+      "Vast amounts of stone quarried (record construction)",
+      "Bent Pyramid shows transition in architectural thinking",
+      "Red Pyramid's internal structure copied by later builders"
+    ],
+    "facts_ar": [
+      "حكم لما يقرب من 24 سنة",
+      "والد خوفو (باني الهرم الأكبر)",
+      "بناء ثلاثة أهرام على الأقل",
+      "حملات عسكرية إلى النوبة وشبه جزيرة سيناء"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Narmer",
+    "name_ar": "نارمر",
+    "era": "Early Dynastic Period (c. 3100 BCE)",
+    "dynasty": "1",
+    "title": "Unifier of Egypt",
+    "title_ar": "موحد مصر",
+    "icon": "warrior",
+    "short_story_en": "Narmer unified Upper and Lower Egypt around 3100 BCE, creating the first national state. The famous Narmer Palette depicts his conquest—a historical moment that began pharaonic civilization and 3,000 years of Egyptian greatness.",
+    "short_story_ar": "وحّد نارمر مصر العليا والسفلى حوالي 3100 قبل الميلاد، منشئاً أول دولة وطنية.",
+    "achievements_en": [
+      "United Upper and Lower Egypt (c. 3100 BCE)",
+      "Founded 1st Dynasty—beginning of pharaonic Egypt",
+      "Established Memphis as capital (or confirmed it)",
+      "Created the first national state",
+      "Depicted on Narmer Palette—world's oldest political document",
+      "Initiated 3,000 years of Egyptian civilization",
+      "Established administrative systems copied by successors"
+    ],
+    "achievements_ar": [
+      "توحيد مصر العليا والسفلى (حوالي 3100 قبل الميلاد)",
+      "تأسيس الأسرة الأولى - بداية مصر الفرعونية",
+      "إنشاء ممفيس كعاصمة",
+      "إنشاء أول دولة وطنية",
+      "صُوّر على لوحة نارمر - أقدم وثيقة سياسية"
+    ],
+    "related_places": [1, 3],
+    "facts_en": [
+      "Ruled c. 3100 BCE (transition to Old Kingdom)",
+      "Exact dates uncertain; traditional dating used",
+      "Narmer Palette discovered in temple at Hierakonpolis",
+      "Palette shows pharaoh with crown of united Egypt",
+      "Preceded Early Dynastic Period fragmentation",
+      "Successors continued his unification policy",
+      "Symbolic beginning of Egyptian recorded history"
+    ],
+    "facts_ar": [
+      "حكم حوالي 3100 قبل الميلاد",
+      "التواريخ الدقيقة غير مؤكدة",
+      "اكتُشفت لوحة نارمر في معبد بهيراكونبوليس",
+      "تُظهر اللوحة الفرعون بتاج مصر الموحدة"
+    ]
+  }
+]

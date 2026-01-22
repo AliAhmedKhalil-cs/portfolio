@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Early Dynastic Period",
+    "name_ar": "الفترة المبكرة",
+    "period": "c. 3100-2686 BCE",
+    "description": "The period that saw the unification of Upper and Lower Egypt by Pharaoh Narmer, establishing the foundation of pharaonic rule and Egyptian civilization.",
+    "description_ar": "الفترة التي شهدت توحيد مصر العليا والسفلى من قبل الفرعون ناويير، مما أسس حكم الفراعنة والحضارة المصرية."
+  },
+  {
+    "name": "Old Kingdom",
+    "name_ar": "الدولة القديمة",
+    "period": "c. 2686-2181 BCE",
+    "description": "The Age of Pyramids. Dynasties 3-6 saw the construction of colossal monuments including the Step Pyramid of Djoser and the Great Pyramids of Giza.",
+    "description_ar": "عصر الأهرامات. شهدت الأسرات 3-6 بناء نصب ضخمة بما في ذلك هرم دجوسر المدرج وأهرام الجيزة الكبرى."
+  },
+  {
+    "name": "First Intermediate Period",
+    "name_ar": "الفترة الانتقالية الأولى",
+    "period": "c. 2181-2055 BCE",
+    "description": "A period of fragmentation and political instability following the collapse of Old Kingdom centralized authority, marked by regional conflicts.",
+    "description_ar": "فترة من التفتت وعدم الاستقرار السياسي تلت انهيار السلطة المركزية للدولة القديمة."
+  },
+  {
+    "name": "Middle Kingdom",
+    "name_ar": "الدولة الوسطى",
+    "period": "c. 2055-1650 BCE",
+    "description": "A renaissance period of art, literature, and architecture. Egypt experienced renewed prosperity, cultural achievements, and territorial expansion.",
+    "description_ar": "فترة نهضة الفن والأدب والعمارة. شهدت مصر ازدهاراً متجدداً وإنجازات ثقافية وتوسعاً إقليمياً."
+  },
+  {
+    "name": "Second Intermediate Period",
+    "name_ar": "الفترة الانتقالية الثانية",
+    "period": "c. 1650-1550 BCE",
+    "description": "A period of foreign invasion and rule by the Hyksos (Asiatic peoples). Egyptian independence was eventually restored by the Theban kings.",
+    "description_ar": "فترة من الغزو الأجنبي والحكم من قبل الهكسوس. تم استعادة الاستقلال المصري في النهاية من قبل ملوك طيبة."
+  },
+  {
+    "name": "New Kingdom",
+    "name_ar": "الدولة الحديثة",
+    "period": "c. 1550-1077 BCE",
+    "description": "Egypt's Imperial Age. The most magnificent temples were built, powerful pharaohs ruled, and Egypt reached its greatest territorial extent and cultural achievement.",
+    "description_ar": "العصر الذهبي لمصر. بُنيت أعظم المعابد، وحكم فراعنة أقويـاء، ووصلت مصر إلى أقصى امتداد إقليمي لها."
+  },
+  {
+    "name": "Third Intermediate Period",
+    "name_ar": "الفترة الانتقالية الثالثة",
+    "period": "c. 1070-664 BCE",
+    "description": "A period of declining central authority and political fragmentation. Egypt's power gradually diminished, though cultural traditions continued.",
+    "description_ar": "فترة من تراجع السلطة المركزية والتفتت السياسي. تراجعت قوة مصر تدريجياً، على الرغم من استمرار التقاليد الثقافية."
+  },
+  {
+    "name": "Late Period",
+    "name_ar": "الفترة المتأخرة",
+    "period": "c. 664-332 BCE",
+    "description": "Egypt was ruled by foreign powers (Persians), though native dynasties also ruled. The period ended with Alexander the Great's conquest.",
+    "description_ar": "حكمت مصر قوى أجنبية (الفرس)، على الرغم من أن الأسرات الأصلية حكمت أيضاً. انتهت الفترة بفتح الإسكندر الأكبر."
+  },
+  {
+    "name": "Ptolemaic & Greco-Roman Periods",
+    "name_ar": "الفترة البطلمية والرومانية",
+    "period": "c. 332 BCE - 395 CE",
+    "description": "After Alexander's conquest, Egypt was ruled by Greek (Ptolemaic) dynasty. Cleopatra VII was the last pharaoh. The period ended with Roman rule.",
+    "description_ar": "بعد فتح الإسكندر، حكمت مصر الأسرة اليونانية (البطلمية). كانت كليوباترا السابعة آخر فرعون. انتهت الفترة بالحكم الروماني."
+  }
+]

@@ -1,0 +1,514 @@
+[
+  {
+    "id": 1,
+    "name": "Great Pyramid of Khufu",
+    "name_ar": "الهرم الأكبر لخوفو",
+    "region": "Giza",
+    "category": "Pyramid",
+    "era": "Old Kingdom (c. 2589-2566 BCE)",
+    "coordinates": { "lat": 29.9792, "lng": 31.1344 },
+    "short_story_en": "The sole surviving Wonder of the Ancient World, Khufu's Great Pyramid stood 146.5 meters tall when built—the tallest human structure for 3,800 years. Built with 2.3 million stone blocks weighing 2.5 tons each.",
+    "short_story_ar": "الهرم الوحيد الباقي من عجائب الدنيا القديمة، وقف هرم خوفو العظيم بارتفاع 146.5 متر عند بنائه. بُني بـ 2.3 مليون كتلة حجرية.",
+    "facts_en": [
+      "Built as a royal tomb for Pharaoh Khufu during the 4th Dynasty",
+      "Base dimensions: 230.4 × 230.4 meters (originally)",
+      "Contains approximately 2.3 million limestone and granite blocks",
+      "Average block weight: 2.5 tons (some weighing up to 80 tons)",
+      "Aligned with extreme precision to cardinal directions",
+      "Internal chamber passages designed for funerary rites",
+      "The only surviving Wonder of the Ancient World"
+    ],
+    "facts_ar": [
+      "بُني كقبر ملكي للفرعون خوفو خلال الأسرة الرابعة",
+      "أبعاد القاعدة: 230.4 × 230.4 متر",
+      "يحتوي على ما يقرب من 2.3 مليون كتلة حجرية",
+      "متوسط وزن الكتلة: 2.5 طن",
+      "محاذاة دقيقة جداً للاتجاهات الأساسية",
+      "الوحيد الباقي من عجائب الدنيا القديمة"
+    ],
+    "visiting_tips_en": [
+      "Arrive early (7:00 AM) to beat crowds and heat",
+      "Wear comfortable shoes and bring sunscreen",
+      "Internal chamber visits require extra tickets",
+      "Photography allowed outside; flash forbidden in chambers",
+      "Hire a guide to understand construction techniques",
+      "Visit Solar Boat Museum nearby for Khufu's ceremonial barge"
+    ],
+    "visiting_tips_ar": [
+      "اذهب مبكراً لتجنب الازدحام والحرارة",
+      "ارتدِ أحذية مريحة وأحضر واقي شمسي",
+      "زيارة الغرف الداخلية تتطلب تذاكر إضافية",
+      "التصوير مسموح بالخارج",
+      "احرص على استئجار مرشد سياحي",
+      "زر متحف القارب الشمسي بالقرب"
+    ],
+    "related_rulers": [1, 2, 3],
+    "gallery": ["assets/giza-pyramid-1.jpg", "assets/giza-pyramid-2.jpg"]
+  },
+  {
+    "id": 2,
+    "name": "Great Sphinx of Giza",
+    "name_ar": "أبو الهول العظيم",
+    "region": "Giza",
+    "category": "Statue",
+    "era": "Old Kingdom (c. 2558-2532 BCE)",
+    "coordinates": { "lat": 29.9756, "lng": 31.1371 },
+    "short_story_en": "With the body of a lion and the face of a pharaoh, the Great Sphinx guards the Giza Plateau. At 73 meters long and 20 meters high, it's one of the world's largest monolith statues, carved from a single rock outcrop.",
+    "short_story_ar": "بجسم أسد ووجه فرعون، يحرس أبو الهول الضخم هضبة الجيزة. بطول 73 متراً وارتفاع 20 متراً، إنه أحد أكبر التماثيل في العالم.",
+    "facts_en": [
+      "Built during the reign of Pharaoh Khafre (4th Dynasty)",
+      "Length: 73 meters; Height: 20 meters; Width: 19 meters",
+      "Carved from a single limestone outcrop",
+      "Face is believed to be a portrait of Pharaoh Khafre",
+      "Nose was damaged in 15th century; exact cause still debated",
+      "Represents royal power and divine protection",
+      "Surrounded by 15 temples in ancient times"
+    ],
+    "facts_ar": [
+      "بُني خلال عهد الفرعون خفرع من الأسرة الرابعة",
+      "الطول: 73 متراً؛ الارتفاع: 20 متراً",
+      "محفور من كتلة واحدة من الحجر الجيري",
+      "الوجه يعتقد أنه صورة للفرعون خفرع",
+      "الأنف تضرر في القرن الخامس عشر",
+      "يمثل القوة الملكية والحماية الإلهية"
+    ],
+    "visiting_tips_en": [
+      "Visit at sunrise for stunning photography",
+      "Entrance through Sphinx Entrance Gate",
+      "Photography allowed from designated viewing areas",
+      "Wear sunscreen and bring water",
+      "Audio guides available in multiple languages",
+      "Visit Sphinx Temple nearby for context"
+    ],
+    "visiting_tips_ar": [
+      "زر عند شروق الشمس للحصول على صور مذهلة",
+      "الدخول عبر بوابة أبو الهول",
+      "التصوير مسموح من مناطق الفرجة المخصصة",
+      "ارتدِ واقي شمس وأحضر ماء",
+      "الأدلة الصوتية متاحة بلغات متعددة"
+    ],
+    "related_rulers": [2],
+    "gallery": ["assets/sphinx-1.jpg", "assets/sphinx-2.jpg"]
+  },
+  {
+    "id": 3,
+    "name": "Step Pyramid of Djoser",
+    "name_ar": "هرم دجوسر المدرج",
+    "region": "Saqqara",
+    "category": "Pyramid",
+    "era": "Old Kingdom, 3rd Dynasty (c. 2670-2650 BCE)",
+    "coordinates": { "lat": 29.8738, "lng": 31.2239 },
+    "short_story_en": "The world's oldest stone structure and first pyramid, the Step Pyramid revolutionized architecture. Designed by the genius architect Imhotep, it was the prototype for all Egyptian pyramids to follow.",
+    "short_story_ar": "أقدم بناء حجري في العالم والهرم الأول، هرم دجوسر أحدث ثورة في العمارة. صممه الفنان البارع إمحتب.",
+    "facts_en": [
+      "Oldest monumental stone structure in world (c. 2670 BCE)",
+      "Height: 62 meters (originally); 6 stepped levels",
+      "Designed by Imhotep, chief architect of Pharaoh Djoser",
+      "Transition from mastaba tombs to pyramidal form",
+      "Contains underground chambers and burial shaft",
+      "Part of a complete mortuary complex with temples",
+      "Underwent major restoration 1988-2000"
+    ],
+    "facts_ar": [
+      "أقدم بناء حجري ضخم في العالم (حوالي 2670 قبل الميلاد)",
+      "الارتفاع: 62 متراً (في الأصل)؛ 6 مستويات متدرجة",
+      "صمم بواسطة إمحتب، رئيس معماري الفرعون دجوسر",
+      "انتقال من المقابر المسطحة إلى الشكل الهرمي",
+      "يحتوي على غرف تحت الأرض ومحراب الدفن",
+      "جزء من مجمع جنائزي كامل"
+    ],
+    "visiting_tips_en": [
+      "Allow 2-3 hours to explore the entire complex",
+      "Entrance through restored entrance colonnade",
+      "The complex includes temples, altars, and ritual spaces",
+      "Photography available but no flash inside chambers",
+      "Saqqara is home to many other pyramids and tombs",
+      "Bring water; limited shade available"
+    ],
+    "visiting_tips_ar": [
+      "اسمح بـ 2-3 ساعات لاستكشاف المجمع بأكمله",
+      "الدخول عبر رواق الدخول المرمم",
+      "المجمع يشمل معابد ومذابح ومساحات طقسية",
+      "التصوير متاح لكن بدون وميض في الحجرات",
+      "ساقارة موطن العديد من الأهرامات والمقابر الأخرى"
+    ],
+    "related_rulers": [6],
+    "gallery": ["assets/saqqara-1.jpg", "assets/saqqara-2.jpg"]
+  },
+  {
+    "id": 4,
+    "name": "Egyptian Museum (Tahrir)",
+    "name_ar": "المتحف المصري (التحرير)",
+    "region": "Cairo",
+    "category": "Museum",
+    "era": "Modern (established 1902)",
+    "coordinates": { "lat": 30.0475, "lng": 31.2341 },
+    "short_story_en": "Home to the world's largest collection of Pharaonic treasures, the Tahrir Museum holds over 120,000 artifacts. Its most famous resident: Tutankhamun's golden burial mask, symbol of ancient Egypt's mystery and splendor.",
+    "short_story_ar": "يضم أكبر مجموعة من كنوز الحقبة الفرعونية في العالم. أشهر سكانه: قناع توت عنخ آمون الذهبي.",
+    "facts_en": [
+      "Established in 1902 to preserve Egypt's heritage",
+      "Houses over 120,000 artifacts from Pharaonic era",
+      "Most famous artifact: Tutankhamun's golden burial mask",
+      "Contains royal mummies of pharaohs and nobles",
+      "Exhibits organized chronologically and thematically",
+      "Two-story Neoclassical building designed by Marcel Dourgnon",
+      "Transitioning collection to new Grand Egyptian Museum"
+    ],
+    "facts_ar": [
+      "تأسس عام 1902 للحفاظ على تراث مصر",
+      "يحتوي على أكثر من 120,000 قطعة أثرية",
+      "أشهر قطعة: قناع توت عنخ آمون الذهبي",
+      "يحتوي على مومياوات ملكية للفراعنة والنبلاء",
+      "المعروضات منظمة بشكل زمني وموضوعي",
+      "بناء كلاسيكي جديد من طابقين"
+    ],
+    "visiting_tips_en": [
+      "Allocate 3-4 hours minimum for the museum",
+      "Photography permitted in most sections (no flash in mummies room)",
+      "Audio guides available in 10+ languages",
+      "Visit early morning to avoid crowds",
+      "Mummies Hall requires separate ticket",
+      "Upper floor: royal mummies, jewelry, furniture",
+      "Lower floor: statues, reliefs, religious objects"
+    ],
+    "visiting_tips_ar": [
+      "خصص 3-4 ساعات على الأقل للمتحف",
+      "التصوير مسموح في معظم الأقسام",
+      "الأدلة الصوتية متاحة بـ 10+ لغات",
+      "زر في الصباح الباكر لتجنب الزحام",
+      "قاعة المومياوات تتطلب تذكرة منفصلة"
+    ],
+    "related_rulers": [1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 14, 15],
+    "gallery": ["assets/egyptian-museum-1.jpg", "assets/egyptian-museum-2.jpg"]
+  },
+  {
+    "id": 5,
+    "name": "Valley of the Kings",
+    "name_ar": "وادي الملوك",
+    "region": "Luxor",
+    "category": "Tombs",
+    "era": "New Kingdom (c. 1550-1069 BCE)",
+    "coordinates": { "lat": 25.7405, "lng": 32.6013 },
+    "short_story_en": "Hidden in a remote valley west of Luxor, 63 royal tombs rest in eternal silence. From Tutankhamun to Ramesses II, the valley holds the grandest New Kingdom pharaohs. Each tomb's passages and chambers tell stories of divine journeys to the afterlife.",
+    "short_story_ar": "مخفي في واد بعيد غرب الأقصر، 63 قبراً ملكياً يستريح في الهدوء الأبدي. من توت عنخ آمون إلى رمسيس الثاني، يضم الوادي أعظم فراعنة الدولة الحديثة.",
+    "facts_en": [
+      "Contains 63 documented royal tombs from New Kingdom",
+      "Pharaohs buried here from 1550-1069 BCE",
+      "Tombs feature elaborate hieroglyphic decorations",
+      "Tutankhamun's tomb (KV62) most intact ever found",
+      "Tombs include texts from Book of the Dead",
+      "Limestone cliffs chosen for natural concealment",
+      "UNESCO World Heritage Site since 1979"
+    ],
+    "facts_ar": [
+      "يحتوي على 63 قبراً ملكياً موثقاً من الدولة الحديثة",
+      "دفن الفراعنة هنا من 1550-1069 قبل الميلاد",
+      "القبور تضم زخارف هيروغليفية معقدة",
+      "قبر توت عنخ آمون الأكثر سلامة",
+      "تضم نصوصاً من كتاب الموتى",
+      "اختيرت منحدرات الحجر الجيري للاختباء الطبيعي"
+    ],
+    "visiting_tips_en": [
+      "Tickets allow entry to 3 tombs (choose wisely)",
+      "Visit early morning (7:00 AM) due to intense heat",
+      "Wear light clothing and bring 2+ liters of water",
+      "Photography forbidden in tombs (flash damages paintings)",
+      "Hire guide to interpret hieroglyphic narratives",
+      "Don't miss Valley of the Queens nearby",
+      "Nobles' tombs offer beautiful reliefs with less crowding"
+    ],
+    "visiting_tips_ar": [
+      "التذاكر تسمح بدخول 3 قبور",
+      "زر في الصباح الباكر (7:00 صباحاً) بسبب الحرارة الشديدة",
+      "ارتدِ ملابس خفيفة وأحضر ماء",
+      "التصوير ممنوع في القبور",
+      "احرص على استئجار مرشد",
+      "لا تفوت وادي الملكات بالقرب"
+    ],
+    "related_rulers": [7, 9, 10, 11, 12, 14],
+    "gallery": ["assets/valley-kings-1.jpg", "assets/valley-kings-2.jpg"]
+  },
+  {
+    "id": 6,
+    "name": "Temple of Karnak",
+    "name_ar": "معبد الكرنك",
+    "region": "Luxor",
+    "category": "Temple",
+    "era": "New Kingdom (c. 1550-1070 BCE)",
+    "coordinates": { "lat": 25.7395, "lng": 32.6589 },
+    "short_story_en": "The largest religious complex ever built, Karnak is an overwhelming symphony of colossal columns and towering pylons. Over 1,500 years of construction by Egypt's greatest pharaohs—each adding to this maze of sacred spaces dedicated to Amun-Ra.",
+    "short_story_ar": "أكبر مجمع ديني بُني على الإطلاق، الكرنك عبارة عن سيمفونية ساحقة من الأعمدة الهائلة والأبراج الشاهقة.",
+    "facts_en": [
+      "Largest religious complex in ancient world",
+      "Built over 1,500 years (c. 1550-1070 BCE)",
+      "Three temple enclosures dedicated to Amun-Ra",
+      "Hypostyle Hall: 134 columns, tallest 33 meters high",
+      "Sacred Lake covers 137 × 77 meters",
+      "Avenue of Sphinxes connects to Luxor Temple",
+      "Each pharaoh added structures—living architectural timeline"
+    ],
+    "facts_ar": [
+      "أكبر مجمع ديني في العالم القديم",
+      "بُني على مدى 1,500 سنة",
+      "ثلاثة معابد مكرسة لآمون-رع",
+      "قاعة الأعمدة: 134 عمود، أطولها 33 متراً",
+      "البحيرة المقدسة: 137 × 77 متراً",
+      "طريق أبو الهول يربطه بمعبد الأقصر"
+    ],
+    "visiting_tips_en": [
+      "Plan 2-3 hours for thorough exploration",
+      "Early morning light is spectacular for photography",
+      "Hire guide to decipher hieroglyphic stories",
+      "Wear comfortable shoes; complex is expansive",
+      "Evening sound-and-light show dramatizes history",
+      "Sacred Lake offers peaceful reflection",
+      "Combined Karnak-Luxor Temple ticket available"
+    ],
+    "visiting_tips_ar": [
+      "اخطط لـ 2-3 ساعات للاستكشاف الكامل",
+      "ضوء الصباح الباكر مذهل للتصوير",
+      "استئجر مرشد لفك الرموز",
+      "ارتدِ أحذية مريحة",
+      "عرض الصوت والضوء المسائي درامي",
+      "بحيرة مقدسة توفر تأملاً سلمياً"
+    ],
+    "related_rulers": [5, 9, 10, 11],
+    "gallery": ["assets/karnak-1.jpg", "assets/karnak-2.jpg"]
+  },
+  {
+    "id": 7,
+    "name": "Luxor Temple",
+    "name_ar": "معبد الأقصر",
+    "region": "Luxor",
+    "category": "Temple",
+    "era": "New Kingdom (c. 1390-1070 BCE)",
+    "coordinates": { "lat": 25.7369, "lng": 32.6393 },
+    "short_story_en": "Built within the city itself—unlike isolated temples—Luxor Temple remains eternally magnificent. Twin obelisks and colossal Ramesses II statues command the Nile. This temple witnessed millennia of worship and, remarkably, a mosque was later built upon it.",
+    "short_story_ar": "بُني داخل المدينة ذاتها، معبد الأقصر يبقى جميلاً للأبد. التماثيل الضخمة لرمسيس الثاني تأمر على النيل.",
+    "facts_en": [
+      "Built primarily during New Kingdom by multiple pharaohs",
+      "Sanctuary dedicated to Theban Triad: Amun, Mut, Khonsu",
+      "Unlike most temples, Luxor was integrated into city life",
+      "Great Pylon and colossal statues added by Ramesses II",
+      "Priests, pharaohs, and common people sought divine blessings here",
+      "A mosque was built atop ruins in medieval times",
+      "Testament to temple's enduring spiritual significance"
+    ],
+    "facts_ar": [
+      "بُني بشكل أساسي خلال الدولة الحديثة من قبل عدة فراعنة",
+      "الحرم مكرس للثالوث الطيبي: آمون وموت وخونسو",
+      "بخلاف معظم المعابد، كان الأقصر متكاملاً مع حياة المدينة",
+      "أضاف رمسيس الثاني بوابة عظيمة وتماثيل ضخمة",
+      "سعى الكهنة والفراعنة والناس العاديون للمباركة الإلهية",
+      "بُني مسجد فوق الأطلال في العصور الوسطى"
+    ],
+    "visiting_tips_en": [
+      "Best visited at sunset when temple glows golden",
+      "Located in city center; easily accessible",
+      "Evening sound-and-light show adds drama",
+      "Modest dress recommended near mosque section",
+      "Local guides provide rich historical context",
+      "Photography excellent during golden hour",
+      "Combined with Karnak Temple ticket available"
+    ],
+    "visiting_tips_ar": [
+      "الأفضل زيارته عند الغروب عندما يتوهج المعبد بالذهب",
+      "يقع في وسط المدينة؛ سهل الوصول إليه",
+      "عرض الصوت والضوء المسائي يضيف درامية",
+      "الملابس المحتشمة موصى بها بالقرب من قسم المسجد",
+      "يقدم المرشدون المحليون سياقاً تاريخياً غنياً",
+      "التصوير ممتاز خلال الساعة الذهبية"
+    ],
+    "related_rulers": [13, 11, 10],
+    "gallery": ["assets/luxor-temple-1.jpg", "assets/luxor-temple-2.jpg"]
+  },
+  {
+    "id": 8,
+    "name": "Mortuary Temple of Hatshepsut",
+    "name_ar": "معبد حتشبسوت الجنائزي",
+    "region": "Luxor",
+    "category": "Temple",
+    "era": "New Kingdom (c. 1470 BCE)",
+    "coordinates": { "lat": 25.7383, "lng": 32.6132 },
+    "short_story_en": "Queen Hatshepsut defied convention to become Egypt's greatest female pharaoh. Her mortuary temple, carved directly into the mountain at Deir el-Bahari, is a graceful statement of power. Walk her ramps and feel the ambition of a woman who reshaped Egypt.",
+    "short_story_ar": "تحدت الملكة حتشبسوت العرف لتصبح أعظم فرعون أنثى في مصر. معبدها الجنائزي المحفور في الجبل هو بيان أناقة من القوة.",
+    "facts_en": [
+      "Designed as celebration of reign, not typical funerary function",
+      "Carved into limestone cliffs at Deir el-Bahari (c. 1470 BCE)",
+      "Three terraced levels connected by ascending ramps",
+      "Reliefs depict famous expedition to Land of Punt",
+      "Hatshepsut ruled in era when women had limited power",
+      "She declared herself pharaoh; transformed Egypt's economy",
+      "Architecture influenced later Hellenistic design"
+    ],
+    "facts_ar": [
+      "صُمم كاحتفال بفترة حكمها، وليس دالة جنائزية نموذجية",
+      "محفور في منحدرات الحجر الجيري بالدير البحري (حوالي 1470 قبل الميلاد)",
+      "ثلاثة مستويات على شكل تراس متصلة برامات صاعدة",
+      "الزخارف تصور بعثة مشهورة إلى أرض بونت",
+      "حكمت حتشبسوت في عصر كان للنساء سلطة محدودة",
+      "أعلنت نفسها فرعون؛ حولت اقتصاد مصر"
+    ],
+    "visiting_tips_en": [
+      "The hike up rewards with stunning panoramic views",
+      "Popular site; arrive early for solitude and photos",
+      "Photography is excellent, especially morning light",
+      "Temple integrates beautifully with natural setting",
+      "Cafe at top provides refreshment",
+      "Well-maintained walking paths",
+      "Nearby Valley of the Queens offers more exploration"
+    ],
+    "visiting_tips_ar": [
+      "الرحلة لأعلى تستحق المناظر البانورامية المذهلة",
+      "موقع شهير؛ اذهب مبكراً للحصول على الهدوء والصور",
+      "التصوير ممتاز، خاصة ضوء الصباح",
+      "يتكامل المعبد جميلاً مع المحيط الطبيعي",
+      "كافيه في الأعلى يوفر الانتعاش",
+      "مسارات سير محفوظة جيداً"
+    ],
+    "related_rulers": [2, 15, 5],
+    "gallery": ["assets/hatshepsut-1.jpg", "assets/hatshepsut-2.jpg"]
+  },
+  {
+    "id": 9,
+    "name": "Abu Simbel Temples",
+    "name_ar": "معابد أبو سمبل",
+    "region": "Aswan",
+    "category": "Temple",
+    "era": "New Kingdom (c. 1260 BCE)",
+    "coordinates": { "lat": 22.3415, "lng": 31.6064 },
+    "short_story_en": "Four towering statues of Ramesses II, each 67 meters high, are carved directly from a mountain at Egypt's southern border. Abu Simbel isn't just impressive—it's awe-inspiring. Twice yearly, sunlight illuminates the inner sanctuary in a phenomenon called 'the miracle of Abu Simbel.'",
+    "short_story_ar": "أربعة تماثيل ضخمة لرمسيس الثاني، كل واحد بارتفاع 67 متراً، محفورة مباشرة من الجبل. أبو سمبل ليس مثيراً للإعجاب فحسب، بل مذهل.",
+    "facts_en": [
+      "Built c. 1260 BCE during Ramesses II's reign",
+      "Four colossal statues of pharaoh: 67 meters high",
+      "Smaller temple dedicated to wife Nefertari",
+      "Sanctuary illuminated on winter & summer solstices",
+      "Entire complex relocated 64 meters higher in 1968",
+      "Relocation was feat of modern engineering",
+      "Asserts pharaonic authority over Nubian lands"
+    ],
+    "facts_ar": [
+      "بُني حوالي 1260 قبل الميلاد في عهد رمسيس الثاني",
+      "أربعة تماثيل ضخمة للفرعون: ارتفاع 67 متراً",
+      "معبد أصغر مكرس لزوجته نفرتاري",
+      "الحرم مضاء في فترة الانقلاب الشتوي والصيفي",
+      "نُقل المجمع بأكمله 64 متراً في عام 1968",
+      "كان النقل إنجازاً هندسياً حديثاً"
+    ],
+    "visiting_tips_en": [
+      "Day trip from Aswan (3 hours by road/air)",
+      "Visit at sunrise for stunning photography",
+      "Solstice illumination dates: February 22 & October 22",
+      "Remote location; well-managed tourist facilities",
+      "Bring water and sun protection",
+      "Multiple languages available for guides",
+      "Nile cruise opportunities available"
+    ],
+    "visiting_tips_ar": [
+      "رحلة يومية من أسوان (3 ساعات بالطريق/الجو)",
+      "زر عند شروق الشمس للتصوير المذهل",
+      "تواريخ إضاءة الانقلاب: 22 فبراير و 22 أكتوبر",
+      "موقع بعيد؛ مرافق سياحية محتالة",
+      "أحضر ماء وواقي شمسي"
+    ],
+    "related_rulers": [11],
+    "gallery": ["assets/abu-simbel-1.jpg", "assets/abu-simbel-2.jpg"]
+  },
+  {
+    "id": 10,
+    "name": "Grand Egyptian Museum (GEM)",
+    "name_ar": "المتحف المصري الكبير",
+    "region": "Giza",
+    "category": "Museum",
+    "era": "Modern (opened 2021)",
+    "coordinates": { "lat": 30.0042, "lng": 31.2034 },
+    "short_story_en": "The world's largest archaeological museum opened in 2021 near the Pyramids of Giza. With innovative exhibits in the Grand Hall, monumental Grand Staircase, and entire dedicated spaces, the GEM presents Egypt's treasures in a contemporary setting without losing their sacred mystery.",
+    "short_story_ar": "أكبر متحف أثري في العالم افتتح في 2021 بالقرب من أهرامات الجيزة. يقدم الكنوز المصرية في بيئة معاصرة.",
+    "facts_en": [
+      "Opened September 2021 near Giza Plateau",
+      "Designed to showcase 4.8 million artifacts over phases",
+      "Grand Hall: 10,000 sqm with monumental displays",
+      "Grand Staircase: 87 meters long, iconic architectural element",
+      "Khufu's Boat Museum: dedicated space for solar barque",
+      "Multiple galleries organized by era and theme",
+      "Modern climate control preserves ancient artifacts"
+    ],
+    "facts_ar": [
+      "افتتح في سبتمبر 2021 بالقرب من هضبة الجيزة",
+      "صُمم لعرض 4.8 مليون قطعة أثرية على مراحل",
+      "القاعة الكبرى: 10,000 متر مربع مع عروض ضخمة",
+      "الدرج الكبير: 87 متراً طويلاً، عنصر معماري أيقوني",
+      "متحف قارب خوفو: مساحة مخصصة للبارجة الشمسية",
+      "معارض متعددة منظمة حسب العصر والموضوع"
+    ],
+    "visiting_tips_en": [
+      "Opening phases may still be ongoing; verify before visit",
+      "Plan 4-5 hours for comprehensive visit",
+      "Photography permitted in most galleries (confirm with staff)",
+      "Multiple cafes and shops throughout",
+      "Audio guides available in multiple languages",
+      "Ticket allows revisit on different day",
+      "Visit early morning for shortest queues",
+      "Combine visit with nearby Giza Plateau sites"
+    ],
+    "visiting_tips_ar": [
+      "قد تكون مراحل الافتتاح جارية؛ تحقق قبل الزيارة",
+      "اخطط لـ 4-5 ساعات للزيارة الشاملة",
+      "التصوير مسموح في معظم المعارض",
+      "عدة مقاهي ومحلات في الجميع أنحاء",
+      "الأدلة الصوتية متاحة بلغات متعددة",
+      "التذكرة تسمح بإعادة الزيارة في يوم آخر"
+    ],
+    "related_rulers": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 14, 15],
+    "gallery": ["assets/gem-grand-hall.jpg", "assets/gem-stairs.jpg", "assets/gem-khufu-boat.jpg"]
+  },
+  {
+    "id": 11,
+    "name": "Temple of Philae",
+    "name_ar": "معبد فيلة",
+    "region": "Aswan",
+    "category": "Temple",
+    "era": "Ptolemaic (c. 300-30 BCE)",
+    "coordinates": { "lat": 24.0219, "lng": 32.8859 },
+    "short_story_en": "Dedicated to Isis, goddess of love and magic, Philae Temple was saved from flooding by an unprecedented international rescue mission in 1968. The relocated temple on Agilkia Island remains a testament to humanity's commitment to preserving heritage.",
+    "short_story_ar": "مكرس لإيزيس، إلهة الحب والسحر، تم إنقاذ معبد فيلة من الفيضان بواسطة بعثة إنقاذ دولية غير مسبوقة في 1968.",
+    "facts_en": [
+      "Built during Ptolemaic period (c. 300 BCE)",
+      "Dedicated to Isis, one of Egypt's most beloved goddesses",
+      "Pilgrims journeyed seeking healing and spiritual guidance",
+      "Features the iconic Gate of Hadrian",
+      "Entire complex relocated in 1968 by UNESCO",
+      "Moved from Philae to nearby Agilkia Island",
+      "Relocation saved site from Lake Nasser flooding"
+    ],
+    "facts_ar": [
+      "بُني خلال الفترة البطلمية (حوالي 300 قبل الميلاد)",
+      "مكرس لإيزيس، إحدى أكثر الإلهات المصرية حبوباً",
+      "سافر الحجاج يسعون للشفاء والتوجيه الروحي",
+      "يضم بوابة هادريان الأيقونية",
+      "تم نقل المجمع بأكمله في 1968 من قبل اليونسكو",
+      "نُقل من فيلة إلى جزيرة أجيلكيا القريبة"
+    ],
+    "visiting_tips_en": [
+      "Access only by boat from Aswan",
+      "Boat ride scenic and romantic, especially sunset",
+      "Island's small size makes it manageable in 2 hours",
+      "Evening visits offer magical golden lighting",
+      "Bring water and sun protection",
+      "Peaceful atmosphere for reflection",
+      "Photography opportunities excellent"
+    ],
+    "visiting_tips_ar": [
+      "لا يمكن الوصول إليه إلا بالقارب من أسوان",
+      "رحلة القارب جميلة وغرامية، خاصة عند الغروب",
+      "حجم الجزيرة الصغير يجعلها قابلة للإدارة في ساعتين",
+      "الزيارات المسائية توفر إضاءة ذهبية سحرية",
+      "أحضر ماء وواقي شمسي",
+      "الأجواء الهادئة للتأمل",
+      "فرص التصوير ممتازة"
+    ],
+    "related_rulers": [18, 19],
+    "gallery": ["assets/philae-1.jpg", "assets/philae-2.jpg"]
+  }
+]

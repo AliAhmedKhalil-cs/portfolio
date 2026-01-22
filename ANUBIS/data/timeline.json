@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Early Dynastic Period",
+    "name_ar": "الفترة الملكية المبكرة",
+    "period": "c. 3100-2686 BCE",
+    "description": "Egypt's first national state emerged when Pharaoh Narmer unified Upper and Lower Egypt around 3100 BCE. This period established the foundations of pharaonic civilization: divine kingship, bureaucracy, and monumental architecture. Memphis became the capital, and writing evolved to record royal deeds.",
+    "description_ar": "ظهرت أول دولة قومية مصرية عندما وحد الفرعون نارمر مصر العليا والسفلى حوالي 3100 قبل الميلاد. أرسى هذا العصر أسس الحضارة الفرعونية: الملكية الإلهية والبيروقراطية والعمارة الضخمة.",
+    "highlights": ["Narmer's unification", "Memphis capital founded", "First hieroglyphic records", "Divine kingship concept established", "Administrative hierarchy created"]
+  },
+  {
+    "name": "Old Kingdom",
+    "name_ar": "الدولة القديمة",
+    "period": "c. 2686-2181 BCE",
+    "description": "The Age of Pyramids. Dynasties 3-6 witnessed humanity's most ambitious architectural projects. From Djoser's revolutionary Step Pyramid (c. 2670 BCE) to Khufu's Great Pyramid (c. 2560 BCE), pharaohs commanded the construction of colossal tombs to ensure eternal life. Imhotep pioneered stone architecture; Egyptian engineering reached unprecedented heights. Central authority peaked, but by Dynasty 6, provincial governors gained power, leading to gradual political fragmentation.",
+    "description_ar": "عصر الأهرامات. شهدت الأسرات 3-6 أكثر المشاريع المعمارية طموحاً للبشرية. من هرم دجوسر المدرج الثوري إلى الهرم الأكبر لخوفو، أمر الفراعنة ببناء قبور ضخمة.",
+    "highlights": ["Step Pyramid of Djoser invented", "Great Pyramid of Khufu built", "Peak of centralized authority", "Imhotep pioneered stone construction", "Provincial power emerges", "Hieroglyphic writing perfected", "Vast tomb complexes created"]
+  },
+  {
+    "name": "First Intermediate Period",
+    "name_ar": "الفترة الانتقالية الأولى",
+    "period": "c. 2181-2055 BCE",
+    "description": "After the Old Kingdom's collapse, centralized authority crumbled. Provincial governors became independent, and Egypt fractured into competing regions. Famine and instability plagued the land. Yet this period wasn't entirely chaotic—local administrators developed independent cultural traditions. Nubian influence increased in the south. This fragmentation would eventually catalyze reunion under stronger dynasties.",
+    "description_ar": "بعد انهيار الدولة القديمة، تفتت السلطة المركزية. أصبح الحكام الإقليميون مستقلين، وانقسمت مصر إلى مناطق متنافسة. الجوع وعدم الاستقرار ساد البلاد.",
+    "highlights": ["Centralized authority collapsed", "Regional fragmentation", "Local governors became independent", "Famine and social upheaval", "Cultural traditions diversified", "Preparation for reunification"]
+  },
+  {
+    "name": "Middle Kingdom",
+    "name_ar": "الدولة الوسطى",
+    "period": "c. 2055-1650 BCE",
+    "description": "A renaissance of art, literature, and architecture. Egypt experienced renewed prosperity and cultural achievements under strong pharaohs like Amenemhat III. This was Egypt's classical age: literature flourished, temples were rebuilt, and administrators established stable governance. Nubia was brought under Egyptian control; trade expanded throughout the Mediterranean and Near East. Yet this stability was threatened by Asiatic peoples entering the delta.",
+    "description_ar": "نهضة الفن والأدب والعمارة. شهدت مصر ازدهاراً متجدداً وإنجازات ثقافية تحت فراعنة أقويـاء. كان هذا العصر الذهبي الكلاسيكي لمصر.",
+    "highlights": ["Literary renaissance begins", "Temples rebuilt and expanded", "Strong centralized governance", "Trade networks expand", "Nubia brought under control", "Artistic achievement peaks", "Immigration increases in Delta"]
+  },
+  {
+    "name": "Second Intermediate Period",
+    "name_ar": "الفترة الانتقالية الثانية",
+    "period": "c. 1650-1550 BCE",
+    "description": "Foreign invasion and rule by the Hyksos (Asiatic peoples, likely from Syria-Palestine). The Hyksos established themselves in the Delta, introducing new military technologies (horses, chariots, composite bows). Though often portrayed as devastating, Hyksos rule was administratively sophisticated. Egyptian independence was eventually restored by the Theban kings of Dynasty 17, who allied with Nubian kingdoms. This period set the stage for the New Kingdom's imperial expansion.",
+    "description_ar": "غزو أجنبي والحكم من قبل الهكسوس. أسس الهكسوس أنفسهم في الدلتا، وأدخلوا تقنيات عسكرية جديدة. تم استعادة الاستقلال المصري في النهاية من قبل ملوك طيبة.",
+    "highlights": ["Hyksos invasion and rule", "Foreign military technology introduced", "Chariots and horses adopted", "Egyptian resistance organizes", "Theban kingdom rises", "Nubian alliance strengthens", "Setup for New Kingdom expansion"]
+  },
+  {
+    "name": "New Kingdom - Early (18th Dynasty)",
+    "name_ar": "الدولة الحديثة - المرحلة المبكرة",
+    "period": "c. 1550-1295 BCE",
+    "description": "Egypt's Imperial Age. Pharaohs like Ahmose, Hatshepsut, Thutmose III, and Amenhotep III expanded Egyptian dominion to its greatest territorial extent. Luxor and Karnak temples were built; Valley of the Kings became the royal necropolis. This era epitomized New Kingdom magnificence—art, architecture, and literature achieved new heights. Women had more rights; trade flourished. The period saw the anomaly of Akhenaten's monotheistic revolution before Tutankhamun restored traditional religion.",
+    "description_ar": "العصر الذهبي لمصر. وسّع الفراعنة السيطرة المصرية إلى أقصى امتداد إقليمي. بُنيت معابد الأقصر والكرنك؛ أصبح وادي الملوك المقبرة الملكية.",
+    "highlights": ["Hyksos expelled; independence restored", "Hatshepsut rules as pharaoh", "Thutmose III's military conquests", "Valley of the Kings established", "Karnak temple expanded", "Tutankhamun's discovery (modern era)", "Akhenaten's religious revolution", "Amenhotep III's golden reign"]
+  },
+  {
+    "name": "New Kingdom - Late (19th-20th Dynasty)",
+    "name_ar": "الدولة الحديثة - المرحلة المتأخرة",
+    "period": "c. 1295-1069 BCE",
+    "description": "Continued imperial power under Ramesses II (the Great), who ruled 66 years and built Abu Simbel. Ramesses III defended against Sea Peoples invasions. Yet cracks appeared: inflation, labor unrest (first recorded strikes), and priestly power grew. By Dynasty 20's end, pharaonic authority weakened. However, this period produced Egypt's greatest monuments and maintained cultural continuity. It was the last gasp of true pharaonic dominance.",
+    "description_ar": "استمرار القوة الإمبراطورية تحت رمسيس الثاني العظيم، الذي حكم 66 سنة وبنى أبو سمبل.",
+    "highlights": ["Ramesses II's 66-year reign", "Abu Simbel temples built", "Battle against Hittites", "Ramesses III defends against Sea Peoples", "Economic inflation emerges", "Labor strikes recorded", "Priestly power increases", "Cultural peak before decline"]
+  },
+  {
+    "name": "Third Intermediate Period",
+    "name_ar": "الفترة الانتقالية الثالثة",
+    "period": "c. 1070-664 BCE",
+    "description": "Declining central authority and political fragmentation. Egypt split into competing power centers: pharaohs in the north; high priests of Amun in the south. Foreign powers increased influence. Yet despite political fragmentation, Egyptian culture remained strong. Libyan mercenaries became influential; Egyptian identity endured. This period set the stage for conquest by outside powers but also demonstrated Egyptian cultural resilience.",
+    "description_ar": "تراجع السلطة المركزية والتفتت السياسي. انقسمت مصر إلى مراكز قوة متنافسة: فراعنة في الشمال؛ كهنة آمون في الجنوب.",
+    "highlights": ["Central authority declined", "North-South political split", "Priestly power rose", "Egyptian culture persisted", "Libyan influence increased", "Foreign powers encroached", "Administrative complexity grew"]
+  },
+  {
+    "name": "Late Period",
+    "name_ar": "الفترة المتأخرة",
+    "period": "c. 664-332 BCE",
+    "description": "Egypt was ruled by foreign powers (especially Persia), though native dynasties sometimes regained control. The 26th Dynasty (Saite Period) saw a cultural renaissance—ancient traditions were revived, temples restored, and trade flourished. Yet the era was marked by periodic invasions and foreign occupation. Despite this, Egyptian identity remained strong, and the people maintained religious and cultural traditions passed down through millennia.",
+    "description_ar": "حكمت مصر قوى أجنبية (خاصة فارس)، على الرغم من أن الأسرات الأصلية حكمت في بعض الأحيان.",
+    "highlights": ["Persian invasions and rule", "26th Dynasty (Saite) Renaissance", "Temple restoration projects", "Trade networks flourishing", "Egyptian culture preserved", "Foreign occupation endured", "Identity maintained despite invasions"]
+  },
+  {
+    "name": "Ptolemaic & Greco-Roman Periods",
+    "name_ar": "الفترة البطلمية والرومانية",
+    "period": "c. 332 BCE - 395 CE",
+    "description": "Alexander the Great conquered Egypt in 332 BCE, ending native pharaonic rule. His general Ptolemy founded the Ptolemaic Dynasty (Greek rulers who adopted Egyptian customs). Cleopatra VII was the last pharaoh—a brilliant diplomat who attempted to preserve Egyptian independence against Rome. After her death in 30 BCE, Egypt became a Roman province. Yet Egyptian culture, religion, and traditions persisted even under foreign rule, surviving into the Christian era and influencing Mediterranean civilization.",
+    "description_ar": "فتح الإسكندر الأكبر مصر في 332 قبل الميلاد، منهياً الحكم الفرعوني الأصلي. أسس جنرالها بطليموس الأسرة البطلمية.",
+    "highlights": ["Alexander's conquest", "Ptolemaic Dynasty established", "Greek rulers adopt Egyptian ways", "Cleopatra VII's diplomacy", "Roman conquest of Egypt", "Egyptian culture survives foreign rule", "3,000 years of pharaonic tradition ends", "Cultural legacy continues"]
+  }
+]
