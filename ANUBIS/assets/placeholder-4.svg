@@ -1,0 +1,16 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="jewelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B7355;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="#0a0a0a"/>
+  <circle cx="100" cy="100" r="50" fill="url(#jewelGrad)" stroke="#FFD700" stroke-width="2"/>
+  <polygon points="100,60 130,85 115,120 85,120 70,85" fill="#FFD700" opacity="0.6"/>
+  <circle cx="85" cy="80" r="4" fill="#FFD700"/>
+  <circle cx="115" cy="80" r="4" fill="#FFD700"/>
+  <circle cx="100" cy="110" r="4" fill="#FFD700"/>
+  <circle cx="100" cy="100" r="8" fill="#FFD700" opacity="0.4"/>
+</svg>

@@ -1,0 +1,88 @@
+<svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="anubisGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="anubisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:0.9"/>
+      <stop offset="50%" style="stop-color:#0d0d0d;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="anubisHotspot">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#b88a2a;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Vignette shadow -->
+  <rect width="200" height="300" fill="url(#anubisGrad)" opacity="0.3"/>
+  
+  <!-- Anubis standing figure (jackal-headed god) -->
+  <g filter="url(#anubisGlow)">
+    <!-- Legs & Base -->
+    <rect x="70" y="200" width="20" height="80" fill="#0d0d0d"/>
+    <rect x="110" y="200" width="20" height="80" fill="#0d0d0d"/>
+    
+    <!-- Torso (wrapped linen) -->
+    <rect x="60" y="110" width="80" height="100" fill="#1a1a1a" rx="8"/>
+    <!-- Torso accent (gold trim on wrappings) -->
+    <line x1="60" y1="130" x2="140" y2="130" stroke="#d4af37" stroke-width="2" opacity="0.7"/>
+    <line x1="60" y1="160" x2="140" y2="160" stroke="#d4af37" stroke-width="2" opacity="0.5"/>
+    <line x1="60" y1="190" x2="140" y2="190" stroke="#d4af37" stroke-width="2" opacity="0.7"/>
+    
+    <!-- Arms (lowered, authority) -->
+    <rect x="35" y="130" width="25" height="65" fill="#0d0d0d" rx="5"/>
+    <rect x="140" y="130" width="25" height="65" fill="#0d0d0d" rx="5"/>
+    
+    <!-- Neck -->
+    <rect x="85" y="85" width="30" height="25" fill="#1a1a1a"/>
+    
+    <!-- Jackal head (profile) -->
+    <g transform="translate(100, 50)">
+      <!-- Snout (long, characteristic) -->
+      <ellipse cx="25" cy="0" rx="20" ry="12" fill="#0d0d0d"/>
+      <path d="M 15 -5 Q 30 -8 45 -2" fill="#1a1a1a"/>
+      
+      <!-- Nose tip (gold accent) -->
+      <circle cx="48" cy="0" r="3" fill="#d4af37"/>
+      
+      <!-- Head (blocky, powerful) -->
+      <polygon points="20,-15 35,-20 40,-5 25,5" fill="#0d0d0d"/>
+      
+      <!-- Ears (pointed, alert) -->
+      <polygon points="15,-18 8,-28 12,-15" fill="#0d0d0d"/>
+      <polygon points="35,-18 42,-28 38,-15" fill="#0d0d0d"/>
+      <!-- Ear gold accents -->
+      <polygon points="15,-18 10,-25 12,-16" fill="#b88a2a" opacity="0.8"/>
+      <polygon points="35,-18 40,-25 38,-16" fill="#b88a2a" opacity="0.8"/>
+      
+      <!-- Eyes (glowing) -->
+      <circle cx="18" cy="-8" r="2.5" fill="#FFD700"/>
+      <circle cx="32" cy="-8" r="2.5" fill="#FFD700"/>
+      <!-- Eye glow -->
+      <circle cx="18" cy="-8" r="3.5" fill="none" stroke="#d4af37" stroke-width="0.5" opacity="0.6"/>
+      <circle cx="32" cy="-8" r="3.5" fill="none" stroke="#d4af37" stroke-width="0.5" opacity="0.6"/>
+      
+      <!-- Ceremonial headdress accent (nemes-style) -->
+      <path d="M 10 -22 Q 25 -32 40 -22" stroke="#d4af37" stroke-width="2" fill="none" opacity="0.8"/>
+    </g>
+  </g>
+  
+  <!-- Authority sigils (hieroglyphic-inspired) -->
+  <g opacity="0.4">
+    <!-- Left sigil -->
+    <circle cx="30" cy="80" r="15" fill="none" stroke="#d4af37" stroke-width="1.5"/>
+    <path d="M 25 75 L 35 85 M 35 75 L 25 85" stroke="#d4af37" stroke-width="1"/>
+    
+    <!-- Right sigil -->
+    <circle cx="170" cy="80" r="15" fill="none" stroke="#d4af37" stroke-width="1.5"/>
+    <path d="M 165 75 L 175 85 M 175 75 L 165 85" stroke="#d4af37" stroke-width="1"/>
+  </g>
+  
+  <!-- Title glow indicator -->
+  <ellipse cx="100" cy="270" rx="50" ry="15" fill="url(#anubisHotspot)" opacity="0.4"/>
+</svg>

@@ -1,0 +1,42 @@
+<svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- Scepter Divider - Egyptian Motif -->
+  <defs>
+    <linearGradient id="scepterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Left Line -->
+  <line x1="10" y1="40" x2="80" y2="40" stroke="url(#scepterGrad)" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Left Decorative End -->
+  <circle cx="12" cy="40" r="3" fill="#D4AF37" stroke="#0A0A0A" stroke-width="0.5"/>
+  
+  <!-- Central Scepter Head -->
+  <g transform="translate(100, 40)">
+    <!-- Main Sphere -->
+    <circle cx="0" cy="0" r="15" fill="url(#scepterGrad)" stroke="#0A0A0A" stroke-width="2"/>
+    
+    <!-- Top Uraeus -->
+    <path d="M -3 -15 Q 0 -20 3 -15" stroke="#0A0A0A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <circle cx="-3" cy="-15" r="0.8" fill="#0A0A0A"/>
+    <circle cx="3" cy="-15" r="0.8" fill="#0A0A0A"/>
+    
+    <!-- Crook Symbol -->
+    <path d="M -8 -2 Q -12 0 -8 5" stroke="#0A0A0A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Flail Symbol -->
+    <path d="M 8 -2 Q 12 0 8 5" stroke="#0A0A0A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Center Detail -->
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#0A0A0A" stroke-width="0.8"/>
+  </g>
+  
+  <!-- Right Line -->
+  <line x1="120" y1="40" x2="190" y2="40" stroke="url(#scepterGrad)" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Right Decorative End -->
+  <circle cx="188" cy="40" r="3" fill="#D4AF37" stroke="#0A0A0A" stroke-width="0.5"/>
+</svg>

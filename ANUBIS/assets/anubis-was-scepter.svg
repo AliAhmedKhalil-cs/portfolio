@@ -1,0 +1,70 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hekaStaff" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#b88a2a;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="staffGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Was Scepter (symbol of power and protection) -->
+  <!-- Main staff -->
+  <rect x="90" y="30" width="20" height="140" fill="url(#hekaStaff)" rx="10" filter="url(#staffGlow)"/>
+  
+  <!-- Upper: Djed Pillar (stability) -->
+  <g transform="translate(100, 35)">
+    <!-- Top cap -->
+    <rect x="-15" y="-8" width="30" height="8" fill="#d4af37" stroke="#FFD700" stroke-width="1"/>
+    <!-- Main pillar -->
+    <rect x="-12" y="0" width="24" height="35" fill="#0d0d0d" stroke="#d4af37" stroke-width="1.5" rx="2"/>
+    <!-- Cross bars (4, representing stability) -->
+    <rect x="-12" y="5" width="24" height="2" fill="#d4af37" opacity="0.6"/>
+    <rect x="-12" y="12" width="24" height="2" fill="#d4af37" opacity="0.6"/>
+    <rect x="-12" y="19" width="24" height="2" fill="#d4af37" opacity="0.6"/>
+    <rect x="-12" y="26" width="24" height="2" fill="#d4af37" opacity="0.6"/>
+  </g>
+  
+  <!-- Middle: Curved handle section -->
+  <g transform="translate(100, 95)">
+    <!-- Left curve -->
+    <path d="M -20 0 Q -30 10 -25 25" fill="none" stroke="url(#hekaStaff)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Right curve -->
+    <path d="M 20 0 Q 30 10 25 25" fill="none" stroke="url(#hekaStaff)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Center grip -->
+    <ellipse cx="0" cy="5" rx="14" ry="20" fill="#0d0d0d" stroke="#d4af37" stroke-width="1.5" opacity="0.8"/>
+    <!-- Grip lines (wrapping) -->
+    <line x1="-10" y1="0" x2="10" y2="0" stroke="#d4af37" stroke-width="1" opacity="0.5"/>
+    <line x1="-10" y1="5" x2="10" y2="5" stroke="#d4af37" stroke-width="1" opacity="0.5"/>
+    <line x1="-10" y1="10" x2="10" y2="10" stroke="#d4af37" stroke-width="1" opacity="0.5"/>
+  </g>
+  
+  <!-- Lower: Curved pronged end (forked base) -->
+  <g transform="translate(100, 155)">
+    <!-- Left prong -->
+    <path d="M -15 0 Q -20 8 -18 20" fill="none" stroke="url(#hekaStaff)" stroke-width="3" stroke-linecap="round" filter="url(#staffGlow)"/>
+    <!-- Right prong -->
+    <path d="M 15 0 Q 20 8 18 20" fill="none" stroke="url(#hekaStaff)" stroke-width="3" stroke-linecap="round" filter="url(#staffGlow)"/>
+    <!-- Center point -->
+    <line x1="0" y1="0" x2="0" y2="22" stroke="url(#hekaStaff)" stroke-width="2.5" stroke-linecap="round" filter="url(#staffGlow)"/>
+    <!-- Prong ends (sharp points for power) -->
+    <circle cx="-18" cy="22" r="1.5" fill="#FFD700"/>
+    <circle cx="0" cy="24" r="1.5" fill="#FFD700"/>
+    <circle cx="18" cy="22" r="1.5" fill="#FFD700"/>
+  </g>
+  
+  <!-- Side sigils (protective) -->
+  <g opacity="0.5">
+    <circle cx="30" cy="100" r="12" fill="none" stroke="#d4af37" stroke-width="1.5"/>
+    <path d="M 25 95 L 35 105 M 35 95 L 25 105" stroke="#d4af37" stroke-width="1"/>
+    
+    <circle cx="170" cy="100" r="12" fill="none" stroke="#d4af37" stroke-width="1.5"/>
+    <path d="M 165 95 L 175 105 M 175 95 L 165 105" stroke="#d4af37" stroke-width="1"/>
+  </g>
+</svg>
