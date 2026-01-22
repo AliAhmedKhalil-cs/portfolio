@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ANUBIS MUSEUM - Archive of Knowledge. Read scholarly articles, archaeological insights, and deep dives into Egyptian mythology and culture.">
+    <meta name="keywords" content="Egyptian archaeology, scholarly articles, museum knowledge, ancient Egypt, research, hieroglyphics, Anubis mythology">
+    
+    <title>Archive of Knowledge | ANUBIS MUSEUM</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- Flaticon Icons - Local Assets -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/icons/anubis.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@400;600;700&family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script defer src="../js/app.js"></script>
+</head>
+<body>
+    <audio id="site-ambience" class="site-audio" autoplay loop preload="auto">
+        <source src="../assets/audio/ambient.mp3" type="audio/mpeg">
+    </audio>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="navbar__logo">
+                <a href="../index.html" class="navbar__logo-link">
+                    <svg class="navbar__logo-icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="anubis-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFD700"/>
+                                <stop offset="100%" stop-color="#b88a2a"/>
+                            </linearGradient>
+                        </defs>
+                        <g fill="none" stroke="url(#anubis-gold)" stroke-width="1">
+                            <path d="M20 6 L14 2 L16 8 L20 10 L24 8 L26 2 L20 6 Z"/>
+                            <path d="M12 10 L20 6 L28 10 L28 22 L24 30 L20 34 L16 30 L12 22 Z" fill="#0d0d0d"/>
+                            <path d="M18 18 L22 18 L25 22 L22 24 L18 24 L15 22 Z" fill="#1a1a1a"/>
+                            <circle cx="18" cy="20" r="1" fill="#FFD700"/>
+                            <circle cx="22" cy="20" r="1" fill="#FFD700"/>
+                            <path d="M20 24 L20 28"/>
+                            <path d="M16 30 L20 34 L24 30"/>
+                        </g>
+                    </svg>
+                    <span class="navbar__title" data-en="ANUBIS MUSEUM" data-ar="متحف أنوبيس">ANUBIS MUSEUM</span>
+                </a>
+            </div>
+            
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <ul class="navbar__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="../index.html" class="navbar__link" role="menuitem" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li role="none"><a href="./hieroglyphic.html" class="navbar__link" role="menuitem" data-en="Hieroglyphic Writing" data-ar="الكتابة الهيروغليفية">Hieroglyphic Writing</a></li>
+                <li role="none"><a href="./galleries.html" class="navbar__link" role="menuitem" data-en="Sacred Galleries" data-ar="المعارض المقدسة">Sacred Galleries</a></li>
+                <li role="none"><a href="./dynasty-timeline.html" class="navbar__link" role="menuitem" data-en="Dynasties Timeline" data-ar="خط زمني للأسرات">Dynasties Timeline</a></li>
+                <li role="none"><a href="./anubis-chamber.html" class="navbar__link" role="menuitem" data-en="Anubis Chamber" data-ar="حجرة أنوبيس">Anubis Chamber</a></li>
+                <li role="none"><a href="./judgment.html" class="navbar__link" role="menuitem" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                <li role="none"><a href="./tombs.html" class="navbar__link" role="menuitem" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                <li role="none"><a href="./artifacts.html" class="navbar__link" role="menuitem" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                <li role="none"><a href="./blog.html" class="navbar__link" role="menuitem" data-en="Knowledge" data-ar="المعرفة">Knowledge</a></li>
+                <li role="none"><a href="./journey.html" class="navbar__link" role="menuitem" data-en="Journeys" data-ar="الرحلات">Journeys</a></li>
+                <li role="none"><a href="./wisdom.html" class="navbar__link" role="menuitem" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                <li role="none">
+                    <button class="navbar__lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                        <span class="navbar__lang-en">EN</span>
+                        <span class="navbar__lang-ar">AR</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero hero--blog" id="hero" role="region" aria-label="Knowledge Archive Hero">
+        <div class="hero__background" aria-hidden="true"></div>
+        <div class="hero__dust" aria-hidden="true">
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+        </div>
+        
+        <div class="hero__content hero__content--blog">
+            <svg class="hero__ornament" viewBox="0 0 100 150" width="90" height="135" aria-hidden="true">
+                <defs>
+                    <linearGradient id="scrollGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1"/>
+                        <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#b88a2a;stop-opacity:1"/>
+                    </linearGradient>
+                </defs>
+                <!-- Papyrus scroll (sacred archive) -->
+                <path d="M30 22 H70 V118 H30 Z" fill="none" stroke="url(#scrollGold)" stroke-width="2"/>
+                <path d="M26 22 Q20 30 26 40" fill="none" stroke="url(#scrollGold)" stroke-width="2"/>
+                <path d="M74 22 Q80 30 74 40" fill="none" stroke="url(#scrollGold)" stroke-width="2"/>
+                <path d="M26 118 Q20 110 26 100" fill="none" stroke="url(#scrollGold)" stroke-width="2"/>
+                <path d="M74 118 Q80 110 74 100" fill="none" stroke="url(#scrollGold)" stroke-width="2"/>
+                <line x1="34" y1="38" x2="66" y2="38" stroke="url(#scrollGold)" stroke-width="1"/>
+                <line x1="34" y1="54" x2="66" y2="54" stroke="url(#scrollGold)" stroke-width="1"/>
+                <line x1="34" y1="70" x2="66" y2="70" stroke="url(#scrollGold)" stroke-width="1"/>
+                <line x1="34" y1="86" x2="66" y2="86" stroke="url(#scrollGold)" stroke-width="1"/>
+                <line x1="34" y1="102" x2="66" y2="102" stroke="url(#scrollGold)" stroke-width="1"/>
+            </svg>
+            
+            <h1 class="hero__title" data-en="ARCHIVE OF KNOWLEDGE" data-ar="أرشيف المعرفة">ARCHIVE OF KNOWLEDGE</h1>
+            <p class="hero__subtitle" data-en="Scholarly insights into ancient Egypt. Deep dives into archaeology, mythology, and the eternal wisdom of Anubis." data-ar="رؤية عميقة في مصر القديمة. غوص عميق في الآثار والأساطير والحكمة الأبدية لأنوبيس.">
+                Scholarly insights into ancient Egypt, archaeology, and the eternal wisdom of Anubis.
+            </p>
+        </div>
+    </section>
+    
+    <main class="main">
+        <section class="section section--blog" role="region" aria-labelledby="blog-intro">
+            <div class="container">
+                <h2 class="section__title" id="blog-intro" data-en="Preserved Forever" data-ar="محفوظ للأبد">Preserved Forever</h2>
+                
+                <div class="blog-grid">
+                    <article class="blog-post">
+                        <h3 class="blog-post__title" data-en="The Evolution of Burial Practices Across Dynasties" data-ar="تطور ممارسات الدفن عبر السلالات">
+                            <a href="#" class="blog-post__link">The Evolution of Burial Practices Across Dynasties</a>
+                        </h3>
+                        <p class="blog-post__meta" data-en="Posted" data-ar="تم النشر"> – Historical Research –</p>
+                        <p class="blog-post__excerpt" data-en="From simple pit graves to monumental pyramids, examine how burial practices evolved over 3,000 years of Egyptian civilization, reflecting changing beliefs about the afterlife." data-ar="من القبور البسيطة إلى الأهرام الضخمة، افحص كيف تطورت ممارسات الدفن على مدى 3000 سنة من الحضارة المصرية.">
+                            From simple pit graves to monumental pyramids, burial practices evolved dramatically over millennia, reflecting changing beliefs about eternity.
+                        </p>
+                    </article>
+                    
+                    <article class="blog-post">
+                        <h3 class="blog-post__title" data-en="Decoding Hieroglyphics: The Written Language of the Gods" data-ar="فك الهيروغليفية: اللغة المكتوبة للآلهة">
+                            <a href="#" class="blog-post__link">Decoding Hieroglyphics: The Language of the Gods</a>
+                        </h3>
+                        <p class="blog-post__meta" data-en="Posted" data-ar="تم النشر"> – Linguistic Study –</p>
+                        <p class="blog-post__excerpt" data-en="Hieroglyphics were not mere writing—they were sacred symbols believed to contain divine power. Learn how these intricate symbols conveyed both practical and spiritual meaning." data-ar="لم تكن الهيروغليفية مجرد كتابة - كانت رموزاً مقدسة يُعتقد أنها تحتوي على قوة إلهية. تعلم كيف نقلت هذه الرموز المعقدة معاني عملية وروحية.">
+                            Hieroglyphics were sacred symbols believed to contain divine power, conveying both practical and spiritual meaning across millennia.
+                        </p>
+                    </article>
+                    
+                    <article class="blog-post">
+                        <h3 class="blog-post__title" data-en="Anubis: From Local Guardian to Supreme God of the Dead" data-ar="أنوبيس: من الحارس المحلي إلى إله الموتى الأعظم">
+                            <a href="#" class="blog-post__link">Anubis: Rise to Supreme God of the Dead</a>
+                        </h3>
+                        <p class="blog-post__meta" data-en="Posted" data-ar="تم النشر"> – Mythology –</p>
+                        <p class="blog-post__excerpt" data-en="How did a jackal-headed god become the ultimate authority over death and the afterlife? Trace Anubis' theological evolution through Egyptian history and his role in cosmic justice." data-ar="كيف أصبح إله برأس الذئب السلطة العليا على الموت والآخرة؟ اتبع تطور أنوبيس اللاهوتي عبر التاريخ المصري ودوره في العدالة الكونية.">
+                            Trace how a jackal-headed god became the ultimate authority over death and the afterlife, embodying cosmic justice itself.
+                        </p>
+                    </article>
+                    
+                    <article class="blog-post">
+                        <h3 class="blog-post__title" data-en="The Science Behind Mummification: Preservation for Eternity" data-ar="العلم وراء التحنيط: الحفظ للأبد">
+                            <a href="#" class="blog-post__link">The Science of Mummification: Preservation for Eternity</a>
+                        </h3>
+                        <p class="blog-post__meta" data-en="Posted" data-ar="تم النشر"> – Archaeological Science –</p>
+                        <p class="blog-post__excerpt" data-en="Egyptian mummification was not superstition—it was sophisticated chemistry and anatomy. Discover how techniques perfected over centuries kept bodies preserved for over 3,000 years." data-ar="التحنيط المصري لم يكن خرافة - كان كيمياء وتشريحاً متقدماً. اكتشف كيف أبقت التقنيات المتقنة على مدى قرون الأجسام محفوظة لأكثر من 3000 سنة.">
+                            Egyptian mummification was sophisticated chemistry, combining anatomy, natron salts, and resin to preserve bodies for millennia.
+                        </p>
+                    </article>
+                    
+                    <article class="blog-post">
+                        <h3 class="blog-post__title" data-en="The Book of the Dead: Map of the Afterlife" data-ar="كتاب الموتى: خريطة الآخرة">
+                            <a href="#" class="blog-post__link">The Book of the Dead: Map of the Afterlife</a>
+                        </h3>
+                        <p class="blog-post__meta" data-en="Posted" data-ar="تم النشر"> – Sacred Texts –</p>
+                        <p class="blog-post__excerpt" data-en="Not one book but a collection of spells, maps, and instructions. The Book of the Dead was the ultimate guide for souls navigating the Duat, written on papyri and tomb walls." data-ar="لا كتاب واحد بل مجموعة من التعاويذ والخرائط والتعليمات. كان كتاب الموتى الدليل الأسمى للأرواح التي تتنقل عبر الدوات.">
+                            A collection of spells and maps inscribed in tombs, the Book of the Dead was the ultimate guide for souls navigating the Duat's trials.
+                        </p>
+                    </article>
+                    
+                    <article class="blog-post">
+                        <h3 class="blog-post__title" data-en="Sacred Geometry in the Great Pyramid: Cosmic Mathematics" data-ar="الهندسة المقدسة في الهرم الأعظم: الرياضيات الكونية">
+                            <a href="#" class="blog-post__link">Sacred Geometry in the Great Pyramid</a>
+                        </h3>
+                        <p class="blog-post__meta" data-en="Posted" data-ar="تم النشر"> – Architecture & Mathematics –</p>
+                        <p class="blog-post__excerpt" data-en="The Great Pyramid is a geometric marvel. Its proportions align with celestial bodies, its chambers reflect cosmic principles, and its construction remains a testament to ancient engineering brilliance." data-ar="الهرم الأعظم هو عجيبة هندسية. تتوافق نسبه مع الأجرام السماوية، وتعكس حجراته مبادئ كونية، والبناء الخاص به يبقى شاهداً على عبقرية الهندسة القديمة.">
+                            The Great Pyramid's proportions align with celestial bodies and cosmic principles, reflecting ancient mathematical mastery.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section--dark" role="region" aria-labelledby="explore-more">
+            <div class="container">
+                <h2 class="section__title" id="explore-more" data-en="Continue Your Exploration" data-ar="استمر في استكشافك">Continue Your Exploration</h2>
+                
+                <div class="grid grid--3">
+                    <div class="exploration-card">
+                        <img src="../assets/icons/eye.png" alt="" class="icon icon--lg icon--gold" style="display: block; margin: 0 auto 1rem;" />
+                        <h3 class="exploration-card__title" data-en="Understand Judgment" data-ar="افهم الحكم">Understand Judgment</h3>
+                        <p data-en="Explore the scales of Ma'at and the weighing of the heart ceremony." data-ar="استكشف موازين معات وحفل وزن القلب.">
+                            Explore the scales of Ma'at and the weighing of the heart ceremony.
+                        </p>
+                        <a href="./judgment.html" class="btn btn--outline" data-en="Learn More" data-ar="تعرف على المزيد">
+                            Learn More
+                        </a>
+                    </div>
+                    
+                    <div class="exploration-card">
+                        <img src="../assets/icons/museum.png" alt="" class="icon icon--lg icon--gold" style="display: block; margin: 0 auto 1rem;" />
+                        <h3 class="exploration-card__title" data-en="Explore Sacred Sites" data-ar="استكشف المواقع المقدسة">Explore Sacred Sites</h3>
+                        <p data-en="Discover the tombs and temples that shaped Egyptian civilization." data-ar="اكتشف المقابر والمعابد التي شكلت الحضارة المصرية.">
+                            Discover the tombs and temples that shaped Egyptian civilization.
+                        </p>
+                        <a href="./tombs.html" class="btn btn--outline" data-en="Discover Tombs" data-ar="اكتشف المقابر">
+                            Discover Tombs
+                        </a>
+                    </div>
+                    
+                    <div class="exploration-card">
+                        <img src="../assets/icons/scepter.png" alt="" class="icon icon--lg icon--gold" style="display: block; margin: 0 auto 1rem;" />
+                        <h3 class="exploration-card__title" data-en="Seek Wisdom" data-ar="ابحث عن الحكمة">Seek Wisdom</h3>
+                        <p data-en="Learn the principles of Ma'at that guide the soul to eternity." data-ar="تعلم مبادئ معات التي توجه الروح نحو الأبدية.">
+                            Learn the principles of Ma'at that guide the soul to eternity.
+                        </p>
+                        <a href="./wisdom.html" class="btn btn--outline" data-en="Receive Wisdom" data-ar="استقبل الحكمة">
+                            Receive Wisdom
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Sacred Path" data-ar="المسار المقدس">Sacred Path</h4>
+                    <ul class="footer__links">
+                        <li><a href="./judgment.html" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                        <li><a href="./tombs.html" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                        <li><a href="./artifacts.html" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                        <li><a href="./wisdom.html" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Knowledge" data-ar="المعرفة">Knowledge</h4>
+                    <ul class="footer__links">
+                        <li><a href="./journey.html" data-en="Your Journey" data-ar="رحلتك">Your Journey</a></li>
+                        <li><a href="./blog.html" data-en="Blog" data-ar="المجلة">Blog</a></li>
+                        <li><a href="../index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <p class="footer__text text-gold" data-en="Guardian of Eternity" data-ar="حارس الأبدية">
+                        Guardian of Eternity
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer__divider"></div>
+            
+            <div class="footer__bottom">
+                <p class="text-muted" data-en="© 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved." data-ar="© 2025 متحف أنوبيس. حيث يتم وزن الأرواح. جميع الحقوق محفوظة.">
+                    © 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/router.js"></script>
+</body>
+</html>

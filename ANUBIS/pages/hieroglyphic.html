@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ANUBIS MUSEUM - Hieroglyphic Writing chamber and Anubis translator.">
+    <meta name="keywords" content="Hieroglyphic writing, Egyptian symbols, Anubis translator">
+    <title>Hieroglyphic Writing | ANUBIS MUSEUM</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/icons/anubis.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@400;600;700&family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script defer src="../js/app.js"></script>
+</head>
+<body>
+    <audio id="site-ambience" class="site-audio" autoplay loop preload="auto">
+        <source src="../assets/audio/ambient.mp3" type="audio/mpeg">
+    </audio>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="navbar__logo">
+                <a href="../index.html" class="navbar__logo-link">
+                    <svg class="navbar__logo-icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="anubis-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFD700"/>
+                                <stop offset="100%" stop-color="#b88a2a"/>
+                            </linearGradient>
+                        </defs>
+                        <g fill="none" stroke="url(#anubis-gold)" stroke-width="1">
+                            <path d="M20 6 L14 2 L16 8 L20 10 L24 8 L26 2 L20 6 Z"/>
+                            <path d="M12 10 L20 6 L28 10 L28 22 L24 30 L20 34 L16 30 L12 22 Z" fill="#0d0d0d"/>
+                            <path d="M18 18 L22 18 L25 22 L22 24 L18 24 L15 22 Z" fill="#1a1a1a"/>
+                            <circle cx="18" cy="20" r="1" fill="#FFD700"/>
+                            <circle cx="22" cy="20" r="1" fill="#FFD700"/>
+                            <path d="M20 24 L20 28"/>
+                            <path d="M16 30 L20 34 L24 30"/>
+                        </g>
+                    </svg>
+                    <span class="navbar__title" data-en="ANUBIS MUSEUM" data-ar="متحف أنوبيس">ANUBIS MUSEUM</span>
+                </a>
+            </div>
+
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="navbar__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="../index.html" class="navbar__link" role="menuitem" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li role="none"><a href="./hieroglyphic.html" class="navbar__link" role="menuitem" data-en="Hieroglyphic Writing" data-ar="الكتابة الهيروغليفية">Hieroglyphic Writing</a></li>
+                <li role="none"><a href="./galleries.html" class="navbar__link" role="menuitem" data-en="Sacred Galleries" data-ar="المعارض المقدسة">Sacred Galleries</a></li>
+                <li role="none"><a href="./dynasty-timeline.html" class="navbar__link" role="menuitem" data-en="Dynasties Timeline" data-ar="خط زمني للأسرات">Dynasties Timeline</a></li>
+                <li role="none"><a href="./anubis-chamber.html" class="navbar__link" role="menuitem" data-en="Anubis Chamber" data-ar="حجرة أنوبيس">Anubis Chamber</a></li>
+                <li role="none"><a href="./judgment.html" class="navbar__link" role="menuitem" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                <li role="none"><a href="./tombs.html" class="navbar__link" role="menuitem" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                <li role="none"><a href="./artifacts.html" class="navbar__link" role="menuitem" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                <li role="none"><a href="./blog.html" class="navbar__link" role="menuitem" data-en="Knowledge" data-ar="المعرفة">Knowledge</a></li>
+                <li role="none"><a href="./journey.html" class="navbar__link" role="menuitem" data-en="Journeys" data-ar="الرحلات">Journeys</a></li>
+                <li role="none"><a href="./wisdom.html" class="navbar__link" role="menuitem" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                <li role="none">
+                    <button class="navbar__lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                        <span class="navbar__lang-en">EN</span>
+                        <span class="navbar__lang-ar">AR</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- Hieroglyphic Writing Chamber -->
+    <section class="section section--dark" id="hieroglyphic-writing" role="region" aria-labelledby="hieroglyphic-title">
+        <div class="container">
+            <h2 class="section__title" id="hieroglyphic-title" data-en="Hieroglyphic Writing" data-ar="الكتابة الهيروغليفية">Hieroglyphic Writing</h2>
+            <p class="section__subtitle" data-en="The sacred language of eternity. Each symbol is a prayer carved into stone." data-ar="لغة الأبدية المقدسة. كل رمز دعاء محفور في الحجر.">
+                The sacred language of eternity. Each symbol is a prayer carved into stone.
+            </p>
+
+            <div class="grid grid--2 hieroglyphic-info">
+                <article class="card card--feature">
+                    <h3 class="card__title" data-en="What is Hieroglyphic Writing?" data-ar="ما هي الكتابة الهيروغليفية؟">What is Hieroglyphic Writing?</h3>
+                    <p class="card__text" data-en="A system of sacred symbols used by priests and scribes to record divine names, royal decrees, and eternal histories." data-ar="نظام من الرموز المقدسة استخدمه الكهنة والكتّاب لتسجيل أسماء الآلهة، والمراسيم الملكية، والوقائع الخالدة.">
+                        A system of sacred symbols used by priests and scribes to record divine names and royal decrees.
+                    </p>
+                </article>
+
+                <article class="card card--feature">
+                    <h3 class="card__title" data-en="How It Was Read" data-ar="كيف كانت تُقرأ؟">How It Was Read</h3>
+                    <p class="card__text" data-en="Hieroglyphs could be read in multiple directions. The figures always face the beginning of the line." data-ar="تُقرأ الهيروغليفية في اتجاهات متعددة، والرموز تنظر دائماً إلى بداية السطر.">
+                        Hieroglyphs could be read in multiple directions. The figures always face the beginning of the line.
+                    </p>
+                </article>
+            </div>
+
+            <div class="hieroglyphic-tool">
+                <h3 class="hieroglyphic-tool__title" data-en="Anubis Translator" data-ar="مترجم أنوبيس">Anubis Translator</h3>
+                <p class="hieroglyphic-tool__subtitle" data-en="Enter your name and receive it as a sacred inscription." data-ar="اكتب اسمك لتراه نقشاً مقدساً.">
+                    Enter your name and receive it as a sacred inscription.
+                </p>
+
+                <div class="hieroglyphic-tool__form">
+                    <input type="text" id="anubis-input" class="hieroglyphic-tool__input" placeholder="Enter your name" data-en="Enter your name" data-ar="اكتب اسمك هنا">
+                    <button class="btn btn--primary" id="anubis-generate" type="button" data-en="Generate Anubis Script" data-ar="توليد كتابة أنوبيس">Generate Anubis Script</button>
+                </div>
+
+                <div class="hieroglyphic-tool__output" id="anubis-output" aria-live="polite">
+                    ?? ?? ?? ??
+                </div>
+                <p class="hieroglyphic-tool__note" data-en="This is a ceremonial rendering for artistic experience." data-ar="هذه كتابة رمزية للاستخدام الفني والتجربة.">
+                    This is a ceremonial rendering for artistic experience.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--dark">
+        <div class="container">
+            <div class="dynasty-links">
+                <a class="btn btn--ghost" href="../index.html" data-en="Back to Home" data-ar="العودة للرئيسية">Back to Home</a>
+                <a class="btn btn--ghost" href="./galleries.html" data-en="Sacred Galleries" data-ar="المعارض المقدسة">Sacred Galleries</a>
+                <a class="btn btn--ghost" href="./dynasty-timeline.html" data-en="Dynasties Timeline" data-ar="خط زمني للأسرات">Dynasties Timeline</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

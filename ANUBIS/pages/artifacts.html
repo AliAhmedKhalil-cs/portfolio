@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ANUBIS MUSEUM - Artifacts. Explore the treasures of ancient Egypt—sacred objects, ceremonial vessels, and divine tools preserved from the pharaonic age.">
+    <meta name="keywords" content="Egyptian artifacts, archaeological treasures, sacred objects, pharaonic relics, museum collection, ancient Egypt">
+    
+    <title>Artifacts | ANUBIS MUSEUM</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- Flaticon Icons - Local Assets -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/icons/anubis.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@400;600;700&family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script defer src="../js/app.js"></script>
+</head>
+<body>
+    <audio id="site-ambience" class="site-audio" autoplay loop preload="auto">
+        <source src="../assets/audio/ambient.mp3" type="audio/mpeg">
+    </audio>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="navbar__logo">
+                <a href="../index.html" class="navbar__logo-link">
+                    <svg class="navbar__logo-icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="anubis-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFD700"/>
+                                <stop offset="100%" stop-color="#b88a2a"/>
+                            </linearGradient>
+                        </defs>
+                        <g fill="none" stroke="url(#anubis-gold)" stroke-width="1">
+                            <path d="M20 6 L14 2 L16 8 L20 10 L24 8 L26 2 L20 6 Z"/>
+                            <path d="M12 10 L20 6 L28 10 L28 22 L24 30 L20 34 L16 30 L12 22 Z" fill="#0d0d0d"/>
+                            <path d="M18 18 L22 18 L25 22 L22 24 L18 24 L15 22 Z" fill="#1a1a1a"/>
+                            <circle cx="18" cy="20" r="1" fill="#FFD700"/>
+                            <circle cx="22" cy="20" r="1" fill="#FFD700"/>
+                            <path d="M20 24 L20 28"/>
+                            <path d="M16 30 L20 34 L24 30"/>
+                        </g>
+                    </svg>
+                    <span class="navbar__title" data-en="ANUBIS MUSEUM" data-ar="متحف أنوبيس">ANUBIS MUSEUM</span>
+                </a>
+            </div>
+            
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <ul class="navbar__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="../index.html" class="navbar__link" role="menuitem" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li role="none"><a href="./hieroglyphic.html" class="navbar__link" role="menuitem" data-en="Hieroglyphic Writing" data-ar="الكتابة الهيروغليفية">Hieroglyphic Writing</a></li>
+                <li role="none"><a href="./galleries.html" class="navbar__link" role="menuitem" data-en="Sacred Galleries" data-ar="المعارض المقدسة">Sacred Galleries</a></li>
+                <li role="none"><a href="./dynasty-timeline.html" class="navbar__link" role="menuitem" data-en="Dynasties Timeline" data-ar="خط زمني للأسرات">Dynasties Timeline</a></li>
+                <li role="none"><a href="./anubis-chamber.html" class="navbar__link" role="menuitem" data-en="Anubis Chamber" data-ar="حجرة أنوبيس">Anubis Chamber</a></li>
+                <li role="none"><a href="./judgment.html" class="navbar__link" role="menuitem" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                <li role="none"><a href="./tombs.html" class="navbar__link" role="menuitem" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                <li role="none"><a href="./artifacts.html" class="navbar__link" role="menuitem" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                <li role="none"><a href="./blog.html" class="navbar__link" role="menuitem" data-en="Knowledge" data-ar="المعرفة">Knowledge</a></li>
+                <li role="none"><a href="./journey.html" class="navbar__link" role="menuitem" data-en="Journeys" data-ar="الرحلات">Journeys</a></li>
+                <li role="none"><a href="./wisdom.html" class="navbar__link" role="menuitem" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                <li role="none">
+                    <button class="navbar__lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                        <span class="navbar__lang-en">EN</span>
+                        <span class="navbar__lang-ar">AR</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero hero--artifacts" id="hero" role="region" aria-label="Artifacts Hero">
+        <div class="hero__background" aria-hidden="true"></div>
+        <div class="hero__dust" aria-hidden="true">
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+        </div>
+        
+        <div class="hero__content hero__content--artifacts">
+            <svg class="hero__ornament" viewBox="0 0 100 150" width="90" height="135" aria-hidden="true">
+                <defs>
+                    <linearGradient id="artifactGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1"/>
+                        <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#b88a2a;stop-opacity:1"/>
+                    </linearGradient>
+                </defs>
+                <!-- Scarab beetle -->
+                <ellipse cx="50" cy="50" rx="25" ry="20" fill="none" stroke="url(#artifactGold)" stroke-width="2"/>
+                <circle cx="50" cy="30" r="15" fill="none" stroke="url(#artifactGold)" stroke-width="1.5"/>
+                <line x1="35" y1="30" x2="25" y2="15" stroke="url(#artifactGold)" stroke-width="1.5"/>
+                <line x1="65" y1="30" x2="75" y2="15" stroke="url(#artifactGold)" stroke-width="1.5"/>
+                <line x1="30" y1="60" x2="20" y2="80" stroke="url(#artifactGold)" stroke-width="1.5"/>
+                <line x1="70" y1="60" x2="80" y2="80" stroke="url(#artifactGold)" stroke-width="1.5"/>
+            </svg>
+            
+            <h1 class="hero__title" data-en="SACRED ARTIFACTS" data-ar="القطع الأثرية المقدسة">SACRED ARTIFACTS</h1>
+            <p class="hero__subtitle" data-en="Treasures of the gods. Objects that held divine power. Preserved through millennia by the grace of Anubis." data-ar="كنوز الآلهة. أشياء تحمل القوة الإلهية. محفوظة عبر الآلاف من السنين برحمة أنوبيس.">
+                Treasures of the gods preserved through millennia by Anubis' eternal grace.
+            </p>
+        </div>
+    </section>
+    
+    <main class="main">
+        <section class="section section--artifacts" role="region" aria-labelledby="artifacts-intro">
+            <div class="container">
+                <h2 class="section__title" id="artifacts-intro" data-en="Objects of Divine Purpose" data-ar="أشياء الغرض الإلهي">Objects of Divine Purpose</h2>
+                
+                <div class="content-block">
+                    <p class="lead" data-en="Every artifact found in Egyptian tombs was placed there with intention. Shabti figurines to serve in the afterlife. Amulets to protect and guide. Canopic jars to preserve the body's essence. Furniture for eternal comfort. Nothing was random—all was sacred." data-ar="كل قطعة أثرية وجدت في المقابر المصرية تم وضعها بنية. تماثيل الشبتي لتخدم في الآخرة. التمائم لحماية وتوجيه. جرار كانوبية لحفظ جوهر الجسم. أثاث للراحة الأبدية. لا شيء عشوائي - كل شيء مقدس.">
+                        Every artifact found in Egyptian tombs was placed with sacred intention. Shabti figurines, protective amulets, canopic jars, eternal furniture—nothing was random. All was sacred.
+                    </p>
+                    
+                    <p data-en="These objects bridge two worlds. They are windows into the beliefs, fears, and aspirations of those who lived 4,000 years ago. They speak to us of a culture that believed death was merely a transition—not an ending." data-ar="هذه الأشياء تربط بين عالمين. هي نوافذ إلى معتقدات وآمال من عاشوا قبل 4000 سنة. تتحدث إلينا عن ثقافة اعتقدت أن الموت كان مجرد انتقال - ليس نهاية.">
+                        These objects bridge two worlds, offering windows into the beliefs and aspirations of those who lived 4,000 years ago.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section--dark" role="region" aria-labelledby="artifact-types">
+            <div class="container">
+                <h2 class="section__title" id="artifact-types" data-en="Categories of Artifacts" data-ar="فئات القطع الأثرية">Categories of Artifacts</h2>
+                
+                <div class="grid grid--2">
+                    <article class="card card--artifacts">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/mummy.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Funeral Equipment" data-ar="معدات الدفن">Funeral Equipment</h3>
+                        <p class="card__text" data-en="The mask of Tutankhamun. The golden sarcophagus of Ramesses II. These objects were not decorations—they were vessels meant to preserve identity through eternity." data-ar="قناع توت عنخ آمون. التابوت الذهبي لرعمسيس الثاني. لم تكن هذه الأشياء زينة - كانت أوعية مخصصة لحفظ الهوية عبر الأبدية.">
+                            Including masks, sarcophagi, and coffins that preserved identity and enabled eternal existence.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--artifacts">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/scepter.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Amulets & Talismans" data-ar="التمائم والحجب">Amulets & Talismans</h3>
+                        <p class="card__text" data-en="The Ankh—eternal life. The Scarab—resurrection and renewal. The Eye of Horus—divine protection. Each carried profound spiritual meaning." data-ar="العنخ - الحياة الأبدية. الجعران - الإحياء والتجديد. عين حورس - الحماية الإلهية. كل واحد يحمل معنى روحياً عميقاً.">
+                            Including the Ankh for eternal life and the Scarab symbolizing resurrection and renewal.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--artifacts">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/crook%202.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Canopic Jars" data-ar="جرار كانوبية">Canopic Jars</h3>
+                        <p class="card__text" data-en="Four sacred vessels guarded by the sons of Horus. Each protected a different organ of the deceased. Imsety, Duamutef, Qebehsenuf, and Kebehsenuf—divine protectors of the body." data-ar="أربعة أوعية مقدسة يحرسها أبناء حورس. كل واحد حمى عضواً مختلفاً من المتوفى. إمسيتي وويمتف وقيبهسنف - حماة الجسم الإلهية.">
+                            Four sacred vessels guarded by the sons of Horus, each protecting different organs of the deceased.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--artifacts">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/crook.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Sacred Texts" data-ar="النصوص المقدسة">Sacred Texts</h3>
+                        <p class="card__text" data-en="The Book of the Dead—instructions for the deceased. Spelled inscriptions on tomb walls. Magic formulas meant to guide the soul through the Duat—the Egyptian underworld." data-ar="كتاب الموتى - تعليمات للموتى. نصوص مكتوبة على جدران المقبرة. صيغ سحرية مخصصة لتوجيه الروح عبر الدوات.">
+                            The Book of the Dead and sacred inscriptions guiding souls through the Duat.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" role="region" aria-labelledby="tutankhamun">
+            <div class="container">
+                <h2 class="section__title" id="tutankhamun" data-en="Tutankhamun's Treasures" data-ar="كنوز توت عنخ آمون">Tutankhamun's Treasures</h2>
+                
+                <div class="content-block">
+                    <p data-en="The boy king's tomb, discovered by Howard Carter in 1922, contained over 5,000 artifacts. His golden mask is the single most recognizable object from ancient Egypt. Yet it represents just one piece of an entire universe of treasures—the complete material world prepared for his journey to eternity." data-ar="قبر الملك الصبي، الذي اكتشفه هوارد كارتر عام 1922، يحتوي على أكثر من 5000 قطعة أثرية. قناعه الذهبي هو الشيء الأكثر تميزاً من مصر القديمة.">
+                        The boy king's tomb contained over 5,000 artifacts prepared for his eternal journey. His golden mask remains the most iconic object from ancient Egypt.
+                    </p>
+                    
+                    <p data-en="Imagine: furniture made of ebony and ivory. Weapons inlaid with precious stones. Clothes of linen so fine it feels like air. Cosmetics still fragrant after 3,300 years. All placed there by scribes and priests who understood that death was not the end—merely a beginning." data-ar="تخيل: أثاث مصنوع من الأبنوس والعاج. أسلحة مرصعة بالأحجار الكريمة. ملابس من الكتان ناعمة جداً تبدو وكأنها هواء. مستحضرات تجميل لا تزال عطرية بعد 3300 سنة.">
+                        Furniture of ebony and ivory, weapons inlaid with precious stones, linen garments, cosmetics still fragrant—all prepared for eternal continuation.
+                    </p>
+                </div>
+                
+                <div class="cta-section">
+                    <p data-en="Understand your sacred journey through the Egyptian cosmos." data-ar="افهم رحلتك المقدسة عبر الكون المصري.">
+                        Understand your sacred journey through the Egyptian cosmos.
+                    </p>
+                    <a href="./journey.html" class="btn btn--gold-bevel" data-en="Begin Your Journey" data-ar="ابدأ رحلتك">
+                        <i class="icon icon--sm icon--gold ti ti-arrow-right" aria-hidden="true"></i>
+                        Begin Your Journey
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Sacred Path" data-ar="المسار المقدس">Sacred Path</h4>
+                    <ul class="footer__links">
+                        <li><a href="./judgment.html" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                        <li><a href="./tombs.html" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                        <li><a href="./artifacts.html" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                        <li><a href="./wisdom.html" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Knowledge" data-ar="المعرفة">Knowledge</h4>
+                    <ul class="footer__links">
+                        <li><a href="./journey.html" data-en="Your Journey" data-ar="رحلتك">Your Journey</a></li>
+                        <li><a href="./blog.html" data-en="Blog" data-ar="المجلة">Blog</a></li>
+                        <li><a href="../index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <p class="footer__text text-gold" data-en="Guardian of Eternity" data-ar="حارس الأبدية">
+                        Guardian of Eternity
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer__divider"></div>
+            
+            <div class="footer__bottom">
+                <p class="text-muted" data-en="© 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved." data-ar="© 2025 متحف أنوبيس. حيث يتم وزن الأرواح. جميع الحقوق محفوظة.">
+                    © 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/router.js"></script>
+</body>
+</html>

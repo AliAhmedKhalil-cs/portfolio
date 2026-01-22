@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ANUBIS MUSEUM - Sacred Tombs. Explore the monumental burial chambers of pharaohs, temples of eternity, and the architectural wonders of ancient Egypt.">
+    <meta name="keywords" content="Egyptian tombs, pyramids, Valley of the Kings, pharaonic burial, ancient tombs, architecture, Anubis Museum">
+    
+    <title>Sacred Tombs | ANUBIS MUSEUM</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- Flaticon Icons - Local Assets -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/icons/anubis.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@400;600;700&family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script defer src="../js/app.js"></script>
+</head>
+<body>
+    <audio id="site-ambience" class="site-audio" autoplay loop preload="auto">
+        <source src="../assets/audio/ambient.mp3" type="audio/mpeg">
+    </audio>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="navbar__logo">
+                <a href="../index.html" class="navbar__logo-link">
+                    <svg class="navbar__logo-icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="anubis-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFD700"/>
+                                <stop offset="100%" stop-color="#b88a2a"/>
+                            </linearGradient>
+                        </defs>
+                        <g fill="none" stroke="url(#anubis-gold)" stroke-width="1">
+                            <path d="M20 6 L14 2 L16 8 L20 10 L24 8 L26 2 L20 6 Z"/>
+                            <path d="M12 10 L20 6 L28 10 L28 22 L24 30 L20 34 L16 30 L12 22 Z" fill="#0d0d0d"/>
+                            <path d="M18 18 L22 18 L25 22 L22 24 L18 24 L15 22 Z" fill="#1a1a1a"/>
+                            <circle cx="18" cy="20" r="1" fill="#FFD700"/>
+                            <circle cx="22" cy="20" r="1" fill="#FFD700"/>
+                            <path d="M20 24 L20 28"/>
+                            <path d="M16 30 L20 34 L24 30"/>
+                        </g>
+                    </svg>
+                    <span class="navbar__title" data-en="ANUBIS MUSEUM" data-ar="متحف أنوبيس">ANUBIS MUSEUM</span>
+                </a>
+            </div>
+            
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <ul class="navbar__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="../index.html" class="navbar__link" role="menuitem" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li role="none"><a href="./hieroglyphic.html" class="navbar__link" role="menuitem" data-en="Hieroglyphic Writing" data-ar="الكتابة الهيروغليفية">Hieroglyphic Writing</a></li>
+                <li role="none"><a href="./galleries.html" class="navbar__link" role="menuitem" data-en="Sacred Galleries" data-ar="المعارض المقدسة">Sacred Galleries</a></li>
+                <li role="none"><a href="./dynasty-timeline.html" class="navbar__link" role="menuitem" data-en="Dynasties Timeline" data-ar="خط زمني للأسرات">Dynasties Timeline</a></li>
+                <li role="none"><a href="./anubis-chamber.html" class="navbar__link" role="menuitem" data-en="Anubis Chamber" data-ar="حجرة أنوبيس">Anubis Chamber</a></li>
+                <li role="none"><a href="./judgment.html" class="navbar__link" role="menuitem" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                <li role="none"><a href="./tombs.html" class="navbar__link" role="menuitem" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                <li role="none"><a href="./artifacts.html" class="navbar__link" role="menuitem" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                <li role="none"><a href="./blog.html" class="navbar__link" role="menuitem" data-en="Knowledge" data-ar="المعرفة">Knowledge</a></li>
+                <li role="none"><a href="./journey.html" class="navbar__link" role="menuitem" data-en="Journeys" data-ar="الرحلات">Journeys</a></li>
+                <li role="none"><a href="./wisdom.html" class="navbar__link" role="menuitem" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                <li role="none">
+                    <button class="navbar__lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                        <span class="navbar__lang-en">EN</span>
+                        <span class="navbar__lang-ar">AR</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero hero--tombs" id="hero" role="region" aria-label="Sacred Tombs Hero">
+        <div class="hero__background" aria-hidden="true"></div>
+        <div class="hero__dust" aria-hidden="true">
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+        </div>
+        
+        <div class="hero__content hero__content--tombs">
+            <svg class="hero__ornament" viewBox="0 0 100 150" width="90" height="135" aria-hidden="true">
+                <defs>
+                    <linearGradient id="pyramidGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1"/>
+                        <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#b88a2a;stop-opacity:1"/>
+                    </linearGradient>
+                </defs>
+                <!-- Pyramid -->
+                <polygon points="50,10 90,130 10,130" fill="none" stroke="url(#pyramidGold)" stroke-width="2.5"/>
+                <line x1="50" y1="10" x2="50" y2="130" stroke="url(#pyramidGold)" stroke-width="1.5" opacity="0.5"/>
+                <line x1="30" y1="70" x2="70" y2="70" stroke="url(#pyramidGold)" stroke-width="1" opacity="0.4"/>
+                <line x1="20" y1="100" x2="80" y2="100" stroke="url(#pyramidGold)" stroke-width="1" opacity="0.4"/>
+            </svg>
+            
+            <h1 class="hero__title" data-en="SACRED TOMBS" data-ar="المقابر المقدسة">SACRED TOMBS</h1>
+            <p class="hero__subtitle" data-en="Monuments of eternity. Where pharaohs rest, guarded by Anubis. Where stone conquers time." data-ar="نصب الأبدية. حيث يرتاح الفراعنة، يحرسهم أنوبيس. حيث ينتصر الحجر على الزمن.">
+                Monuments of eternity where pharaohs rest under Anubis' eternal guard.
+            </p>
+        </div>
+    </section>
+    
+    <main class="main">
+        <section class="section section--tombs" role="region" aria-labelledby="tombs-intro">
+            <div class="container">
+                <h2 class="section__title" id="tombs-intro" data-en="Houses of Eternity" data-ar="بيوت الأبدية">Houses of Eternity</h2>
+                
+                <div class="content-block">
+                    <p class="lead" data-en="The tombs of Egypt were never meant to be mere graves. They were palaces for eternity—architectural statements of power, repositories of wisdom, and gateways to the afterlife. Every stone was placed with sacred intention." data-ar="لم تكن مقابر مصر مقررة أن تكون مجرد قبور. كانت قصوراً للأبدية - بيانات معمارية للقوة، ومستودعات للحكمة، وبوابات إلى الآخرة. كل حجر تم وضعه بنية مقدسة.">
+                        The tombs of Egypt were never mere graves. They were palaces for eternity—architectural statements of power, repositories of wisdom, and gateways to the afterlife.
+                    </p>
+                    
+                    <p data-en="The architects who designed them understood sacred geometry. The engineers who built them mastered the mathematics of stone. The pharaohs who commissioned them understood that their legacy would be measured in millennia, not years." data-ar="فهم المهندسون الذين صمموهم الهندسة المقدسة. أتقن المهندسون الذين بنوهم الرياضيات الحجرية. فهم الفراعنة الذين أمروا ببنائهم أن إرثهم سيُقاس بآلاف السنين وليس السنوات.">
+                        The architects understood sacred geometry. The engineers mastered the mathematics of stone. Every detail served a purpose—spiritual and eternal.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section--dark" role="region" aria-labelledby="tomb-types">
+            <div class="container">
+                <h2 class="section__title" id="tomb-types" data-en="Types of Sacred Tombs" data-ar="أنواع المقابر المقدسة">Types of Sacred Tombs</h2>
+                
+                <div class="grid grid--3">
+                    <article class="card card--tombs">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/pyramids.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Pyramids" data-ar="الأهرام">Pyramids</h3>
+                        <p class="card__text" data-en="The most recognizable monuments on Earth. Perfectly aligned with the stars, the pyramids were cosmic markers—channels through which pharaohs ascended to the heavens. Pure geometry elevated to the divine." data-ar="أكثر النصب إثارة للاعتراف على الأرض. محاذاة مثالية مع النجوم، كانت الأهرام علامات كونية.">
+                            Perfectly aligned with the stars, pyramids were cosmic markers and channels for pharaonic ascension.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--tombs">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/egyptian-mummy2.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Valley Tombs" data-ar="مقابر الوادي">Valley Tombs</h3>
+                        <p class="card__text" data-en="Hidden in the Valley of the Kings, these rock-cut tombs protected royal remains from looters and the desert. Thousands of chambers decorated with sacred texts, guarded forever by Anubis." data-ar="مخفية في وادي الملوك، حمت هذه المقابر المنحوتة من الصخر البقايا الملكية من السارقين. آلاف الغرف المزينة بالنصوص المقدسة.">
+                            Hidden in the Valley of the Kings, rock-cut tombs protected royal remains with thousands of decorated chambers.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--tombs">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/museum.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Temple Tombs" data-ar="معابد مقابر">Temple Tombs</h3>
+                        <p class="card__text" data-en="Mortuary temples served as eternal monuments where priests conducted sacred rituals for the deceased. Massive complexes where the boundary between tomb and temple dissolved into pure spirituality." data-ar="خدمت المعابد الجنائزية كنصب أبدية حيث أجرى الكهنة طقوسهم المقدسة. معقدات ضخمة حيث ذابت الحدود بين المقبرة والمعبد.">
+                            Mortuary temples served as eternal monuments where priests conducted sacred rituals in cosmic harmony.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" role="region" aria-labelledby="great-pyramid">
+            <div class="container">
+                <h2 class="section__title" id="great-pyramid" data-en="The Great Pyramid of Khufu" data-ar="الهرم الأعظم لخوفو">The Great Pyramid of Khufu</h2>
+                
+                <div class="content-block">
+                    <p data-en="The last standing wonder of the ancient world. Built in the 26th century BCE with such precision that it has never lost its structural integrity. Its original height was 146.5 meters—it touched the heavens." data-ar="آخر عجيبة قائمة من العالم القديم. بُني في القرن 26 قبل الميلاد بدقة لم تفقد أبداً سلامتها الهيكلية. كان ارتفاعه الأصلي 146.5 متراً - لمس السماء.">
+                        The last standing wonder of the ancient world, built with such precision it stands eternally unchanged. Rising 146.5 meters, it touched the heavens themselves.
+                    </p>
+                    
+                    <p data-en="Inside: 2.3 million stone blocks, each perfectly cut and fitted. No mortar. No iron reinforcement. Just geometry and the will of a pharaoh. Inside the Great Pyramid lies the King's Chamber, where Khufu was meant to ascend to the sun god Ra." data-ar="بداخله: 2.3 مليون كتلة حجرية، كل منها مقطوعة ومركبة بكمال. بلا ملاط. بلا تعزيز حديدي. فقط الهندسة وإرادة الفرعون. بداخل الهرم الأعظم تقع غرفة الملك.">
+                        Inside: 2.3 million perfectly cut stone blocks with no mortar, no reinforcement—only geometry and divine will.
+                    </p>
+                </div>
+                
+                <div class="cta-section">
+                    <p data-en="Discover the artifacts buried within eternal monuments." data-ar="اكتشف القطع الأثرية المدفونة في النصب الأبدية.">
+                        Discover the sacred artifacts buried within eternal monuments.
+                    </p>
+                    <a href="./artifacts.html" class="btn btn--gold-bevel" data-en="Explore Artifacts" data-ar="استكشف القطع الأثرية">
+                        <img src="../assets/icons/scepter.png" alt="" class="icon icon--sm icon--gold" />
+                        Explore Artifacts
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Sacred Path" data-ar="المسار المقدس">Sacred Path</h4>
+                    <ul class="footer__links">
+                        <li><a href="./judgment.html" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                        <li><a href="./tombs.html" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                        <li><a href="./artifacts.html" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                        <li><a href="./wisdom.html" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Knowledge" data-ar="المعرفة">Knowledge</h4>
+                    <ul class="footer__links">
+                        <li><a href="./journey.html" data-en="Your Journey" data-ar="رحلتك">Your Journey</a></li>
+                        <li><a href="./blog.html" data-en="Blog" data-ar="المجلة">Blog</a></li>
+                        <li><a href="../index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <p class="footer__text text-gold" data-en="Guardian of Eternity" data-ar="حارس الأبدية">
+                        Guardian of Eternity
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer__divider"></div>
+            
+            <div class="footer__bottom">
+                <p class="text-muted" data-en="© 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved." data-ar="© 2025 متحف أنوبيس. حيث يتم وزن الأرواح. جميع الحقوق محفوظة.">
+                    © 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/router.js"></script>
+</body>
+</html>

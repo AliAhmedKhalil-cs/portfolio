@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ANUBIS MUSEUM - Wisdom. Learn the teachings of ancient Egypt, the secrets inscribed in hieroglyphics, and the eternal truths guarded by Anubis.">
+    <meta name="keywords" content="Egyptian wisdom, hieroglyphics, ancient philosophy, Ma'at truth, Egyptian teachings, spiritual knowledge">
+    
+    <title>Wisdom | ANUBIS MUSEUM</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- Flaticon Icons - Local Assets -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/icons/anubis.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@400;600;700&family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script defer src="../js/app.js"></script>
+</head>
+<body>
+    <audio id="site-ambience" class="site-audio" autoplay loop preload="auto">
+        <source src="../assets/audio/ambient.mp3" type="audio/mpeg">
+    </audio>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="navbar__logo">
+                <a href="../index.html" class="navbar__logo-link">
+                    <svg class="navbar__logo-icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="anubis-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFD700"/>
+                                <stop offset="100%" stop-color="#b88a2a"/>
+                            </linearGradient>
+                        </defs>
+                        <g fill="none" stroke="url(#anubis-gold)" stroke-width="1">
+                            <path d="M20 6 L14 2 L16 8 L20 10 L24 8 L26 2 L20 6 Z"/>
+                            <path d="M12 10 L20 6 L28 10 L28 22 L24 30 L20 34 L16 30 L12 22 Z" fill="#0d0d0d"/>
+                            <path d="M18 18 L22 18 L25 22 L22 24 L18 24 L15 22 Z" fill="#1a1a1a"/>
+                            <circle cx="18" cy="20" r="1" fill="#FFD700"/>
+                            <circle cx="22" cy="20" r="1" fill="#FFD700"/>
+                            <path d="M20 24 L20 28"/>
+                            <path d="M16 30 L20 34 L24 30"/>
+                        </g>
+                    </svg>
+                    <span class="navbar__title" data-en="ANUBIS MUSEUM" data-ar="متحف أنوبيس">ANUBIS MUSEUM</span>
+                </a>
+            </div>
+            
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <ul class="navbar__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="../index.html" class="navbar__link" role="menuitem" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li role="none"><a href="./hieroglyphic.html" class="navbar__link" role="menuitem" data-en="Hieroglyphic Writing" data-ar="الكتابة الهيروغليفية">Hieroglyphic Writing</a></li>
+                <li role="none"><a href="./galleries.html" class="navbar__link" role="menuitem" data-en="Sacred Galleries" data-ar="المعارض المقدسة">Sacred Galleries</a></li>
+                <li role="none"><a href="./dynasty-timeline.html" class="navbar__link" role="menuitem" data-en="Dynasties Timeline" data-ar="خط زمني للأسرات">Dynasties Timeline</a></li>
+                <li role="none"><a href="./anubis-chamber.html" class="navbar__link" role="menuitem" data-en="Anubis Chamber" data-ar="حجرة أنوبيس">Anubis Chamber</a></li>
+                <li role="none"><a href="./judgment.html" class="navbar__link" role="menuitem" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                <li role="none"><a href="./tombs.html" class="navbar__link" role="menuitem" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                <li role="none"><a href="./artifacts.html" class="navbar__link" role="menuitem" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                <li role="none"><a href="./blog.html" class="navbar__link" role="menuitem" data-en="Knowledge" data-ar="المعرفة">Knowledge</a></li>
+                <li role="none"><a href="./journey.html" class="navbar__link" role="menuitem" data-en="Journeys" data-ar="الرحلات">Journeys</a></li>
+                <li role="none"><a href="./wisdom.html" class="navbar__link" role="menuitem" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                <li role="none">
+                    <button class="navbar__lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                        <span class="navbar__lang-en">EN</span>
+                        <span class="navbar__lang-ar">AR</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero hero--wisdom" id="hero" role="region" aria-label="Wisdom Hero">
+        <div class="hero__background" aria-hidden="true"></div>
+        <div class="hero__dust" aria-hidden="true">
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+        </div>
+        
+        <div class="hero__content hero__content--wisdom">
+            <svg class="hero__ornament" viewBox="0 0 100 150" width="90" height="135" aria-hidden="true">
+                <defs>
+                    <linearGradient id="wisdomGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1"/>
+                        <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#b88a2a;stop-opacity:1"/>
+                    </linearGradient>
+                </defs>
+                <!-- Hieroglyph tablet -->
+                <rect x="20" y="10" width="60" height="120" fill="none" stroke="url(#wisdomGold)" stroke-width="2"/>
+                <line x1="25" y1="30" x2="75" y2="30" stroke="url(#wisdomGold)" stroke-width="1"/>
+                <line x1="25" y1="50" x2="75" y2="50" stroke="url(#wisdomGold)" stroke-width="1"/>
+                <line x1="25" y1="70" x2="75" y2="70" stroke="url(#wisdomGold)" stroke-width="1"/>
+                <line x1="25" y1="90" x2="75" y2="90" stroke="url(#wisdomGold)" stroke-width="1"/>
+                <circle cx="35" cy="40" r="3" fill="url(#wisdomGold)"/>
+                <circle cx="50" cy="60" r="3" fill="url(#wisdomGold)"/>
+                <circle cx="65" cy="80" r="3" fill="url(#wisdomGold)"/>
+            </svg>
+            
+            <h1 class="hero__title" data-en="WISDOM OF AGES" data-ar="حكمة الأعصار">WISDOM OF AGES</h1>
+            <p class="hero__subtitle" data-en="The secrets inscribed in stone. The teachings that have endured for millennia. Truth preserved by Anubis." data-ar="الأسرار المنقوشة في الحجر. التعاليم التي استمرت لآلاف السنين. الحقيقة المحفوظة بواسطة أنوبيس.">
+                The secrets inscribed in stone that have endured for millennia, guarded by Anubis.
+            </p>
+        </div>
+    </section>
+    
+    <main class="main">
+        <section class="section section--wisdom" role="region" aria-labelledby="wisdom-intro">
+            <div class="container">
+                <h2 class="section__title" id="wisdom-intro" data-en="The Path to Knowledge" data-ar="الطريق إلى المعرفة">The Path to Knowledge</h2>
+                
+                <div class="content-block">
+                    <p class="lead" data-en="The ancient Egyptians understood something we often forget: that wisdom is not merely intellectual. It is embodied. It is lived. The principle of Ma'at—truth, justice, order, balance—was not a philosophy to discuss. It was a way of being." data-ar="فهم المصريون القدماء شيئاً غالباً ما ننسى: أن الحكمة ليست مجرد فكرية. إنها جسدية. إنها تُعاش. كان مبدأ معات - الحقيقة والعدل والنظام والتوازن - ليس فلسفة للمناقشة. كانت طريقة كينونة.">
+                        The ancient Egyptians understood that wisdom is embodied—not merely intellectual. Ma'at, the principle of truth and justice, was not a philosophy to discuss but a way of being.
+                    </p>
+                    
+                    <p data-en="To live by Ma'at meant to speak truth. To act with integrity. To honor the gods and the pharaoh. To care for family and the poor. To treat the earth with respect. These were not separate virtues—they were one unified way of life." data-ar="العيش بمعات يعني التحدث بالحقيقة. التصرف بنزاهة. تكريم الآلهة والفرعون. الاهتمام بالعائلة والفقراء. احترام الأرض. لم تكن هذه فضائل منفصلة - كانت طريقة حياة موحدة.">
+                        To live by Ma'at meant to speak truth, act with integrity, honor the gods, and care for others. This was not separate virtues—it was one unified way of life.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section--dark" role="region" aria-labelledby="core-wisdom">
+            <div class="container">
+                <h2 class="section__title" id="core-wisdom" data-en="Core Egyptian Teachings" data-ar="التعاليم المصرية الأساسية">Core Egyptian Teachings</h2>
+                
+                <div class="grid grid--2">
+                    <article class="card card--wisdom">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/eye.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Ma'at: Universal Balance" data-ar="معات: التوازن العام">Ma'at: Balance</h3>
+                        <p class="card__text" data-en="The universe operates through balance. Good and evil, order and chaos, are eternally balanced. The soul must maintain this balance through right action and just living." data-ar="يعمل الكون من خلال التوازن. الخير والشر، النظام والفوضى، متوازنان أبدياً. يجب على الروح أن تحافظ على هذا التوازن من خلال العمل الصحيح والعيش العادل.">
+                            The universe operates through eternal balance. Chaos and order coexist. The soul maintains this balance through right action and just living.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--wisdom">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/crook.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Ka & Ba: Soul Aspects" data-ar="الكا والبا: جوانب الروح">Ka & Ba: Soul</h3>
+                        <p class="card__text" data-en="The Egyptians understood the soul as multiple. The Ka was the spiritual double, the Ba was the personality and consciousness. Both were necessary for eternal existence." data-ar="فهم المصريون الروح على أنها متعددة. كانت الكا هي النسخة الروحية، والبا كانت الشخصية والوعي. كان كلاهما ضروراً للوجود الأبدي.">
+                            The soul had multiple aspects: the Ka (spiritual double) and Ba (personality). Both were necessary for eternal existence.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--wisdom">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/museum.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Heka: Sacred Magic" data-ar="حكا: السحر المقدس">Heka: Magic</h3>
+                        <p class="card__text" data-en="Magic was not supernatural—it was the natural force that animated all of creation. Properly understood and used, it could heal, protect, and guide the soul through the afterlife." data-ar="السحر لم يكن خارقاً - كان القوة الطبيعية التي أحيت الخلق كله. إذا فُهم واستُخدم بشكل صحيح، يمكن أن يشفي ويحمي ويوجه الروح عبر الآخرة.">
+                            Magic was the natural force animating creation. Properly used, it could heal, protect, and guide the soul through the afterlife.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--wisdom">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/scepter.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Djet & Neheh: Time Eternal" data-ar="جيت و نهه: الزمن الأبدي">Djet & Neheh: Time</h3>
+                        <p class="card__text" data-en="The Egyptians distinguished between Djet (unchanging, permanent) and Neheh (eternal recurrence). Death moved the soul from one to the other—from changing time to eternal cycles." data-ar="ميز المصريون بين جيت (الثابت والدائم) و نهه (التكرار الأبدي). نقل الموت الروح من أحدهما إلى الآخر - من الزمن المتغير إلى الدورات الأبدية.">
+                            The Egyptians distinguished between Djet (permanent) and Neheh (eternal cycles). Death moves the soul from one to the other.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" role="region" aria-labelledby="living-wisdom">
+            <div class="container">
+                <h2 class="section__title" id="living-wisdom" data-en="Living Wisdom Today" data-ar="الحكمة الحية اليوم">Living Wisdom Today</h2>
+                
+                <div class="content-block">
+                    <p data-en="The wisdom of ancient Egypt is not relics of a dead civilization. It speaks to us still: Be truthful. Treat others justly. Care for family and the vulnerable. Respect the natural order. Live in balance. These are timeless truths." data-ar="حكمة مصر القديمة ليست آثاراً لحضارة ميتة. إنها تتحدث إلينا حتى الآن: كن صادقاً. عامل الآخرين بعدل. اعتن بالعائلة والضعفاء. احترم النظام الطبيعي. عش في التوازن. هذه حقائق خالدة.">
+                        Ancient wisdom speaks to us still: Be truthful. Treat others justly. Care for the vulnerable. Respect natural order. Live in balance. These are timeless truths.
+                    </p>
+                    
+                    <p data-en="When you understand these principles, you understand why the Egyptians built pyramids that still stand. Why they created a civilization that lasted 3,000 years. Why Anubis remains eternal. They knew something fundamental about how to live rightly." data-ar="عندما تفهم هذه المبادئ، تفهم لماذا بنى المصريون أهراماً لا تزال قائمة. لماذا خلقوا حضارة استمرت 3000 سنة. لماذا يبقى أنوبيس أبدياً. كانوا يعرفون شيئاً أساسياً عن كيفية العيش بحق.">
+                        When you understand these principles, you understand why Egyptian civilization lasted 3,000 years and why its wisdom endures eternally.
+                    </p>
+                </div>
+                
+                <div class="cta-section">
+                    <p data-en="Explore the knowledge shared across this sacred museum." data-ar="استكشف المعرفة المشتركة عبر هذا المتحف المقدس.">
+                        Explore the knowledge and stories shared across this sacred museum.
+                    </p>
+                    <a href="./blog.html" class="btn btn--gold-bevel" data-en="Read the Archive" data-ar="اقرأ الأرشيف">
+                        <i class="icon icon--sm icon--gold ti ti-arrow-right" aria-hidden="true"></i>
+                        Read the Archive
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Sacred Path" data-ar="المسار المقدس">Sacred Path</h4>
+                    <ul class="footer__links">
+                        <li><a href="./judgment.html" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                        <li><a href="./tombs.html" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                        <li><a href="./artifacts.html" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                        <li><a href="./wisdom.html" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Knowledge" data-ar="المعرفة">Knowledge</h4>
+                    <ul class="footer__links">
+                        <li><a href="./journey.html" data-en="Your Journey" data-ar="رحلتك">Your Journey</a></li>
+                        <li><a href="./blog.html" data-en="Blog" data-ar="المجلة">Blog</a></li>
+                        <li><a href="../index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <p class="footer__text text-gold" data-en="Guardian of Eternity" data-ar="حارس الأبدية">
+                        Guardian of Eternity
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer__divider"></div>
+            
+            <div class="footer__bottom">
+                <p class="text-muted" data-en="© 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved." data-ar="© 2025 متحف أنوبيس. حيث يتم وزن الأرواح. جميع الحقوق محفوظة.">
+                    © 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/router.js"></script>
+</body>
+</html>

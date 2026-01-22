@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ANUBIS MUSEUM - Your Journey. Experience the Egyptian path to eternity, the trials of the afterlife, and the eternal meeting with Anubis.">
+    <meta name="keywords" content="Egyptian afterlife, soul journey, Duat, underworld, Anubis guide, spiritual journey, Egyptian mythology">
+    
+    <title>Your Journey | ANUBIS MUSEUM</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- Flaticon Icons - Local Assets -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/icons/anubis.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@400;600;700&family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script defer src="../js/app.js"></script>
+</head>
+<body>
+    <audio id="site-ambience" class="site-audio" autoplay loop preload="auto">
+        <source src="../assets/audio/ambient.mp3" type="audio/mpeg">
+    </audio>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="navbar__logo">
+                <a href="../index.html" class="navbar__logo-link">
+                    <svg class="navbar__logo-icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="anubis-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFD700"/>
+                                <stop offset="100%" stop-color="#b88a2a"/>
+                            </linearGradient>
+                        </defs>
+                        <g fill="none" stroke="url(#anubis-gold)" stroke-width="1">
+                            <path d="M20 6 L14 2 L16 8 L20 10 L24 8 L26 2 L20 6 Z"/>
+                            <path d="M12 10 L20 6 L28 10 L28 22 L24 30 L20 34 L16 30 L12 22 Z" fill="#0d0d0d"/>
+                            <path d="M18 18 L22 18 L25 22 L22 24 L18 24 L15 22 Z" fill="#1a1a1a"/>
+                            <circle cx="18" cy="20" r="1" fill="#FFD700"/>
+                            <circle cx="22" cy="20" r="1" fill="#FFD700"/>
+                            <path d="M20 24 L20 28"/>
+                            <path d="M16 30 L20 34 L24 30"/>
+                        </g>
+                    </svg>
+                    <span class="navbar__title" data-en="ANUBIS MUSEUM" data-ar="متحف أنوبيس">ANUBIS MUSEUM</span>
+                </a>
+            </div>
+            
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <ul class="navbar__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="../index.html" class="navbar__link" role="menuitem" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li role="none"><a href="./hieroglyphic.html" class="navbar__link" role="menuitem" data-en="Hieroglyphic Writing" data-ar="الكتابة الهيروغليفية">Hieroglyphic Writing</a></li>
+                <li role="none"><a href="./galleries.html" class="navbar__link" role="menuitem" data-en="Sacred Galleries" data-ar="المعارض المقدسة">Sacred Galleries</a></li>
+                <li role="none"><a href="./dynasty-timeline.html" class="navbar__link" role="menuitem" data-en="Dynasties Timeline" data-ar="خط زمني للأسرات">Dynasties Timeline</a></li>
+                <li role="none"><a href="./anubis-chamber.html" class="navbar__link" role="menuitem" data-en="Anubis Chamber" data-ar="حجرة أنوبيس">Anubis Chamber</a></li>
+                <li role="none"><a href="./judgment.html" class="navbar__link" role="menuitem" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                <li role="none"><a href="./tombs.html" class="navbar__link" role="menuitem" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                <li role="none"><a href="./artifacts.html" class="navbar__link" role="menuitem" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                <li role="none"><a href="./blog.html" class="navbar__link" role="menuitem" data-en="Knowledge" data-ar="المعرفة">Knowledge</a></li>
+                <li role="none"><a href="./journey.html" class="navbar__link" role="menuitem" data-en="Journeys" data-ar="الرحلات">Journeys</a></li>
+                <li role="none"><a href="./wisdom.html" class="navbar__link" role="menuitem" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                <li role="none">
+                    <button class="navbar__lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                        <span class="navbar__lang-en">EN</span>
+                        <span class="navbar__lang-ar">AR</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero hero--journey" id="hero" role="region" aria-label="Journey Hero">
+        <div class="hero__background" aria-hidden="true"></div>
+        <div class="hero__dust" aria-hidden="true">
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+        </div>
+        
+        <div class="hero__content hero__content--journey">
+            <svg class="hero__ornament" viewBox="0 0 100 150" width="90" height="135" aria-hidden="true">
+                <defs>
+                    <linearGradient id="journeyGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1"/>
+                        <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#b88a2a;stop-opacity:1"/>
+                    </linearGradient>
+                </defs>
+                <!-- Path/Journey symbol -->
+                <path d="M 50 10 Q 30 40 50 60 Q 70 80 50 110" fill="none" stroke="url(#journeyGold)" stroke-width="3"/>
+                <circle cx="50" cy="10" r="5" fill="url(#journeyGold)"/>
+                <circle cx="50" cy="110" r="7" fill="none" stroke="url(#journeyGold)" stroke-width="2"/>
+                <line x1="35" y1="50" x2="20" y2="45" stroke="url(#journeyGold)" stroke-width="1.5" opacity="0.6"/>
+                <line x1="65" y1="70" x2="80" y2="75" stroke="url(#journeyGold)" stroke-width="1.5" opacity="0.6"/>
+            </svg>
+            
+            <h1 class="hero__title" data-en="YOUR SACRED JOURNEY" data-ar="رحلتك المقدسة">YOUR SACRED JOURNEY</h1>
+            <p class="hero__subtitle" data-en="The path through the Duat. The trials you must face. The eternity that awaits beyond the scales." data-ar="الطريق عبر الدوات. المحاولات التي يجب عليك مواجهتها. الأبدية التي تنتظرك بعد الموازين.">
+                The path through the Duat. The trials you must face. The eternity that awaits.
+            </p>
+        </div>
+    </section>
+    
+    <main class="main">
+        <section class="section section--journey" role="region" aria-labelledby="journey-intro">
+            <div class="container">
+                <h2 class="section__title" id="journey-intro" data-en="The Duat: Realm of the Dead" data-ar="الدوات: عالم الموتى">The Duat: Realm of the Dead</h2>
+                
+                <div class="content-block">
+                    <p class="lead" data-en="Death, in ancient Egyptian belief, was not an ending—it was a transformation. The soul entered the Duat (also called Duet), a hidden dimension beneath the earth. Here, the soul faced twelve hours of night, each guarded by divine beings, each testing the deceased's virtue and knowledge." data-ar="الموت، في المعتقد المصري القديم، لم يكن نهاية - كان تحولاً. دخلت الروح الدوات (تسمى أيضاً الدويت)، بعداً مخفياً تحت الأرض. هنا، واجهت الروح اثني عشر ساعة من الليل.">
+                        Death was not an ending—it was a transformation. The soul entered the Duat, a hidden dimension where it faced twelve hours of night, each testing the soul's virtue and knowledge.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section--dark" role="region" aria-labelledby="twelve-hours">
+            <div class="container">
+                <h2 class="section__title" id="twelve-hours" data-en="The Twelve Hours of the Night" data-ar="اثنا عشرة ساعة من الليل">The Twelve Hours of the Night</h2>
+                
+                <div class="grid grid--2">
+                    <article class="card card--journey">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/pyramids.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="First Hour - The Duat Opening" data-ar="الساعة الأولى - فتح الدوات">First Hour</h3>
+                        <p class="card__text" data-en="The soul enters. The gates of the Duat open. The first guardians appear, their names inscribed in the sacred texts. You must know their names to pass." data-ar="تدخل الروح. تفتح بوابات الدوات. تظهر الحراس الأوائل، أسماؤهم منقوشة في النصوص المقدسة. يجب أن تعرف أسماءهم للعبور.">
+                            The soul enters and the gates open. Guardians appear, their names inscribed in sacred texts. Knowledge is the first key.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--journey">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/crook.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Middle Hours - Trials & Demons" data-ar="الساعات الوسطى - المحاولات والشياطين">Middle Hours</h3>
+                        <p class="card__text" data-en="The soul must navigate lakes of fire and serpents of chaos. These are not punishments—they test the soul's resolve. Only the pure of heart can pass." data-ar="يجب على الروح أن تتنقل عبر بحيرات من النار والثعابين. هذه ليست عقوبات - إنها تختبر عزم الروح. فقط النقية من القلب يمكنها العبور.">
+                            The soul navigates lakes of fire and serpents. These test the soul's resolve. Only the pure of heart can pass.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--journey">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/eye.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="The Weighing Chamber" data-ar="غرفة الوزن">The Weighing</h3>
+                        <p class="card__text" data-en="The climax. The soul enters the Hall of Two Truths. The heart is placed on the scale. The feather of Ma'at waits. Anubis observes. The forty-two judges wait. This is the moment of absolute truth." data-ar="الذروة. تدخل الروح قاعة الحقيقتين. يوضع القلب على الميزان. تنتظر ريشة معات. يراقب أنوبيس. ينتظر اثنان وأربعون قاضياً. هذه لحظة الحقيقة المطلقة.">
+                            The climax. The heart is weighed against the feather of truth. Anubis observes. This is the moment of absolute truth.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--journey">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/museum.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="Final Hours - Ascension" data-ar="الساعات الأخيرة - الصعود">Final Hours</h3>
+                        <p class="card__text" data-en="If found worthy, the soul ascends. It joins the sun god Ra in his eternal boat, traveling across the sky each day, returning to the Field of Reeds at night. Eternal life. True peace." data-ar="إذا وُجدت الروح أهلاً، تصعد. تنضم إلى إله الشمس رع في قاربه الأبدي، تسافر عبر السماء كل يوم، وتعود إلى حقل القصب ليلاً. حياة أبدية. سلام حقيقي.">
+                            If found worthy, the soul ascends and joins Ra's eternal journey across the sky. True peace and eternal life.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" role="region" aria-labelledby="anubis-guide">
+            <div class="container">
+                <h2 class="section__title" id="anubis-guide" data-en="Anubis: Your Guide Through the Duat" data-ar="أنوبيس: دليلك عبر الدوات">Anubis: Your Guide Through the Duat</h2>
+                
+                <div class="content-block">
+                    <p data-en="Anubis does not judge—he guides. In the halls of death, he is the one who knows the way. His jackal head can sniff out truth from deception. His measuring staff ensures all is balanced. When you stand before the scales, it is Anubis who steadies your heart and gives you courage to face judgment." data-ar="أنوبيس لا يحكم - يوجّه. في قاعات الموت، هو الذي يعرف الطريق. يمكن لرأسه الذئب أن يشم الحقيقة من الخداع. يضمن موظفه القياسي توازن كل شيء. عندما تقف أمام الموازين، يثبت أنوبيس قلبك ويعطيك الشجاعة لمواجهة الحكم.">
+                        Anubis does not judge—he guides. He knows the way through the Duat. His jackal senses sniff out truth from deception. When you stand before the scales, Anubis steadies your heart and gives you courage to face judgment.
+                    </p>
+                    
+                    <p data-en="He is the eternal witness. The keeper of secrets. The guardian of the boundary between life and death. When you trust in Anubis, you trust in eternity itself." data-ar="هو الشاهد الأبدي. حارس الأسرار. حارس الحد الفاصل بين الحياة والموت. عندما تثق بأنوبيس، فأنت تثق بالأبدية نفسها.">
+                        He is the eternal witness, keeper of secrets, and guardian of the boundary between life and death. Trust in Anubis is trust in eternity itself.
+                    </p>
+                </div>
+                
+                <div class="cta-section">
+                    <p data-en="Seek wisdom for your eternal journey." data-ar="ابحث عن الحكمة لرحلتك الأبدية.">
+                        Seek wisdom to prepare for your eternal journey.
+                    </p>
+                    <a href="./wisdom.html" class="btn btn--gold-bevel" data-en="Receive Wisdom" data-ar="استقبل الحكمة">
+                        <i class="icon icon--sm icon--gold ti ti-arrow-right" aria-hidden="true"></i>
+                        Receive Wisdom
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Sacred Path" data-ar="المسار المقدس">Sacred Path</h4>
+                    <ul class="footer__links">
+                        <li><a href="./judgment.html" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                        <li><a href="./tombs.html" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                        <li><a href="./artifacts.html" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                        <li><a href="./wisdom.html" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Knowledge" data-ar="المعرفة">Knowledge</h4>
+                    <ul class="footer__links">
+                        <li><a href="./journey.html" data-en="Your Journey" data-ar="رحلتك">Your Journey</a></li>
+                        <li><a href="./blog.html" data-en="Blog" data-ar="المجلة">Blog</a></li>
+                        <li><a href="../index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <p class="footer__text text-gold" data-en="Guardian of Eternity" data-ar="حارس الأبدية">
+                        Guardian of Eternity
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer__divider"></div>
+            
+            <div class="footer__bottom">
+                <p class="text-muted" data-en="© 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved." data-ar="© 2025 متحف أنوبيس. حيث يتم وزن الأرواح. جميع الحقوق محفوظة.">
+                    © 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/router.js"></script>
+</body>
+</html>

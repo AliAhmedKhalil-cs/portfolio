@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ANUBIS MUSEUM - Judgment of the Soul. Explore the sacred scales where hearts are weighed against the feather of truth in the eternal judgment hall.">
+    <meta name="keywords" content="Judgment scales, Anubis, Egyptian afterlife, soul weighing, judgment hall, ancient Egypt, eternal judgment">
+    
+    <title>Judgment of the Soul | ANUBIS MUSEUM</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- Flaticon Icons - Local Assets -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/icons/anubis.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@400;600;700&family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script defer src="../js/app.js"></script>
+</head>
+<body>
+    <audio id="site-ambience" class="site-audio" autoplay loop preload="auto">
+        <source src="../assets/audio/ambient.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="navbar__logo">
+                <a href="../index.html" class="navbar__logo-link">
+                    <svg class="navbar__logo-icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="anubis-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFD700"/>
+                                <stop offset="100%" stop-color="#b88a2a"/>
+                            </linearGradient>
+                        </defs>
+                        <g fill="none" stroke="url(#anubis-gold)" stroke-width="1">
+                            <path d="M20 6 L14 2 L16 8 L20 10 L24 8 L26 2 L20 6 Z"/>
+                            <path d="M12 10 L20 6 L28 10 L28 22 L24 30 L20 34 L16 30 L12 22 Z" fill="#0d0d0d"/>
+                            <path d="M18 18 L22 18 L25 22 L22 24 L18 24 L15 22 Z" fill="#1a1a1a"/>
+                            <circle cx="18" cy="20" r="1" fill="#FFD700"/>
+                            <circle cx="22" cy="20" r="1" fill="#FFD700"/>
+                            <path d="M20 24 L20 28"/>
+                            <path d="M16 30 L20 34 L24 30"/>
+                        </g>
+                    </svg>
+                    <span class="navbar__title" data-en="ANUBIS MUSEUM" data-ar="متحف أنوبيس">ANUBIS MUSEUM</span>
+                </a>
+            </div>
+            
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <ul class="navbar__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="../index.html" class="navbar__link" role="menuitem" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li role="none"><a href="./hieroglyphic.html" class="navbar__link" role="menuitem" data-en="Hieroglyphic Writing" data-ar="الكتابة الهيروغليفية">Hieroglyphic Writing</a></li>
+                <li role="none"><a href="./galleries.html" class="navbar__link" role="menuitem" data-en="Sacred Galleries" data-ar="المعارض المقدسة">Sacred Galleries</a></li>
+                <li role="none"><a href="./dynasty-timeline.html" class="navbar__link" role="menuitem" data-en="Dynasties Timeline" data-ar="خط زمني للأسرات">Dynasties Timeline</a></li>
+                <li role="none"><a href="./anubis-chamber.html" class="navbar__link" role="menuitem" data-en="Anubis Chamber" data-ar="حجرة أنوبيس">Anubis Chamber</a></li>
+                <li role="none"><a href="./judgment.html" class="navbar__link" role="menuitem" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                <li role="none"><a href="./tombs.html" class="navbar__link" role="menuitem" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                <li role="none"><a href="./artifacts.html" class="navbar__link" role="menuitem" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                <li role="none"><a href="./blog.html" class="navbar__link" role="menuitem" data-en="Knowledge" data-ar="المعرفة">Knowledge</a></li>
+                <li role="none"><a href="./journey.html" class="navbar__link" role="menuitem" data-en="Journeys" data-ar="الرحلات">Journeys</a></li>
+                <li role="none"><a href="./wisdom.html" class="navbar__link" role="menuitem" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                <li role="none">
+                    <button class="navbar__lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                        <span class="navbar__lang-en">EN</span>
+                        <span class="navbar__lang-ar">AR</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero hero--judgment" id="hero" role="region" aria-label="Judgment Hall Hero">
+        <div class="hero__background" aria-hidden="true"></div>
+        <div class="hero__dust" aria-hidden="true">
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+            <div class="dust-particle dust-particle--gold"></div>
+        </div>
+        
+        <div class="hero__content hero__content--judgment">
+            <svg class="hero__ornament" viewBox="0 0 100 150" width="90" height="135" aria-hidden="true">
+                <defs>
+                    <linearGradient id="scaleGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1"/>
+                        <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#b88a2a;stop-opacity:1"/>
+                    </linearGradient>
+                </defs>
+                <!-- Balance scales symbol (front-facing) -->
+                <line x1="50" y1="18" x2="50" y2="92" stroke="url(#scaleGold)" stroke-width="3"/>
+                <line x1="18" y1="60" x2="82" y2="60" stroke="url(#scaleGold)" stroke-width="2.5"/>
+                <line x1="30" y1="60" x2="22" y2="86" stroke="url(#scaleGold)" stroke-width="2"/>
+                <line x1="30" y1="60" x2="38" y2="86" stroke="url(#scaleGold)" stroke-width="2"/>
+                <path d="M18 90 L42 90 L36 108 L24 108 Z" fill="none" stroke="url(#scaleGold)" stroke-width="2.5"/>
+                <line x1="70" y1="60" x2="62" y2="86" stroke="url(#scaleGold)" stroke-width="2"/>
+                <line x1="70" y1="60" x2="78" y2="86" stroke="url(#scaleGold)" stroke-width="2"/>
+                <path d="M58 90 L82 90 L76 108 L64 108 Z" fill="none" stroke="url(#scaleGold)" stroke-width="2.5"/>
+                <line x1="50" y1="92" x2="38" y2="125" stroke="url(#scaleGold)" stroke-width="3"/>
+                <line x1="50" y1="92" x2="62" y2="125" stroke="url(#scaleGold)" stroke-width="3"/>
+                <line x1="34" y1="128" x2="66" y2="128" stroke="url(#scaleGold)" stroke-width="3"/>
+            </svg>
+            
+            <h1 class="hero__title" data-en="JUDGMENT OF THE SOUL" data-ar="محاكمة الروح">JUDGMENT OF THE SOUL</h1>
+            <p class="hero__subtitle" data-en="Where hearts are weighed against the feather of truth. Enter the eternal hall of Anubis." data-ar="حيث يتم وزن القلوب ضد ريشة الحقيقة. ادخل القاعة الأبدية لأنوبيس.">
+                Where hearts are weighed against the feather of truth.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="main">
+        <section class="section section--judgment" role="region" aria-labelledby="judgment-intro">
+            <div class="container">
+                <h2 class="section__title" id="judgment-intro" data-en="The Scales of Ma'at" data-ar="موازين معات">The Scales of Ma'at</h2>
+                
+                <div class="content-block">
+                    <p class="lead" data-en="In ancient Egyptian cosmology, the afterlife was not guaranteed. Every soul faced a trial—the Weighing of the Heart ceremony, where truth itself became the measure of a soul's worthiness." data-ar="في الكونيات المصرية القديمة، لم تكن الآخرة مضمونة. كل روح واجهت محاكمة - حفل وزن القلب، حيث أصبح الحق نفسه مقياس استحقاق الروح.">
+                        In ancient Egyptian cosmology, the afterlife was not guaranteed. Every soul faced a trial—the Weighing of the Heart ceremony, where truth itself became the measure of a soul's worthiness.
+                    </p>
+                    
+                    <p data-en="Anubis, the guardian of cemeteries and embalmer of the dead, presided over this sacred ritual in the Hall of Two Truths. The deceased would recite confessions of their deeds—the sins they did NOT commit. If found truthful, they would enter paradise. If not... their hearts would be devoured by Ammit, the Eater of the Dead." data-ar="أنوبيس، حارس المقابر ومُحنّط الموتى، ترأس هذا الطقس المقدس في قاعة الحقيقتين. سيعترف الموتى بأعمالهم - الذنوب التي لم يرتكبوها. إذا وُجدوا صادقين، سيدخلون الجنة. وإلا... ستأكل قلوبهم عمّيت، آكلة الموتى.">
+                        Anubis, the guardian of cemeteries and embalmer of the dead, presided over this sacred ritual. The deceased would recite confessions—deeds they did NOT commit. If found truthful, they would enter paradise. If not, Ammit, the Eater of the Dead, would consume their hearts forever.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section section--dark" role="region" aria-labelledby="ceremony-title">
+            <div class="container">
+                <h2 class="section__title" id="ceremony-title" data-en="The Sacred Ceremony" data-ar="الحفل المقدس">The Sacred Ceremony</h2>
+                
+                <div class="grid grid--2">
+                    <article class="card card--judgment">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/eye.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="The Weighing" data-ar="الوزن">The Weighing</h3>
+                        <p class="card__text" data-en="Forty-two divine judges observed as the heart was placed on one side of the scales, and the feather of Ma'at (truth and justice) on the other. This was the moment of absolute truth—no deception was possible." data-ar="راقب اثنان وأربعون قاضياً إلهياً وضع القلب على جانب واحد من الميزان، وريشة معات على الجانب الآخر. هذه كانت لحظة الحقيقة المطلقة.">
+                            Forty-two divine judges observed as the heart was placed on the scales opposite the feather of truth. This was the moment of absolute truth.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--judgment">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/museum.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="The Confession" data-ar="الاعتراف">The Confession</h3>
+                        <p class="card__text" data-en="The Negative Confession was a declaration of all sins NOT committed: 'I have not killed. I have not stolen. I have not spoken falsehood.' Each statement was weighed by the gods themselves." data-ar="كان الاعتراف السلبي إعلاناً عن جميع الذنوب التي لم يرتكبها: 'لم أقتل. لم أسرق. لم أتحدث بالكذب.' كل عبارة تم وزنها من قبل الآلهة أنفسهم.">
+                            The Negative Confession declared all sins NOT committed. Each statement was weighed by the divine judges against the feather of truth.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--judgment">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/pharaoh.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="The Reward" data-ar="المكافأة">The Reward</h3>
+                        <p class="card__text" data-en="Those found worthy entered the Field of Reeds (Aaru), a paradise where they could enjoy eternal peace, reunite with loved ones, and live in abundance forever." data-ar="من وُجدوا أهلاً دخلوا حقل القصب (آرو)، جنة حيث يمكنهم التمتع بالسلام الأبدي والتوحد مع الأحبة والعيش في الوفرة إلى الأبد.">
+                            Those found worthy entered the Field of Reeds, a paradise of eternal peace and abundance.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--judgment">
+                        <div class="card__icon" aria-hidden="true">
+                            <img src="../assets/icons/crook.png" alt="" class="icon icon--lg icon--gold" />
+                        </div>
+                        <h3 class="card__title" data-en="The Consequence" data-ar="العاقبة">The Consequence</h3>
+                        <p class="card__text" data-en="If the heart was found heavier than the feather—if lies were discovered—Ammit would devour it. The soul would be erased from existence, denied the afterlife forever. This was the ultimate death." data-ar="إذا وُجد القلب أثقل من الريشة - إذا اكتُشفت الأكاذيب - كانت عمّيت تأكله. تُمحى الروح من الوجود، محرومة من الآخرة إلى الأبد. هذا كان الموت الحقيقي.">
+                            If found unworthy, Ammit would devour the heart. The soul would be erased from existence forever.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" role="region" aria-labelledby="anubis-title">
+            <div class="container">
+                <h2 class="section__title" id="anubis-title" data-en="Anubis: The Divine Arbiter" data-ar="أنوبيس: الحكم الإلهي">Anubis: The Divine Arbiter</h2>
+                
+                <div class="content-block">
+                    <p data-en="Anubis stood eternal at the scales. With his jackal head and measuring staff, he embodied the law of truth. He did not judge—the scales spoke for themselves. He was simply the keeper of the boundary between the living and the dead, the guardian of knowledge, and the witness to all hearts." data-ar="وقف أنوبيس أزلياً عند الموازين. برأسه الذئب وموظفه القياسي، جسّد قانون الحقيقة. لم يحكم - تحدثت الموازين من تلقاء نفسها. كان مجرد حارس الحد الفاصل بين الأحياء والموتى.">
+                        Anubis stood eternal at the scales with his jackal head and measuring staff, embodying the law of truth. He did not judge—the scales spoke for themselves. He was the keeper of the boundary between the living and the dead.
+                    </p>
+                    
+                    <p data-en="His presence was both merciful and terrifying. Merciful because truth could redeem any soul, no matter how poor or humble. Terrifying because no deception could escape his gaze. In Anubis, justice was absolute." data-ar="كان حضوره رحيماً ومرعباً في نفس الوقت. رحيماً لأن الحقيقة يمكن أن تخلص أي روح. مرعباً لأن أي خداع لا يمكن أن يفلت من نظره. في أنوبيس، كانت العدالة مطلقة.">
+                        His presence was both merciful and terrifying. Merciful because truth could redeem any soul. Terrifying because no deception could escape his vigilance. In Anubis, justice was absolute.
+                    </p>
+                </div>
+                
+                <div class="cta-section">
+                    <p data-en="Explore the sacred tombs where judgment was rendered eternal." data-ar="استكشف المقابر المقدسة حيث تم تقديم الحكم الأبدي.">
+                        Explore the sacred tombs where judgment was rendered eternal.
+                    </p>
+                    <a href="./tombs.html" class="btn btn--gold-bevel" data-en="Enter the Sacred Tombs" data-ar="أدخل المقابر المقدسة">
+                        <img src="../assets/icons/scepter.png" alt="" class="icon icon--sm icon--gold" />
+                        Enter the Sacred Tombs
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Sacred Path" data-ar="المسار المقدس">Sacred Path</h4>
+                    <ul class="footer__links">
+                        <li><a href="./judgment.html" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                        <li><a href="./tombs.html" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                        <li><a href="./artifacts.html" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                        <li><a href="./wisdom.html" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title" data-en="Knowledge" data-ar="المعرفة">Knowledge</h4>
+                    <ul class="footer__links">
+                        <li><a href="./journey.html" data-en="Your Journey" data-ar="رحلتك">Your Journey</a></li>
+                        <li><a href="./blog.html" data-en="Blog" data-ar="المجلة">Blog</a></li>
+                        <li><a href="../index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <p class="footer__text text-gold" data-en="Guardian of Eternity" data-ar="حارس الأبدية">
+                        Guardian of Eternity
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer__divider"></div>
+            
+            <div class="footer__bottom">
+                <p class="text-muted" data-en="© 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved." data-ar="© 2025 متحف أنوبيس. حيث يتم وزن الأرواح. جميع الحقوق محفوظة.">
+                    © 2025 ANUBIS MUSEUM. Where Souls Are Weighed. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/router.js"></script>
+</body>
+</html>
