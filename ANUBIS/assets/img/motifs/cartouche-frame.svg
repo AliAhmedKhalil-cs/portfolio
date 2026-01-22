@@ -1,0 +1,44 @@
+<svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="cartouche-fill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#d4af37;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="cartouche-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b88a2a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Cartouche Border -->
+  <!-- Top curved section -->
+  <path d="M 40 80 Q 40 20 100 20 Q 160 20 160 80 L 160 180 Q 160 240 100 240 Q 40 240 40 180 Z" 
+        fill="url(#cartouche-fill)" stroke="url(#cartouche-border)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Inner decorative pattern (simple geometric design) -->
+  <!-- Top cap ornament -->
+  <rect x="95" y="15" width="10" height="15" fill="url(#cartouche-border)" rx="2" opacity="0.8"/>
+  <circle cx="100" cy="28" r="4" fill="#d4af37" opacity="0.6"/>
+  
+  <!-- Horizontal dividing line inside -->
+  <line x1="50" y1="130" x2="150" y2="130" stroke="url(#cartouche-border)" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Vertical ornamental lines -->
+  <line x1="65" y1="50" x2="65" y2="210" stroke="url(#cartouche-border)" stroke-width="1" opacity="0.3"/>
+  <line x1="135" y1="50" x2="135" y2="210" stroke="url(#cartouche-border)" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="50" cy="80" r="2.5" fill="url(#cartouche-border)" opacity="0.6"/>
+  <circle cx="150" cy="80" r="2.5" fill="url(#cartouche-border)" opacity="0.6"/>
+  <circle cx="50" cy="180" r="2.5" fill="url(#cartouche-border)" opacity="0.6"/>
+  <circle cx="150" cy="180" r="2.5" fill="url(#cartouche-border)" opacity="0.6"/>
+  
+  <!-- Bottom cap ornament -->
+  <rect x="95" y="230" width="10" height="15" fill="url(#cartouche-border)" rx="2" opacity="0.8"/>
+  <circle cx="100" cy="232" r="4" fill="#d4af37" opacity="0.6"/>
+  
+  <!-- Inner corners accent -->
+  <path d="M 48 85 L 55 75" stroke="url(#cartouche-border)" stroke-width="1" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 152 85 L 145 75" stroke="url(#cartouche-border)" stroke-width="1" fill="none" opacity="0.4" stroke-linecap="round"/>
+</svg>
