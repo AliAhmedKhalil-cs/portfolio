@@ -1,0 +1,93 @@
+/* ============================================================================
+   DESIGN TOKENS: Spacing & Shadows
+   ============================================================================ */
+
+    /* SPACING - Luxury Scale */
+    --spacing-2xs: 0.25rem;   /* 4px */
+    --spacing-xs: 0.5rem;     /* 8px */
+    --spacing-sm: 1rem;       /* 16px */
+    --spacing-md: 1.5rem;     /* 24px */
+    --spacing-lg: 2rem;       /* 32px */
+    --spacing-xl: 3rem;       /* 48px */
+    --spacing-2xl: 4rem;      /* 64px */
+    --spacing-3xl: 6rem;      /* 96px */
+    
+    /* SHADOWS - Museum Grade */
+    --shadow-none: none;
+    --shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.15);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.35);
+    --shadow-2xl: 0 20px 60px rgba(0, 0, 0, 0.4);
+    
+    /* Gold Glow - Spotlight Effects */
+    --shadow-gold-sm: 0 0 12px rgba(212, 175, 55, 0.3);
+    --shadow-gold-md: 0 0 20px rgba(212, 175, 55, 0.5);
+    --shadow-gold-lg: 0 0 40px rgba(212, 175, 55, 0.6);
+    --shadow-gold-xl: 0 0 60px rgba(212, 175, 55, 0.7);
+    
+    /* Inset/Bevel Shadows */
+    --shadow-inset-gold: inset 0 0 15px rgba(255, 215, 0, 0.15);
+    --shadow-inset-dark: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+    
+    /* Legacy names */
+    --shadow-glow-gold: 0 0 30px rgba(212, 175, 55, 0.5), inset 0 0 15px rgba(255, 215, 0, 0.15);
+    --shadow-gold-glow: 0 0 30px rgba(212, 175, 55, 0.5), inset 0 0 15px rgba(255, 215, 0, 0.15);
+    --shadow-spotlight: 0 0 40px rgba(212, 175, 55, 0.3);
+    --shadow-deep-glow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.15);
+
+/* ============================================================================
+   DESIGN TOKENS: Border Radius & Transitions
+   ============================================================================ */
+
+    --radius-none: 0;
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-cartouche: 20px;
+    --radius-full: 9999px;
+    
+    /* Legacy names */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-cartouche: 20px;
+
+    /* TRANSITIONS - Luxury Timing */
+    --easing-in: cubic-bezier(0.4, 0, 1, 1);
+    --easing-out: cubic-bezier(0, 0, 0.2, 1);
+    --easing-inout: cubic-bezier(0.4, 0, 0.2, 1);
+    --easing-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+    
+    --transition-fastest: 100ms var(--easing-out);
+    --transition-faster: 150ms var(--easing-out);
+    --transition-fast: 200ms var(--easing-out);
+    --transition-base: 300ms var(--easing-inout);
+    --transition-slow: 500ms var(--easing-luxury);
+    --transition-slower: 800ms var(--easing-luxury);
+    
+    /* Legacy names */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 600ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-smooth: 800ms cubic-bezier(0.2, 0.1, 0.3, 1);
+
+/* ============================================================================
+   DESIGN TOKENS: Gradients
+   ============================================================================ */
+    
+    --gradient-gold-foil: linear-gradient(135deg, #FFD700 0%, #d4af37 25%, #b88a2a 50%, #7a5b22 75%, #d4af37 100%);
+    --gradient-obsidian-to-basalt: linear-gradient(180deg, #070708 0%, #0e0f12 100%);
+    --gradient-basalt-to-black: linear-gradient(180deg, #0e0f12 0%, #000000 100%);
+    --gradient-hero-vignette: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%);
+    --gradient-spotlight: radial-gradient(circle at 70% 35%, rgba(212,175,55,0.08) 0%, transparent 35%);
+    --gradient-gold-bevel: linear-gradient(180deg, #FFD700 0%, #d4af37 50%, #b88a2a 100%);
+    
+    /* Legacy names */
+    --gradient-desert-dusk: linear-gradient(180deg, #2a1a0a 0%, #4a3020 50%, #6b4423 100%);
+    --gradient-sandstone: linear-gradient(135deg, #d4af37 0%, #b88a2a 100%);
+    --gradient-statue-depth: radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+}

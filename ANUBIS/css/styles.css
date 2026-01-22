@@ -1,0 +1,4632 @@
+﻿/* ============================================================================
+   ANUBIS MUSEUM - PREMIUM LUXURY DESIGN SYSTEM v2.0
+   Pharaonic Craftsmanship + Museum-Grade Quality
+   ============================================================================ */
+
+:root {
+    /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+       DESIGN TOKENS: Color Palette
+    â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    
+    /* BACKGROUNDS */
+    --color-bg-primary: #070708;       /* Obsidian - primary bg */
+    --color-bg-secondary: #0e0f12;     /* Basalt - dark surface */
+    --color-bg-tertiary: #15171c;      /* Charcoal - lighter surface */
+    --color-bg-quaternary: #2a2a2a;    /* Stone - hover states */
+    --color-bg-light: #3a3a3a;         /* Charcoal light - interactive */
+    
+    /* SURFACES & DEPTH */
+    --color-surface-dark: #0a0a0a;
+    --color-surface-elevated: #1a1a1a;
+    
+    /* TEXT COLORS */
+    --color-text-primary: #f5f0e6;     /* Ivory - main text (light mode) */
+    --color-text-secondary: #d4af37;   /* Antique gold - headings, emphasis */
+    --color-text-muted: #8b8680;       /* Museum stone - helper text */
+    --color-text-dark: #070708;        /* Obsidian - on gold backgrounds */
+    
+    /* ACCENT COLORS - Premium Gold Hierarchy */
+    --color-gold-primary: #d4af37;     /* Antique gold - primary accent */
+    --color-gold-secondary: #FFD700;   /* Bright gold - hover, emphasis */
+    --color-gold-tertiary: #b88a2a;    /* Deep gold - shadows, depth */
+    --color-gold-quaternary: #7a5b22;  /* Bronze - darkest gold */
+    
+    /* SEMANTIC COLORS */
+    --color-danger: #C41E3A;
+    --color-success: #2D5016;
+    --color-info: #0066CC;
+    --color-warning: #c4886f;
+    
+    /* BORDERS */
+    --color-border-light: #2a2a2a;
+    --color-border-medium: #3a3a3a;
+    --color-border-emphasis: #d4af37;
+    
+    /* LEGACY SUPPORT (compatibility) */
+    --color-obsidian: #070708;
+    --color-basalt: #0e0f12;
+    --color-charcoal: #15171c;
+    --color-stone: #2a2a2a;
+    --color-charcoal-light: #3a3a3a;
+    
+    --color-antique-gold: #d4af37;
+    --color-deep-gold: #b88a2a;
+    --color-bronze: #7a5b22;
+    --color-bright-gold: #FFD700;
+    --color-ivory-text: #f5f0e6;
+    
+    --color-sand: #D2B48C;
+    --color-desert-dusk: #c4886f;
+    --color-museum-stone: #8b8680;
+    --color-warm-highlight: #FFF8DC;
+    
+    --color-accent-red: #C41E3A;
+    --color-accent-blue: #0066CC;
+    --color-accent-green: #2D5016;
+    
+    --color-text-dark: #070708;
+    --color-text-light: #f5f0e6;
+    --color-border: #2a2a2a;
+    --color-bg-light: #F9F7F4;
+    --color-desert: #c4886f;
+    --color-deep-bronze: #b88a2a;
+
+    /* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+       DESIGN TOKENS: Typography
+    â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    
+    --font-heading: 'Cinzel', 'Playfair Display', serif;
+    --font-heading-ar: 'Noto Kufi Arabic', 'Cairo', serif;
+    --font-body: 'Cinzel', 'Playfair Display', serif;
+    --font-body-ar: 'Noto Kufi Arabic', 'Cairo', serif;
+    
+    /* Font Size Scale (responsive via clamp) */
+    --font-size-h1: clamp(2rem, 5vw, 3.5rem);
+    --font-size-h2: clamp(1.75rem, 4vw, 2.5rem);
+    --font-size-h3: clamp(1.25rem, 3vw, 1.75rem);
+    --font-size-h4: clamp(1.1rem, 2.5vw, 1.35rem);
+    --font-size-h5: 1.1rem;
+    --font-size-h6: 1rem;
+    --font-size-base: 1rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-tiny: 0.75rem;
+    
+    /* Line Heights */
+    --line-height-tight: 1.1;
+    --line-height-heading: 1.2;
+    --line-height-body: 1.6;
+    --line-height-relaxed: 1.8;
+    
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+    
+    /* SPACING - Luxury Scale */
+    --spacing-2xs: 0.25rem;   /* 4px */
+    --spacing-xs: 0.5rem;     /* 8px */
+    --spacing-sm: 1rem;       /* 16px */
+    --spacing-md: 1.5rem;     /* 24px */
+    --spacing-lg: 2rem;       /* 32px */
+    --spacing-xl: 3rem;       /* 48px */
+    --spacing-2xl: 4rem;      /* 64px */
+    --spacing-3xl: 6rem;      /* 96px */
+    
+    
+    /* NAV HEIGHT */
+    --nav-height: 72px;
+    /* SHADOWS - Museum Grade */
+    --shadow-none: none;
+    --shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.15);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.35);
+    --shadow-2xl: 0 20px 60px rgba(0, 0, 0, 0.4);
+    
+    /* Gold Glow - Spotlight Effects */
+    --shadow-gold-sm: 0 0 12px rgba(212, 175, 55, 0.3);
+    --shadow-gold-md: 0 0 20px rgba(212, 175, 55, 0.5);
+    --shadow-gold-lg: 0 0 40px rgba(212, 175, 55, 0.6);
+    --shadow-gold-xl: 0 0 60px rgba(212, 175, 55, 0.7);
+    
+    /* Inset/Bevel Shadows */
+    --shadow-inset-gold: inset 0 0 15px rgba(255, 215, 0, 0.15);
+    --shadow-inset-dark: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+    
+    /* Legacy shadow names (for backward compatibility) */
+    --shadow-gold-glow: 0 0 30px rgba(212, 175, 55, 0.5), inset 0 0 15px rgba(255, 215, 0, 0.15);
+    --shadow-spotlight: 0 0 40px rgba(212, 175, 55, 0.3);
+    --shadow-deep-glow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.15);
+    
+    /* TRANSITIONS - Luxury Timing */
+    --easing-in: cubic-bezier(0.4, 0, 1, 1);
+    --easing-out: cubic-bezier(0, 0, 0.2, 1);
+    --easing-inout: cubic-bezier(0.4, 0, 0.2, 1);
+    --easing-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+    
+    --transition-fastest: 100ms var(--easing-out);
+    --transition-faster: 150ms var(--easing-out);
+    --transition-fast: 200ms var(--easing-out);
+    --transition-base: 300ms var(--easing-inout);
+    --transition-slow: 500ms var(--easing-luxury);
+    --transition-slower: 800ms var(--easing-luxury);
+    
+    /* Legacy transition names */
+    --transition-smooth: 800ms cubic-bezier(0.2, 0.1, 0.3, 1);
+    
+    /* BORDERS & RADIUS */
+    --radius-none: 0;
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-cartouche: 20px;
+    --radius-full: 9999px;
+    
+    /* Legacy radius names */
+    --border-radius-sm: 2px;
+    --border-radius-md: 3px;
+    --border-radius-lg: 5px;
+    --border-radius-cartouche: 10px;
+    
+    /* GRADIENTS - Luxury Effects */
+    --gradient-gold-foil: linear-gradient(135deg, #FFD700 0%, #d4af37 25%, #b88a2a 50%, #7a5b22 75%, #d4af37 100%);
+    --gradient-obsidian-to-basalt: linear-gradient(180deg, #070708 0%, #0e0f12 100%);
+    --gradient-basalt-to-black: linear-gradient(180deg, #0e0f12 0%, #000000 100%);
+    --gradient-hero-vignette: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.8) 100%);
+    --gradient-spotlight: radial-gradient(circle at 70% 35%, rgba(212,175,55,0.08) 0%, transparent 35%);
+    --gradient-gold-bevel: linear-gradient(180deg, #FFD700 0%, #d4af37 50%, #b88a2a 100%);
+    
+    /* Legacy gradient names */
+    --gradient-desert-dusk: linear-gradient(180deg, #2a1a0a 0%, #4a3020 50%, #6b4423 100%);
+    --gradient-sandstone: linear-gradient(135deg, #d4af37 0%, #b88a2a 100%);
+    --gradient-statue-depth: radial-gradient(circle at 30% 20%, rgba(255, 215, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* ============================================================================
+   RESET & BASE STYLES
+   ============================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    overflow-x: hidden;
+}
+
+body[lang="ar"] {
+    font-family: var(--font-body-ar);
+    direction: rtl;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+body.nav-open {
+    overflow: hidden;
+    touch-action: none;
+}
+/* ============================================================================
+   GLOBAL TYPOGRAPHY - Hierarchy & Colors
+   ============================================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-secondary);
+    letter-spacing: 0.5px;
+}
+
+body[lang="ar"] h1,
+body[lang="ar"] h2,
+body[lang="ar"] h3,
+body[lang="ar"] h4,
+body[lang="ar"] h5,
+body[lang="ar"] h6 {
+    font-family: var(--font-heading-ar);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    letter-spacing: 0.75px;
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+}
+
+/* PARAGRAPHS - Global Defaults */
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-body);
+    max-width: 75ch;
+    font-size: inherit;
+}
+
+/* Ensure all unstyled <p> gets proper styling */
+section p,
+.container p,
+.card p,
+.modal__content p,
+.artifact-card__description {
+    color: var(--color-text-primary);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Dark section text */
+.section--dark p,
+.section--immersive p,
+.section--artifacts p {
+    color: var(--color-text-primary);
+}
+
+/* LISTS */
+ul, ol {
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-lg);
+    color: var(--color-text-primary);
+}
+
+li {
+    margin-bottom: var(--spacing-sm);
+    line-height: var(--line-height-body);
+}
+
+/* Small text and muted text */
+small {
+    font-size: var(--font-size-small);
+    line-height: 1.4;
+}
+
+.text-muted,
+p.text-muted,
+small {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-small);
+}
+
+/* LINKS - Premium Gold Treatment */
+a {
+    color: var(--color-gold-primary);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+a:hover {
+    color: var(--color-gold-secondary);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-gold-secondary);
+    outline-offset: 2px;
+    border-radius: var(--radius-xs);
+}
+
+/* Underline on hover for body links */
+p a:hover,
+li a:hover,
+.card a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold-secondary);
+    text-underline-offset: 2px;
+}
+
+a:focus, a:hover {
+    color: var(--color-bright-gold);
+}
+
+/* ============================================================================
+   ICON SYSTEM - Unified Flaticon-Based Icon System
+   ============================================================================ */
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   BASE ICON CLASSES - Support for Flaticon (SVG/PNG)
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 1;
+    color: var(--color-gold-primary);
+    transition: all var(--transition-fast);
+    font-size: 1.5rem;
+}
+
+/* SVG icons - normalize rendering */
+.icon svg,
+.icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* PNG icons - recolor to gold via filter */
+.icon img[src*=".png"] {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(34%) saturate(1223%) hue-rotate(41deg);
+}
+
+/* SVG fill normalization for Flaticon SVGs */
+.icon svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+.icon svg * {
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   ICON SIZING SYSTEM - Semantic Sizes
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+/* Extra Small - 12px / 0.75rem */
+.icon--xs {
+    width: 0.75rem;
+    height: 0.75rem;
+    font-size: 0.75rem;
+}
+
+/* Small - 16px / 1rem */
+.icon--sm {
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
+}
+
+/* Medium - 24px / 1.5rem (default for most UI) */
+.icon--md {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Large - 32px / 2rem */
+.icon--lg {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+}
+
+/* Extra Large - 40px / 2.5rem */
+.icon--xl {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2.5rem;
+}
+
+/* 2XL - 48px / 3rem for hero sections */
+.icon--2xl {
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   ICON COLOR VARIANTS - Museum-Grade Gold Palette
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+/* Gold Primary - Default brand color with engraving effect */
+.icon--gold,
+.icon {
+    color: var(--color-gold-primary);
+    /* Subtle engraving effect: inner shadow via drop-shadow */
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3)) 
+            drop-shadow(0 -1px 1px rgba(255, 255, 255, 0.08));
+}
+
+/* Card Icon PNG Mask - Render PNG as mask with currentColor (opt-in) */
+.card__icon .icon.icon--mask,
+.card__icon img.icon.icon--mask {
+    /* PNG Mask Technique: Remove original color, use mask-image */
+    background: currentColor;
+    -webkit-mask-image: var(--icon-src);
+    mask-image: var(--icon-src);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    
+    /* Fallback for browsers without mask support */
+    opacity: 1;
+    filter: none;
+}
+
+/* Gold Bright - Emphasis/hover state */
+.icon--gold-bright {
+    color: var(--color-gold-secondary);
+    filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.4))
+            drop-shadow(0 -1px 2px rgba(255, 255, 255, 0.1));
+}
+
+/* Gold Glow - Interactive hover with shine */
+.icon--gold-glow {
+    color: var(--color-gold-secondary);
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5))
+            drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+}
+
+/* Muted - Secondary/disabled state */
+.icon--muted {
+    color: var(--color-text-muted);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    opacity: 0.7;
+}
+
+/* Primary Text Color - Use text color instead of gold */
+.icon--primary {
+    color: var(--color-text-primary);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* White - For dark backgrounds */
+.icon--white {
+    color: #ffffff;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   ICON INTERACTIVE EFFECTS - Hover & Active States
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+/* Interactive hover - gentle glow */
+.icon--interactive:hover,
+.icon--interactive:focus-visible {
+    color: var(--color-gold-secondary);
+    filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.4))
+            drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+    transform: scale(1.08);
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   ICON CONTEXT STYLING - Icons in specific UI contexts
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+/* Navigation icons */
+.navbar .icon,
+.navbar img.icon,
+.navbar svg.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--color-gold-primary);
+}
+
+.navbar__logo-icon,
+.navbar .icon--lg {
+    width: 2.5rem;
+    height: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.4));
+}
+
+/* Card icons */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   CARD ICONS - Pharaonic Hero Elements (Redesigned v3.0)
+   Sacred artifact display with carved stone / engraved gold aesthetic
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+.card .icon,
+.card img.icon,
+.card svg.icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.card__icon {
+    /* Hero Sizing - Large Dominant Icon */
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 200px;
+    margin: 0 auto var(--spacing-xl);
+    
+    /* Centering & Alignment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Museum-Grade Pharaonic Seal/Tablet Background */
+    background: linear-gradient(135deg, 
+        #1a1410 0%,
+        #2a2218 25%,
+        #1a1410 50%,
+        #241f14 75%,
+        #1a1410 100%);
+    
+    /* Dark stone gradient with subtle gold highlights */
+    position: relative;
+    overflow: hidden;
+    
+    /* Subtle carved stone effect via inset shadow */
+    border: 2px solid rgba(212, 175, 55, 0.35);
+    border-radius: 10px;
+    box-shadow: 
+        inset 0 3px 12px rgba(0, 0, 0, 0.7),
+        inset 0 -2px 6px rgba(212, 175, 55, 0.12),
+        0 0 20px rgba(212, 175, 55, 0.08),
+        inset 0 1px 0 rgba(212, 175, 55, 0.2);
+    
+    /* Breathing space and visual weight */
+    padding: var(--spacing-lg);
+    
+    /* Transition for hover effects - subtle, no bounce */
+    transition: all var(--transition-base) ease-out;
+}
+
+.card__icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, 
+        rgba(212, 175, 55, 0.08) 0%,
+        transparent 50%);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.card__icon::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, 
+        rgba(212, 175, 55, 0.05) 0%,
+        transparent 40%,
+        rgba(0, 0, 0, 0.15) 100%);
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-base) ease-out;
+}
+
+/* Hover: Light sweep effect (no bounce) */
+.card__icon:hover::after {
+    opacity: 1;
+    animation: lightSweep 1.5s ease-in-out infinite;
+}
+
+@keyframes lightSweep {
+    0% {
+        background: linear-gradient(180deg, 
+            rgba(212, 175, 55, 0.05) 0%,
+            transparent 40%,
+            rgba(0, 0, 0, 0.15) 100%);
+    }
+    50% {
+        background: linear-gradient(180deg, 
+            rgba(212, 175, 55, 0.12) 0%,
+            rgba(212, 175, 55, 0.05) 40%,
+            rgba(0, 0, 0, 0.15) 100%);
+    }
+    100% {
+        background: linear-gradient(180deg, 
+            rgba(212, 175, 55, 0.05) 0%,
+            transparent 40%,
+            rgba(0, 0, 0, 0.15) 100%);
+    }
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   BUTTON ICON STYLING - Icons inside buttons
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+button .icon,
+.btn .icon,
+a.icon {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+button .icon:not(:last-child),
+.btn .icon:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+/* Icon-only buttons */
+button.icon-only,
+.btn.icon-only {
+    width: auto;
+    height: auto;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+button.icon-only:hover,
+.btn.icon-only:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--color-gold-primary);
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   IMMERSIVE SECTION ICONS - Hero & animated icons
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+.immersive__spinner {
+    width: 80px;
+    height: 80px;
+    border: 4px solid rgba(212, 175, 55, 0.2);
+    border-top-color: var(--color-gold-primary);
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.immersive__spinner-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+}
+
+.immersive__sigil {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gold-primary);
+}
+
+.immersive__sigil img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(83%) sepia(34%) saturate(1223%) hue-rotate(41deg);
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   RESPONSIVE ICON ADJUSTMENTS
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+@media (max-width: 768px) {
+    .icon--2xl {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 2.5rem;
+    }
+
+    /* Tablet: Card icons remain prominent */
+    .card__icon {
+        max-width: 80px;
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .artifact-card__icon {
+        max-width: 100px;
+        padding: var(--spacing-md);
+    }
+
+    .immersive__sigil {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon--lg {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .icon--xl {
+        width: 2rem;
+        height: 2rem;
+        font-size: 2rem;
+    }
+
+    /* Mobile: Icons slightly reduced but still dominant */
+    .card__icon {
+        max-width: 72px;
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        border-width: 1.5px;
+    }
+
+    .artifact-card__icon {
+        max-width: 80px;
+        padding: var(--spacing-md);
+        border-width: 1.5px;
+    }
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   ACCESSIBILITY - Reduced Motion & Screen Reader Support
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .icon--interactive:hover,
+    .icon--interactive:focus-visible {
+        transform: none;
+    }
+
+    .immersive__spinner {
+        animation: none;
+        border-top-color: transparent;
+    }
+}
+
+/* Screen reader only - for semantic icon labels */
+.icon-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.card__icon .icon,
+.card__icon img.icon {
+    /* Use currentColor for mask-based rendering */
+    color: var(--color-gold-primary);
+    width: 80%;
+    height: 80%;
+    display: block;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure standard image icons render (no mask) */
+.card__icon img.icon:not(.icon--mask) {
+    background: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+/* For boxicons or icon fonts in cards (if present) */
+.card__icon i[class^="bx"],
+.card__icon i[class*=" bx-"] {
+    color: var(--color-gold-primary);
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+}
+
+/* Feature list icons */
+.feature-list .icon,
+.feature-list i[class^="bx"],
+.feature-list i[class*=" bx-"],
+.feature-item .icon,
+.feature-item i[class^="bx"],
+.feature-item i[class*=" bx-"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+/* Timeline icons */
+.timeline .icon,
+.timeline i[class^="bx"],
+.timeline i[class*=" bx-"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.timeline__dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline__dot .icon,
+.timeline__dot i[class^="bx"],
+.timeline__dot i[class*=" bx-"] {
+    color: var(--color-text-dark);
+}
+
+/* Modal icons */
+.modal .icon,
+.modal i[class^="bx"],
+.modal i[class*=" bx-"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Section header icons */
+.section__title .icon,
+.section__title i[class^="bx"],
+.section__title i[class*=" bx-"],
+h2 .icon,
+h2 i[class^="bx"],
+h2 i[class*=" bx-"],
+h3 .icon,
+h3 i[class^="bx"],
+h3 i[class*=" bx-"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    vertical-align: -0.25em;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   ARTIFACT ICONS - Custom Premium Styling
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+.artifact-icon,
+.artifact-icon svg,
+.artifact-card .icon,
+.artifact-card i[class^="bx"],
+.artifact-card i[class*=" bx-"] {
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+    color: var(--color-gold-primary);
+    filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.4))
+            drop-shadow(0 -1px 2px rgba(255, 255, 255, 0.1));
+}
+
+.artifact-icon:hover,
+.artifact-card:hover .icon,
+.artifact-card:hover i[class^="bx"],
+.artifact-card:hover i[class*=" bx-"] {
+    color: var(--color-gold-secondary);
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5))
+            drop-shadow(0 2px 6px rgba(212, 175, 55, 0.4));
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
+   ICON ANIMATIONS - Subtle luxury motion (respects prefers-reduced-motion)
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+.icon,
+i[class^="bx"],
+i[class*=" bx-"] {
+    transition: color var(--transition-fast),
+                filter var(--transition-fast),
+                transform var(--transition-fast);
+}
+
+/* Gentle pulse for decorative icons */
+@keyframes icon-pulse {
+    0%, 100% {
+        filter: drop-shadow(0 1px 2px rgba(212, 175, 55, 0.3));
+    }
+    50% {
+        filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.5));
+    }
+}
+
+.icon--pulse,
+i[class^="bx"].icon--pulse,
+i[class*=" bx-"].icon--pulse {
+    animation: icon-pulse 3s ease-in-out infinite;
+}
+
+/* Gentle shimmer sweep (subtle, not annoying) */
+@keyframes icon-shimmer {
+    0% {
+        filter: drop-shadow(0 1px 2px rgba(212, 175, 55, 0.2));
+    }
+    50% {
+        filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.3));
+    }
+    100% {
+        filter: drop-shadow(0 1px 2px rgba(212, 175, 55, 0.2));
+    }
+}
+
+.icon--shimmer,
+i[class^="bx"].icon--shimmer,
+i[class*=" bx-"].icon--shimmer {
+    animation: icon-shimmer 2s ease-in-out infinite;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .icon,
+    i[class^="bx"],
+    i[class*=" bx-"],
+    .icon--pulse,
+    .icon--shimmer {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+.icon--interactive:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+button {
+    font-family: var(--font-body);
+    cursor: pointer;
+    border: none;
+}
+
+button:focus {
+    outline: 2px solid var(--color-bright-gold);
+    outline-offset: 2px;
+}
+
+/* ============================================================================
+   LAYOUT & UTILITIES
+   ============================================================================ */
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.section {
+    padding: var(--spacing-2xl) 0;
+    position: relative;
+}
+
+.section--dark {
+    background-color: var(--color-basalt);
+    color: var(--color-text-light);
+}
+
+.section--gem {
+    background: linear-gradient(135deg, var(--color-basalt) 0%, var(--color-charcoal) 100%);
+}
+
+.section__title {
+    font-size: var(--font-size-h2);
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    color: var(--color-antique-gold);
+    position: relative;
+    padding-bottom: var(--spacing-lg);
+}
+
+.section__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-bright-gold), transparent);
+}
+
+.grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.grid--2 {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.grid--3 {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.grid--4 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+@media (max-width: 768px) {
+    .grid--2, .grid--3, .grid--4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================================
+   UTILITY CLASSES - Spacing, Text, Layout
+   ============================================================================ */
+
+/* Text Utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+.text-bold { font-weight: var(--font-weight-bold); }
+.text-semibold { font-weight: var(--font-weight-semibold); }
+.text-medium { font-weight: var(--font-weight-medium); }
+
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted { color: var(--color-text-muted); }
+.text-gold { color: var(--color-gold-primary); }
+.text-gold-bright { color: var(--color-gold-secondary); }
+.text-ivory { color: var(--color-ivory); }
+
+.text-sm { font-size: var(--font-size-small); }
+.text-xs { font-size: var(--font-size-tiny); }
+
+/* Lead paragraph - emphasized body text */
+.lead {
+  font-size: var(--font-size-large);
+  line-height: 1.6;
+  color: var(--color-ivory);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
+}
+
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+
+/* Spacing Utilities */
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.pt-md { padding-top: var(--spacing-md); }
+.pt-lg { padding-top: var(--spacing-lg); }
+.pb-md { padding-bottom: var(--spacing-md); }
+.pb-lg { padding-bottom: var(--spacing-lg); }
+
+/* Display utilities */
+.hidden { display: none !important; }
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+
+/* ============================================================================
+   NAVIGATION BAR
+   ============================================================================ */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(180deg, var(--color-basalt) 0%, rgba(26, 26, 26, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--color-antique-gold);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    flex-wrap: wrap;
+    row-gap: var(--spacing-sm);
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-antique-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar__logo-icon {
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+    width: 32px;
+    height: 32px;
+}
+
+.navbar__logo-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: inherit;
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+}
+
+.navbar__logo-link:hover {
+    opacity: 0.8;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.navbar__link {
+    color: var(--color-text-light);
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    line-height: 1.1;
+    position: relative;
+    transition: color var(--transition-fast);
+}
+
+.navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-bright-gold);
+    transition: width var(--transition-fast);
+}
+
+[dir="rtl"] .navbar .container {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .navbar__menu {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .navbar__link {
+    text-align: right;
+}
+
+[dir="rtl"] .navbar__link::after {
+    left: auto;
+    right: 0;
+}
+
+.navbar__link:hover::after, .navbar__link:focus::after {
+    width: 100%;
+}
+
+.navbar__lang-toggle {
+    background: var(--color-antique-gold);
+    color: var(--color-obsidian);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    font-size: 0.75rem;
+    transition: all var(--transition-fast);
+}
+
+.navbar__lang-toggle:hover {
+    background: var(--color-bright-gold);
+    transform: scale(1.05);
+}
+
+.navbar__lang-en, .navbar__lang-ar {
+    margin: 0 var(--spacing-xs);
+}
+
+.navbar__toggle {
+    display: none;
+    background: none;
+    color: var(--color-antique-gold);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .navbar,
+    .navbar .container {
+        overflow: visible;
+    }
+
+    .navbar__menu {
+        display: none;
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        height: calc(100vh - var(--nav-height));
+        max-height: calc(100vh - var(--nav-height));
+        height: calc(100svh - var(--nav-height));
+        max-height: calc(100svh - var(--nav-height));
+        flex-direction: column;
+        gap: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+        background: radial-gradient(circle at top, rgba(212, 175, 55, 0.12), rgba(7, 7, 8, 0.96) 55%);
+        border: none;
+        border-top: 1px solid rgba(212, 175, 55, 0.25);
+        padding: var(--spacing-md) var(--spacing-md) calc(var(--spacing-lg) + env(safe-area-inset-bottom));
+        z-index: 10000;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-6px);
+        transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+    }
+.navbar__menu.open {
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+        max-height: calc(100vh - var(--nav-height));
+        max-height: calc(100svh - var(--nav-height));
+        box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
+    }
+.navbar__link {
+        display: block;
+        padding: 1rem 1.2rem;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+    
+    .navbar__toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        z-index: 10001;
+    }
+    
+    .navbar__toggle span {
+        width: 25px;
+        height: 2px;
+        background: var(--color-antique-gold);
+        transition: all var(--transition-fast);
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar__menu {
+        gap: var(--spacing-sm);
+    }
+
+    .navbar__link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    [dir="rtl"] .navbar__link {
+        text-align: right;
+    }
+}
+
+@media (max-width: 540px) {
+    .navbar__menu.open {
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+        max-height: calc(100vh - var(--nav-height));
+        max-height: calc(100svh - var(--nav-height));
+        box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
+    }
+
+    .navbar__link {
+        padding: 0.9rem 1.1rem;
+        font-size: 0.95rem;
+    }
+
+    .navbar__lang-toggle {
+        margin: var(--spacing-md) var(--spacing-md) 0;
+        align-self: flex-start;
+    }
+}
+.navbar__link {
+        padding: 0.9rem 1.1rem;
+        font-size: 0.95rem;
+    }
+
+    .navbar__lang-toggle {
+        margin: var(--spacing-md) var(--spacing-md) 0;
+        align-self: flex-start;
+    }
+}
+
+/* ============================================================================
+   HERO SECTION
+   ============================================================================ */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: clamp(2rem, 6vw, 5rem) 0;
+}
+
+@supports (height: 100svh) {
+    .hero {
+        min-height: 100svh;
+    }
+}
+.hero__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/img/anubis/anubis-hero-background.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  z-index: 0;
+  /* Enhanced Pharaonic Filter */
+  filter: brightness(0.95) contrast(1.08) saturate(1.02);
+}
+
+.hero__background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+      linear-gradient(180deg, rgba(7, 7, 8, 0.6) 0%, rgba(7, 7, 8, 0.9) 100%),
+      repeating-linear-gradient(
+          45deg,
+          rgba(212, 175, 55, 0.06) 0px,
+          rgba(212, 175, 55, 0.06) 6px,
+          transparent 6px,
+          transparent 18px
+      ),
+      repeating-linear-gradient(
+          -45deg,
+          rgba(212, 175, 55, 0.05) 0px,
+          rgba(212, 175, 55, 0.05) 4px,
+          transparent 4px,
+          transparent 16px
+      );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.hero__gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+        #2a2a2a 0%,
+        #0A0A0A 50%,
+        #1a1a1a 100%);
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .hero__gradient {
+        background-attachment: scroll;
+    }
+}
+.hero__gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            rgba(212, 175, 55, 0.03) 0px,
+            rgba(212, 175, 55, 0.03) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+    animation: shimmer 8s linear infinite;
+}
+
+.hero__dust {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.dust-particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(212, 175, 55, 0.6);
+    border-radius: 50%;
+    animation: float 20s linear infinite;
+}
+
+.dust-particle:nth-child(1) { left: 20%; top: 30%; animation-duration: 25s; }
+.dust-particle:nth-child(2) { left: 60%; top: 40%; animation-duration: 30s; animation-delay: 5s; }
+.dust-particle:nth-child(3) { left: 80%; top: 20%; animation-duration: 35s; animation-delay: 10s; }
+.dust-particle:nth-child(4) { left: 40%; top: 60%; animation-duration: 40s; animation-delay: 15s; }
+.dust-particle:nth-child(5) { left: 10%; top: 70%; animation-duration: 45s; animation-delay: 20s; }
+
+.hero__silhouette-container {
+    position: absolute;
+    right: -100px;
+    bottom: -50px;
+    width: 500px;
+    height: 600px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero__silhouette {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.2));
+}
+
+.hero__vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero__ornament {
+    margin-bottom: var(--spacing-lg);
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero__title {
+    font-size: var(--font-size-h1);
+    color: var(--color-antique-gold);
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    color: var(--color-warm-highlight);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.8;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero__shimmer-line {
+    position: absolute;
+    top: 40%;
+    left: -100%;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-bright-gold), transparent);
+    animation: shimmer-sweep 4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100svh;
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero__silhouette-container {
+        right: -150px;
+        width: 350px;
+        height: 400px;
+    }
+}
+
+/* ============================================================================
+   BUTTONS - PREMIUM PHARAONIC LUXURY
+   ============================================================================ */
+
+/* ANUBIS HERO OVERRIDES - Maximum Authority */
+.hero--anubis {
+    background: linear-gradient(180deg, 
+        #070708 0%,
+        #0a0a0a 40%,
+        #1a0d0d 70%,
+        #0a0a0a 100%);
+}
+
+.hero__gradient--anubis {
+    background: linear-gradient(180deg,
+        #1a1a1a 0%,
+        #070708 50%,
+        #000000 100%) !important;
+}
+
+.hero__dust--anubis .dust-particle--gold {
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.8), rgba(212, 175, 55, 0.2));
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    animation: goldDust 3s ease-in-out infinite;
+}
+
+.hero__anubis-guardian {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.hero__anubis-svg {
+    filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.2));
+    animation: anubisPresence 3s cubic-bezier(0.25, 0.1, 0.25, 1) 1s 1;
+}
+
+@keyframes anubisPresence {
+    0% { opacity: 0; transform: scale(0.95); }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.hero__vignette--anubis {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 50% 50%, 
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.4) 60%,
+            rgba(0, 0, 0, 0.8) 100%),
+        radial-gradient(circle at 50% 30%,
+            rgba(212, 175, 55, 0.05) 0%,
+            rgba(0, 0, 0, 0.1) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.hero__content--anubis {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 900px;
+    animation: contentReveal 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s both;
+}
+
+@keyframes contentReveal {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero__ornament--anubis {
+    margin-bottom: var(--spacing-xl);
+    animation: ankthBreathe 4s ease-in-out infinite 1s;
+}
+
+@keyframes ankthBreathe {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+.hero__title--anubis {
+    font-size: 4.5rem;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-ivory-text);
+    margin-bottom: var(--spacing-md);
+    text-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(212, 175, 55, 0.3);
+    background: linear-gradient(180deg,
+        var(--color-ivory-text) 0%,
+        var(--color-warm-highlight) 50%,
+        var(--color-ivory-text) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.4));
+}
+
+.hero__subtitle--anubis {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-antique-gold);
+    margin-bottom: var(--spacing-lg);
+    letter-spacing: 2px;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+    line-height: 1.4;
+}
+
+.hero__tagline {
+    font-size: 1.1rem;
+    color: var(--color-ivory-text);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    opacity: 0.95;
+}
+
+.hero__cta-group {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-2xl);
+}
+
+.btn--anubis {
+    animation: buttonAppear 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 1s both;
+}
+
+@keyframes buttonAppear {
+    0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.hero__shimmer-line--anubis {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        var(--color-antique-gold) 50%,
+        transparent 100%);
+    box-shadow: 0 0 20px var(--color-antique-gold);
+    animation: shimmerFlow 3s ease-in-out infinite;
+}
+
+@keyframes shimmerFlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@media (max-width: 1024px) {
+    .hero__title--anubis {
+        font-size: 3.5rem;
+        letter-spacing: 3px;
+    }
+    
+    .hero__subtitle--anubis {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero__tagline {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__title--anubis {
+        font-size: 2.5rem;
+    }
+    
+    .hero__subtitle--anubis {
+        font-size: 1.2rem;
+    }
+    
+    .hero__tagline {
+        font-size: 0.9rem;
+    }
+    
+    .hero__cta-group {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .btn--anubis {
+        width: 100%;
+    }
+}
+
+/* ============================================================================
+   BUTTONS - PREMIUM PHARAONIC LUXURY
+   ============================================================================ */
+
+.btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 140px;
+    text-align: center;
+    box-shadow: none;
+}
+
+/* Shimmer effect on all buttons */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left var(--transition-slow);
+    pointer-events: none;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Primary Gold Button - Maximum Luxury */
+.btn--primary {
+    background: linear-gradient(135deg, var(--color-antique-gold) 0%, var(--color-bright-gold) 50%, var(--color-antique-gold) 100%);
+    color: var(--color-obsidian);
+    border: 2px solid var(--color-bright-gold);
+    box-shadow: 
+        0 0 30px rgba(212, 175, 55, 0.5),
+        inset 0 2px 5px rgba(255, 255, 255, 0.3),
+        inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.btn--primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+    pointer-events: none;
+    border-radius: var(--border-radius-md);
+}
+
+.btn--primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 0 50px rgba(212, 175, 55, 0.7),
+        inset 0 2px 8px rgba(255, 255, 255, 0.4),
+        inset 0 -2px 8px rgba(0, 0, 0, 0.4),
+        0 15px 40px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, var(--color-bright-gold) 0%, #FFFF99 50%, var(--color-bright-gold) 100%);
+}
+
+.btn--primary:active {
+    transform: translateY(-1px);
+    box-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.4),
+        inset 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn--primary:focus-visible {
+    outline: 2px solid var(--color-bright-gold);
+    outline-offset: 3px;
+}
+
+/* Secondary Black Stone Button */
+.btn--secondary {
+    background: linear-gradient(180deg, var(--color-charcoal-light) 0%, var(--color-charcoal) 50%, var(--color-basalt) 100%);
+    color: var(--color-antique-gold);
+    border: 2px solid var(--color-antique-gold);
+    box-shadow: var(--shadow-deep-glow);
+}
+
+.btn--secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        var(--shadow-deep-glow),
+        0 0 40px rgba(212, 175, 55, 0.3);
+    background: linear-gradient(180deg, var(--color-stone) 0%, var(--color-charcoal-light) 100%);
+    border-color: var(--color-bright-gold);
+}
+
+/* Ghost Button */
+.btn--ghost {
+    background: transparent;
+    color: var(--color-antique-gold);
+    border: 2px solid var(--color-antique-gold);
+    position: relative;
+}
+
+.btn--ghost::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    pointer-events: none;
+    border-radius: var(--border-radius-md);
+}
+
+.btn--ghost:hover {
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.3),
+        inset 0 0 10px rgba(212, 175, 55, 0.05);
+    border-color: var(--color-bright-gold);
+    color: var(--color-bright-gold);
+}
+
+/* Icon Button - Cartouche Style */
+.btn--icon {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: var(--border-radius-cartouche);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-antique-gold), var(--color-deep-gold));
+    color: var(--color-obsidian);
+    border: 2px solid var(--color-bright-gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn--icon:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+}
+
+/* Gold Button with Bevel */
+.btn--gold-bevel {
+    background: linear-gradient(180deg, var(--color-bright-gold) 0%, var(--color-antique-gold) 50%, var(--color-deep-gold) 100%);
+    color: var(--color-obsidian);
+    border: 2px solid var(--color-bronze);
+    box-shadow: 
+        inset 0 2px 6px rgba(255, 255, 255, 0.4),
+        inset 0 -3px 8px rgba(0, 0, 0, 0.2),
+        0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn--gold-bevel:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        inset 0 2px 8px rgba(255, 255, 255, 0.5),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.3),
+        0 15px 35px rgba(212, 175, 55, 0.5);
+}
+
+/* Close Button */
+.btn--close {
+    background: var(--color-charcoal-light);
+    color: var(--color-text-light);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-border);
+    font-size: 1.5rem;
+}
+
+.btn--close:hover {
+    background: var(--color-accent-red);
+    border-color: var(--color-accent-red);
+    color: var(--color-text-light);
+    box-shadow: 0 0 20px rgba(196, 30, 58, 0.6);
+    transform: rotate(90deg);
+}
+
+/* Disabled State */
+.btn:disabled,
+.btn[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn:disabled:hover,
+.btn[disabled]:hover {
+    transform: none;
+    box-shadow: var(--shadow-md);
+}
+
+/* ============================================================================
+   CARDS
+   ============================================================================ */
+
+.card {
+    background: var(--color-basalt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-antique-gold), var(--color-bright-gold), var(--color-antique-gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-base);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
+    border-color: var(--color-antique-gold);
+}
+
+.card--feature {
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+.card--feature .card__icon {
+    /* Remove bounce animation - icons are now static sacred elements */
+    margin-bottom: var(--spacing-lg);
+    animation: none;
+}
+
+/* Subtle ambient glow to make feature icons feel alive */
+.card--feature .card__icon::before {
+    animation: runeGlow 6s ease-in-out infinite;
+}
+
+/* Hover State: Sacred Glow Effect (very subtle) */
+.card:hover .card__icon {
+    background: linear-gradient(135deg, 
+        rgba(212, 175, 55, 0.25) 0%,
+        rgba(212, 175, 55, 0.12) 50%,
+        rgba(212, 175, 55, 0.25) 100%);
+    
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4),
+                inset 0 -2px 8px rgba(212, 175, 55, 0.12),
+                0 0 24px rgba(212, 175, 55, 0.1);
+    
+    /* Very subtle brightness increase (light sweep effect) */
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+/* Respect prefers-reduced-motion for card hover effects */
+@media (prefers-reduced-motion: reduce) {
+    .card:hover .card__icon {
+        background: linear-gradient(135deg, 
+            rgba(212, 175, 55, 0.15) 0%,
+            rgba(212, 175, 55, 0.08) 50%,
+            rgba(212, 175, 55, 0.15) 100%);
+        
+        box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4),
+                    inset 0 -2px 8px rgba(212, 175, 55, 0.08),
+                    0 0 20px rgba(212, 175, 55, 0.05);
+        
+        filter: none;
+        transform: none;
+    }
+
+    .card--feature .card__icon::before {
+        animation: none;
+    }
+}
+
+@keyframes runeGlow {
+    0% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.75;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+}
+
+.card__title {
+    color: var(--color-bright-gold);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.card__text {
+    color: var(--color-desert);
+    margin: 0;
+}
+
+.card--gem {
+    color: var(--color-text-light);
+    border: 2px solid var(--color-antique-gold);
+}
+
+.card--gem:hover {
+    background: linear-gradient(135deg, var(--color-charcoal), var(--color-basalt));
+}
+
+.card__image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, var(--color-antique-gold), var(--color-deep-bronze));
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-obsidian);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.card--gem .card__image {
+    height: 260px;
+    overflow: hidden;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 0, 0, 0.4));
+}
+
+.card--gem .card__image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* ============================================================================
+   MODALS
+   ============================================================================ */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    visibility: visible;
+    transition: all var(--transition-base);
+}
+
+.modal[aria-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modal__content {
+    position: relative;
+    background: var(--color-basalt);
+    border: 2px solid var(--color-antique-gold);
+    border-radius: var(--border-radius-lg);
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: var(--spacing-xl);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    animation: slideIn 0.3s ease-out;
+}
+
+.modal--fullscreen {
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.modal--fullscreen .modal__overlay {
+    background-color: transparent;
+}
+
+.modal--fullscreen .modal__content {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.modal__close {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: transparent;
+    color: var(--color-antique-gold);
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.modal__close:hover {
+    color: var(--color-bright-gold);
+    transform: rotate(90deg);
+}
+
+.modal__close-button {
+    position: absolute;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    z-index: 2001;
+}
+
+@media (max-width: 768px) {
+    .modal__content {
+        max-width: 90%;
+        padding: var(--spacing-lg);
+    }
+}
+
+/* ============================================================================
+   FORMS
+   ============================================================================ */
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form__label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-antique-gold);
+    font-weight: 600;
+}
+
+.form__input {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: var(--color-charcoal);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    color: var(--color-text-light);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+}
+
+.form__input:focus {
+    border-color: var(--color-antique-gold);
+    background: var(--color-basalt);
+    outline: none;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.form__input::placeholder {
+    color: var(--color-stone);
+}
+
+/* ============================================================================
+   FILTERS
+   ============================================================================ */
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-lg);
+    background: var(--color-charcoal);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--color-border);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter__label {
+    color: var(--color-antique-gold);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.filter__select, .filter__input {
+    padding: var(--spacing-sm);
+    background: var(--color-basalt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    color: var(--color-text-light);
+    font-family: var(--font-body);
+    transition: border-color var(--transition-fast);
+}
+
+.filter__select:focus, .filter__input:focus {
+    border-color: var(--color-antique-gold);
+    outline: none;
+}
+
+/* ============================================================================
+   TIMELINE
+   ============================================================================ */
+
+.timeline {
+    position: relative;
+    padding: var(--spacing-2xl) 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--color-antique-gold), transparent);
+    transform: translateX(-1px);
+}
+
+.timeline__item {
+    margin-bottom: var(--spacing-2xl);
+    position: relative;
+}
+
+.timeline__item:nth-child(odd) .timeline__content {
+    margin-left: 0;
+    margin-right: auto;
+    padding-right: var(--spacing-xl);
+    text-align: right;
+}
+
+.timeline__item:nth-child(even) .timeline__content {
+    margin-left: auto;
+    margin-right: 0;
+    padding-left: var(--spacing-xl);
+    text-align: left;
+}
+
+.timeline__dot {
+    position: absolute;
+    left: 50%;
+    top: var(--spacing-lg);
+    width: 20px;
+    height: 20px;
+    background: var(--color-antique-gold);
+    border: 3px solid var(--color-obsidian);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.timeline__content {
+    background: var(--color-charcoal);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    max-width: 500px;
+}
+
+.timeline__era {
+    color: var(--color-antique-gold);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.timeline__period {
+    color: var(--color-stone);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.timeline__description {
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+    .timeline::before {
+        left: 0;
+    }
+    
+    .timeline__item:nth-child(odd) .timeline__content,
+    .timeline__item:nth-child(even) .timeline__content {
+        margin-left: var(--spacing-xl);
+        margin-right: 0;
+        padding-left: var(--spacing-xl);
+        padding-right: 0;
+        text-align: left;
+        max-width: calc(100% - var(--spacing-xl));
+    }
+    
+    .timeline__dot {
+        left: -10px;
+    }
+}
+
+/* ============================================================================
+   DYNASTY TIMELINE - Carved Slabs
+   ============================================================================ */
+
+.section--dynasty {
+    background: linear-gradient(180deg, rgba(7, 7, 8, 0.98) 0%, rgba(12, 11, 10, 0.98) 100%);
+    border-top: 2px solid rgba(212, 175, 55, 0.4);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.35);
+}
+
+.dynasty-timeline {
+    position: relative;
+    display: grid;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl) 0 var(--spacing-2xl);
+}
+
+.dynasty-timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.8), rgba(212, 175, 55, 0.1));
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.dynasty-slab {
+    position: relative;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, #14100c 0%, #1b1712 45%, #0f0d0a 100%);
+    border: 2px solid rgba(212, 175, 55, 0.35);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 10px 30px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(212, 175, 55, 0.12);
+}
+
+.dynasty-slab::after {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 32px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(212, 175, 55, 0.8);
+    background: #0b0a09;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.4);
+}
+
+.dynasty-slab__glyph {
+    width: 64px;
+    height: 64px;
+    border: 2px solid rgba(212, 175, 55, 0.55);
+    background:
+        linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(7, 7, 8, 0.9) 100%),
+        repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.08) 0px, rgba(212, 175, 55, 0.08) 2px, transparent 2px, transparent 6px);
+    box-shadow:
+        inset 0 0 20px rgba(212, 175, 55, 0.08),
+        0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.dynasty-slab__title {
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-antique-gold);
+}
+
+.dynasty-slab__period {
+    font-size: 0.9rem;
+    color: rgba(212, 175, 55, 0.7);
+    margin-bottom: var(--spacing-sm);
+}
+
+.dynasty-slab__text {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.btn--dynasty {
+    border-radius: 2px;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    box-shadow:
+        inset 0 0 0 rgba(255, 255, 255, 0),
+        0 0 18px rgba(212, 175, 55, 0.25);
+}
+
+@media (max-width: 900px) {
+    .dynasty-timeline::before {
+        left: 18px;
+    }
+
+    .dynasty-slab {
+        grid-template-columns: 56px 1fr;
+        padding: var(--spacing-md);
+    }
+
+    .dynasty-slab::after {
+        left: -10px;
+    }
+
+    .dynasty-slab__glyph {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* ============================================================================
+   IMMERSIVE 360Â° PANORAMA VIEWER
+   ============================================================================ */
+
+.section--immersive {
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(180deg,
+        var(--color-obsidian) 0%,
+        var(--color-basalt) 100%);
+    border-top: 3px solid var(--color-antique-gold);
+    border-bottom: 3px solid var(--color-antique-gold);
+}
+
+.immersive__header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    padding: 0 var(--spacing-lg);
+}
+
+.immersive__subtitle {
+    font-size: 1.1rem;
+    color: var(--color-ivory-text);
+    margin-top: var(--spacing-md);
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.immersive__viewer-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto var(--spacing-2xl);
+    padding: 0 var(--spacing-lg);
+}
+
+.immersive__panorama {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 
+        0 0 50px rgba(212, 175, 55, 0.3),
+        0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-antique-gold);
+}
+
+#panorama {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+}
+
+/* Pannellum canvas styling */
+#panorama canvas {
+    border-radius: var(--border-radius-lg);
+}
+
+.immersive__loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    color: var(--color-ivory-text);
+}
+
+.immersive__spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto var(--spacing-md);
+    border: 3px solid rgba(212, 175, 55, 0.3);
+    border-top-color: var(--color-antique-gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Hotspot styling (Pannellum) */
+.pnlm-hotspot {
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.pnlm-hotspot-element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.8), rgba(180, 140, 40, 0.4));
+    border: 2px solid var(--color-antique-gold);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.6),
+        inset 0 0 10px rgba(255, 215, 0, 0.3);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    animation: hotspotPulse 2s ease-in-out infinite;
+}
+
+@keyframes hotspotPulse {
+    0%, 100% { 
+        box-shadow: 
+            0 0 20px rgba(212, 175, 55, 0.6),
+            inset 0 0 10px rgba(255, 215, 0, 0.3);
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% { 
+        box-shadow: 
+            0 0 40px rgba(212, 175, 55, 0.9),
+            inset 0 0 15px rgba(255, 215, 0, 0.5);
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.pnlm-hotspot-element:hover {
+    background: radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 1), rgba(212, 175, 55, 0.8));
+    box-shadow: 
+        0 0 50px rgba(212, 175, 55, 1),
+        inset 0 0 20px rgba(255, 215, 0, 0.6);
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.pnlm-hotspot-text {
+    position: absolute;
+    background: rgba(7, 7, 8, 0.95);
+    color: var(--color-ivory-text);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-antique-gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 300px;
+    pointer-events: auto;
+    z-index: 100;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: normal;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.pnlm-hotspot-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--color-antique-gold);
+}
+
+/* Info Callouts */
+.immersive__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    max-width: 1000px;
+    margin: var(--spacing-2xl) auto 0;
+    padding: 0 var(--spacing-lg);
+}
+
+.immersive__callout {
+    background: linear-gradient(135deg, rgba(13, 13, 13, 0.8), rgba(26, 26, 26, 0.8));
+    border: 1px solid var(--color-antique-gold);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: all var(--transition-base);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.immersive__callout:hover {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(13, 13, 13, 0.9));
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3), 0 8px 20px rgba(0, 0, 0, 0.7);
+    transform: translateY(-5px);
+}
+
+.immersive__sigil,
+.immersive__scale {
+    margin-bottom: var(--spacing-md);
+    filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.4));
+}
+
+.immersive__callout h3 {
+    font-size: 1.3rem;
+    color: var(--color-antique-gold);
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.immersive__callout p {
+    color: var(--color-ivory-text);
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+    .immersive__panorama {
+        padding-bottom: 75%; /* Adjust for smaller screens */
+    }
+    
+    .immersive__info {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .immersive__callout {
+        padding: var(--spacing-md);
+    }
+    
+    .immersive__callout h3 {
+        font-size: 1.1rem;
+    }
+    
+    .pnlm-hotspot-text {
+        max-width: 200px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================================================
+   SACRED ARTIFACTS SHOWCASE
+   ============================================================================ */
+
+.section--artifacts {
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(180deg,
+        var(--color-obsidian) 0%,
+        var(--color-basalt) 100%);
+    border-top: 2px solid var(--color-antique-gold);
+}
+
+.section__subtitle {
+    font-size: 1.1rem;
+    color: var(--color-ivory-text);
+    margin-top: var(--spacing-md);
+    opacity: 0.9;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.artifacts__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.artifact-card {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.7), rgba(13, 13, 13, 0.7));
+    border: 2px solid var(--color-antique-gold);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    text-align: center;
+    transition: all var(--transition-base);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.artifact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left var(--transition-slow);
+    pointer-events: none;
+}
+
+.artifact-card:hover::before {
+    left: 100%;
+}
+
+.artifact-card:hover {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(13, 13, 13, 0.95));
+    box-shadow: 
+        0 0 30px rgba(212, 175, 55, 0.4),
+        0 12px 40px rgba(0, 0, 0, 0.8);
+    transform: translateY(-10px);
+    border-color: var(--color-bright-gold);
+}
+
+.artifact-card:hover .artifact-card__title {
+    color: var(--color-bright-gold);
+}
+
+.artifact-card__icon {
+    /* Dominant icon container */
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Museum-Grade Pharaonic Seal/Tablet Background */
+    background: linear-gradient(135deg, 
+        #1a1410 0%,
+        #2a2218 25%,
+        #1a1410 50%,
+        #241f14 75%,
+        #1a1410 100%);
+    
+    /* Subtle carved stone effect */
+    border: 2px solid rgba(212, 175, 55, 0.35);
+    border-radius: 10px;
+    box-shadow: 
+        inset 0 3px 12px rgba(0, 0, 0, 0.7),
+        inset 0 -2px 6px rgba(212, 175, 55, 0.12),
+        0 0 20px rgba(212, 175, 55, 0.08),
+        inset 0 1px 0 rgba(212, 175, 55, 0.2);
+    
+    padding: var(--spacing-lg);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base) ease-out;
+}
+
+.artifact-card__icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, 
+        rgba(212, 175, 55, 0.08) 0%,
+        transparent 50%);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.artifact-card__icon::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, 
+        rgba(212, 175, 55, 0.05) 0%,
+        transparent 40%,
+        rgba(0, 0, 0, 0.15) 100%);
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-base) ease-out;
+}
+
+/* Hover: Light sweep effect (no bounce) */
+.artifact-card__icon:hover::after {
+    opacity: 1;
+    animation: lightSweep 1.5s ease-in-out infinite;
+}
+
+.artifact-icon {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    animation: none;
+}
+
+.artifact-card:hover .artifact-icon {
+    animation: none;
+    filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.7));
+    transition: filter var(--transition-base) ease-out;
+}
+
+.artifact-card__title {
+    font-size: 1.4rem;
+    color: var(--color-antique-gold);
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color var(--transition-base);
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.artifact-card__description {
+    color: var(--color-ivory-text);
+    line-height: 1.7;
+    opacity: 0.95;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+    .artifacts__grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .section--artifacts {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .artifacts__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .artifact-card {
+        padding: var(--spacing-md);
+    }
+    
+    .artifact-card__title {
+        font-size: 1.2rem;
+    }
+    
+    .artifact-card__description {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================================================
+   PLACEHOLDERS & MEDIA
+   ============================================================================ */
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-antique-gold) 0%, var(--color-deep-bronze) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-obsidian);
+    font-weight: bold;
+    border-radius: var(--border-radius-md);
+}
+
+/* ============================================================================
+   NEWSLETTER FORM
+   ============================================================================ */
+
+.newsletter-form {
+    background: var(--color-charcoal);
+    border: 2px solid var(--color-antique-gold);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-2xl);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter__text {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.newsletter__input-group {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.newsletter__input {
+    flex: 1;
+    padding: var(--spacing-md);
+    background: var(--color-basalt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+    color: var(--color-text-light);
+    font-family: var(--font-body);
+}
+
+.newsletter__input:focus {
+    border-color: var(--color-antique-gold);
+    outline: none;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.newsletter__input::placeholder {
+    color: var(--color-stone);
+}
+
+@media (max-width: 768px) {
+    .newsletter__input-group {
+        flex-direction: column;
+    }
+}
+
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+
+.footer {
+    background: var(--color-obsidian);
+    border-top: 2px solid var(--color-antique-gold);
+    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+    color: var(--color-text-light);
+}
+
+.footer__section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer__title {
+    color: var(--color-antique-gold);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer__list {
+    list-style: none;
+}
+
+.footer__link {
+    display: block;
+    padding: var(--spacing-xs) 0;
+    color: var(--color-desert);
+    transition: color var(--transition-fast);
+}
+
+.footer__link:hover {
+    color: var(--color-bright-gold);
+}
+
+.footer__bottom {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-stone);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--color-antique-gold), var(--color-deep-bronze));
+    color: var(--color-obsidian);
+    border-radius: 50%;
+    transition: all var(--transition-fast);
+    font-weight: 700;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gold-glow);
+}
+
+/* ============================================================================
+   DIVIDERS & ORNAMENTS
+   ============================================================================ */
+
+.divider {
+    text-align: center;
+    padding: var(--spacing-2xl) 0;
+}
+
+.scepter-divider {
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+}
+
+.cartouche {
+    border: 2px solid var(--color-antique-gold);
+    border-radius: 50%;
+    padding: var(--spacing-lg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 175, 55, 0.05);
+}
+
+/* ============================================================================
+   ACCESSIBILITY & RESPONSIVE
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-h1: 2rem;
+        --font-size-h2: 1.75rem;
+        --font-size-h3: 1.25rem;
+        --spacing-2xl: 2rem;
+        --spacing-xl: 1.5rem;
+    }
+    
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Already dark by default */
+}
+
+@media (prefers-contrast: more) {
+    :root {
+        --color-antique-gold: #FFD700;
+        --color-bright-gold: #FFFF00;
+    }
+}
+
+/* ============================================================================
+   PRINT STYLES
+   ============================================================================ */
+
+@media print {
+    .navbar, .newsletter-form, .modal {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+
+/* ================================
+   ANUBIS JUDGMENT ROOM (Overlay)
+   ================================ */
+body.modal-open {
+    overflow: hidden;
+}
+
+body.nav-open {
+    overflow: hidden;
+    touch-action: none;
+}
+.anubis-room {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    background: #000;
+}
+
+.anubis-room.is-open {
+    display: block;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.anubis-room__video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.06) brightness(0.86) saturate(1.05);
+}
+
+.anubis-room::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 70% 35%, rgba(212,175,55,0.08) 0%, rgba(0,0,0,0.0) 35%, rgba(0,0,0,0.65) 100%),
+        linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.45) 42%, rgba(0,0,0,0.20) 70%, rgba(0,0,0,0.05) 100%);
+    pointer-events: none;
+}
+
+.anubis-room__ui{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.anubis-room__title{
+    font-family: var(--font-heading);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-antique-gold);
+    text-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    padding: 10px 14px;
+    border: 1px solid rgba(212,175,55,0.35);
+    border-radius: var(--border-radius-cartouche);
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+}
+
+.btn--anubis-room{
+    padding: 12px 16px;
+}
+
+@media (max-width: 768px){
+    .anubis-room__ui{
+        top: auto;
+        right: 50%;
+        bottom: 18px;
+        transform: translateX(50%);
+        align-items: center;
+    }
+}
+
+
+
+/* Anubis hero art framing tweaks */
+@media (max-width: 768px){
+    .hero--anubis .hero__background{
+        background-position: 75% center;
+    }
+}
+@media (min-width: 1400px){
+    .hero--anubis .hero__background{
+        background-position: 84% center;
+    }
+}
+
+
+/* ============================================================
+   ANUBIS HERO: FINAL LAYERING + RESPONSIVE FIX (OVERRIDE)
+   Purpose: ensure the background image is always visible and
+   gradient/dust/guardian never "break out" of the hero.
+   ============================================================ */
+
+.hero.hero--anubis{
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  height: auto;
+  overflow: hidden;
+}
+
+@supports (height: 100svh) {
+  .hero.hero--anubis{
+    min-height: 100svh;
+  }
+}
+/* Background image */
+.hero.hero--anubis .hero__background{
+  z-index: 0 !important;
+  background-image: url("../assets/img/anubis/anubis-hero-background.png") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center right !important;
+}
+
+/* Gradient overlay */
+.hero.hero--anubis .hero__gradient,
+.hero.hero--anubis .hero__gradient--anubis{
+  z-index: 1 !important;
+  background-attachment: scroll !important; /* avoid mobile issues */
+}
+
+/* Dust layer */
+.hero.hero--anubis .hero__dust,
+.hero.hero--anubis .hero__dust--anubis{
+  z-index: 2 !important;
+  pointer-events: none;
+}
+
+/* Optional guardian silhouette */
+.hero.hero--anubis .hero__anubis-guardian{
+  z-index: 3 !important;
+  pointer-events: none;
+  opacity: 0.35; /* keep subtle (image is primary) */
+}
+
+/* Vignette */
+.hero.hero--anubis .hero__vignette,
+.hero.hero--anubis .hero__vignette--anubis{
+  z-index: 4 !important;
+  pointer-events: none;
+}
+
+/* Content */
+.hero.hero--anubis .hero__content,
+.hero.hero--anubis .hero__content--anubis{
+  z-index: 10 !important;
+  position: relative;
+}
+
+/* Responsive cropping */
+@media (max-width: 768px){
+  .hero.hero--anubis .hero__background{
+    background-position: 75% center !important;
+  }
+  .hero.hero--anubis .hero__anubis-guardian{
+    opacity: 0.18;
+  }
+}
+
+@media (max-width: 480px){
+  .hero.hero--anubis .hero__background{
+    background-position: 75% center;
+  }
+}
+
+@media (max-width: 1024px){
+  .hero.hero--anubis .hero__background{
+    background-position: 70% center;
+  }
+}
+
+/* Page-specific hero symbols */
+.hero--judgment .hero__background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 240'><g fill='none' stroke='%23d4af37' stroke-width='4'><line x1='100' y1='20' x2='100' y2='90'/><line x1='40' y1='90' x2='160' y2='90'/><circle cx='60' cy='150' r='35'/><circle cx='140' cy='140' r='35'/><line x1='60' y1='90' x2='60' y2='115'/><line x1='140' y1='90' x2='140' y2='110'/></g></svg>");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: clamp(160px, 40vw, 280px);
+  opacity: 0.18;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero--blog .hero__background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 260'><g fill='none' stroke='%23d4af37' stroke-width='3'><rect x='60' y='40' width='100' height='160' rx='6'/><line x1='70' y1='70' x2='150' y2='70'/><line x1='70' y1='95' x2='150' y2='95'/><line x1='70' y1='120' x2='150' y2='120'/><line x1='70' y1='145' x2='150' y2='145'/><line x1='70' y1='170' x2='150' y2='170'/><line x1='40' y1='40' x2='40' y2='200'/><line x1='180' y1='40' x2='180' y2='200'/></g></svg>");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: clamp(170px, 42vw, 300px);
+  opacity: 0.16;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+body.no-scroll{overflow:hidden;}
+audio.site-audio{display:none;}
+
+/* ============================================================================
+   HIEROGLYPHIC WRITING CHAMBER
+   ============================================================================ */
+
+.hieroglyphic-info {
+    margin-top: var(--spacing-lg);
+}
+
+.hieroglyphic-tool {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    border: 2px solid rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, rgba(12, 11, 10, 0.9), rgba(22, 18, 14, 0.95));
+    box-shadow:
+        inset 0 0 18px rgba(212, 175, 55, 0.1),
+        0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.hieroglyphic-tool__title {
+    color: var(--color-antique-gold);
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hieroglyphic-tool__subtitle {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.hieroglyphic-tool__form {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) auto;
+    gap: var(--spacing-md);
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.hieroglyphic-tool__input {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: rgba(7, 7, 8, 0.9);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--color-text-light);
+    font-family: var(--font-body);
+    letter-spacing: 1px;
+}
+
+.hieroglyphic-tool__output {
+    min-height: 120px;
+    padding: var(--spacing-md);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    background: rgba(9, 8, 7, 0.95);
+    color: var(--color-bright-gold);
+    font-size: 1.6rem;
+    letter-spacing: 6px;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    box-shadow: inset 0 0 25px rgba(212, 175, 55, 0.1);
+}
+
+.hieroglyphic-tool__note {
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-sm);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .hieroglyphic-tool__form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================================
+   PAGE COMPONENTS - Blog, Exploration Cards, etc.
+   ============================================================================ */
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+/* Blog Post Card */
+.blog-post {
+    padding: var(--spacing-md);
+    border-left: 3px solid var(--color-gold-primary);
+    transition: all var(--transition-normal);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+}
+
+.blog-post:hover {
+    border-left-color: var(--color-gold-secondary);
+    transform: translateX(4px);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+}
+
+.blog-post__title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 var(--spacing-sm) 0;
+    color: var(--color-ivory);
+}
+
+.blog-post__link {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.blog-post__link:hover {
+    color: var(--color-gold-secondary);
+}
+
+.blog-post__meta {
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--spacing-sm) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.blog-post__excerpt {
+    color: var(--color-ivory);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Exploration Card */
+.exploration-card {
+    padding: var(--spacing-lg);
+    background: rgba(13, 13, 13, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.exploration-card:hover {
+    border-color: var(--color-gold-primary);
+    background: rgba(13, 13, 13, 0.95);
+    transform: translateY(-4px);
+}
+
+.exploration-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-large);
+    color: var(--color-ivory);
+    margin: var(--spacing-md) 0;
+}
+
+.exploration-card p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+    margin: var(--spacing-md) 0;
+}
+
+/* CTA Section */
+.cta-section {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-xl);
+    background: rgba(212, 175, 55, 0.08);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cta-section p {
+    color: var(--color-ivory);
+    font-size: var(--font-size-body);
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-section .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+/* Outline Button */
+.btn--outline {
+    background: transparent;
+    border: 2px solid var(--color-gold-primary);
+    color: var(--color-gold-primary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    display: inline-block;
+    font-weight: var(--font-weight-medium);
+}
+
+.btn--outline:hover {
+    background: var(--color-gold-primary);
+    color: var(--color-background);
+}
+
+body.no-scroll{overflow:hidden;}
+
+/* ============================================================================
+   PHARAONIC IMAGE GALLERY - Anubis & Places with Luxury Overlays
+   ============================================================================ */
+
+/* Base Image Container Styling */
+.pharaonic-image,
+.pharaonic-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+    box-shadow: 
+        0 8px 24px rgba(212, 175, 55, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, #1a1410 0%, #2a2218 100%);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Pharaonic Image - Large Display */
+.pharaonic-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    aspect-ratio: 4 / 3;
+    display: block;
+    overflow: hidden;
+}
+
+.anubis-gallery,
+.pharaonic-image--scroll,
+.pharaonic-image--sepia {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    aspect-ratio: 4 / 3;
+    padding: 0;
+    margin: 0;
+}
+
+.pharaonic-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Anubis Images (Hero & Gallery) */
+.anubis-image,
+.anubis-gallery {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    aspect-ratio: 4 / 3;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.anubis-image img,
+.anubis-gallery img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.anubis-image:hover img,
+.anubis-gallery:hover img {
+    transform: scale(1.05);
+}
+
+/* Pharaonic Overlay - Multi-Layer Effect */
+.pharaonic-image::before,
+.pharaonic-gallery-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+        rgba(212, 175, 55, 0.15) 0%,
+        rgba(212, 175, 55, 0.08) 50%,
+        rgba(26, 20, 16, 0.3) 100%);
+    pointer-events: none;
+    transition: opacity 0.6s ease-out;
+    z-index: 2;
+}
+
+.pharaonic-image::after,
+.pharaonic-gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 0% 0%, 
+            rgba(212, 175, 55, 0.1) 0%,
+            transparent 50%),
+        radial-gradient(circle at 100% 100%,
+            rgba(26, 20, 16, 0.15) 0%,
+            transparent 50%);
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.pharaonic-image:hover::after,
+.pharaonic-gallery-item:hover::after {
+    opacity: 1;
+}
+
+/* Hieroglyphic Border Effect */
+.pharaonic-image--bordered,
+.pharaonic-gallery-item--bordered {
+    border: 3px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.2),
+        inset 0 0 15px rgba(212, 175, 55, 0.08),
+        0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Gold Ornament Border - Cartouche Style */
+.pharaonic-image--cartouche {
+    border: 4px solid rgba(212, 175, 55, 0.5);
+    border-radius: 2px;
+    box-shadow: 
+        0 0 30px rgba(212, 175, 55, 0.3),
+        inset 0 2px 8px rgba(212, 175, 55, 0.1),
+        inset 0 -2px 8px rgba(0, 0, 0, 0.3),
+        0 12px 32px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.pharaonic-image--cartouche::before {
+    background: linear-gradient(135deg,
+        rgba(212, 175, 55, 0.2) 0%,
+        rgba(212, 175, 55, 0.12) 50%,
+        rgba(26, 20, 16, 0.4) 100%);
+}
+
+/* Dark Vignette Overlay (Egyptian tomb effect) */
+.pharaonic-image--vignette::after {
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Ancient Scroll Texture */
+.pharaonic-image--scroll {
+    position: relative;
+    background: 
+        linear-gradient(90deg, 
+            rgba(212, 175, 55, 0.08) 0%,
+            rgba(212, 175, 55, 0.04) 50%,
+            rgba(212, 175, 55, 0.08) 100%),
+        linear-gradient(135deg, #1a1410 0%, #2a2218 100%);
+    border-left: 6px solid rgba(212, 175, 55, 0.3);
+    border-right: 6px solid rgba(212, 175, 55, 0.3);
+}
+
+.pharaonic-image--scroll img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.pharaonic-image--scroll::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, 
+        transparent 0%, 
+        rgba(0, 0, 0, 0.3) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Scan Lines Effect (museum display glass) */
+.pharaonic-image--glass {
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.03) 0px,
+            rgba(255, 255, 255, 0.03) 2px,
+            transparent 2px,
+            transparent 4px),
+        linear-gradient(135deg, #1a1410 0%, #2a2218 100%);
+}
+
+/* Places Gallery Container */
+.places-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-2xl) 0;
+}
+
+/* Place Image Card */
+.place-image-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1410 0%, #2a2218 100%);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.place-image-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 16px 40px rgba(212, 175, 55, 0.25),
+        0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+.place-image-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.place-image-card:hover img {
+    transform: scale(1.08) rotate(0.5deg);
+    filter: brightness(1.1) contrast(1.05);
+}
+
+/* Place Card Overlay */
+.place-image-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(212, 175, 55, 0.08) 50%,
+        rgba(26, 20, 16, 0.3) 100%);
+    pointer-events: none;
+    z-index: 2;
+    transition: all 0.6s ease-out;
+}
+
+.place-image-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 50% 0%, 
+            rgba(212, 175, 55, 0.12) 0%,
+            transparent 50%),
+        radial-gradient(circle at 50% 100%,
+            rgba(26, 20, 16, 0.2) 0%,
+            transparent 50%);
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.place-image-card:hover::after {
+    opacity: 1;
+}
+
+/* Place Title & Caption */
+.place-image-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-lg);
+    background: linear-gradient(180deg,
+        transparent 0%,
+        rgba(0, 0, 0, 0.7) 50%,
+        rgba(0, 0, 0, 0.9) 100%);
+    z-index: 5;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.place-image-card:hover .place-image-title {
+    transform: translateY(0);
+}
+
+.place-image-title h3 {
+    color: var(--color-antique-gold);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 var(--spacing-sm) 0;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.place-image-title p {
+    color: var(--color-ivory-text);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* Gold Accent Line */
+.place-image-card::before {
+    border-top: 3px solid rgba(212, 175, 55, 0);
+    transition: border-top 0.6s ease-out;
+}
+
+.place-image-card:hover::before {
+    border-top-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Anubis Section Images */
+.anubis-section-image {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: var(--spacing-2xl) auto;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.anubis-section-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.95) contrast(1.1) saturate(1.05);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.anubis-section-image:hover img {
+    filter: brightness(1.05) contrast(1.15) saturate(1.1);
+    transform: scale(1.02);
+}
+
+/* Pharaonic Frame */
+.anubis-section-image {
+    border: 4px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 
+        0 0 25px rgba(212, 175, 55, 0.15),
+        inset 0 0 20px rgba(212, 175, 55, 0.08),
+        0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Sepia Tone for Historical Images */
+.pharaonic-image--sepia img,
+.anubis-section-image--sepia img,
+.place-image-card--sepia img {
+    filter: sepia(0.25) brightness(0.95) contrast(1.1) saturate(1.05);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.pharaonic-image--sepia:hover img,
+.anubis-section-image--sepia:hover img,
+.place-image-card--sepia:hover img {
+    filter: sepia(0.12) brightness(1.02) contrast(1.15) saturate(1.1);
+}
+
+/* Gold Dust Animation Overlay */
+.pharaonic-image--dust::after,
+.anubis-section-image--dust::after {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(212, 175, 55, 0.5), transparent),
+        radial-gradient(2px 2px at 60px 70px, rgba(212, 175, 55, 0.3), transparent),
+        radial-gradient(1px 1px at 50px 50px, rgba(212, 175, 55, 0.4), transparent);
+    animation: dustFloat 6s ease-in-out infinite;
+}
+
+@keyframes dustFloat {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+/* Responsive Image Sizing */
+@media (max-width: 1024px) {
+    .anubis-gallery {
+        min-height: 300px;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .places-gallery {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .anubis-gallery {
+        min-height: 260px;
+        aspect-ratio: 4 / 3;
+        max-width: 100%;
+    }
+
+    .place-image-card img {
+        height: 220px;
+    }
+
+    .pharaonic-image--cartouche {
+        border-width: 3px;
+    }
+
+    .anubis-section-image {
+        max-width: 100%;
+        margin: var(--spacing-lg) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .anubis-gallery {
+        min-height: 220px;
+        aspect-ratio: 4 / 3;
+    }
+
+    .place-image-card img {
+        height: 180px;
+    }
+
+    .pharaonic-image--bordered {
+        border-width: 2px;
+    }
+
+    .pharaonic-image--cartouche {
+        border-width: 2px;
+    }
+
+    .anubis-section-image {
+        border-width: 2px;
+    }
+}
+/* ============================================================================
+   PHARAONIC OVERLAY EFFECTS - Advanced Image Enhancement v3.0
+   Hieroglyphic patterns, gold accents, Egyptian mystique
+   ============================================================================ */
+
+/* Premium Papyrus Texture Overlay */
+.image-overlay-papyrus::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            45deg,
+            rgba(212, 175, 55, 0.02) 0px,
+            rgba(212, 175, 55, 0.02) 2px,
+            transparent 2px,
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            rgba(212, 175, 55, 0.01) 0px,
+            rgba(212, 175, 55, 0.01) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* Hieroglyphic Border Frame */
+.image-frame-hieroglyphic {
+    position: relative;
+    border: 8px solid rgba(212, 175, 55, 0.3);
+    border-radius: 4px;
+    box-shadow:
+        inset 0 0 30px rgba(212, 175, 55, 0.1),
+        0 0 40px rgba(212, 175, 55, 0.2),
+        0 0 60px rgba(212, 175, 55, 0.1);
+}
+
+.image-frame-hieroglyphic::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.image-frame-hieroglyphic::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 2px dashed rgba(212, 175, 55, 0.2);
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+/* Cartouche Frame - Royal Egyptian Seal */
+.image-frame-cartouche {
+    position: relative;
+    border: 6px solid rgba(212, 175, 55, 0.4);
+    border-radius: 50% 50% 4px 4px;
+    box-shadow:
+        0 0 30px rgba(212, 175, 55, 0.25),
+        inset 0 0 20px rgba(212, 175, 55, 0.1),
+        0 8px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Lotus Flower Corner Decoration */
+.image-corner-lotus::before,
+.image-corner-lotus::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 60% 60%, rgba(212, 175, 55, 0.3) 0%, transparent 40%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.image-corner-lotus::before {
+    top: -15px;
+    left: -15px;
+    transform: rotate(-45deg);
+}
+
+.image-corner-lotus::after {
+    bottom: -15px;
+    right: -15px;
+    transform: rotate(135deg);
+}
+
+/* Anubis Guardian Aura - Mystical Glow */
+.image-aura-anubis {
+    position: relative;
+    box-shadow:
+        0 0 20px rgba(212, 175, 55, 0.15),
+        0 0 40px rgba(212, 175, 55, 0.1),
+        inset 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.image-aura-anubis::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.1) 0%, transparent 70%),
+        radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Mummy Linen Texture */
+.image-texture-linen {
+    position: relative;
+}
+
+.image-texture-linen::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        repeating-linear-gradient(
+            90deg,
+            rgba(212, 175, 55, 0.03) 0px,
+            rgba(212, 175, 55, 0.03) 2px,
+            transparent 2px,
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(212, 175, 55, 0.02) 0px,
+            rgba(212, 175, 55, 0.02) 3px,
+            transparent 3px,
+            transparent 6px
+        );
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* Scarab Beetle Accent */
+.image-accent-scarab {
+    position: relative;
+}
+
+.image-accent-scarab::before {
+    content: 'â—†';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    color: rgba(212, 175, 55, 0.4);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Eye of Ra (Wedjat) Mystical Symbol */
+.image-symbol-eye-of-ra {
+    position: relative;
+}
+
+.image-symbol-eye-of-ra::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    left: 15px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.3);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Pyramid Perspective Effect */
+.image-effect-pyramid {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.image-effect-pyramid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        linear-gradient(-135deg, rgba(26, 20, 16, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Sand Dune Gradient Overlay */
+.image-overlay-sand {
+    position: relative;
+}
+
+.image-overlay-sand::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+        rgba(212, 175, 55, 0.05) 0%,
+        rgba(212, 175, 55, 0.02) 50%,
+        rgba(180, 138, 42, 0.08) 100%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Ancient Scroll Roll Effect */
+.image-style-scroll {
+    position: relative;
+    border-left: 12px solid rgba(212, 175, 55, 0.25);
+    border-right: 12px solid rgba(212, 175, 55, 0.25);
+    border-radius: 8px;
+    box-shadow:
+        inset 8px 0 20px rgba(0, 0, 0, 0.3),
+        inset -8px 0 20px rgba(0, 0, 0, 0.3),
+        0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Museum Glass Display Case Effect */
+.image-style-glass {
+    position: relative;
+    box-shadow:
+        0 0 40px rgba(212, 175, 55, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.1),
+        inset 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.image-style-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.03) 0px,
+            rgba(255, 255, 255, 0.03) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+    pointer-events: none;
+    z-index: 4;
+}
+
+/* Vignette Tomb Darkness Effect */
+.image-vignette-tomb {
+    position: relative;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.6);
+}
+
+.image-vignette-tomb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Torch Light Illumination */
+.image-lighting-torch {
+    position: relative;
+}
+
+.image-lighting-torch::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Dust Particle Animation for Images */
+.image-animation-dust {
+    position: relative;
+}
+
+.image-animation-dust::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(2px 2px at 30px 40px, rgba(212, 175, 55, 0.4), transparent),
+        radial-gradient(1px 1px at 70px 80px, rgba(212, 175, 55, 0.3), transparent),
+        radial-gradient(2px 2px at 50px 60px, rgba(212, 175, 55, 0.2), transparent);
+    animation: imageDustFloat 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes imageDustFloat {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0.2; }
+}
+
+/* Hero Background Enhanced Effects */
+.hero__background-enhanced {
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    filter: brightness(0.9) contrast(1.1) saturate(1.05);
+}
+
+.hero__background-enhanced::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+        rgba(212, 175, 55, 0.08) 0%,
+        rgba(212, 175, 55, 0.05) 50%,
+        rgba(0, 0, 0, 0.1) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Hieroglyphic Text Shadow Effect */
+.text-shadow-hieroglyphic {
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(212, 175, 55, 0.3),
+        0 0 20px rgba(212, 175, 55, 0.15);
+    color: var(--color-antique-gold);
+}
+
+/* Responsive Overlay Adjustments */
+@media (max-width: 768px) {
+    .image-frame-hieroglyphic {
+        border-width: 4px;
+    }
+
+    .image-frame-cartouche {
+        border-width: 3px;
+    }
+
+    .image-corner-lotus::before,
+    .image-corner-lotus::after {
+        width: 40px;
+        height: 40px;
+    }
+
+    .image-symbol-eye-of-ra::before {
+        width: 35px;
+        height: 35px;
+    }
+
+    .image-style-scroll {
+        border-left-width: 8px;
+        border-right-width: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-frame-hieroglyphic {
+        border-width: 3px;
+    }
+
+    .image-corner-lotus::before,
+    .image-corner-lotus::after {
+        width: 30px;
+        height: 30px;
+    }
+
+    .image-accent-scarab::before {
+        font-size: 2rem;
+        top: 10px;
+        right: 10px;
+    }
+
+    .image-symbol-eye-of-ra::before {
+        width: 25px;
+        height: 25px;
+        top: 10px;
+        left: 10px;
+    }
+}
+.dynasty-hero {
+    position: relative;
+    min-height: 60vh;
+    display: grid;
+    align-items: center;
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    background:
+        linear-gradient(180deg, rgba(7, 7, 8, 0.85) 0%, rgba(7, 7, 8, 0.98) 100%),
+        var(--dynasty-hero-image);
+    background-size: cover;
+    background-position: center top;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.35);
+}
+
+.dynasty-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(7, 7, 8, 0.55) 0%, rgba(7, 7, 8, 0.92) 100%),
+        repeating-linear-gradient(
+            90deg,
+            rgba(212, 175, 55, 0.06) 0px,
+            rgba(212, 175, 55, 0.06) 2px,
+            transparent 2px,
+            transparent 10px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(212, 175, 55, 0.03) 0px,
+            rgba(212, 175, 55, 0.03) 3px,
+            transparent 3px,
+            transparent 14px
+        );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dynasty-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+.dynasty-hero__content {
+    max-width: 700px;
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(18, 16, 12, 0.9) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.dynasty-hero__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    color: var(--color-antique-gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.dynasty-hero__subtitle {
+    color: var(--color-text-light);
+    margin-top: var(--spacing-sm);
+    line-height: 1.8;
+}
+
+.dynasty-page {
+    padding: var(--spacing-2xl) 0;
+    background: radial-gradient(circle at top, rgba(212, 175, 55, 0.05), transparent 55%);
+}
+
+.dynasty-section {
+    padding: var(--spacing-xl) 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.dynasty-section h2 {
+    color: var(--color-antique-gold);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.dynasty-section p {
+    color: var(--color-text-light);
+    line-height: 1.9;
+}
+
+.dynasty-highlights {
+    display: grid;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    padding-left: 0;
+    list-style: none;
+}
+
+.dynasty-highlights li {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: linear-gradient(135deg, rgba(12, 11, 10, 0.9), rgba(22, 18, 14, 0.9));
+    box-shadow: inset 0 0 18px rgba(212, 175, 55, 0.08);
+}
+
+.dynasty-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.dynasty-gallery__item {
+    min-height: 240px;
+    aspect-ratio: 4 / 3;
+}
+
+.dynasty-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.dynasty-video-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-base);
+}
+
+.dynasty-video-modal.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dynasty-video-modal__panel {
+    background: linear-gradient(135deg, #0d0b0a, #1a1410);
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    padding: var(--spacing-lg);
+    max-width: 920px;
+    width: 100%;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+}
+
+.dynasty-video-modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.dynasty-video-modal__title {
+    color: var(--color-antique-gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+.dynasty-video-modal__video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 768px) {
+    .dynasty-hero {
+        min-height: 50vh;
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+
+    .dynasty-hero__content {
+        padding: var(--spacing-md);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
