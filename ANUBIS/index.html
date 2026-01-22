@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Critical SEO & Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ANUBIS MUSEUM - Where Souls Are Weighed. Immersive 360° experience through sacred Egyptian tombs, temples, and eternal judgment halls. Museum-grade digital archaeology.">
+    <meta name="keywords" content="Anubis Museum, Egyptian archaeology, 360 panorama, digital museum, pharaonic tombs, immersive virtual tours, Anubis god, eternal judgment">
+    <meta name="author" content="Anubis Museum - Guardian of Eternity">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://egypt-eternal.example.com/">
+    
+    <!-- OpenGraph Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ANUBIS MUSEUM - Guardian of Eternity">
+    <meta property="og:description" content="Where Souls Are Weighed. 360° immersive museum experience. Step into the eternal judgment halls.">
+    <meta property="og:url" content="https://anubis-museum.example.com/">
+    <meta property="og:site_name" content="ANUBIS MUSEUM">
+    <meta property="og:image" content="https://egypt-eternal.example.com/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ANUBIS MUSEUM - Where Souls Are Weighed">
+    <meta name="twitter:description" content="360° immersive experience. Guardian of eternal judgment. Museum-grade Egyptian archaeology.">
+    <meta name="twitter:image" content="https://egypt-eternal.example.com/assets/twitter-image.jpg">
+    
+    <!-- Language Alternatives (hreflang) -->
+    <link rel="alternate" hreflang="en" href="https://anubis-museum.example.com/">
+    <link rel="alternate" hreflang="ar" href="https://anubis-museum.example.com/?lang=ar">
+    <link rel="alternate" hreflang="x-default" href="https://anubis-museum.example.com/">
+    
+    <!-- Preconnect to External Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#0A0A0A">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cinzel:wght@400;600;700&family=Cairo:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <title>ANUBIS MUSEUM - Where Souls Are Weighed. Where Eternity Begins. 360° Virtual Experience</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Favicon from Flaticon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="assets/icons/anubis.png">
+
+    
+    <!-- Pannellum 360 Panorama Viewer (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    
+    <!-- JSON-LD Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Organization",
+        "name": "Egypt Eternal",
+        "url": "https://egypt-eternal.example.com",
+        "logo": "https://egypt-eternal.example.com/assets/logo.svg",
+        "description": "Premium Egyptian archaeology and tourism experience platform",
+        "sameAs": [
+            "https://www.facebook.com/egypteternal",
+            "https://www.instagram.com/egypteternal",
+            "https://twitter.com/egypteternal"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "email": "hello@egypt-eternal.example.com"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Museum",
+        "name": "Grand Egyptian Museum",
+        "url": "https://egypt-eternal.example.com/gem",
+        "description": "The world's largest archaeological museum, showcasing 4.8 million artifacts from pharaonic Egypt",
+        "image": "https://egypt-eternal.example.com/assets/gem-grand-hall.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Giza Plateau Road",
+            "addressLocality": "Cairo",
+            "addressRegion": "Giza",
+            "postalCode": "12563",
+            "addressCountry": "EG"
+        },
+        "telephone": "+20-2-3386-0000",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "09:00",
+                "closes": "20:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "1250"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Luxor Temple",
+        "description": "Ancient Egyptian temple dedicated to Amun-Ra, featuring colossal statues and hieroglyphic reliefs",
+        "image": "https://egypt-eternal.example.com/assets/luxor-temple-1.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Luxor",
+            "addressCountry": "EG"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "850"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Valley of the Kings",
+        "description": "Royal necropolis containing 63 tombs of New Kingdom pharaohs, including Tutankhamun and Ramesses II",
+        "image": "https://egypt-eternal.example.com/assets/valley-kings-1.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Luxor",
+            "addressRegion": "West Bank",
+            "addressCountry": "EG"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "920"
+        }
+    }
+    </script>
+</head>
+<body>
+    <audio id="site-ambience" class="site-audio" autoplay loop preload="auto">
+        <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="navbar__logo">
+                <a href="./index.html" class="navbar__logo-link">
+                    <svg class="navbar__logo-icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="anubis-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFD700"/>
+                                <stop offset="100%" stop-color="#b88a2a"/>
+                            </linearGradient>
+                        </defs>
+                        <g fill="none" stroke="url(#anubis-gold)" stroke-width="1">
+                            <path d="M20 6 L14 2 L16 8 L20 10 L24 8 L26 2 L20 6 Z"/>
+                            <path d="M12 10 L20 6 L28 10 L28 22 L24 30 L20 34 L16 30 L12 22 Z" fill="#0d0d0d"/>
+                            <path d="M18 18 L22 18 L25 22 L22 24 L18 24 L15 22 Z" fill="#1a1a1a"/>
+                            <circle cx="18" cy="20" r="1" fill="#FFD700"/>
+                            <circle cx="22" cy="20" r="1" fill="#FFD700"/>
+                            <path d="M20 24 L20 28"/>
+                            <path d="M16 30 L20 34 L24 30"/>
+                        </g>
+                    </svg>
+                    <span class="navbar__title" data-en="ANUBIS MUSEUM" data-ar="متحف أنوبيس">ANUBIS MUSEUM</span>
+                </a>
+            </div>
+            
+            <button class="navbar__toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <ul class="navbar__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="./index.html" class="navbar__link" role="menuitem" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li role="none"><a href="./pages/hieroglyphic.html" class="navbar__link" role="menuitem" data-en="Hieroglyphic Writing" data-ar="الكتابة الهيروغليفية">Hieroglyphic Writing</a></li>
+                <li role="none"><a href="./pages/galleries.html" class="navbar__link" role="menuitem" data-en="Sacred Galleries" data-ar="المعارض المقدسة">Sacred Galleries</a></li>
+                <li role="none"><a href="./pages/dynasty-timeline.html" class="navbar__link" role="menuitem" data-en="Dynasties Timeline" data-ar="خط زمني للأسرات">Dynasties Timeline</a></li>
+                <li role="none"><a href="./pages/anubis-chamber.html" class="navbar__link" role="menuitem" data-en="Anubis Chamber" data-ar="حجرة أنوبيس">Anubis Chamber</a></li>
+                <li role="none"><a href="./pages/judgment.html" class="navbar__link" role="menuitem" data-en="Judgment Scales" data-ar="موازين الحكم">Judgment Scales</a></li>
+                <li role="none"><a href="./pages/tombs.html" class="navbar__link" role="menuitem" data-en="Sacred Tombs" data-ar="المقابر المقدسة">Sacred Tombs</a></li>
+                <li role="none"><a href="./pages/artifacts.html" class="navbar__link" role="menuitem" data-en="Artifacts" data-ar="القطع الأثرية">Artifacts</a></li>
+                <li role="none"><a href="./pages/blog.html" class="navbar__link" role="menuitem" data-en="Knowledge" data-ar="المعرفة">Knowledge</a></li>
+                <li role="none"><a href="./pages/journey.html" class="navbar__link" role="menuitem" data-en="Journeys" data-ar="الرحلات">Journeys</a></li>
+                <li role="none"><a href="./pages/wisdom.html" class="navbar__link" role="menuitem" data-en="Wisdom" data-ar="الحكمة">Wisdom</a></li>
+                <li role="none">
+                    <button class="navbar__lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                        <span class="navbar__lang-en">EN</span>
+                        <span class="navbar__lang-ar">AR</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section - ANUBIS MUSEUM: Where Souls Are Weighed -->
+<section class="hero hero--anubis" id="hero" role="region" aria-label="Anubis Museum Hero - Guardian of Eternity">
+    <!-- Background Layers -->
+    <div class="hero__background" aria-hidden="true"></div>
+    <!-- <div class="hero__gradient hero__gradient--anubis" aria-hidden="true"></div> -->
+
+    <!-- Gold Dust Particles -->
+    <div class="hero__dust hero__dust--anubis" aria-hidden="true">
+        <div class="dust-particle dust-particle--gold"></div>
+        <div class="dust-particle dust-particle--gold"></div>
+        <div class="dust-particle dust-particle--gold"></div>
+        <div class="dust-particle dust-particle--gold"></div>
+        <div class="dust-particle dust-particle--gold"></div>
+        <div class="dust-particle dust-particle--gold"></div>
+    </div>
+
+    <!-- Optional silhouette layer (kept if you want extra depth). You can remove later. -->
+    <div class="hero__anubis-guardian" aria-hidden="true">
+        <!-- <svg class="hero__anubis-svg" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice"> -->
+            <defs>
+                <linearGradient id="anubisDepth" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:0.95"/>
+                    <stop offset="50%" style="stop-color:#0d0d0d;stop-opacity:1"/>
+                    <stop offset="100%" style="stop-color:#000000;stop-opacity:1"/>
+                </linearGradient>
+                <radialGradient id="anubisAura">
+                    <stop offset="0%" style="stop-color:#d4af37;stop-opacity:0.12"/>
+                    <stop offset="100%" style="stop-color:#000000;stop-opacity:0"/>
+                </radialGradient>
+            </defs>
+
+            <circle cx="200" cy="250" r="280" fill="url(#anubisAura)" opacity="0.55"/>
+            <rect x="160" y="380" width="40" height="150" fill="url(#anubisDepth)" rx="8"/>
+            <rect x="200" y="380" width="40" height="150" fill="url(#anubisDepth)" rx="8"/>
+            <rect x="120" y="240" width="160" height="160" fill="url(#anubisDepth)" rx="12"/>
+            <line x1="120" y1="270" x2="280" y2="270" stroke="#d4af37" stroke-width="3" opacity="0.65"/>
+            <line x1="120" y1="310" x2="280" y2="310" stroke="#d4af37" stroke-width="2" opacity="0.4"/>
+            <line x1="120" y1="350" x2="280" y2="350" stroke="#d4af37" stroke-width="3" opacity="0.55"/>
+
+            <rect x="60" y="270" width="50" height="120" fill="url(#anubisDepth)" rx="10"/>
+            <rect x="290" y="270" width="50" height="120" fill="url(#anubisDepth)" rx="10"/>
+
+            <rect x="170" y="190" width="60" height="50" fill="url(#anubisDepth)"/>
+
+            <g transform="translate(200, 120)">
+                <circle cx="0" cy="0" r="50" fill="url(#anubisDepth)"/>
+                <ellipse cx="35" cy="5" rx="35" ry="20" fill="url(#anubisDepth)"/>
+                <circle cx="68" cy="5" r="4" fill="#d4af37" opacity="0.75"/>
+
+                <polygon points="-25,-40 -40,-70 -15,-45" fill="url(#anubisDepth)"/>
+                <polygon points="25,-40 40,-70 15,-45" fill="url(#anubisDepth)"/>
+                <polygon points="-25,-40 -35,-65 -15,-43" fill="#b88a2a" opacity="0.6"/>
+                <polygon points="25,-40 35,-65 15,-43" fill="#b88a2a" opacity="0.6"/>
+
+                <circle cx="-15" cy="-15" r="3.5" fill="#d4af37" opacity="0.85"/>
+                <circle cx="15" cy="-15" r="3.5" fill="#d4af37" opacity="0.85"/>
+
+                <path d="M -30 -50 Q 0 -75 30 -50" stroke="#d4af37" stroke-width="3" fill="none" opacity="0.75"/>
+                <circle cx="0" cy="-70" r="3" fill="#d4af37" opacity="0.85"/>
+            </g>
+        </svg>
+    </div>
+
+    <div class="hero__vignette hero__vignette--anubis" aria-hidden="true"></div>
+
+    <!-- Content -->
+    <div class="hero__content hero__content--anubis">
+        <div class="hero__ornament hero__ornament--anubis" aria-hidden="true">
+            <svg class="ankh-symbol" viewBox="0 0 100 150" width="90" height="135" aria-hidden="true">
+                <defs>
+                    <linearGradient id="ankhGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1"/>
+                        <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#b88a2a;stop-opacity:1"/>
+                    </linearGradient>
+                </defs>
+                <circle cx="50" cy="30" r="20" fill="none" stroke="url(#ankhGold)" stroke-width="2.5"/>
+                <rect x="45" y="50" width="10" height="80" fill="url(#ankhGold)"/>
+                <rect x="20" y="65" width="60" height="10" fill="url(#ankhGold)"/>
+            </svg>
+        </div>
+
+        <h1 class="hero__title hero__title--anubis" data-en="ANUBIS MUSEUM" data-ar="متحف أنوبيس">ANUBIS MUSEUM</h1>
+
+        <p class="hero__subtitle hero__subtitle--anubis"
+           data-en="Where Souls Are Weighed. Where Eternity Begins."
+           data-ar="حيث يتم وزن الأرواح... حيث تبدأ الأبدية.">
+            Where Souls Are Weighed. Where Eternity Begins.
+        </p>
+
+        <p class="hero__tagline"
+           data-en="A luxury digital museum guided by Anubis—enter the judgment hall, then explore Egypt’s sacred places."
+           data-ar="متحف رقمي فاخر يقوده أنوبيس — ادخل حجرة الحساب ثم استكشف أماكن مصر المقدسة.">
+            A luxury digital museum guided by Anubis—enter the judgment hall, then explore Egypt’s sacred places.
+        </p>
+
+        <div class="hero__cta-group">
+            <a class="btn btn--primary btn--anubis" href="./pages/anubis-chamber.html" data-en="Enter the Hall" data-ar="ادخل الحجرة">Enter the Hall</a>
+
+            <button class="btn btn--ghost btn--anubis" type="button"
+                    data-en="Explore Egypt" data-ar="استكشف مصر"
+                    onclick="document.getElementById('artifacts').scrollIntoView({behavior:'smooth'})">
+                Explore Egypt
+            </button>
+        </div>
+    </div>
+
+    <div class="hero__shimmer-line hero__shimmer-line--anubis" aria-hidden="true"></div>
+</section>
+    
+    <!-- IMMERSIVE HALL - 360° PANORAMA EXPERIENCE -->
+    <section class="section section--immersive" id="immersive" role="region" aria-labelledby="immersive-title">
+        <div class="immersive__header">
+            <h2 class="section__title" id="immersive-title" data-en="Enter the Sacred Hall" data-ar="ادخل الحجرة المقدسة">
+                Enter the Sacred Hall
+            </h2>
+            <p class="immersive__subtitle" data-en="360° immersive experience. Use mouse, touch, or gyro to navigate. Hover hotspots reveal mysteries." data-ar="تجربة غامرة بزاوية 360 درجة. استخدم الماوس أو اللمس أو الجيروسكوب للتنقل.">
+                360° experience. Navigate with mouse, touch, or gyro. Discover sacred mysteries.
+            </p>
+        </div>
+        
+        <div class="immersive__viewer-container">
+            <!-- Pannellum Panorama Viewer -->
+            <div id="panorama" class="immersive__panorama">
+                <!-- Fallback: Loading indicator -->
+                <div class="immersive__loading" aria-hidden="true">
+                    <div class="immersive__spinner"></div>
+                    <p data-en="Loading Sacred Hall..." data-ar="جاري تحميل الحجرة المقدسة...">Loading Sacred Hall...</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="immersive__info">
+            <div class="immersive__callout immersive__callout--left">
+                <img src="assets/img/places/karnak/Columns_of_the_Temple_of_Karnak_civilization_of_the_Pharaohs.jpg" alt="" class="icon icon--lg icon--gold" style="display: block; margin: 0 auto 1rem; width: 2rem; height: 2rem;"/>
+                <h3 data-en="Karnak Hypostyle Hall" data-ar="قاعة الأعمدة الضخمة بالكرنك">Karnak Hypostyle Hall</h3>
+                <p data-en="134 towering columns in the sacred temple. Place your cursor on golden markers to discover ancient secrets." data-ar="134 عمود ضخم في المعبد المقدس. ضع مؤشرك على العلامات الذهبية لاكتشاف الأسرار القديمة.">
+                    134 columns in the sacred temple. Explore ancient mysteries.
+                </p>
+            </div>
+            
+            <div class="immersive__callout immersive__callout--right">
+                <img src="assets/img/places/karnak/elroh.jpeg" alt="" class="icon icon--lg icon--gold" style="display: block; margin: 0 auto 1rem; width: 2rem; height: 2rem;"/>
+                <h3 data-en="Judgment of the Soul" data-ar="محاكمة الروح">Judgment of the Soul</h3>
+                <p data-en="Anubis weighs hearts against the feather of truth. Click hotspots to hear hieroglyphic tales." data-ar="يزن أنوبيس القلوب ضد ريشة الحقيقة. انقر على العلامات لسماع القصص الهيروغليفية.">
+                    Anubis weighs hearts. Click markers for sacred knowledge.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Egypt Section -->
+    <section class="section" id="why-egypt" role="region" aria-labelledby="why-egypt-title">
+        <div class="container">
+            <h2 class="section__title" id="why-egypt-title" data-en="Why Choose Egypt?" data-ar="لماذا تختار مصر؟">Why Choose Egypt?</h2>
+            
+            <div class="grid grid--3">
+                <article class="card card--feature">
+                    <div class="card__icon" aria-hidden="true">
+                        <img src="assets/icons/mummy.png" alt="" class="icon icon--lg icon--gold" />
+                    </div>
+                    <h3 class="card__title" data-en="Timeless Legacy" data-ar="إرث خالد">Timeless Legacy</h3>
+                    <p class="card__text" data-en="Discover monuments that have stood for millennia, each stone a testament to human ambition." data-ar="اكتشف الآثار التي ظلت قائمة لآلاف السنين، كل حجر يشهد على طموح الإنسان.">
+                        Discover monuments that have stood for millennia.
+                    </p>
+                </article>
+                
+                <article class="card card--feature">
+                    <div class="card__icon" aria-hidden="true">
+                        <img src="assets/icons/museum.png" alt="" class="icon icon--lg icon--gold" />
+                    </div>
+                    <h3 class="card__title" data-en="Mystical Wonders" data-ar="عجائب غامضة">Mystical Wonders</h3>
+                    <p class="card__text" data-en="Unravel the secrets of pharaohs and gods. Immerse yourself in stories that shaped civilization." data-ar="فك رموز أسرار الفراعنة والآلهة. انغمس في قصص شكلت الحضارة.">
+                        Unravel secrets that shaped civilization.
+                    </p>
+                </article>
+                
+                <article class="card card--feature">
+                    <div class="card__icon" aria-hidden="true">
+                        <img src="assets/icons/pyramids.png" alt="" class="icon icon--lg icon--gold" />
+                    </div>
+                    <h3 class="card__title" data-en="Sacred Journey" data-ar="رحلة مقدسة">Sacred Journey</h3>
+                    <p class="card__text" data-en="Walk the same paths as pharaohs. Feel the spiritual presence in every temple and tomb." data-ar="امش على نفس طرق الفراعنة. اشعر بالحضور الروحي في كل معبد وقبر.">
+                        Feel the spiritual presence in every temple.
+                    </p>
+                </article>
+            </div>
+        </div>
+        <div class="divider" aria-hidden="true">
+            <svg class="scepter-divider" viewBox="0 0 200 80" width="200" height="80">
+                <!-- Scepter Divider -->
+                <line x1="10" y1="40" x2="90" y2="40" stroke="#D4AF37" stroke-width="2"/>
+                <circle cx="100" cy="40" r="15" fill="#D4AF37" stroke="#0A0A0A" stroke-width="2"/>
+                <line x1="110" y1="40" x2="190" y2="40" stroke="#D4AF37" stroke-width="2"/>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Grand Egyptian Museum Section -->
+    <section class="section section--gem" id="gem" role="region" aria-labelledby="gem-title">
+        <div class="container">
+            <h2 class="section__title" id="gem-title" data-en="Grand Egyptian Museum" data-ar="المتحف المصري الكبير">
+                Grand Egyptian Museum
+            </h2>
+            
+            <div class="gem__intro">
+                <p class="gem__tagline" data-en="The World's Largest Archaeological Museum — Gateway to Ancient Egypt's Greatest Treasures" data-ar="أعظم متحف أثري في العالم — البوابة إلى كنوز مصر القديمة العظيمة">
+                    The World's Largest Archaeological Museum
+                </p>
+            </div>
+            
+            <!-- GEM Highlights Grid -->
+            <div class="grid grid--2">
+                <article class="card card--gem">
+                    <div class="card__image">
+                        <img src="assets/img/places/karnak/anubis-tomb.jpg" alt="Grand Hall">
+                    </div>
+                    <h3 class="card__title" data-en="The Grand Hall" data-ar="القاعة الكبيرة">The Grand Hall</h3>
+                    <p class="card__text" data-en="Towering above all: an architectural marvel housing colossal statues and grand pharaonic monuments." data-ar="ترتفع فوق الجميع: تحفة معمارية تضم تماثيل ضخمة وآثار فرعونية مهيبة.">
+                        Towering above all, an architectural marvel housing colossal statues.
+                    </p>
+                </article>
+                
+                <article class="card card--gem">
+                    <div class="card__image">
+                        <img src="assets/img/places/karnak/big-stairs_files/494212520_23963161896614833_5611580865074791752_n.jpg" alt="Grand Stairs">
+                    </div>
+                    <h3 class="card__title" data-en="The Grand Stairs" data-ar="السلالم الكبيرة">The Grand Stairs</h3>
+                    <p class="card__text" data-en="The symbolic ascent through Egypt's dynasties. Each step reveals a new era of pharaonic glory." data-ar="الصعود الرمزي عبر أسر مصر. كل درجة تكشف عن عصر جديد من المجد الفرعوني.">
+                        The symbolic ascent through Egypt's dynasties and eras.
+                    </p>
+                </article>
+                
+                <article class="card card--gem">
+                    <div class="card__image">
+                        <img src="assets/img/places/luxor/luxor-temple.jpg" alt="Tutankhamun Galleries">
+                    </div>
+                    <h3 class="card__title" data-en="Tutankhamun Galleries" data-ar="معارض توت عنخ آمون">Tutankhamun Galleries</h3>
+                    <p class="card__text" data-en="The Boy King's untouched burial treasures: the golden mask, sacred objects, and royal regalia." data-ar="كنوز دفن الملك الصبي التي لم تُمس: القناع الذهبي والأشياء المقدسة والزينة الملكية.">
+                        The Boy King's untouched treasures and legendary golden mask.
+                    </p>
+                </article>
+                
+                <article class="card card--gem">
+                    <div class="card__image">
+                        <img src="assets/img/places/giza/pyramids-giza.jpg" alt="Khufu's Boats Museum">
+                    </div>
+                    <h3 class="card__title" data-en="Khufu's Boats Museum" data-ar="متحف قوارب خوفو">Khufu's Boats Museum</h3>
+                    <p class="card__text" data-en="The sacred solar barques of Pharaoh Khufu—celestial vessels meant to transport the pharaoh through the afterlife." data-ar="السفن الشمسية المقدسة للفرعون خوفو - السفن السماوية المخصصة لنقل الفرعون في الآخرة.">
+                        The sacred solar barques of Pharaoh Khufu for the afterlife journey.
+                    </p>
+                </article>
+            </div>
+            
+            <!-- Immersive Button -->
+            <div class="gem__cta">
+                <button class="btn btn--gold-bevel" id="immersive-btn" data-en="Enter 360° Museum Experience" data-ar="أدخل تجربة المتحف بـ 360°">
+                    Enter 360° Museum Experience
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Places Section (المصريات) -->
+    <section class="section" id="places" role="region" aria-labelledby="places-title">
+        <div class="container">
+            <h2 class="section__title" id="places-title" data-en="المصريات - Archaeological Sites" data-ar="المصريات - المواقع الأثرية">
+                المصريات - Archaeological Sites
+            </h2>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="region-filter" class="filter__label" data-en="Region:" data-ar="المنطقة:">Region:</label>
+                    <select id="region-filter" class="filter__select">
+                        <option value="">All Regions</option>
+                        <option value="Cairo">Cairo & Giza</option>
+                        <option value="Luxor">Luxor & Thebes</option>
+                        <option value="Aswan">Aswan & Nubia</option>
+                        <option value="Alexandria">Alexandria</option>
+                        <option value="Sinai">Sinai</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="category-filter" class="filter__label" data-en="Category:" data-ar="الفئة:">Category:</label>
+                    <select id="category-filter" class="filter__select">
+                        <option value="">All Categories</option>
+                        <option value="Pyramids">Pyramids</option>
+                        <option value="Temples">Temples</option>
+                        <option value="Tombs">Tombs</option>
+                        <option value="Museums">Museums</option>
+                        <option value="Fortresses">Fortresses</option>
+                        <option value="Monasteries">Monasteries</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="search-filter" class="filter__label" data-en="Search:" data-ar="بحث:">Search:</label>
+                    <input type="text" id="search-filter" class="filter__input" placeholder="Search places...">
+                </div>
+            </div>
+            
+            <!-- Places Grid -->
+            <div class="grid grid--3" id="places-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- Trip Planner Section -->
+    <section class="section" id="planner" role="region" aria-labelledby="planner-title">
+        <div class="container">
+            <h2 class="section__title" id="planner-title" data-en="Smart Trip Planner" data-ar="مخطط الرحلة الذكي">Smart Trip Planner</h2>
+            
+            <form class="planner-form" id="planner-form">
+                <div class="grid grid--3">
+                    <div class="form-group">
+                        <label for="duration" class="form__label" data-en="Trip Duration" data-ar="مدة الرحلة">Trip Duration</label>
+                        <select id="duration" class="form__input" required>
+                            <option value="">Select duration...</option>
+                            <option value="3">3 days</option>
+                            <option value="5">5 days</option>
+                            <option value="7">7 days (1 week)</option>
+                            <option value="10">10 days</option>
+                            <option value="14">14 days (2 weeks)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget" class="form__label" data-en="Budget" data-ar="الميزانية">Budget</label>
+                        <select id="budget" class="form__input" required>
+                            <option value="">Select budget...</option>
+                            <option value="budget">Budget (Economy)</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="premium">Premium</option>
+                            <option value="luxury">Luxury</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interests" class="form__label" data-en="Interests" data-ar="الاهتمامات">Primary Interest</label>
+                        <select id="interests" class="form__input" required>
+                            <option value="">Select interest...</option>
+                            <option value="pyramids">Pyramids & Monuments</option>
+                            <option value="temples">Temples & Worship</option>
+                            <option value="museums">Museums & Artifacts</option>
+                            <option value="luxury">Luxury & Comfort</option>
+                            <option value="adventure">Adventure & Culture</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn--primary" data-en="Generate Itinerary" data-ar="توليد الجدول الزمني">
+                    Generate Itinerary
+                </button>
+            </form>
+            
+            <!-- Generated Itinerary Display -->
+            <div id="itinerary-output" class="itinerary" style="display: none; margin-top: 30px;">
+                <h3 class="itinerary__title" data-en="Your Personalized Itinerary" data-ar="جدولك الزمني المخصص">Your Personalized Itinerary</h3>
+                <div id="itinerary-content" class="itinerary__content">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Practical Info Section -->
+    <section class="section section--dark" id="info" role="region" aria-labelledby="info-title">
+        <div class="container">
+            <h2 class="section__title" id="info-title" data-en="Practical Information" data-ar="معلومات عملية">Practical Information</h2>
+            
+            <div class="grid grid--2">
+                <article class="info-card">
+                    <h3 class="info-card__title" data-en="Visa & Entry" data-ar="التأشيرة والدخول">Visa & Entry</h3>
+                    <ul class="info-card__list">
+                        <li data-en="Most nationalities can obtain a tourist visa on arrival" data-ar="يمكن لمعظم الجنسيات الحصول على تأشيرة سياحية عند الوصول">Most nationalities can obtain a tourist visa on arrival</li>
+                        <li data-en="Passport valid for 6+ months from entry date" data-ar="جواز سفر صالح لمدة 6 أشهر على الأقل من تاريخ الدخول">Passport valid for 6+ months from entry date</li>
+                        <li data-en="eVisa available online (90 days)" data-ar="تأشيرة إلكترونية متاحة عبر الإنترنت (90 يومًا)">eVisa available online (90 days)</li>
+                    </ul>
+                </article>
+                
+                <article class="info-card">
+                    <h3 class="info-card__title" data-en="Currency & Payments" data-ar="العملة والدفع">Currency & Payments</h3>
+                    <ul class="info-card__list">
+                        <li data-en="Currency: Egyptian Pound (EGP)" data-ar="العملة: الجنيه المصري">Currency: Egyptian Pound (EGP)</li>
+                        <li data-en="ATMs widely available in major cities" data-ar="أجهزة صراف آلي متوفرة بكثرة في المدن الرئيسية">ATMs widely available in major cities</li>
+                        <li data-en="Credit cards accepted in tourist areas" data-ar="يتم قبول بطاقات الائتمان في المناطق السياحية">Credit cards accepted in tourist areas</li>
+                    </ul>
+                </article>
+                
+                <article class="info-card">
+                    <h3 class="info-card__title" data-en="Safety & Health" data-ar="الأمان والصحة">Safety & Health</h3>
+                    <ul class="info-card__list">
+                        <li data-en="Tourist areas are generally safe and well-patrolled" data-ar="المناطق السياحية آمنة بشكل عام">Tourist areas are generally safe and well-patrolled</li>
+                        <li data-en="Drink bottled water; avoid tap water" data-ar="اشرب الماء المعبأ؛ تجنب ماء الحنفية">Drink bottled water; avoid tap water</li>
+                        <li data-en="Sun protection essential; temperatures reach 40°C" data-ar="الحماية من الشمس ضرورية؛ درجات الحرارة تصل إلى 40 درجة مئوية">Sun protection essential; temperatures can reach 40°C</li>
+                    </ul>
+                </article>
+                
+                <article class="info-card">
+                    <h3 class="info-card__title" data-en="Best Time to Visit" data-ar="أفضل وقت للزيارة">Best Time to Visit</h3>
+                    <ul class="info-card__list">
+                        <li data-en="October - April: ideal weather (20-25°C)" data-ar="أكتوبر - أبريل: طقس مثالي">October - April: ideal weather (20-25°C)</li>
+                        <li data-en="May - September: hot (35-40°C), fewer tourists" data-ar="مايو - سبتمبر: حار (35-40 درجة مئوية)، سياح أقل">May - September: hot, fewer tourists</li>
+                        <li data-en="Ramadan (dates vary): restaurants/museums have altered hours" data-ar="رمضان (التواريخ تختلف): ساعات مختلفة">Ramadan: altered business hours</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SACRED ARTIFACTS - Museum Collections -->
+    <section class="section section--artifacts" id="artifacts" role="region" aria-labelledby="artifacts-title">
+        <div class="container">
+            <h2 class="section__title" id="artifacts-title" data-en="Sacred Artifacts" data-ar="القطع المقدسة">
+                Sacred Artifacts
+            </h2>
+            <p class="section__subtitle" data-en="Treasures guarded by Anubis. Objects of power from the tombs of pharaohs and temples of gods." data-ar="الكنوز التي يحرسها أنوبيس. أشياء قوية من مقابر الفراعنة ومعابد الآلهة.">
+                Treasures guarded by Anubis. Objects of power from sacred chambers.
+            </p>
+            
+            <div class="artifacts__grid">
+                <!-- Ankh - Symbol of Eternal Life -->
+                <article class="artifact-card">
+                    <div class="artifact-card__icon" aria-hidden="true">
+                        <svg class="artifact-icon" viewBox="0 0 100 150" width="80" height="120">
+                            <defs>
+                                <linearGradient id="ankh-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FFD700"/>
+                                    <stop offset="50%" style="stop-color:#d4af37"/>
+                                    <stop offset="100%" style="stop-color:#b88a2a"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50" cy="35" r="25" fill="none" stroke="url(#ankh-gradient)" stroke-width="3"/>
+                            <rect x="45" y="60" width="10" height="70" fill="url(#ankh-gradient)"/>
+                            <rect x="20" y="75" width="60" height="10" fill="url(#ankh-gradient)"/>
+                        </svg>
+                    </div>
+                    <h3 class="artifact-card__title" data-en="The Ankh" data-ar="العنخ">The Ankh</h3>
+                    <p class="artifact-card__description" data-en="Symbol of eternal life. Carried by gods and pharaohs. Represents the union of masculine and feminine eternal forces." data-ar="رمز الحياة الأبدية. تحمله الآلهة والفراعنة. يمثل اتحاد القوى الأبدية الذكورية والأنثوية.">
+                        Symbol of eternal life. Union of eternal forces.
+                    </p>
+                </article>
+                
+                <!-- Was Scepter - Divine Power -->
+                <article class="artifact-card">
+                    <div class="artifact-card__icon" aria-hidden="true">
+                        <svg class="artifact-icon" viewBox="0 0 80 140" width="80" height="120">
+                            <defs>
+                                <linearGradient id="scepter-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#b88a2a"/>
+                                    <stop offset="50%" style="stop-color:#d4af37"/>
+                                    <stop offset="100%" style="stop-color:#FFD700"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="35" y="20" width="10" height="100" fill="url(#scepter-gradient)"/>
+                            <path d="M 30 15 L 40 5 L 50 15" fill="url(#scepter-gradient)"/>
+                            <line x1="15" y1="80" x2="65" y2="80" stroke="url(#scepter-gradient)" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="artifact-card__title" data-en="Was Scepter" data-ar="صولجان الوا">Was Scepter</h3>
+                    <p class="artifact-card__description" data-en="Staff of authority and protection. Pharaohs wielded this to command armies and invoke divine will upon the kingdom." data-ar="عصا السلطة والحماية. استخدمها الفراعنة للتحكم في الجيوش واستحضار الإرادة الإلهية على المملكة.">
+                        Staff of authority. Divine power incarnate.
+                    </p>
+                </article>
+                
+                <!-- Djed Pillar - Stability -->
+                <article class="artifact-card">
+                    <div class="artifact-card__icon" aria-hidden="true">
+                        <svg class="artifact-icon" viewBox="0 0 80 140" width="80" height="120">
+                            <defs>
+                                <linearGradient id="djed-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FFD700"/>
+                                    <stop offset="50%" style="stop-color:#d4af37"/>
+                                    <stop offset="100%" style="stop-color:#b88a2a"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="30" y="10" width="20" height="120" fill="url(#djed-gradient)"/>
+                            <rect x="20" y="35" width="40" height="4" fill="url(#djed-gradient)"/>
+                            <rect x="20" y="55" width="40" height="4" fill="url(#djed-gradient)"/>
+                            <rect x="20" y="75" width="40" height="4" fill="url(#djed-gradient)"/>
+                            <rect x="20" y="95" width="40" height="4" fill="url(#djed-gradient)"/>
+                        </svg>
+                    </div>
+                    <h3 class="artifact-card__title" data-en="Djed Pillar" data-ar="عمود الجد">Djed Pillar</h3>
+                    <p class="artifact-card__description" data-en="Represents stability and endurance. Backbone of Osiris. Ensures the eternal order of the cosmos." data-ar="يمثل الاستقرار والصمود. العمود الفقري لأوزيريس. يضمن النظام الأبدي للكون.">
+                        Backbone of Osiris. Cosmic stability eternal.
+                    </p>
+                </article>
+                
+                <!-- Cartouche - Royal Name -->
+                <article class="artifact-card">
+                    <div class="artifact-card__icon" aria-hidden="true">
+                        <svg class="artifact-icon" viewBox="0 0 100 80" width="100" height="80">
+                            <defs>
+                                <linearGradient id="cartouche-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FFD700"/>
+                                    <stop offset="50%" style="stop-color:#d4af37"/>
+                                    <stop offset="100%" style="stop-color:#b88a2a"/>
+                                </linearGradient>
+                            </defs>
+                            <ellipse cx="50" cy="40" rx="35" ry="25" fill="none" stroke="url(#cartouche-gradient)" stroke-width="2.5"/>
+                            <rect x="20" y="38" width="60" height="4" fill="url(#cartouche-gradient)"/>
+                            <circle cx="30" cy="40" r="2" fill="url(#cartouche-gradient)"/>
+                            <circle cx="50" cy="40" r="2" fill="url(#cartouche-gradient)"/>
+                            <circle cx="70" cy="40" r="2" fill="url(#cartouche-gradient)"/>
+                        </svg>
+                    </div>
+                    <h3 class="artifact-card__title" data-en="Royal Cartouche" data-ar="الخرطوش الملكي">Royal Cartouche</h3>
+                    <p class="artifact-card__description" data-en="Oval seal containing pharaoh's sacred name. More powerful than the pharaoh's human name, it was used in spells and protection rites." data-ar="ختم بيضاوي يحتوي على الاسم المقدس للفرعون. أقوى من الاسم البشري للفرعون، تم استخدامه في التعاويذ وطقوس الحماية.">
+                        Sacred name seal. Power in every character.
+                    </p>
+                </article>
+                
+                <!-- Canopic Jar - Afterlife Protection -->
+                <article class="artifact-card">
+                    <div class="artifact-card__icon" aria-hidden="true">
+                        <svg class="artifact-icon" viewBox="0 0 70 120" width="70" height="120">
+                            <defs>
+                                <linearGradient id="canopic-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FFD700"/>
+                                    <stop offset="50%" style="stop-color:#d4af37"/>
+                                    <stop offset="100%" style="stop-color:#b88a2a"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M 20 20 L 25 15 L 45 15 L 50 20 L 50 80 Q 50 90 40 95 L 30 95 Q 20 90 20 80 Z" fill="url(#canopic-gradient)" stroke="url(#canopic-gradient)" stroke-width="2"/>
+                            <circle cx="35" cy="25" r="8" fill="url(#canopic-gradient)"/>
+                        </svg>
+                    </div>
+                    <h3 class="artifact-card__title" data-en="Canopic Jar" data-ar="الجرة الكانوبية">Canopic Jar</h3>
+                    <p class="artifact-card__description" data-en="Guarded the organs of the deceased. Each jar was protected by a god to ensure the pharaoh's resurrection in the afterlife." data-ar="حماية أعضاء المتوفى. حرس كل جرة إله لضمان قيامة الفرعون في الحياة الآخرة.">
+                        Guardian of eternal preservation. Divine protection.
+                    </p>
+                </article>
+                
+                <!-- Scarab Amulet - Rebirth -->
+                <article class="artifact-card">
+                    <div class="artifact-card__icon" aria-hidden="true">
+                        <svg class="artifact-icon" viewBox="0 0 100 80" width="100" height="80">
+                            <defs>
+                                <radialGradient id="scarab-gradient" cx="30%" cy="30%">
+                                    <stop offset="0%" style="stop-color:#FFD700"/>
+                                    <stop offset="100%" style="stop-color:#b88a2a"/>
+                                </radialGradient>
+                            </defs>
+                            <!-- Beetle shell -->
+                            <ellipse cx="50" cy="40" rx="25" ry="22" fill="url(#scarab-gradient)"/>
+                            <!-- Legs -->
+                            <line x1="25" y1="35" x2="10" y2="20" stroke="url(#scarab-gradient)" stroke-width="2"/>
+                            <line x1="25" y1="45" x2="8" y2="50" stroke="url(#scarab-gradient)" stroke-width="2"/>
+                            <line x1="75" y1="35" x2="90" y2="20" stroke="url(#scarab-gradient)" stroke-width="2"/>
+                            <line x1="75" y1="45" x2="92" y2="50" stroke="url(#scarab-gradient)" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="artifact-card__title" data-en="Scarab Amulet" data-ar="تمييمة الخنفساء">Scarab Amulet</h3>
+                    <p class="artifact-card__description" data-en="Symbol of renewal and rebirth. Pharaohs carried scarabs to ensure they would be reborn in the eternal paradise." data-ar="رمز التجديد والولادة من جديد. حمل الفراعنة خنافس للتأكد من ولادتهم من جديد في الجنة الأبدية.">
+                        Rebirth eternal. Khepri's sacred mark.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+        
+
+
+    
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials" role="region" aria-labelledby="testimonials-title">
+        <div class="container">
+            <h2 class="section__title" id="testimonials-title" data-en="Traveler Stories" data-ar="قصص المسافرين">Traveler Stories</h2>
+            
+            <div class="grid grid--3" id="testimonials-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="section section--dark" id="newsletter" role="region" aria-labelledby="newsletter-title">
+        <div class="container">
+            <h2 class="section__title" id="newsletter-title" data-en="Stay Connected" data-ar="ابق متصلا">Stay Connected</h2>
+            
+            <form class="newsletter-form" id="newsletter-form">
+                <p class="newsletter__text" data-en="Get exclusive travel tips, new discoveries, and pharaonic wisdom delivered to your inbox." data-ar="احصل على نصائح سفر حصرية واكتشافات جديدة والحكمة الفرعونية مباشرة إلى بريدك الإلكتروني.">
+                    Get exclusive travel tips and discoveries.
+                </p>
+                <div class="newsletter__input-group">
+                    <input type="email" class="newsletter__input" placeholder="your@email.com" required>
+                    <button type="submit" class="btn btn--gold" data-en="Subscribe" data-ar="اشترك">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="grid grid--4">
+                <div class="footer__section">
+                    <h3 class="footer__title" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h3>
+                    <ul class="footer__list">
+                        <li><a href="#hero" class="footer__link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li><a href="#places" class="footer__link" data-en="Places" data-ar="الأماكن">Places</a></li>
+                        <li><a href="#gem" class="footer__link" data-en="Museum" data-ar="متحف">Museum</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title" data-en="About" data-ar="حول">About</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link" data-en="Our Mission" data-ar="مهمتنا">Our Mission</a></li>
+                        <li><a href="#" class="footer__link" data-en="Contact" data-ar="اتصل">Contact</a></li>
+                        <li><a href="#" class="footer__link" data-en="Blog" data-ar="مدونة">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title" data-en="Legal" data-ar="قانوني">Legal</h3>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a></li>
+                        <li><a href="#" class="footer__link" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a></li>
+                        <li><a href="#" class="footer__link" data-en="Cookies" data-ar="ملفات تعريف الارتباط">Cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h3 class="footer__title" data-en="Follow Us" data-ar="تابعنا">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/egypteternal" class="social-link" aria-label="Facebook">f</a>
+                        <a href="https://instagram.com/egypteternal" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="https://twitter.com/egypteternal" class="social-link" aria-label="Twitter">𝕏</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p data-en="© 2025 Egypt Eternal. Celebrating 5,000 years of pharaonic splendor." data-ar="© 2025 Egypt Eternal. الاحتفال بـ 5000 سنة من الجلال الفرعوني.">
+                    © 2025 Egypt Eternal. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modals -->
+    
+    <!-- Place Detail Modal -->
+    <div class="modal" id="place-modal" role="dialog" aria-hidden="true">
+        <div class="modal__overlay" onclick="this.parentElement.setAttribute('aria-hidden', 'true')"></div>
+        <div class="modal__content">
+            <button class="modal__close" onclick="this.closest('.modal').setAttribute('aria-hidden', 'true')" aria-label="Close modal">&times;</button>
+            <div id="place-modal-content">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Ruler Detail Modal -->
+    <div class="modal" id="ruler-modal" role="dialog" aria-hidden="true">
+        <div class="modal__overlay" onclick="this.parentElement.setAttribute('aria-hidden', 'true')"></div>
+        <div class="modal__content">
+            <button class="modal__close" onclick="this.closest('.modal').setAttribute('aria-hidden', 'true')" aria-label="Close modal">&times;</button>
+            <div id="ruler-modal-content">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Immersive Experience Modal -->
+    <div class="modal modal--fullscreen" id="immersive-modal" role="dialog" aria-hidden="true">
+        <div class="modal__close-button">
+            <button class="btn btn--close" onclick="document.getElementById('immersive-modal').setAttribute('aria-hidden', 'true')" aria-label="Exit immersive experience">✕ Exit</button>
+        </div>
+        <div id="immersive-container">
+            <!-- Populated by immersive.js -->
+        </div>
+    </div>
+    
+    <!-- Three.js for 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/@tabler/icons@latest/dist/tabler-icons.min.js"></script>
+
+    
+    <!-- Scripts -->
+    <script src="js/router.js"></script>
+    <script src="js/panorama.js"></script>
+    <script src="js/immersive.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- ================================
+         ANUBIS JUDGMENT CHAMBER (Overlay)
+         Assets (place in your project):
+         - assets/video/anubis-judgment.mp4
+         - assets/audio/anubis-ambient.mp3 (optional)
+    =================================== -->
+    <!-- FINAL ANUBIS ROOM SECTION (Lines 943-964) -->
+
+    
+</body>
+</html>

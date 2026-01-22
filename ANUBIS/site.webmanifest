@@ -1,0 +1,94 @@
+{
+  "name": "Egypt Eternal",
+  "short_name": "Egypt Eternal",
+  "description": "Premium Egyptian archaeology and tourism experience platform. Explore ancient Egypt's treasures, pharaohs, and timeless monuments.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["travel", "education", "entertainment"],
+  "screenshots": [
+    {
+      "src": "/assets/screenshot-wide.png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/assets/screenshot-narrow.png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/assets/favicon-512.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon-512.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Explore Places",
+      "short_name": "Places",
+      "description": "Explore 19 archaeological sites across Egypt",
+      "url": "/?nav=places",
+      "icons": [
+        {
+          "src": "/assets/icon-places.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Trip Planner",
+      "short_name": "Planner",
+      "description": "Plan your perfect Egyptian adventure",
+      "url": "/?nav=planner",
+      "icons": [
+        {
+          "src": "/assets/icon-planner.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Grand Egyptian Museum",
+      "short_name": "Museum",
+      "description": "Experience the GEM and ancient treasures",
+      "url": "/?nav=gem",
+      "icons": [
+        {
+          "src": "/assets/icon-museum.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

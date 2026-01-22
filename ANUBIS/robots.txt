@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /data/
+Disallow: /data/*_old.json
+Disallow: /*.json$
+
+# Sitemap for search engine indexing
+Sitemap: https://egypt-eternal.example.com/sitemap.xml
+
+# Crawl delay (be respectful of server resources)
+Crawl-delay: 1
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
