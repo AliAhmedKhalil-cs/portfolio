@@ -30,7 +30,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
             color: var(--text);
             line-height: 1.6;
             background: linear-gradient(135deg, #fafbfc 0%, #f0ebf8 100%);
@@ -40,6 +40,8 @@
             padding: 0;
             overflow-x: hidden;
             position: relative;
+            text-transform: capitalize;
+            letter-spacing: 0.3px;
         }
 
         /* ANIMATIONS */
@@ -124,9 +126,10 @@
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
-            font-weight: 500;
+            font-weight: 600;
             position: relative;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
         }
 
         nav a::after {
@@ -265,11 +268,12 @@
         }
 
         .hero h1 {
-            font-size: clamp(1.8rem, 6vw, 3.5rem);
+            font-size: clamp(2rem, 6vw, 3.8rem);
             margin-bottom: 1.5rem;
             animation: fadeInDown 0.8s ease;
-            font-weight: 900;
-            line-height: 1.2;
+            font-weight: 800;
+            line-height: 1.3;
+            letter-spacing: 1px;
         }
 
         .hero h1 span {
@@ -277,10 +281,12 @@
         }
 
         .hero p {
-            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-size: clamp(1.05rem, 3vw, 1.25rem);
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease 0.2s both;
             opacity: 0.95;
+            line-height: 1.7;
+            letter-spacing: 0.3px;
         }
 
         .hero-buttons {
@@ -292,10 +298,10 @@
         }
 
         .btn {
-            padding: 11px 24px;
+            padding: 13px 28px;
             border: none;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -303,9 +309,10 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 0.6rem;
+            gap: 0.7rem;
             text-transform: capitalize;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
@@ -344,9 +351,10 @@
         }
 
         .section-title h2 {
-            font-size: clamp(1.6rem, 5vw, 2.8rem);
+            font-size: clamp(1.8rem, 5vw, 3rem);
             margin-bottom: 1rem;
-            font-weight: 900;
+            font-weight: 800;
+            letter-spacing: 0.5px;
         }
 
         .section-title h2 span {
@@ -355,8 +363,9 @@
 
         .section-title p {
             color: var(--accent);
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-size: clamp(1rem, 2vw, 1.15rem);
             font-weight: 500;
+            letter-spacing: 0.3px;
         }
 
         /* PRODUCTS */
@@ -436,15 +445,17 @@
         }
 
         .product-name {
-            font-size: 1rem;
-            font-weight: 800;
+            font-size: 1.05rem;
+            font-weight: 700;
             margin-bottom: 0.4rem;
+            letter-spacing: 0.3px;
         }
 
         .product-desc {
             color: var(--accent);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-bottom: 0.8rem;
+            letter-spacing: 0.2px;
         }
 
         .product-price {
@@ -593,17 +604,19 @@
         }
 
         .contact-title {
-            font-size: 1.2rem;
-            font-weight: 900;
+            font-size: 1.3rem;
+            font-weight: 700;
             color: white;
             margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
         }
 
         .contact-description {
             color: rgba(255, 255, 255, 0.75);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 1rem;
-            line-height: 1.6;
+            line-height: 1.7;
+            letter-spacing: 0.3px;
         }
 
         .contact-link {
@@ -1358,11 +1371,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#products">products</a></li>
-                    <li><a href="#categories">categories</a></li>
-                    <li><a href="#contact">contact</a></li>
-                    <li><a href="#payment">payment</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#payment">Payment</a></li>
                 </ul>
             </nav>
             <div class="cart-icon" onclick="openCart()">
@@ -1380,11 +1393,11 @@
     <div class="menu-overlay" id="menu-overlay" onclick="closeMenu()"></div>
     <div class="mobile-menu" id="mobile-menu">
         <ul>
-            <li><a href="#home" onclick="closeMenu()">home</a></li>
-            <li><a href="#products" onclick="closeMenu()">products</a></li>
-            <li><a href="#categories" onclick="closeMenu()">categories</a></li>
-            <li><a href="#contact" onclick="closeMenu()">contact</a></li>
-            <li><a href="#payment" onclick="closeMenu()">payment</a></li>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#products" onclick="closeMenu()">Products</a></li>
+            <li><a href="#categories" onclick="closeMenu()">Categories</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            <li><a href="#payment" onclick="closeMenu()">Payment</a></li>
         </ul>
     </div>
 
@@ -1394,10 +1407,10 @@
             <p>Discover Elegant Room & Office Accessories - Curated Posters, Decorations, Jewelry & More</p>
             <div class="hero-buttons">
                 <a href="#products" class="btn btn-primary">
-                    <i class="fas fa-shopping-bag"></i> explore collection
+                    <i class="fas fa-shopping-bag"></i> Explore Collection
                 </a>
                 <a href="#categories" class="btn btn-secondary">
-                    <i class="fas fa-th-large"></i> browse categories
+                    <i class="fas fa-th-large"></i> Browse Categories
                 </a>
             </div>
         </div>
@@ -1433,10 +1446,10 @@
                         <div class="contact-icon-box">
                             <i class="fab fa-whatsapp contact-icon"></i>
                         </div>
-                        <div class="contact-title">whatsapp</div>
-                        <p class="contact-description">Chat with us on WhatsApp for instant support 24/7.</p>
+                        <div class="contact-title">WhatsApp</div>
+                        <p class="contact-description">Chat With Us On WhatsApp For Instant Support 24/7.</p>
                         <a href="https://wa.me/201150835911" target="_blank" class="contact-link">
-                            <i class="fab fa-whatsapp"></i> start chat
+                            <i class="fab fa-whatsapp"></i> Start Chat
                         </a>
                     </div>
 
@@ -1444,10 +1457,10 @@
                         <div class="contact-icon-box">
                             <i class="fab fa-facebook-f contact-icon"></i>
                         </div>
-                        <div class="contact-title">facebook</div>
-                        <p class="contact-description">Follow our page for latest updates and promotions.</p>
+                        <div class="contact-title">Facebook</div>
+                        <p class="contact-description">Follow Our Page For Latest Updates And Promotions.</p>
                         <a href="https://www.facebook.com/domzi.artstore" target="_blank" class="contact-link">
-                            <i class="fab fa-facebook-f"></i> visit page
+                            <i class="fab fa-facebook-f"></i> Visit Page
                         </a>
                     </div>
 
@@ -1455,35 +1468,35 @@
                         <div class="contact-icon-box">
                             <i class="fas fa-envelope contact-icon"></i>
                         </div>
-                        <div class="contact-title">email</div>
-                        <p class="contact-description">Send us your questions anytime.</p>
+                        <div class="contact-title">Email</div>
+                        <p class="contact-description">Send Us Your Questions Anytime.</p>
                         <a href="mailto:info@domzistore.com" class="contact-link">
-                            <i class="fas fa-envelope"></i> send email
+                            <i class="fas fa-envelope"></i> Send Email
                         </a>
                     </div>
                 </div>
 
                 <div class="contact-form">
-                    <h3>send us a message</h3>
+                    <h3>Send Us A Message</h3>
                     <form onsubmit="handleContactForm(event)">
                         <div class="form-group">
-                            <label for="name">your name</label>
-                            <input type="text" id="name" placeholder="Enter your name" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter Your Name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">email address</label>
-                            <input type="email" id="email" placeholder="Enter your email" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter Your Email" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">subject</label>
+                            <label for="subject">Subject</label>
                             <input type="text" id="subject" placeholder="Subject" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">message</label>
-                            <textarea id="message" placeholder="Your message..." required></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your Message..." required></textarea>
                         </div>
                         <button type="submit" class="form-submit">
-                            <i class="fas fa-paper-plane"></i> send message
+                            <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
                 </div>
@@ -1494,14 +1507,14 @@
                     <div class="quick-contact-icon">
                         <i class="fab fa-whatsapp"></i>
                     </div>
-                    <div class="quick-contact-title">whatsapp</div>
+                    <div class="quick-contact-title">WhatsApp</div>
                     <div class="quick-contact-value">01150835911</div>
                 </div>
                 <div class="quick-contact-btn" onclick="quickFacebook()">
                     <div class="quick-contact-icon">
                         <i class="fab fa-facebook-f"></i>
                     </div>
-                    <div class="quick-contact-title">facebook</div>
+                    <div class="quick-contact-title">Facebook</div>
                     <div class="quick-contact-value">@domzi.artstore</div>
                 </div>
             </div>
@@ -1516,32 +1529,32 @@
         <div class="payment-methods">
             <div class="payment-method">
                 <div class="payment-icon"><i class="fab fa-facebook"></i></div>
-                <div class="payment-name">facebook orders</div>
-                <p class="payment-desc">Order directly through our Facebook shop</p>
-                <button class="btn btn-primary" onclick="handleFacebookPayment()">order on facebook</button>
+                <div class="payment-name">Facebook Orders</div>
+                <p class="payment-desc">Order Directly Through Our Facebook Shop</p>
+                <button class="btn btn-primary" onclick="handleFacebookPayment()">Order On Facebook</button>
             </div>
             <div class="payment-method">
                 <div class="payment-icon"><i class="fas fa-wallet"></i></div>
-                <div class="payment-name">fawry pay</div>
-                <p class="payment-desc">Quick and secure payments via Fawry</p>
-                <button class="btn btn-primary" onclick="handleFawryPayment()">pay with fawry</button>
+                <div class="payment-name">Fawry Pay</div>
+                <p class="payment-desc">Quick And Secure Payments Via Fawry</p>
+                <button class="btn btn-primary" onclick="handleFawryPayment()">Pay With Fawry</button>
             </div>
             <div class="payment-method">
                 <div class="payment-icon"><i class="fas fa-credit-card"></i></div>
-                <div class="payment-name">credit card</div>
-                <p class="payment-desc">Visa, Mastercard & major cards accepted</p>
-                <button class="btn btn-primary" onclick="handleCardPayment()">pay by card</button>
+                <div class="payment-name">Credit Card</div>
+                <p class="payment-desc">Visa, Mastercard & Major Cards Accepted</p>
+                <button class="btn btn-primary" onclick="handleCardPayment()">Pay By Card</button>
             </div>
         </div>
     </section>
 
     <div class="section">
         <div class="newsletter">
-            <h3>✉️ stay updated</h3>
-            <p>Get exclusive deals and new arrivals delivered to your inbox</p>
+            <h3>✉️ Stay Updated</h3>
+            <p>Get Exclusive Deals And New Arrivals Delivered To Your Inbox</p>
             <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
-                <input type="email" placeholder="Enter your email..." required>
-                <button type="submit">subscribe</button>
+                <input type="email" placeholder="Enter Your Email..." required>
+                <button type="submit">Subscribe</button>
             </form>
         </div>
     </div>
@@ -1549,24 +1562,24 @@
     <footer>
         <div class="footer-content">
             <div class="footer-col">
-                <h4>🏪 about domzi</h4>
-                <p>Premium room and office accessories for your perfect space.</p>
+                <h4>🏪 About Domzi</h4>
+                <p>Premium Room And Office Accessories For Your Perfect Space.</p>
             </div>
             <div class="footer-col">
-                <h4>🔗 quick links</h4>
+                <h4>🔗 Quick Links</h4>
                 <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#products">shop</a></li>
-                    <li><a href="#categories">categories</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>📞 connect with us</h4>
+                <h4>📞 Connect With Us</h4>
                 <ul>
-                    <li><a href="https://wa.me/201150835911">📱 whatsapp</a></li>
-                    <li><a href="https://www.facebook.com/domzi.artstore">📘 facebook</a></li>
-                    <li><a href="mailto:info@domzistore.com">📧 email</a></li>
+                    <li><a href="https://wa.me/201150835911">📱 WhatsApp</a></li>
+                    <li><a href="https://www.facebook.com/domzi.artstore">📘 Facebook</a></li>
+                    <li><a href="mailto:info@domzistore.com">📧 Email</a></li>
                 </ul>
             </div>
         </div>
@@ -1578,20 +1591,20 @@
     <div id="cartModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeCart()">&times;</span>
-            <h2>🛒 shopping cart</h2>
+            <h2>🛒 Shopping Cart</h2>
             <div id="cart-items">
-                <p style="text-align: center; color: var(--accent); padding: 2rem;">Your cart is empty</p>
+                <p style="text-align: center; color: var(--accent); padding: 2rem;">Your Cart Is Empty</p>
             </div>
             <div id="cart-summary" style="display: none;">
                 <div class="cart-total">
-                    total: <span id="cart-total-amount">0</span> egp
+                    Total: <span id="cart-total-amount">0</span> EGP
                 </div>
                 <div class="checkout-btns">
                     <button class="facebook-checkout" onclick="checkoutFacebook()">
-                        <i class="fab fa-facebook"></i> pay via facebook
+                        <i class="fab fa-facebook"></i> Pay Via Facebook
                     </button>
                     <button class="fawry-checkout" onclick="checkoutFawry()">
-                        <i class="fas fa-wallet"></i> fawry pay
+                        <i class="fas fa-wallet"></i> Fawry Pay
                     </button>
                 </div>
             </div>
@@ -1601,38 +1614,38 @@
     <div id="invoiceModal" class="invoice-modal">
         <div class="invoice-content">
             <div class="invoice-header">
-                <h2>🧾 payment invoice</h2>
-                <p style="color: var(--accent); margin-top: 0.5rem;">payment reference</p>
+                <h2>🧾 Payment Invoice</h2>
+                <p style="color: var(--accent); margin-top: 0.5rem;">Payment Reference</p>
             </div>
 
             <div class="invoice-ref">
-                <div>Your reference number</div>
+                <div>Your Reference Number</div>
                 <div class="invoice-ref-number" id="invoice-ref">FR-000000000</div>
             </div>
 
             <div class="invoice-details">
                 <div class="invoice-row header">
-                    <span>item</span>
-                    <span>amount</span>
+                    <span>Item</span>
+                    <span>Amount</span>
                 </div>
                 <div id="invoice-items"></div>
                 <div class="invoice-row total">
-                    <span>total amount</span>
-                    <span id="invoice-total">0 egp</span>
+                    <span>Total Amount</span>
+                    <span id="invoice-total">0 EGP</span>
                 </div>
             </div>
 
             <div class="invoice-footer">
-                <p><strong>📱 whatsapp:</strong> 01150835911</p>
-                <p><strong>📘 facebook:</strong> @domzi.artstore</p>
+                <p><strong>📱 WhatsApp:</strong> 01150835911</p>
+                <p><strong>📘 Facebook:</strong> @domzi.artstore</p>
             </div>
 
             <div class="invoice-actions">
                 <button class="download-btn" onclick="downloadInvoice()">
-                    <i class="fas fa-download"></i> download invoice
+                    <i class="fas fa-download"></i> Download Invoice
                 </button>
                 <button class="close-invoice-btn" onclick="closeInvoice()">
-                    <i class="fas fa-times"></i> close
+                    <i class="fas fa-times"></i> Close
                 </button>
             </div>
         </div>
@@ -1646,18 +1659,18 @@
         const FACEBOOK_PAGE = 'https://www.facebook.com/domzi.artstore';
 
         const products = [
-            { id: 1, name: "Modern Art Poster", price: 149.99, icon: "🖼️", desc: "Stunning wall art", category: "Posters" },
-            { id: 2, name: "Ceramic Mug", price: 89.99, icon: "☕", desc: "Premium ceramic", category: "Mugs & Drinkware" },
-            { id: 3, name: "Wooden Branch", price: 199.99, icon: "🌿", desc: "Decorative branch", category: "Branches" },
-            { id: 4, name: "Gold Necklace", price: 279.99, icon: "💍", desc: "Elegant jewelry", category: "Jewelry" },
-            { id: 5, name: "Crystal Bracelet", price: 179.99, icon: "💎", desc: "Beautiful crystal", category: "Jewelry" },
-            { id: 6, name: "Desk Organizer", price: 119.99, icon: "📦", desc: "Keep tidy", category: "Decorations" },
-            { id: 7, name: "Scented Candle", price: 99.99, icon: "🕯️", desc: "Home decor", category: "Decorations" },
-            { id: 8, name: "Print Set", price: 219.99, icon: "🎨", desc: "3 beautiful prints", category: "Posters" },
-            { id: 9, name: "Vintage Poster", price: 129.99, icon: "🖼️", desc: "Classic vintage", category: "Posters" },
-            { id: 10, name: "Mug Set", price: 159.99, icon: "☕", desc: "2 premium mugs", category: "Mugs & Drinkware" },
-            { id: 11, name: "Branch Vase", price: 139.99, icon: "🌿", desc: "Elegant display", category: "Branches" },
-            { id: 12, name: "Ring Set", price: 199.99, icon: "💎", desc: "Silver jewelry", category: "Jewelry" }
+            { id: 1, name: "Modern Art Poster", price: 149.99, icon: "🖼️", desc: "Stunning Wall Art", category: "Posters" },
+            { id: 2, name: "Ceramic Mug", price: 89.99, icon: "☕", desc: "Premium Ceramic", category: "Mugs & Drinkware" },
+            { id: 3, name: "Wooden Branch", price: 199.99, icon: "🌿", desc: "Decorative Branch", category: "Branches" },
+            { id: 4, name: "Gold Necklace", price: 279.99, icon: "💍", desc: "Elegant Jewelry", category: "Jewelry" },
+            { id: 5, name: "Crystal Bracelet", price: 179.99, icon: "💎", desc: "Beautiful Crystal", category: "Jewelry" },
+            { id: 6, name: "Desk Organizer", price: 119.99, icon: "📦", desc: "Keep Tidy", category: "Decorations" },
+            { id: 7, name: "Scented Candle", price: 99.99, icon: "🕯️", desc: "Home Decor", category: "Decorations" },
+            { id: 8, name: "Print Set", price: 219.99, icon: "🎨", desc: "3 Beautiful Prints", category: "Posters" },
+            { id: 9, name: "Vintage Poster", price: 129.99, icon: "🖼️", desc: "Classic Vintage", category: "Posters" },
+            { id: 10, name: "Mug Set", price: 159.99, icon: "☕", desc: "2 Premium Mugs", category: "Mugs & Drinkware" },
+            { id: 11, name: "Branch Vase", price: 139.99, icon: "🌿", desc: "Elegant Display", category: "Branches" },
+            { id: 12, name: "Ring Set", price: 199.99, icon: "💎", desc: "Silver Jewelry", category: "Jewelry" }
         ];
 
         const categories = [
@@ -1680,7 +1693,7 @@
 
         function initializeFilterButtons() {
             const filterContainer = document.getElementById('filter-buttons');
-            let html = '<button class="filter-btn active" onclick="filterProducts(\'all\')">all products</button>';
+            let html = '<button class="filter-btn active" onclick="filterProducts(\'all\')">All Products</button>';
             categories.forEach(cat => {
                 html += `<button class="filter-btn" onclick="filterProducts('${cat.name}')">${cat.icon} ${cat.name}</button>`;
             });
@@ -1692,12 +1705,12 @@
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
                 btn.classList.remove('active');
-                if (btn.textContent.includes(category) || (category === 'all' && btn.textContent.includes('all'))) {
+                if (btn.textContent.includes(category) || (category === 'all' && btn.textContent.includes('All'))) {
                     btn.classList.add('active');
                 }
             });
             displayProducts();
-            showToast(`📂 showing ${category === 'all' ? 'all products' : category}`);
+            showToast(`📂 Showing ${category === 'all' ? 'All Products' : category}`);
         }
 
         function displayProducts() {
@@ -1712,10 +1725,10 @@
                         <div class="product-name">${product.name}</div>
                         <div class="product-desc">${product.desc}</div>
                         <div class="product-price">
-                            <span class="price">${product.price.toFixed(2)} egp</span>
+                            <span class="price">${product.price.toFixed(2)} EGP</span>
                             <span class="rating">★★★★★</span>
                         </div>
-                        <button class="add-to-cart" onclick="addToCart(${product.id})">add to cart</button>
+                        <button class="add-to-cart" onclick="addToCart(${product.id})">Add To Cart</button>
                     </div>
                 </div>
             `).join('');
@@ -1730,7 +1743,7 @@
                 cart.push({ ...product, quantity: 1 });
             }
             updateCartCount();
-            showToast(`✅ ${product.name} added!`);
+            showToast(`✅ ${product.name} Added!`);
         }
 
         function updateCartCount() {
@@ -1744,14 +1757,14 @@
             const cartSummary = document.getElementById('cart-summary');
 
             if (cart.length === 0) {
-                cartItems.innerHTML = '<p style="text-align: center; color: var(--accent); padding: 2rem;">Your cart is empty</p>';
+                cartItems.innerHTML = '<p style="text-align: center; color: var(--accent); padding: 2rem;">Your Cart Is Empty</p>';
                 cartSummary.style.display = 'none';
             } else {
                 cartItems.innerHTML = cart.map(item => `
                     <div class="cart-item">
                         <div class="cart-item-info">
                             <div class="cart-item-name">${item.name}</div>
-                            <div class="cart-item-price">${item.price.toFixed(2)} egp</div>
+                            <div class="cart-item-price">${item.price.toFixed(2)} EGP</div>
                         </div>
                         <div class="cart-item-quantity">
                             <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
@@ -1789,13 +1802,13 @@
             cart = cart.filter(item => item.id !== productId);
             openCart();
             updateCartCount();
-            showToast('🗑️ item removed');
+            showToast('🗑️ Item Removed');
         }
 
         function handleContactForm(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
-            showToast(`✅ thanks ${name}! we'll be in touch.`);
+            showToast(`✅ Thanks ${name}! We'll Be In Touch.`);
             event.target.reset();
         }
 
@@ -1814,7 +1827,7 @@
 
         function checkoutFawry() {
             if (cart.length === 0) {
-                showToast('Your cart is empty!');
+                showToast('Your Cart Is Empty!');
                 return;
             }
             const invoiceModal = document.getElementById('invoiceModal');
@@ -1825,18 +1838,18 @@
             let itemsHTML = cart.map(item => `
                 <div class="invoice-row">
                     <span>${item.name} x${item.quantity}</span>
-                    <span>${(item.price * item.quantity).toFixed(2)} egp</span>
+                    <span>${(item.price * item.quantity).toFixed(2)} EGP</span>
                 </div>
             `).join('');
 
             invoiceItems.innerHTML = itemsHTML;
             document.getElementById('invoice-ref').textContent = fawryRef;
-            document.getElementById('invoice-total').textContent = total.toFixed(2) + ' egp';
+            document.getElementById('invoice-total').textContent = total.toFixed(2) + ' EGP';
 
             window.invoiceData = { ref: fawryRef, items: cart, total: total };
             invoiceModal.style.display = 'block';
             closeCart();
-            showToast('🧾 invoice generated!');
+            showToast('🧾 Invoice Generated!');
         }
 
         function downloadInvoice() {
@@ -1849,26 +1862,26 @@
                 jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
             };
             html2pdf().set(opt).from(element).save();
-            showToast('📥 invoice downloaded!');
+            showToast('📥 Invoice Downloaded!');
         }
 
         function closeInvoice() {
             document.getElementById('invoiceModal').style.display = 'none';
             cart = [];
             updateCartCount();
-            showToast('✅ thank you for your order!');
+            showToast('✅ Thank You For Your Order!');
         }
 
         function checkoutFacebook() {
             if (cart.length === 0) {
-                showToast('Your cart is empty!');
+                showToast('Your Cart Is Empty!');
                 return;
             }
             window.open(FACEBOOK_PAGE, '_blank');
             closeCart();
             cart = [];
             updateCartCount();
-            showToast('📱 redirecting to facebook...');
+            showToast('📱 Redirecting To Facebook...');
         }
 
         function toggleMenu() {
@@ -1887,26 +1900,26 @@
         }
 
         function handleFacebookPayment() {
-            showToast('opening facebook shop...');
+            showToast('Opening Facebook Shop...');
             setTimeout(() => window.open(FACEBOOK_PAGE, '_blank'), 500);
         }
 
         function handleFawryPayment() {
             if (cart.length > 0) {
-                showToast('opening fawry payment...');
+                showToast('Opening Fawry Payment...');
                 setTimeout(() => openCart(), 500);
             } else {
-                showToast('add items to cart first!');
+                showToast('Add Items To Cart First!');
             }
         }
 
         function handleCardPayment() {
-            showToast('💳 coming soon!');
+            showToast('💳 Coming Soon!');
         }
 
         function subscribeNewsletter(event) {
             event.preventDefault();
-            showToast('✉️ thank you for subscribing!');
+            showToast('✉️ Thank You For Subscribing!');
             event.target.reset();
         }
 
