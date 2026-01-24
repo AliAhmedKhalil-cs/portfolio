@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>احجز موعدك - Perfect Clinic | بيرفكت لطب الأسنان</title>
+    <meta name="description" content="احجز موعدك في Perfect Clinic بسهولة. اختر الفرع والوقت المناسب لك">
+    <link rel="canonical" href="https://yourdomainname.com/booking.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.jpg" alt="Perfect Clinic Logo">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-menu-header">
+                    <div class="nav-menu-logo">
+                        <img src="logo.jpg" alt="Perfect Clinic">
+                    </div>
+                    <h3>Perfect Clinic</h3>
+                </div>
+                <div class="nav-menu-content">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>عن العيادة</span>
+                    </a>
+                    <a href="services.html" class="nav-link">
+                        <i class="fas fa-tooth"></i>
+                        <span>خدماتنا</span>
+                    </a>
+                    <a href="location.html" class="nav-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>موقعنا</span>
+                    </a>
+                    <a href="booking.html" class="nav-link booking-link active">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>احجز موعدك</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="nav-contact">
+                <a href="tel:01031929814" class="phone-btn">
+                    <i class="fas fa-phone"></i>
+                    الزقازيق: 01031929814
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Booking Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>احجز موعدك الآن</h1>
+            <p>سهل وسريع - احجز موعدك في بضع دقائق</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-page">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="booking-info">
+                    <h2>لماذا تختار Perfect Clinic؟</h2>
+                    <div class="booking-features">
+                        <div class="feature-item">
+                            <i class="fas fa-user-md"></i>
+                            <div>
+                                <h4>أطباء متخصصون</h4>
+                                <p>فريق من أمهر الأطباء في طب الأسنان</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-microscope"></i>
+                            <div>
+                                <h4>أحدث التقنيات</h4>
+                                <p>معدات طبية متطورة وتقنيات حديثة</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>تعقيم كامل</h4>
+                                <p>أعلى معايير النظافة والتعقيم</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>مواعيد مرنة</h4>
+                                <p>مواعيد تناسب جدولك اليومي</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-options">
+                        <h3>طرق أخرى للحجز</h3>
+                        <div class="contact-buttons">
+                            <a href="tel:01031929814" class="contact-btn call">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span>الزقازيق</span>
+                                    <strong>01031929814</strong>
+                                </div>
+                            </a>
+                            <a href="tel:01029929819" class="contact-btn call">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span>المنصورة</span>
+                                    <strong>01029929819</strong>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/201031929814" class="contact-btn whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <span>واتساب</span>
+                                    <strong>تواصل فوري</strong>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form-container">
+                    <div class="booking-card">
+                        <div class="booking-header">
+                            <h2>أهلاً بك في Perfect Clinic بيرفكت لطب الأسنان 🦷</h2>
+                            <p>شكراً لتواصلك معنا.<br>لتسهيل الحجز والرد عليك بشكل أسرع، يرجى ترك البيانات التالية:</p>
+                        </div>
+                        <form class="booking-form" id="bookingForm">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل *</label>
+                                <input type="text" id="name" required placeholder="أدخل اسمك الكامل">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف *</label>
+                                <input type="tel" id="phone" required placeholder="01xxxxxxxxx">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="complaint">الشكوى أو الخدمة المطلوبة *</label>
+                                <textarea id="complaint" required placeholder="اكتب تفاصيل الشكوى أو الخدمة التي تحتاجها"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="branch">اختر الفرع *</label>
+                                <select id="branch" required>
+                                    <option value="">اختر الفرع المناسب لك</option>
+                                    <option value="الزقازيق">الزقازيق - بجوار مجلس المدينة</option>
+                                    <option value="المنصورة">المنصورة - برج الجامعة</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="preferred-time">الوقت المفضل</label>
+                                <select id="preferred-time">
+                                    <option value="">اختر الوقت المفضل (اختياري)</option>
+                                    <option value="صباحي">صباحي (9:00 ص - 12:00 م)</option>
+                                    <option value="مسائي">مسائي (12:00 م - 6:00 م)</option>
+                                    <option value="ليلي">ليلي (6:00 م - 10:00 م)</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                إرسال طلب الحجز
+                            </button>
+                        </form>
+                        <p class="trust-note">
+                            <i class="fas fa-shield-check"></i>
+                            سيتم إرسال طلبك مباشرة إلى العيادة عبر البريد الإلكتروني. سيقوم فريق الحجز بالتواصل معك خلال دقائق لتأكيد الموعد. دمت بصحة!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Quick Links -->
+    <section class="services-quick">
+        <div class="container">
+            <h2 class="section-title">خدماتنا الأكثر طلباً</h2>
+            <div class="services-quick-grid">
+                <a href="services.html#cosmetic" class="service-quick-card">
+                    <i class="fas fa-gem"></i>
+                    <h4>تجميل الأسنان</h4>
+                    <p>ابتسامة هوليود وتبييض الأسنان</p>
+                </a>
+                <a href="services.html#implants" class="service-quick-card">
+                    <i class="fas fa-tooth"></i>
+                    <h4>زراعة الأسنان</h4>
+                    <p>زراعة فورية وتركيبات ثابتة</p>
+                </a>
+                <a href="services.html#orthodontics" class="service-quick-card">
+                    <i class="fas fa-ruler"></i>
+                    <h4>تقويم الأسنان</h4>
+                    <p>تقويم شفاف ومعدني</p>
+                </a>
+                <a href="services.html#general" class="service-quick-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>العلاج العام</h4>
+                    <p>حشوات وتنظيف الأسنان</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Perfect Clinic - بيرفكت لطب الأسنان</h3>
+                    <p><i class="fas fa-phone"></i> الزقازيق: <a href="tel:01031929814">01031929814</a></p>
+                    <p><i class="fas fa-phone"></i> المنصورة: <a href="tel:01029929819">01029929819</a></p>
+                    <p><i class="fas fa-clock"></i> السبت - الخميس: 9:00 ص - 10:00 م</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1No9vv3my1/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/perfe.ctclinic?igsh=ZXl4N2EwbnllNDF5" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/201031929814" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
+        <a href="tel:01031929814" class="mobile-call">
+            <i class="fas fa-phone"></i>
+            الزقازيق
+        </a>
+        <a href="https://wa.me/201031929814" class="mobile-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            واتساب
+        </a>
+    </div>
+
+    <!-- Floating Contact Button -->
+    <div class="floating-contact">
+        <button class="contact-toggle" onclick="toggleContactMenu()">
+            <i class="fas fa-phone"></i>
+        </button>
+        <div class="contact-menu" id="contactMenu">
+            <a href="tel:01031929814" class="contact-menu-item phone">
+                <i class="fas fa-phone"></i>
+                <span>الزقازيق: 01031929814</span>
+            </a>
+            <a href="tel:01029929819" class="contact-menu-item phone">
+                <i class="fas fa-phone"></i>
+                <span>المنصورة: 01029929819</span>
+            </a>
+            <a href="https://wa.me/201031929814" class="contact-menu-item whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>واتساب فوري</span>
+            </a>
+            <a href="index.html" class="contact-menu-item booking">
+                <i class="fas fa-home"></i>
+                <span>الرئيسية</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>تم إرسال طلبك بنجاح!</h3>
+            <p>تم فتح برنامج البريد الإلكتروني لإرسال طلبك إلى العيادة.<br>سيتواصل معك فريق الحجز قريباً</p>
+            <button onclick="closeModal()">حسناً</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

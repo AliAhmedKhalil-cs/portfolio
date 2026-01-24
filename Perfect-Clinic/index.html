@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Clinic - بيرفكت لطب الأسنان | عيادة أسنان متخصصة</title>
+    <meta name="description" content="Perfect Clinic - بيرفكت لطب الأسنان. أحدث التقنيات الطبية، أطباء متخصصون، تعقيم كامل. احجز موعدك الآن">
+    <meta name="keywords" content="طبيب أسنان, عيادة أسنان, تجميل أسنان, زراعة أسنان, تقويم أسنان, الزقازيق, المنصورة">
+    <meta name="author" content="Perfect Clinic">
+    <link rel="canonical" href="https://yourdomainname.com/">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Perfect Clinic - بيرفكت لطب الأسنان">
+    <meta property="og:description" content="أحدث التقنيات الطبية، أطباء متخصصون، تعقيم كامل. احجز موعدك الآن">
+    <meta property="og:image" content="https://yourdomainname.com/logo.png">
+    <meta property="og:url" content="https://yourdomainname.com/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Perfect Clinic - بيرفكت لطب الأسنان">
+    <meta name="twitter:description" content="أحدث التقنيات الطبية، أطباء متخصصون، تعقيم كامل">
+    <meta name="twitter:image" content="https://yourdomainname.com/logo.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.boxicons.com/animations.min.css" rel="stylesheet">
+    <!-- Basic Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+<!-- Filled Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+<!-- Brand Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Perfect Clinic Logo">
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-menu-header">
+                    <div class="nav-menu-logo">
+                        <img src="logo.jpg" alt="Perfect Clinic">
+                    </div>
+                    <h3>Perfect Clinic</h3>
+                </div>
+                <div class="nav-menu-content">
+                    <a href="index.html" class="nav-link active" onclick="closeMobileMenu()">
+                        <i class="fas fa-home"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                    <a href="about.html" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-info-circle"></i>
+                        <span>عن العيادة</span>
+                    </a>
+                    <a href="services.html" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-tooth"></i>
+                        <span>خدماتنا</span>
+                    </a>
+                    <a href="location.html" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>موقعنا</span>
+                    </a>
+                    <a href="booking.html" class="nav-link booking-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>احجز موعدك</span>
+                    </a>
+                </div>
+                <div class="nav-menu-footer">
+                    <div class="contact-info">
+                        <a href="tel:01031929814" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>الزقازيق: 01031929814</span>
+                        </a>
+                        <a href="tel:01029929819" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>المنصورة: 01029929819</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1No9vv3my1/" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/perfe.ctclinic?igsh=ZXl4N2EwbnllNDF5" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/201031929814">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-contact">
+                <a href="tel:01031929814" class="phone-btn">
+                    <i class="fas fa-phone"></i>
+                    الزقازيق: 01031929814
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-up">ابتسامتك المثالية تبدأ من هنا</h1>
+            <p class="hero-subtitle animate-fade-up">في Perfect Clinic نقدم أحدث تقنيات طب الأسنان مع فريق من الأطباء المتخصصين لضمان راحتك وأمانك</p>
+            <div class="hero-buttons animate-fade-up">
+                <button class="btn-primary" onclick="window.location.href='booking.html'">احجز موعدك الآن</button>
+                <a href="tel:01031929814" class="btn-secondary">تواصل معنا</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="dental-placeholder">
+                <i class="bx bx-tooth bx-burst"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Booking Hook -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="booking-card animate-slide-up">
+                <div class="booking-header">
+                    <h2>أهلاً بك في Perfect Clinic بيرفكت لطب الأسنان 🦷</h2>
+                    <p>شكراً لتواصلك معنا.<br>لتسهيل الحجز والرد عليك بشكل أسرع، يرجى ترك البيانات التالية:</p>
+                </div>
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="الاسم">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="رقم الهاتف (اختياري)">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="complaint" required placeholder="الشكوى أو الخدمة المطلوبة"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <select id="branch" required>
+                            <option value="">اختر الفرع المناسب لك</option>
+                            <option value="الزقازيق">الزقازيق</option>
+                            <option value="المنصورة">المنصورة</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">إرسال طلب الحجز</button>
+                </form>
+                <p class="trust-note">سيتم إرسال طلبك مباشرة إلى العيادة عبر البريد الإلكتروني. سيقوم فريق الحجز بالتواصل معك خلال دقائق لتأكيد الموعد. دمت بصحة!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">عن Perfect Clinic</h2>
+            <div class="about-content">
+                <p>في Perfect Clinic، نلتزم بتقديم أعلى مستويات الرعاية الطبية لأسنانك باستخدام أحدث التقنيات والمعدات الطبية المتطورة. فريقنا من الأطباء المتخصصين يضمن لك تجربة علاجية مريحة وآمنة مع الحفاظ على أعلى معايير التعقيم والنظافة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا المتخصصة</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>تجميل الأسنان 💎</h3>
+                    <p>ابتسامة هوليود • تبييض الأسنان • تصميم الابتسامة الرقمي • علاج الابتسامة اللثوية</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>علاج الجذور والأعصاب ⚡</h3>
+                    <p>حشو العصب في جلسة واحدة • العلاج الميكروسكوبي بأحدث أجهزة الروتاري</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tooth"></i>
+                    <h3>التركيبات والزراعة 🦷</h3>
+                    <p>زراعة الأسنان • التركيبات الثابتة (زيركون - E-max) • التركيبات المتحركة</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-ruler"></i>
+                    <h3>تقويم الأسنان 📏</h3>
+                    <p>التقويم الشفاف • التقويم المعدني التقليدي • التقويم الخزفي</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-child"></i>
+                    <h3>طب أسنان الأطفال 🧸</h3>
+                    <p>علاج التسوس • جلسات الفلورايد الوقائية • حافظ المكان • الخلع البسيط</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>العلاج العام واللثة 🛡️</h3>
+                    <p>الحشوات التجميلية • تنظيف الجير • خلع ضرس العقل الجراحي</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>التشخيص والتكنولوجيا 🖥️</h3>
+                    <p>أشعة ديجيتال فورية RVG • التعقيم وفق أحدث البروتوكولات العالمية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">لماذا Perfect Clinic؟</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-microscope"></i>
+                    <h3>أحدث التقنيات الطبية</h3>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-md"></i>
+                    <h3>أطباء متخصصون</h3>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>تعقيم كامل</h3>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-heart"></i>
+                    <h3>راحة وأمان المريض</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>ابدأ رحلتك نحو ابتسامة مثالية اليوم</h2>
+            <p>لا تتردد في التواصل معنا للحصول على استشارة مجانية</p>
+            <div class="cta-buttons">
+                <a href="booking.html" class="cta-btn">
+                    <i class="fas fa-calendar-check"></i>
+                    احجز موعدك الآن
+                </a>
+                <a href="tel:01029929819" class="cta-btn">
+                    <i class="fas fa-phone"></i>
+                    المنصورة: 01029929819
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <h2 class="section-title">موقعنا</h2>
+            <div class="branches-container">
+                <div class="branch-card">
+                    <h3>فرع الزقازيق</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> بجوار مجلس المدينة، أمام بنك أبو ظبي الإسلامي، الدور التاني علوي فوق بنك القاهرة</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:01031929814">01031929814</a></p>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.643527191531!2d31.507189824704415!3d30.587606992632452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7f19ff8f9c2b3%3A0xbf25a6eb09962440!2sPerfect%20Braces%20Zagazig!5e0!3m2!1sar!2seg!4v1768659214495!5m2!1sar!2seg" width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="branch-card">
+                    <h3>فرع المنصورة</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> عمارة 44 برج الجامعة، شارع الجلاء، بجوار مسجد الجمال، أعلى محل لعب عيال</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:01029929819">01029929819</a></p>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.490491987714!2d31.365794299999997!3d31.040442199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f79d440c65dcf7%3A0x9567552dd93c865c!2sPerfect%20Braces%20ElMansoura!5e0!3m2!1sar!2seg!4v1768659400411!5m2!1sar!2seg" width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Perfect Clinic - بيرفكت لطب الأسنان</h3>
+                    <p><i class="fas fa-phone"></i> الزقازيق: <a href="tel:01031929814">01031929814</a></p>
+                    <p><i class="fas fa-phone"></i> المنصورة: <a href="tel:01029929819">01029929819</a></p>
+                    <p><i class="fas fa-clock"></i> السبت - الخميس: 9:00 ص - 10:00 م</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1No9vv3my1/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/perfe.ctclinic?igsh=ZXl4N2EwbnllNDF5" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/201031929814"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="mobile-cta">
+        <a href="tel:01031929814" class="mobile-call">
+            <i class="fas fa-phone"></i>
+            الزقازيق
+        </a>
+        <a href="https://wa.me/201031929814" class="mobile-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            واتساب
+        </a>
+    </div>
+
+    <!-- Floating Contact Button -->
+    <div class="floating-contact">
+        <button class="contact-toggle" onclick="toggleContactMenu()">
+            <i class="fas fa-phone"></i>
+        </button>
+        <div class="contact-menu" id="contactMenu">
+            <a href="tel:01031929814" class="contact-menu-item phone">
+                <i class="fas fa-phone"></i>
+                <span>الزقازيق: 01031929814</span>
+            </a>
+            <a href="tel:01029929819" class="contact-menu-item phone">
+                <i class="fas fa-phone"></i>
+                <span>المنصورة: 01029929819</span>
+            </a>
+            <a href="https://wa.me/201031929814" class="contact-menu-item whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>واتساب فوري</span>
+            </a>
+            <a href="booking.html" class="contact-menu-item booking">
+                <i class="fas fa-calendar-check"></i>
+                <span>احجز موعدك</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>تم إرسال طلبك بنجاح!</h3>
+            <p>تم فتح برنامج البريد الإلكتروني لإرسال طلبك إلى العيادة.<br>سيتواصل معك فريق الحجز قريباً</p>
+            <button onclick="closeModal()">حسناً</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
