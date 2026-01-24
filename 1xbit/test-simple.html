@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار القائمة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center; padding: 50px; color: white;">اضغط على أيقونة القائمة ☰</h1>
+    
+    <button class="floating-menu-toggle" aria-label="فتح القائمة" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999;">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div class="menu-overlay"></div>
+    <div class="side-menu">
+        <button class="side-menu-close" aria-label="إغلاق القائمة">✕</button>
+        <div class="side-menu-content">
+            <div class="side-menu-title">القائمة الرئيسية</div>
+            <ul class="side-menu-list">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="top-agents.html">أفضل الوكلاء</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Test inline script
+        console.log('Script loaded!');
+        const btn = document.querySelector('.floating-menu-toggle');
+        const menu = document.querySelector('.side-menu');
+        const overlay = document.querySelector('.menu-overlay');
+        
+        console.log('Button:', btn);
+        console.log('Menu:', menu);
+        console.log('Overlay:', overlay);
+        
+        if (btn) {
+            btn.onclick = function() {
+                console.log('Button clicked!');
+                menu.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+        }
+        
+        if (overlay) {
+            overlay.onclick = function() {
+                console.log('Overlay clicked!');
+                menu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+        }
+    </script>
+</body>
+</html>
