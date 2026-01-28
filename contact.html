@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="logo">Portfolio.</a>
+        <a href="index.html" class="logo">IbrahemKassap</a>
         
         <div class="menu-icon">
             <i class='bx bx-menu'></i>
@@ -24,6 +24,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li class="active"><a href="contact.html">Contact</a></li>
         </ul>
@@ -42,8 +43,8 @@
     <section class="contact-section">
         <div class="contact-container">
             <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Let's discuss your project and bring your ideas to life</p>
+                <h2 data-i18n="contact.title">Get In Touch</h2>
+                <p data-i18n="contact.subtitle">Let's discuss your project and bring your ideas to life</p>
             </div>
 
             <div class="contact-content">
@@ -53,10 +54,10 @@
                         <div class="contact-icon">
                             <i class='bx bxl-whatsapp'></i>
                         </div>
-                        <h3>WhatsApp</h3>
+                        <h3 data-i18n="contact.cards.whatsapp.title">WhatsApp</h3>
                         <p>+20 101 735 8087</p>
                         <a href="https://wa.me/+201017358087?text=Hello%20Ibrahem,%20I'm%20interested%20in%20your%20services" target="_blank" class="contact-link">
-                            Message Me <i class='bx bx-right-arrow-alt'></i>
+                            <span data-i18n="contact.cards.whatsapp.cta">Message Me</span> <i class='bx bx-right-arrow-alt'></i>
                         </a>
                     </div>
 
@@ -64,10 +65,10 @@
                         <div class="contact-icon">
                             <i class='bx bx-envelope'></i>
                         </div>
-                        <h3>Email</h3>
+                        <h3 data-i18n="contact.cards.email.title">Email</h3>
                         <p>ibrahem.kassap@gmail.com</p>
                         <a href="mailto:ibrahem.kassap@gmail.com" class="contact-link">
-                            Send Email <i class='bx bx-right-arrow-alt'></i>
+                            <span data-i18n="contact.cards.email.cta">Send Email</span> <i class='bx bx-right-arrow-alt'></i>
                         </a>
                     </div>
 
@@ -75,52 +76,52 @@
                         <div class="contact-icon">
                             <i class='bx bx-map'></i>
                         </div>
-                        <h3>Location</h3>
-                        <p>Cairo, Egypt</p>
+                        <h3 data-i18n="contact.cards.location.title">Location</h3>
+                        <p data-i18n="contact.cards.location.value">Cairo, Egypt</p>
                         <a href="#" class="contact-link">
-                            View Map <i class='bx bx-right-arrow-alt'></i>
+                            <span data-i18n="contact.cards.location.cta">View Map</span> <i class='bx bx-right-arrow-alt'></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper">
-                    <h3>Send Me a Message</h3>
+                    <h3 data-i18n="contact.form.title">Send Me a Message</h3>
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
                             <input type="text" id="name" name="from_name" required placeholder=" ">
-                            <label for="name">Your Name</label>
+                            <label for="name" data-i18n="contact.form.name">Your Name</label>
                             <i class='bx bx-user'></i>
                         </div>
 
                         <div class="form-group">
                             <input type="email" id="email" name="from_email" required placeholder=" ">
-                            <label for="email">Your Email</label>
+                            <label for="email" data-i18n="contact.form.email">Your Email</label>
                             <i class='bx bx-envelope'></i>
                         </div>
 
                         <div class="form-group">
                             <input type="text" id="subject" name="subject" required placeholder=" ">
-                            <label for="subject">Subject</label>
+                            <label for="subject" data-i18n="contact.form.subject">Subject</label>
                             <i class='bx bx-edit'></i>
                         </div>
 
                         <div class="form-group">
                             <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-                            <label for="message">Your Message</label>
+                            <label for="message" data-i18n="contact.form.message">Your Message</label>
                             <i class='bx bx-message-dots'></i>
                         </div>
 
                         <button type="submit" class="submit-btn">
-                            Send Message <i class='bx bx-send'></i>
+                            <span data-i18n="contact.form.submit">Send Message</span> <i class='bx bx-send'></i>
                         </button>
                     </form>
 
                     <!-- Quick WhatsApp Button -->
                     <div class="quick-whatsapp">
-                        <p>Or message me directly on</p>
+                        <p data-i18n="contact.quick.text">Or message me directly on</p>
                         <a href="https://wa.me/+201017358087?text=Hello%20Ibrahem,%20I'm%20interested%20in%20your%20services" target="_blank" class="whatsapp-btn">
-                            <i class='bx bxl-whatsapp'></i> WhatsApp
+                            <i class='bx bxl-whatsapp'></i> <span data-i18n="contact.quick.cta">WhatsApp</span>
                         </a>
                     </div>
                 </div>
@@ -128,7 +129,7 @@
 
             <!-- Social Media Links -->
             <div class="contact-social">
-                <h3>Follow Me On</h3>
+                <h3 data-i18n="contact.social.title">Follow Me On</h3>
                 <div class="social-links">
                     <a href="https://github.com/ibrahemkassap" target="_blank">
                         <i class='bx bxl-github'></i>
@@ -153,27 +154,27 @@
     <!-- Internal Links -->
     <section class="internal-cta">
         <div class="container">
-            <h3>Before You Go</h3>
+            <h3 data-i18n="contact.internalCta.title">Before You Go</h3>
             <div class="quick-links">
                 <a href="pricing.html" class="quick-link-card">
                     <i class='bx bx-money'></i>
-                    <h4>Pricing</h4>
-                    <p>Transparent rates</p>
+                    <h4 data-i18n="contact.internalCta.cards.pricing.title">Pricing</h4>
+                    <p data-i18n="contact.internalCta.cards.pricing.desc">Transparent rates</p>
                 </a>
                 <a href="portfolio.html" class="quick-link-card">
                     <i class='bx bx-images'></i>
-                    <h4>Portfolio</h4>
-                    <p>Our best work</p>
+                    <h4 data-i18n="contact.internalCta.cards.portfolio.title">Portfolio</h4>
+                    <p data-i18n="contact.internalCta.cards.portfolio.desc">Our best work</p>
                 </a>
                 <a href="audit.html" class="quick-link-card">
                     <i class='bx bx-analyse'></i>
-                    <h4>Free Audit</h4>
-                    <p>Website analysis</p>
+                    <h4 data-i18n="contact.internalCta.cards.audit.title">Free Audit</h4>
+                    <p data-i18n="contact.internalCta.cards.audit.desc">Website analysis</p>
                 </a>
                 <a href="blog.html" class="quick-link-card">
                     <i class='bx bx-book-reader'></i>
-                    <h4>Blog</h4>
-                    <p>Learn & grow</p>
+                    <h4 data-i18n="contact.internalCta.cards.blog.title">Blog</h4>
+                    <p data-i18n="contact.internalCta.cards.blog.desc">Learn & grow</p>
                 </a>
             </div>
         </div>

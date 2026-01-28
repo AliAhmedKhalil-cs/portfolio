@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" class="logo">Portfolio.</a>
+        <a href="index.html" class="logo">IbrahemKassap</a>
         
         <!-- Hamburger Menu Icon for Mobile -->
         <div class="menu-icon">
@@ -28,6 +28,7 @@
             <li class="active"><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -54,17 +55,17 @@
     <section class="home">
         <div class="home-info">
             <h1>Ibrahem Kassap</h1>
-            <h2 style="position: relative; min-height: 40px; display: inline-block;">I'm a
-                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 0s;" data-text="Frontend Developer">Frontend Developer</span>
-                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 3s;" data-text="Ui/Ux Designer">Ui/Ux Designer</span>
-                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 6s;" data-text="SEO Specialist">SEO Specialist</span>
-                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 9s;" data-text="Digital Marketing">Digital Marketing</span>
+            <h2 style="position: relative; min-height: 40px; display: inline-block;" data-i18n="about.hero.roleIntro">I'm a
+                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 0s;" data-text="Frontend Developer" data-i18n="about.hero.roles.frontend" data-i18n-attr="data-text">Frontend Developer</span>
+                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 3s;" data-text="Ui/Ux Designer" data-i18n="about.hero.roles.uiux" data-i18n-attr="data-text">Ui/Ux Designer</span>
+                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 6s;" data-text="SEO Specialist" data-i18n="about.hero.roles.seo" data-i18n-attr="data-text">SEO Specialist</span>
+                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 9s;" data-text="Digital Marketing" data-i18n="about.hero.roles.marketing" data-i18n-attr="data-text">Digital Marketing</span>
             </h2>
-            <p>I graduated from the Sadat Academy for Administrative Sciences in Cairo with a Bachelor's degree in Information Technology Systems. I have specialized in programming, particularly front-end development, and I am currently working on developing my skills to move into back-end development.
+            <p data-i18n="about.hero.desc">I graduated from the Sadat Academy for Administrative Sciences in Cairo with a Bachelor's degree in Information Technology Systems. I have specialized in programming, particularly front-end development, and I am currently working on developing my skills to move into back-end development.
 
 I work on GitHub, and all my projects are freelance; I am not affiliated with any company.</p>
             <div class="btn-sci">
-                <a href="https://drive.google.com/file/d/10dO_xzsQHa2JJQtEXlFGaPLb3-wSzB8F/view?usp=sharing" class="btn">Download CV</a>
+                <a href="https://drive.google.com/file/d/10dO_xzsQHa2JJQtEXlFGaPLb3-wSzB8F/view?usp=sharing" class="btn" data-i18n="about.hero.cta">Download CV</a>
                 <div class="sci">
                     <a href="https://github.com/ibrahemkassap" target="_blank"><i class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/ibrahem-kassap/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
@@ -87,16 +88,34 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
     <section class="about-section">
         <div class="about-container">
             <div class="section-header">
-                <h2>About Me</h2>
-                <p>Get to know me better</p>
+                <h2 data-i18n="about.section.title">About Me</h2>
+                <p data-i18n="about.section.subtitle">Get to know me better</p>
             </div>
 
             <!-- About Content -->
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Who Am I?</h3>
-                    <p>I graduated from the Sadat Academy for Administrative Sciences in Cairo with a Bachelor's degree in Information Technology Systems. I have specialized in programming, particularly front-end development, and I am currently working on developing my skills to move into back-end development. I work on GitHub, and all my projects are freelance; I am not affiliated with any company.</p>
-                    <p>My skills include HTML, CSS, JavaScript, UI/UX design, SEO, and digital marketing. I am passionate about creating beautiful and functional websites that provide an excellent user experience. I am always eager to learn new technologies and improve my skills to stay up-to-date with the latest trends in web development.</p>
+                    <div class="about-kicker" data-i18n="about.highlights.kicker">5+ Years • 50+ Projects • 100+ Clients</div>
+                    <h3 data-i18n="about.section.whoTitle">Who Am I?</h3>
+                    <p data-i18n="about.section.whoDesc1">I graduated from the Sadat Academy for Administrative Sciences in Cairo with a Bachelor's degree in Information Technology Systems. I specialize in front-end development, with strong expertise in performance, UX, and SEO. I work on GitHub, and all my projects are freelance; I am not affiliated with any company.</p>
+                    <p data-i18n="about.section.whoDesc2">I build fast, conversion-focused websites with clean structure, modern UI, and scalable code. My focus is delivering reliable results and long-term maintainability for every client.</p>
+                </div>
+                <div class="about-highlights">
+                    <h4 data-i18n="about.highlights.title">Why Clients Trust Me</h4>
+                    <ul class="about-highlights-list">
+                        <li>
+                            <span class="highlight-title" data-i18n="about.highlights.items.one.title">Production-ready code</span>
+                            <span class="highlight-desc" data-i18n="about.highlights.items.one.desc">Clean architecture, fast performance, and maintainable structure.</span>
+                        </li>
+                        <li>
+                            <span class="highlight-title" data-i18n="about.highlights.items.two.title">SEO-first mindset</span>
+                            <span class="highlight-desc" data-i18n="about.highlights.items.two.desc">Technical SEO, Core Web Vitals, and conversion-focused UX.</span>
+                        </li>
+                        <li>
+                            <span class="highlight-title" data-i18n="about.highlights.items.three.title">Clear delivery process</span>
+                            <span class="highlight-desc" data-i18n="about.highlights.items.three.desc">Milestones, transparent updates, and on-time delivery.</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -107,9 +126,9 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                     <div class="card-icon">
                         <i class='bx bx-briefcase-alt'></i>
                     </div>
-                    <h3>Experience</h3>
-                    <p class="card-number">5+ Years</p>
-                    <p class="card-desc">Five years of experience in the field of programming.</p>
+                    <h3 data-i18n="about.cards.experience.title">Experience</h3>
+                    <p class="card-number" data-i18n="about.cards.experience.value">5+ Years</p>
+                    <p class="card-desc" data-i18n="about.cards.experience.desc">Five years of experience in the field of programming.</p>
                 </div>
 
                 <!-- Card 2 - Projects -->
@@ -117,9 +136,9 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                     <div class="card-icon">
                         <i class='bx bx-code-alt'></i>
                     </div>
-                    <h3>Projects</h3>
-                    <p class="card-number">50+</p>
-                    <p class="card-desc">More than 50 projects over five years.</p>
+                    <h3 data-i18n="about.cards.projects.title">Projects</h3>
+                    <p class="card-number" data-i18n="about.cards.projects.value">50+</p>
+                    <p class="card-desc" data-i18n="about.cards.projects.desc">More than 50 projects over five years.</p>
                 </div>
 
                 <!-- Card 3 - Clients -->
@@ -127,9 +146,9 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                     <div class="card-icon">
                         <i class='bx bx-happy'></i>
                     </div>
-                    <h3>Happy Clients</h3>
-                    <p class="card-number">100+</p>
-                    <p class="card-desc">Over 100 satisfied clients have had positive experiences with me and the services and projects I offer.</p>
+                    <h3 data-i18n="about.cards.clients.title">Happy Clients</h3>
+                    <p class="card-number" data-i18n="about.cards.clients.value">100+</p>
+                    <p class="card-desc" data-i18n="about.cards.clients.desc">Over 100 satisfied clients have had positive experiences with me and the services and projects I offer.</p>
                 </div>
 
                 <!-- Card 4 - Education -->
@@ -137,9 +156,9 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                     <div class="card-icon">
                         <i class='bx bx-book-open'></i>
                     </div>
-                    <h3>Education</h3>
-                    <p class="card-number">Bachelor's Degree</p>
-                    <p class="card-desc">Bachelor's degree in Information Technology Systems.</p>
+                    <h3 data-i18n="about.cards.education.title">Education</h3>
+                    <p class="card-number" data-i18n="about.cards.education.value">Bachelor's Degree</p>
+                    <p class="card-desc" data-i18n="about.cards.education.desc">Bachelor's degree in Information Technology Systems.</p>
                 </div>
 
                 <!-- Card 5 - Languages -->
@@ -147,9 +166,9 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                     <div class="card-icon">
                         <i class='bx bx-globe'></i>
                     </div>
-                    <h3>Languages</h3>
-                    <p class="card-number">Arabic & English & Spanish</p>
-                    <p class="card-desc">I love learning languages; I speak English and Arabic fluently, and my Spanish pronunciation is limited.</p>
+                    <h3 data-i18n="about.cards.languages.title">Languages</h3>
+                    <p class="card-number" data-i18n="about.cards.languages.value">Arabic & English & Spanish</p>
+                    <p class="card-desc" data-i18n="about.cards.languages.desc">I love learning languages; I speak English and Arabic fluently, and my Spanish pronunciation is limited.</p>
                 </div>
 
                 <!-- Card 6 - Location -->
@@ -157,19 +176,19 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                     <div class="card-icon">
                         <i class='bx bx-map'></i>
                     </div>
-                    <h3>Location</h3>
-                    <p class="card-number">Cairo, Egypt</p>
-                    <p class="card-desc">I was born and live in Cairo.</p>
+                    <h3 data-i18n="about.cards.location.title">Location</h3>
+                    <p class="card-number" data-i18n="about.cards.location.value">Cairo, Egypt</p>
+                    <p class="card-desc" data-i18n="about.cards.location.desc">I was born and live in Cairo.</p>
                 </div>
             </div>
 
             <!-- Skills Section -->
             <div class="skills-section">
-                <h3>My Skills</h3>
+                <h3 data-i18n="about.skills.title">My Skills</h3>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <div class="skill-info">
-                            <span>HTML & CSS</span>
+                            <span data-i18n="about.skills.htmlcss">HTML & CSS</span>
                             <span>99%</span>
                         </div>
                         <div class="skill-bar">
@@ -179,7 +198,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
 
                     <div class="skill-item">
                         <div class="skill-info">
-                            <span>JavaScript</span>
+                            <span data-i18n="about.skills.javascript">JavaScript</span>
                             <span>99%</span>
                         </div>
                         <div class="skill-bar">
@@ -189,7 +208,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
 
                     <div class="skill-item">
                         <div class="skill-info">
-                            <span>UI/UX Design</span>
+                            <span data-i18n="about.skills.uiux">UI/UX Design</span>
                             <span>95%</span>
                         </div>
                         <div class="skill-bar">
@@ -199,7 +218,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
 
                     <div class="skill-item">
                         <div class="skill-info">
-                            <span>SEO & Digital Marketing</span>
+                            <span data-i18n="about.skills.seoMarketing">SEO & Digital Marketing</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-bar">
@@ -209,7 +228,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
 
                     <div class="skill-item">
                         <div class="skill-info">
-                            <span>CYBERSECURITY</span>
+                            <span data-i18n="about.skills.cyber">CYBERSECURITY</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-bar">
@@ -219,7 +238,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
 
                     <div class="skill-item">
                         <div class="skill-info">
-                            <span>Business Identities</span>
+                            <span data-i18n="about.skills.identity">Business Identities</span>
                             <span>88%</span>
                         </div>
                         <div class="skill-bar">
@@ -237,8 +256,8 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
     <section class="certificates-section">
         <div class="certificates-container">
             <div class="section-header">
-                <h2>My Certificates</h2>
-                <p>Professional achievements and qualifications</p>
+                <h2 data-i18n="about.certs.title">My Certificates</h2>
+                <p data-i18n="about.certs.subtitle">Professional achievements and qualifications</p>
             </div>
 
             <div class="certificates-grid">
@@ -255,7 +274,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                             <i class='bx bxs-award'></i>
                         </div>
                         <h3>Using AI IN MARKETING</h3>
-                        <p class="cert-issuer">التسويق بالذكاء الأصطناعي</p>
+                        <p class="cert-issuer">التسويق بالذكاء الاصطناعي</p>
                         <p class="cert-date">2025</p>
                     </div>
                 </div>
@@ -291,7 +310,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                             <i class='bx bxs-award'></i>
                         </div>
                         <h3>SEO OPTIMIZATION WITH AI</h3>
-                        <p class="cert-issuer">تحسين ظهورك على محركات البحث بأستخدام الذكاء الأصطناعي</p>
+                        <p class="cert-issuer">تحسين ظهورك على محركات البحث باستخدام الذكاء الاصطناعي</p>
                         <p class="cert-date">2025</p>
                     </div>
                 </div>
@@ -327,7 +346,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                             <i class='bx bxs-award'></i>
                         </div>
                         <h3>INTRODUCTION TO CYBERSECURITY</h3>
-                        <p class="cert-issuer">مقدمه في الأمن السيبراني</p>
+                        <p class="cert-issuer">مقدمة في الأمن السيبراني</p>
                         <p class="cert-date">2023</p>
                     </div>
                 </div>
@@ -356,27 +375,27 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
     <!-- Internal Links -->
     <section class="internal-cta">
         <div class="container">
-            <h3>Work With Me</h3>
+            <h3 data-i18n="about.cta.title">Work With Me</h3>
             <div class="quick-links">
                 <a href="pricing.html" class="quick-link-card">
                     <i class='bx bx-purchase-tag'></i>
-                    <h4>Pricing</h4>
-                    <p>Affordable packages</p>
+                    <h4 data-i18n="about.cta.cards.pricing.title">Pricing</h4>
+                    <p data-i18n="about.cta.cards.pricing.desc">Affordable packages</p>
                 </a>
                 <a href="services.html" class="quick-link-card">
                     <i class='bx bx-code-alt'></i>
-                    <h4>Services</h4>
-                    <p>What I do</p>
+                    <h4 data-i18n="about.cta.cards.services.title">Services</h4>
+                    <p data-i18n="about.cta.cards.services.desc">What I do</p>
                 </a>
                 <a href="portfolio.html" class="quick-link-card">
                     <i class='bx bx-images'></i>
-                    <h4>Portfolio</h4>
-                    <p>My work</p>
+                    <h4 data-i18n="about.cta.cards.portfolio.title">Portfolio</h4>
+                    <p data-i18n="about.cta.cards.portfolio.desc">My work</p>
                 </a>
                 <a href="contact.html" class="quick-link-card">
                     <i class='bx bx-phone'></i>
-                    <h4>Hire Me</h4>
-                    <p>Let's talk</p>
+                    <h4 data-i18n="about.cta.cards.hire.title">Hire Me</h4>
+                    <p data-i18n="about.cta.cards.hire.desc">Let's talk</p>
                 </a>
             </div>
         </div>
@@ -385,7 +404,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
     <!-- Floating Pricing Button -->
     <a href="pricing.html" class="floating-pricing-btn" title="View Pricing">
         <i class='bx bx-purchase-tag'></i>
-        <span>Pricing</span>
+        <span data-i18n="about.cta.floating">Pricing</span>
     </a>
 
     <footer class="footer">

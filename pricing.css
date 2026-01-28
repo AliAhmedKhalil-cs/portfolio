@@ -431,24 +431,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 12px;
     color: white;
 }
 
-.payment-icon.etisalat {
-    background: linear-gradient(135deg, #00a651 0%, #008d43 100%);
+.payment-icon-text {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    text-align: center;
+    padding: 0 8px;
+    line-height: 1.1;
+}
+
+[dir="rtl"] .payment-icon-text {
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.payment-icon.instapay {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
 }
 
 .payment-icon.vodafone {
     background: linear-gradient(135deg, #e60000 0%, #c20000 100%);
 }
 
-.payment-icon.orange {
-    background: linear-gradient(135deg, #ff7900 0%, #e66a00 100%);
-}
-
-.payment-icon.instapay {
-    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+.payment-icon.fawry {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
 }
 
 .payment-card h4 {
@@ -472,6 +483,130 @@
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.5px;
+}
+
+.payment-direct {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    margin: 30px 0 35px;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    background: rgba(0, 113, 227, 0.08);
+    border: 1px solid rgba(0, 113, 227, 0.15);
+    text-align: left;
+}
+
+.payment-direct-content h4 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+.payment-direct-content p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.payment-direct-form {
+    display: grid;
+    gap: 10px;
+}
+
+.payment-direct-form label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.payment-direct-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+}
+
+.payment-input {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #fff;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.payment-input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+}
+
+.payment-direct-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #e60000;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+
+.payment-direct-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(230, 0, 0, 0.28);
+}
+
+.payment-direct-note {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.payment-steps {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.payment-steps li {
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    border: 1px solid rgba(0, 113, 227, 0.1);
+}
+
+.payment-step-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.payment-step-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.28);
+}
+
+.payment-step-btn:focus-visible {
+    outline: 3px solid rgba(37, 211, 102, 0.35);
+    outline-offset: 2px;
 }
 
 .payment-note {
@@ -502,6 +637,23 @@
     color: var(--accent-blue);
     font-weight: 600;
     text-decoration: underline;
+}
+
+[dir="rtl"] .payment-note {
+    border-left: 0;
+    border-right: 4px solid var(--accent-blue);
+}
+
+[dir="rtl"] .payment-note p {
+    text-align: right;
+}
+
+[dir="rtl"] .payment-direct {
+    text-align: right;
+}
+
+[dir="rtl"] .payment-direct-row {
+    grid-template-columns: auto minmax(0, 1fr);
 }
 
 /* Pricing CTA Section */
@@ -576,6 +728,15 @@
     
     .payment-methods {
         padding: 40px 20px;
+    }
+
+    .payment-direct-row {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-direct-btn {
+        justify-content: center;
+        width: 100%;
     }
     
     .payment-grid {

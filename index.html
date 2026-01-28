@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -64,7 +64,7 @@
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="logo">Portfolio.</a>
+        <a href="index.html" class="logo">IbrahemKassap</a>
         
         <div class="menu-icon">
             <i class='bx bx-menu'></i>
@@ -92,13 +92,12 @@
 
     <section class="home">
         <div class="home-info">
-            <h1>Ibrahem Kassap</h1>
-            <h2>Growth-Oriented Web Strategist focused on client acquisition</h2>
-            <p>Freelance Web Developer and SEO Specialist building fast, conversion-focused websites. Get a free audit and a clear roadmap to increase qualified leads.</p>
+            <h1 data-i18n="home.title">Ibrahem Kassap</h1>
+            <h2 data-i18n="home.subtitle">High-performance websites that turn visitors into clients</h2>
+            <p data-i18n="home.description">I build fast, conversion-focused websites with clean code, modern UI, and SEO-ready structure. Let’s launch your project quickly and professionally.</p>
             <div class="btn-sci">
-                <a href="audit.html" class="btn">Get a Free Website Audit</a>
-                <a href="contact.html" class="btn" style="margin-left:12px;">Request a Free Consultation</a>
-                <a href="services.html" class="btn" style="margin-left:12px;">Let’s Build Your Project</a>
+                <a href="contact.html" class="btn" data-i18n="home.btn1">Work With Me</a>
+                <a href="portfolio.html" class="btn" style="margin-left:12px;" data-i18n="home.btn2">View Recent Work</a>
                 <div class="sci">
                     <a href="https://github.com/ibrahemkassap" target="_blank"><i class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/ibrahem-kassap/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
@@ -117,32 +116,38 @@
         </div>
     </section>
 
-    <!-- Internal Links CTA -->
-    <section class="internal-cta">
+    <!-- Project Type Picker -->
+    <section class="project-picker" id="project-type">
         <div class="container">
-            <h3>Explore More</h3>
-            <div class="quick-links">
-                <a href="services.html" class="quick-link-card">
-                    <i class='bx bx-briefcase'></i>
-                    <h4>Our Services</h4>
-                    <p>Discover what we offer</p>
-                </a>
-                <a href="pricing.html" class="quick-link-card">
-                    <i class='bx bx-dollar-circle'></i>
-                    <h4>Pricing Plans</h4>
-                    <p>Choose your package</p>
-                </a>
-                <a href="portfolio.html" class="quick-link-card">
-                    <i class='bx bx-folder-open'></i>
-                    <h4>Portfolio</h4>
-                    <p>View our projects</p>
-                </a>
-                <a href="contact.html" class="quick-link-card">
-                    <i class='bx bx-message-dots'></i>
-                    <h4>Contact Us</h4>
-                    <p>Get in touch</p>
-                </a>
+            <div class="picker-header">
+                <span class="picker-badge" data-i18n="home.picker.badge">Pick Your Website Type</span>
+                <h3 data-i18n="home.picker.title">Tell me what you need, I’ll handle the rest</h3>
+                <p data-i18n="home.picker.subtitle">Select your project type and I’ll guide you to the best solution.</p>
             </div>
+            <div class="picker-grid">
+                <button class="picker-card" data-project-value="Online Store" data-i18n="home.picker.cards.store" type="button">Online Store</button>
+                <button class="picker-card" data-project-value="B2B Web" data-i18n="home.picker.cards.b2b" type="button">B2B Web</button>
+                <button class="picker-card" data-project-value="E-Commerce" data-i18n="home.picker.cards.ecommerce" type="button">E-Commerce</button>
+                <button class="picker-card" data-project-value="Portfolio" data-i18n="home.picker.cards.portfolio" type="button">Portfolio</button>
+                <button class="picker-card" data-project-value="Landing Page" data-i18n="home.picker.cards.landing" type="button">Landing Page</button>
+                <button class="picker-card" data-project-value="Web App" data-i18n="home.picker.cards.webapp" type="button">Web App</button>
+            </div>
+            <div class="picker-form">
+                <label class="picker-label" for="projectTypeInput" data-i18n="home.picker.form.typeLabel">Selected project type</label>
+                <input class="picker-input" id="projectTypeInput" name="projectType" type="text" data-i18n="home.picker.form.typePlaceholder" data-i18n-attr="placeholder" placeholder="Select a project type above" readonly>
+                <label class="picker-label" for="projectDescInput" data-i18n="home.picker.form.descLabel">Project description</label>
+                <textarea class="picker-textarea" id="projectDescInput" name="projectDesc" rows="4" data-i18n="home.picker.form.descDefault" data-i18n-attr="placeholder,data-default-text,value" placeholder="Tell me a bit about your project goals, pages, or features."></textarea>
+            </div>
+            <div class="picker-cta">
+                <p data-i18n="home.picker.ctaText">Ready to start? I reply fast and help you choose the right plan.</p>
+                <div class="picker-actions">
+                    <button class="btn btn-secondary picker-send-btn" id="pickerSendBtn" type="button">
+                        <i class='bx bxl-whatsapp'></i>
+                        <span data-i18n="home.picker.sendBtn">Send to WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+            <p class="picker-note" data-i18n="home.picker.form.uploadNote">After WhatsApp opens, please attach your image manually.</p>
         </div>
     </section>
 

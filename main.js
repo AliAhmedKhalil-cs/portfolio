@@ -508,6 +508,102 @@ function sendQuickReply(message) {
     sendMessage();
 }
 
+function initProjectPicker() {
+    const picker = document.querySelector('.project-picker');
+    if (!picker) return;
+
+    const cards = picker.querySelectorAll('.picker-card');
+    const input = picker.querySelector('#projectTypeInput');
+    const desc = picker.querySelector('#projectDescInput');
+    const sendBtn = picker.querySelector('#pickerSendBtn');
+
+    if (!cards.length || !input) return;
+
+    cards.forEach((card) => {
+        card.addEventListener('click', () => {
+            cards.forEach((c) => c.classList.remove('selected'));
+            card.classList.add('selected');
+            input.value = card.textContent.trim();
+        });
+    });
+
+    if (desc) {
+        const clearDefault = () => {
+            const defaultText = desc.getAttribute('data-default-text') || '';
+            if (desc.value.trim() === defaultText.trim()) {
+                desc.value = '';
+            }
+        };
+
+        desc.addEventListener('focus', clearDefault);
+        desc.addEventListener('input', () => {
+            const defaultText = desc.getAttribute('data-default-text') || '';
+            if (desc.value.trim() === defaultText.trim()) {
+                desc.value = '';
+            }
+        });
+    }
+
+    if (sendBtn) {
+        sendBtn.addEventListener('click', () => {
+            const typeValue = input ? input.value.trim() : '';
+            const defaultText = desc ? (desc.getAttribute('data-default-text') || '') : '';
+            const descValue = desc ? desc.value.trim() : '';
+            const finalDesc = descValue && descValue !== defaultText.trim() ? descValue : '';
+            const lang = document.documentElement.getAttribute('lang') || 'en';
+
+            const lines = [];
+            lines.push('تفاصيل المشروع:');
+            lines.push(`1- نوع الموقع: ${typeValue || 'غير محدد'}`);
+            lines.push(`2- وصف الموقع: ${finalDesc || 'لم يتم إضافة وصف'}`);
+            lines.push('3- مع إرفاق الصورة المرسلة من العميل');
+
+            const message = lines.join('\n');
+            const phone = '201016040576';
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        });
+    }
+
+    syncProjectPickerSelection();
+}
+
+function initVodafoneCashDialer() {
+    const amountInput = document.getElementById('vodafoneAmount');
+    const btn = document.getElementById('vodafoneCashBtn');
+    if (!btn) return;
+
+    const base = '*9*7*01017358087*';
+    const suffix = '#';
+    const encodedSuffix = '%23';
+
+    const updateDialer = () => {
+        const raw = amountInput ? amountInput.value.trim() : '';
+        const clean = raw.replace(/[^\d.]/g, '');
+        const code = clean ? `${base}${clean}${suffix}` : `${base}${suffix}`;
+        const dialCode = clean ? `${base}${clean}${encodedSuffix}` : `${base}${encodedSuffix}`;
+        btn.setAttribute('href', `tel:${dialCode}`);
+        btn.setAttribute('data-code', code);
+    };
+
+    if (amountInput) {
+        amountInput.addEventListener('input', updateDialer);
+    }
+
+    updateDialer();
+}
+
+function syncProjectPickerSelection() {
+    const picker = document.querySelector('.project-picker');
+    if (!picker) return;
+
+    const selected = picker.querySelector('.picker-card.selected');
+    const input = picker.querySelector('#projectTypeInput');
+    if (selected && input) {
+        input.value = selected.textContent.trim();
+    }
+}
+
 window.onload = function() {
     var badge = document.getElementById('notificationBadge');
     if (badge) {
@@ -523,6 +619,10 @@ window.onload = function() {
     loadTheme();
     // Load saved language
     loadLanguage();
+    // Initialize project picker interactions
+    initProjectPicker();
+    // Initialize Vodafone Cash dialer
+    initVodafoneCashDialer();
 };
 
 // ==================== THEME TOGGLE ====================
@@ -565,11 +665,332 @@ const translations = {
         },
         home: {
             title: 'Ibrahem Kassap',
-            subtitle: 'Growth-Oriented Web Strategist focused on client acquisition',
-            description: 'Freelance Web Developer and SEO Specialist building fast, conversion-focused websites. Get a free audit and a clear roadmap to increase qualified leads.',
-            btn1: 'Get a Free Website Audit',
-            btn2: 'Request a Free Consultation',
-            btn3: "Let's Build Your Project"
+            subtitle: 'High-performance websites that turn visitors into clients',
+            description: 'I build fast, conversion-focused websites with clean code, modern UI, and SEO-ready structure. Let’s launch your project quickly and professionally.',
+            btn1: 'Work With Me',
+            btn2: 'View Recent Work',
+            btn3: "Let's Build Your Project",
+            picker: {
+                badge: 'Pick Your Website Type',
+                title: 'Tell me what you need, I’ll handle the rest',
+                subtitle: 'Select your project type and I’ll guide you to the best solution.',
+                cards: {
+                    store: 'Online Store',
+                    b2b: 'B2B Web',
+                    ecommerce: 'E-Commerce',
+                    portfolio: 'Portfolio',
+                    landing: 'Landing Page',
+                    webapp: 'Web App'
+                },
+                form: {
+                    typeLabel: 'Selected project type',
+                    typePlaceholder: 'Select a project type above',
+                    descLabel: 'Project description',
+                    descPlaceholder: 'Tell me a bit about your project goals, pages, or features.',
+                    descDefault: 'Write a short brief about your project here...',
+                    uploadLabel: 'Add a reference image (optional)',
+                    uploadHint: 'Screenshots or inspirations help me estimate faster.',
+                    uploadNote: 'After WhatsApp opens, please attach your image manually.'
+                },
+                ctaText: 'Ready to start? I reply fast and help you choose the right plan.',
+                ctaBtn: 'Start Your Project',
+                sendBtn: 'Send to WhatsApp'
+            }
+        },
+        shared: {
+            cta: {
+                explore: {
+                    title: 'Explore More'
+                },
+                cards: {
+                    services: {
+                        title: 'Our Services',
+                        desc: 'Discover what we offer'
+                    },
+                    pricing: {
+                        title: 'Pricing Plans',
+                        desc: 'Choose your package'
+                    },
+                    portfolio: {
+                        title: 'Portfolio',
+                        desc: 'View our projects'
+                    },
+                    contact: {
+                        title: 'Contact Us',
+                        desc: 'Get in touch'
+                    }
+                }
+            }
+        },
+        about: {
+            hero: {
+                roleIntro: "I'm a",
+                roles: {
+                    frontend: 'Frontend Developer',
+                    uiux: 'UI/UX Designer',
+                    seo: 'SEO Specialist',
+                    marketing: 'Digital Marketing'
+                },
+                desc: 'Frontend developer focused on high-performance websites, clean UI, and measurable business results. 5+ years of experience delivering fast, reliable, and scalable web projects.',
+                cta: 'Download CV'
+            },
+            section: {
+                title: 'About Me',
+                subtitle: 'Get to know me better',
+                whoTitle: 'Who Am I?',
+                whoDesc1: 'I graduated from the Sadat Academy for Administrative Sciences in Cairo with a Bachelor\'s degree in Information Technology Systems. I specialize in front-end development, with strong expertise in performance, UX, and SEO. I work on GitHub, and all my projects are freelance; I am not affiliated with any company.',
+                whoDesc2: 'I build fast, conversion-focused websites with clean structure, modern UI, and scalable code. My focus is delivering reliable results and long-term maintainability for every client.'
+            },
+            highlights: {
+                kicker: '5+ Years • 50+ Projects • 100+ Clients',
+                title: 'Why Clients Trust Me',
+                items: {
+                    one: {
+                        title: 'Production-ready code',
+                        desc: 'Clean architecture, fast performance, and maintainable structure.'
+                    },
+                    two: {
+                        title: 'SEO-first mindset',
+                        desc: 'Technical SEO, Core Web Vitals, and conversion-focused UX.'
+                    },
+                    three: {
+                        title: 'Clear delivery process',
+                        desc: 'Milestones, transparent updates, and on-time delivery.'
+                    }
+                }
+            },
+            cards: {
+                experience: {
+                    title: 'Experience',
+                    value: '5+ Years',
+                    desc: 'Five years of experience in the field of programming.'
+                },
+                projects: {
+                    title: 'Projects',
+                    value: '50+',
+                    desc: 'More than 50 projects over five years.'
+                },
+                clients: {
+                    title: 'Happy Clients',
+                    value: '100+',
+                    desc: 'Over 100 satisfied clients have had positive experiences with me and the services and projects I offer.'
+                },
+                education: {
+                    title: 'Education',
+                    value: "Bachelor's Degree",
+                    desc: "Bachelor's degree in Information Technology Systems."
+                },
+                languages: {
+                    title: 'Languages',
+                    value: 'Arabic & English & Spanish',
+                    desc: 'I love learning languages; I speak English and Arabic fluently, and my Spanish pronunciation is limited.'
+                },
+                location: {
+                    title: 'Location',
+                    value: 'Cairo, Egypt',
+                    desc: 'I was born and live in Cairo.'
+                }
+            },
+            skills: {
+                title: 'My Skills',
+                htmlcss: 'HTML & CSS',
+                javascript: 'JavaScript',
+                uiux: 'UI/UX Design',
+                seoMarketing: 'SEO & Digital Marketing',
+                cyber: 'CYBERSECURITY',
+                identity: 'Business Identities'
+            },
+            certs: {
+                title: 'My Certificates',
+                subtitle: 'Professional achievements and qualifications'
+            },
+            cta: {
+                title: 'Work With Me',
+                cards: {
+                    pricing: {
+                        title: 'Pricing',
+                        desc: 'Affordable packages'
+                    },
+                    services: {
+                        title: 'Services',
+                        desc: 'What I do'
+                    },
+                    portfolio: {
+                        title: 'Portfolio',
+                        desc: 'My work'
+                    },
+                    hire: {
+                        title: 'Hire Me',
+                        desc: "Let's talk"
+                    }
+                },
+                floating: 'Pricing'
+            }
+        },
+        contact: {
+            title: 'Get In Touch',
+            subtitle: "Let's discuss your project and bring your ideas to life",
+            cards: {
+                whatsapp: {
+                    title: 'WhatsApp',
+                    cta: 'Message Me'
+                },
+                email: {
+                    title: 'Email',
+                    cta: 'Send Email'
+                },
+                location: {
+                    title: 'Location',
+                    value: 'Cairo, Egypt',
+                    cta: 'View Map'
+                }
+            },
+            form: {
+                title: 'Send Me a Message',
+                name: 'Your Name',
+                email: 'Your Email',
+                subject: 'Subject',
+                message: 'Your Message',
+                submit: 'Send Message'
+            },
+            quick: {
+                text: 'Or message me directly on',
+                cta: 'WhatsApp'
+            },
+            social: {
+                title: 'Follow Me On'
+            },
+            internalCta: {
+                title: 'Before You Go',
+                cards: {
+                    pricing: {
+                        title: 'Pricing',
+                        desc: 'Transparent rates'
+                    },
+                    portfolio: {
+                        title: 'Portfolio',
+                        desc: 'Our best work'
+                    },
+                    audit: {
+                        title: 'Free Audit',
+                        desc: 'Website analysis'
+                    },
+                    blog: {
+                        title: 'Blog',
+                        desc: 'Learn & grow'
+                    }
+                }
+            }
+        },
+        blog: {
+            header: {
+                title: 'Web Development & Programming Blog',
+                subtitle: 'Free tutorials on HTML, CSS, JavaScript, and SEO to help you learn from basics to advanced.'
+            },
+            cards: {
+                landing: {
+                    badge: 'New - Arabic Friendly',
+                    title: 'Complete Guide: Build a Professional Landing Page',
+                    desc: 'Learn step by step how to build a pro landing page using HTML, CSS, and JavaScript with copy-ready code.',
+                    cta: 'Start Learning'
+                },
+                html: {
+                    badge: 'High Performance',
+                    title: 'HTML Performance Optimization',
+                    desc: 'Learn how to build fast, SEO-friendly HTML with practical examples.',
+                    cta: 'Start Reading'
+                },
+                css: {
+                    badge: 'Modern Design',
+                    title: 'Modern CSS Techniques',
+                    desc: 'Explore CSS Variables, Grid, and Flexbox for clean, responsive layouts.',
+                    cta: 'Start Reading'
+                },
+                seo: {
+                    badge: 'Rank Higher',
+                    title: 'The SEO Checklist for 2026',
+                    desc: 'A complete guide to technical SEO, Core Web Vitals, and E-E-A-T signals.',
+                    cta: 'Start Reading'
+                }
+            },
+            cta: {
+                title: 'Ready to Build?',
+                cards: {
+                    pricing: {
+                        title: 'Pricing',
+                        desc: 'View packages'
+                    },
+                    services: {
+                        title: 'Services',
+                        desc: 'Our solutions'
+                    },
+                    projects: {
+                        title: 'Projects',
+                        desc: 'Live examples'
+                    },
+                    contact: {
+                        title: 'Contact',
+                        desc: 'Get quote'
+                    }
+                },
+                floating: 'Pricing'
+            }
+        },
+        audit: {
+            title: 'Free Website SEO Audit',
+            subtitle: 'Get a custom report with quick wins to boost qualified leads',
+            cards: {
+                scope: {
+                    title: "What you'll get",
+                    desc: 'Core Web Vitals, speed, on-page SEO, UX friction, and prioritised fixes.'
+                },
+                trust: {
+                    title: 'Trust indicators',
+                    desc: 'Real projects, SEO certificates, and a no-spam policy. 100% free.'
+                },
+                delivery: {
+                    title: 'Delivery',
+                    desc: 'Audit summary in 24-48 hours with next-step recommendations.'
+                }
+            },
+            form: {
+                title: 'Request Your Audit',
+                name: 'Your Name',
+                email: 'Your Email',
+                website: 'Website URL',
+                projectType: 'Project Type (e.g., Portfolio, SaaS)',
+                submit: 'Get My Free Audit',
+                note: 'By submitting, you agree to be contacted about your audit. No spam.'
+            },
+            quick: {
+                text: 'Prefer chat?',
+                cta: 'WhatsApp'
+            },
+            social: {
+                title: 'Featured Work & Credentials'
+            },
+            cta: {
+                title: 'After Your Audit',
+                cards: {
+                    pricing: {
+                        title: 'Pricing',
+                        desc: 'Fix issues now'
+                    },
+                    services: {
+                        title: 'Services',
+                        desc: 'Full solutions'
+                    },
+                    success: {
+                        title: 'Success Stories',
+                        desc: 'See results'
+                    },
+                    tips: {
+                        title: 'SEO Tips',
+                        desc: 'Learn more'
+                    }
+                },
+                floating: 'Pricing'
+            }
         },
         services: {
             title: 'My Services',
@@ -619,7 +1040,102 @@ const translations = {
             learnMore: 'Learn More',
             ctaTitle: 'Ready to Start Your Project?',
             ctaDesc: 'Let\'s work together to bring your ideas to life',
-            ctaBtn: 'Get In Touch'
+            ctaBtn: 'Get In Touch',
+            internalCta: {
+                title: 'Next Steps',
+                cards: {
+                    pricing: {
+                        title: 'View Pricing',
+                        desc: 'Check our packages'
+                    },
+                    work: {
+                        title: 'Our Work',
+                        desc: 'See live projects'
+                    },
+                    audit: {
+                        title: 'Free Audit',
+                        desc: 'Get SEO analysis'
+                    },
+                    contact: {
+                        title: 'Contact',
+                        desc: 'Start your project'
+                    }
+                }
+            }
+        },
+        portfolio: {
+            title: 'My Portfolio',
+            subtitle: 'Check out my latest projects and work',
+            viewLive: 'View Live',
+            items: {
+                anubis: {
+                    title: 'ANUBIS-MUSUIM',
+                    desc: 'An interactive museum website showcasing ancient Egyptian artifacts and history.',
+                    cta: 'ANUBIS-MUSUIM'
+                },
+                cv: {
+                    title: '3D CV Portfolio Project',
+                    desc: 'A modern, responsive website built using HTML, CSS, and JavaScript, featuring a sleek design and smooth animations to showcase your resume professionally.'
+                },
+                rgbClock: {
+                    title: 'RGB Clock Project',
+                    desc: 'A digital clock project built with HTML, CSS, and JavaScript that displays time in RGB color format.'
+                },
+                creativeLanding: {
+                    title: 'Creative Landing Page',
+                    desc: 'A modern, responsive landing page built using HTML, CSS, and JavaScript, featuring a sleek design and smooth animations to showcase your business or product.'
+                },
+                pos: {
+                    title: 'Cashier System (POS)',
+                    desc: 'A point-of-sale system built with HTML, CSS, JavaScript, and React, designed for efficient transaction processing and inventory management.'
+                },
+                domzi: {
+                    title: 'Domzi Art Store',
+                    desc: 'A modern e-commerce website for an art store built with HTML, CSS, and JavaScript, featuring a responsive design and product showcase.'
+                },
+                clinic: {
+                    title: 'Perfect Clinic',
+                    desc: 'A modern clinic website built with HTML, CSS, and JavaScript, featuring a responsive design and appointment booking system.'
+                },
+                samsung: {
+                    title: 'Samsung AI Landing Page',
+                    desc: 'A responsive landing page for Samsung\'s AI products built with HTML, CSS, and JavaScript.'
+                },
+                xbet: {
+                    title: '1xBet Agent Landing Page',
+                    desc: 'A responsive landing page for 1xBet agents built with HTML, CSS, and JavaScript.'
+                },
+                miraj: {
+                    title: 'Miraj',
+                    desc: 'A responsive landing page for Miraj built with HTML, CSS, and JavaScript.'
+                },
+                mrx: {
+                    title: 'MR-X AI Chatbot',
+                    desc: 'A responsive landing page for MR-X AI Chatbot built with HTML, CSS, and JavaScript (Demo View).'
+                }
+            },
+            cta: {
+                title: 'Like What You See?',
+                cards: {
+                    getStarted: {
+                        title: 'Get Started',
+                        desc: 'Choose your plan'
+                    },
+                    services: {
+                        title: 'Services',
+                        desc: 'What we offer'
+                    },
+                    learn: {
+                        title: 'Learn',
+                        desc: 'Free tutorials'
+                    },
+                    discuss: {
+                        title: 'Discuss',
+                        desc: 'Your project'
+                    }
+                }
+            },
+            pricingBtn: 'Pricing'
         },
         pricing: {
             title: 'Choose Your Plan',
@@ -671,13 +1187,49 @@ const translations = {
             },
             faqTitle: 'Frequently Asked Questions',
             faq1Q: 'What payment methods do you accept?',
-            faq1A: 'We accept PayPal, bank transfers, and cryptocurrency payments.',
+            faq1A: 'We accept InstaPay, Vodafone Cash, and Fawry Pay.',
             faq2Q: 'Can I upgrade my plan later?',
             faq2A: 'Yes! You can upgrade anytime and pay only the difference.',
             faq3Q: 'Do you offer refunds?',
             faq3A: 'We offer a 14-day money-back guarantee if you\'re not satisfied.',
             faq4Q: 'What if I need custom features?',
-            faq4A: 'Contact us for a custom quote tailored to your specific needs.'
+            faq4A: 'Contact us for a custom quote tailored to your specific needs.',
+            cta: {
+                title: 'Ready to Get Started?',
+                desc: 'Choose your plan and start building your dream website today.',
+                btnContact: 'Contact Us',
+                btnPortfolio: 'View Our Work'
+            }
+        },
+        payment: {
+            title: 'Professional Payment Options',
+            subtitle: 'Choose a method, send the receipt, and we\'ll confirm quickly.',
+            instapay: {
+                title: 'InstaPay',
+                desc: 'Fast transfer to the same number'
+            },
+            vodafone: {
+                title: 'Vodafone Cash',
+                desc: 'Instant wallet transfer to this number',
+                directTitle: 'Vodafone Cash Direct Code',
+                directDesc: 'Enter the amount and tap the button to open your dialer with the code ready.',
+                amountLabel: 'Amount (EGP)',
+                amountPlaceholder: 'Enter amount',
+                directBtn: 'Pay with Vodafone Cash',
+                directNote: 'The code uses *9*7*01017358087*amount# and opens your dialer automatically.'
+            },
+            fawry: {
+                title: 'Fawry Pay',
+                desc: 'Available on request',
+                badge: 'Request Code'
+            },
+            steps: {
+                one: 'Choose InstaPay, Vodafone Cash, or Fawry Pay.',
+                two: 'Send the receipt on WhatsApp for instant confirmation.'
+            },
+            notePrefix: 'After payment, send the receipt via',
+            noteOr: 'or',
+            noteSuffix: '.'
         },
         footer: 'Copyright © 2023 by Ibrahem Kassap | All Rights Reserved.'
     },
@@ -693,61 +1245,477 @@ const translations = {
         },
         home: {
             title: 'إبراهيم كساب',
-            subtitle: 'مطور ويب محترف متخصص في جذب العملاء',
-            description: 'مطور ويب مستقل ومتخصص SEO أقوم ببناء مواقع سريعة تركز على التحويل. احصل على تدقيق مجاني وخارطة طريق واضحة لزيادة العملاء المحتملين.',
-            btn1: 'احصل على تدقيق مجاني',
-            btn2: 'اطلب استشارة مجانية',
-            btn3: 'لنبني مشروعك'
+            subtitle: 'مواقع عالية الأداء تحوّل الزائر إلى عميل',
+            description: 'أبني مواقع سريعة تركز على التحويل بكود نظيف وواجهة حديثة وتجهيز كامل للسيو. لنطلق مشروعك بسرعة وباحتراف.',
+            btn1: 'اعمل معي الآن',
+            btn2: 'شاهد أحدث الأعمال',
+            btn3: 'لنبدأ مشروعك',
+            picker: {
+                badge: 'اختر نوع موقعك',
+                title: 'اختر النوع وسأتولى الباقي',
+                subtitle: 'حدد نوع المشروع وسأوجهك للحل الأنسب.',
+                cards: {
+                    store: 'متجر إلكتروني',
+                    b2b: 'موقع أعمال B2B',
+                    ecommerce: 'تجارة إلكترونية',
+                    portfolio: 'بورتفوليو',
+                    landing: 'صفحة هبوط',
+                    webapp: 'تطبيق ويب'
+                },
+                form: {
+                    typeLabel: 'نوع المشروع المختار',
+                    typePlaceholder: 'اختر نوع المشروع من الأعلى',
+                    descLabel: 'وصف المشروع',
+                    descPlaceholder: 'اكتب أهداف المشروع والصفحات أو المزايا المطلوبة.',
+                    descDefault: 'اكتب نبذة قصيرة عن مشروعك هنا...',
+                    uploadLabel: 'أضف صورة مرجعية (اختياري)',
+                    uploadHint: 'الصور أو أمثلة الإلهام تساعدني على التقدير أسرع.',
+                    uploadNote: 'بعد فتح واتساب، برجاء إرفاق الصورة يدويًا.'
+                },
+                ctaText: 'جاهز للانطلاق؟ أرد بسرعة وأساعدك في اختيار الخطة المناسبة.',
+                ctaBtn: 'ابدأ مشروعك',
+                sendBtn: 'إرسال عبر واتساب'
+            }
+        },
+        shared: {
+            cta: {
+                explore: {
+                    title: 'اكتشف المزيد'
+                },
+                cards: {
+                    services: {
+                        title: 'خدماتنا',
+                        desc: 'اكتشف ما نقدمه'
+                    },
+                    pricing: {
+                        title: 'خطط الأسعار',
+                        desc: 'اختر الباقة المناسبة'
+                    },
+                    portfolio: {
+                        title: 'معرض الأعمال',
+                        desc: 'شاهد مشاريعنا'
+                    },
+                    contact: {
+                        title: 'تواصل معنا',
+                        desc: 'تواصل الآن'
+                    }
+                }
+            }
+        },
+        about: {
+            hero: {
+                roleIntro: 'أنا',
+                roles: {
+                    frontend: 'مطور واجهات أمامية',
+                    uiux: 'مصمم واجهات وتجربة مستخدم',
+                    seo: 'متخصص SEO',
+                    marketing: 'تسويق رقمي'
+                },
+                desc: 'مطور واجهات أمامية يركز على الأداء العالي وتجربة المستخدم والنتائج العملية. خبرة أكثر من 5 سنوات في تنفيذ مشاريع ويب سريعة وموثوقة وقابلة للتوسع.',
+                cta: 'تحميل السيرة الذاتية'
+            },
+            section: {
+                title: 'من أنا',
+                subtitle: 'تعرف علي أكثر',
+                whoTitle: 'من أنا؟',
+                whoDesc1: 'تخرجت من أكاديمية السادات للعلوم الإدارية بالقاهرة بدرجة البكالوريوس في نظم معلومات التكنولوجيا. أتخصص في تطوير الواجهات الأمامية مع خبرة قوية في الأداء وتجربة المستخدم وSEO. أعمل على GitHub وجميع مشاريعي عمل حر ولا أنتمي لأي شركة.',
+                whoDesc2: 'أبني مواقع سريعة تركز على التحويل بهيكل نظيف وواجهة حديثة وكود قابل للتطوير. هدفي تقديم نتائج موثوقة واستدامة طويلة المدى لكل عميل.'
+            },
+            highlights: {
+                kicker: 'أكثر من 5 سنوات • 50+ مشروع • 100+ عميل',
+                title: 'لماذا يثق بي العملاء',
+                items: {
+                    one: {
+                        title: 'كود جاهز للإنتاج',
+                        desc: 'هيكل نظيف وأداء سريع وقابلية صيانة عالية.'
+                    },
+                    two: {
+                        title: 'تفكير SEO أولاً',
+                        desc: 'SEO تقني وCore Web Vitals وتجربة مستخدم تركز على التحويل.'
+                    },
+                    three: {
+                        title: 'عملية تسليم واضحة',
+                        desc: 'مراحل عمل محددة وتحديثات شفافة وتسليم في الموعد.'
+                    }
+                }
+            },
+            cards: {
+                experience: {
+                    title: 'الخبرة',
+                    value: 'أكثر من 5 سنوات',
+                    desc: 'خمس سنوات خبرة في مجال البرمجة.'
+                },
+                projects: {
+                    title: 'المشاريع',
+                    value: '50+',
+                    desc: 'أكثر من 50 مشروعًا خلال خمس سنوات.'
+                },
+                clients: {
+                    title: 'عملاء سعداء',
+                    value: '100+',
+                    desc: 'أكثر من 100 عميل راضٍ عن الخدمات والمشاريع التي أقدمها.'
+                },
+                education: {
+                    title: 'التعليم',
+                    value: 'بكالوريوس',
+                    desc: 'بكالوريوس نظم معلومات التكنولوجيا.'
+                },
+                languages: {
+                    title: 'اللغات',
+                    value: 'العربية والإنجليزية والإسبانية',
+                    desc: 'أحب تعلم اللغات؛ أتحدث العربية والإنجليزية بطلاقة ونطقي للإسبانية محدود.'
+                },
+                location: {
+                    title: 'الموقع',
+                    value: 'القاهرة، مصر',
+                    desc: 'ولدت وأعيش في القاهرة.'
+                }
+            },
+            skills: {
+                title: 'مهاراتي',
+                htmlcss: 'HTML وCSS',
+                javascript: 'JavaScript',
+                uiux: 'تصميم UI/UX',
+                seoMarketing: 'SEO والتسويق الرقمي',
+                cyber: 'الأمن السيبراني',
+                identity: 'هويات تجارية'
+            },
+            certs: {
+                title: 'شهاداتي',
+                subtitle: 'الإنجازات والمؤهلات المهنية'
+            },
+            cta: {
+                title: 'اعمل معي',
+                cards: {
+                    pricing: {
+                        title: 'الأسعار',
+                        desc: 'باقات مناسبة'
+                    },
+                    services: {
+                        title: 'الخدمات',
+                        desc: 'ما أقدمه'
+                    },
+                    portfolio: {
+                        title: 'الأعمال',
+                        desc: 'نماذج من عملي'
+                    },
+                    hire: {
+                        title: 'وظفني',
+                        desc: 'لنتحدث'
+                    }
+                },
+                floating: 'الأسعار'
+            }
+        },
+        contact: {
+            title: 'تواصل معي',
+            subtitle: 'لنتحدث عن مشروعك ونحوّل أفكارك إلى واقع',
+            cards: {
+                whatsapp: {
+                    title: 'واتساب',
+                    cta: 'راسلني'
+                },
+                email: {
+                    title: 'البريد الإلكتروني',
+                    cta: 'إرسال بريد'
+                },
+                location: {
+                    title: 'الموقع',
+                    value: 'القاهرة، مصر',
+                    cta: 'عرض الخريطة'
+                }
+            },
+            form: {
+                title: 'أرسل رسالة',
+                name: 'اسمك',
+                email: 'بريدك الإلكتروني',
+                subject: 'الموضوع',
+                message: 'رسالتك',
+                submit: 'إرسال الرسالة'
+            },
+            quick: {
+                text: 'أو راسلني مباشرة على',
+                cta: 'واتساب'
+            },
+            social: {
+                title: 'تابعني على'
+            },
+            internalCta: {
+                title: 'قبل أن تغادر',
+                cards: {
+                    pricing: {
+                        title: 'الأسعار',
+                        desc: 'أسعار واضحة'
+                    },
+                    portfolio: {
+                        title: 'معرض الأعمال',
+                        desc: 'أفضل أعمالنا'
+                    },
+                    audit: {
+                        title: 'تدقيق مجاني',
+                        desc: 'تحليل الموقع'
+                    },
+                    blog: {
+                        title: 'المدونة',
+                        desc: 'تعلم وتطور'
+                    }
+                }
+            }
+        },
+        blog: {
+            header: {
+                title: 'مدونة تطوير الويب والبرمجة',
+                subtitle: 'دروس مجانية في HTML وCSS وJavaScript وSEO من المبتدئ حتى المتقدم.'
+            },
+            cards: {
+                landing: {
+                    badge: 'جديد - مناسب للعربية',
+                    title: 'دليل كامل: إنشاء صفحة هبوط احترافية',
+                    desc: 'تعلّم خطوة بخطوة بناء صفحة هبوط احترافية باستخدام HTML وCSS وJavaScript مع كود جاهز.',
+                    cta: 'ابدأ التعلم'
+                },
+                html: {
+                    badge: 'أداء عالٍ',
+                    title: 'تحسين أداء HTML',
+                    desc: 'تعلّم بناء HTML سريع ومحسّن للسيو مع أمثلة عملية.',
+                    cta: 'ابدأ القراءة'
+                },
+                css: {
+                    badge: 'تصميم عصري',
+                    title: 'تقنيات CSS الحديثة',
+                    desc: 'استكشف CSS Variables وGrid وFlexbox لبناء تخطيطات متجاوبة.',
+                    cta: 'ابدأ القراءة'
+                },
+                seo: {
+                    badge: 'تصدر النتائج',
+                    title: 'قائمة فحص SEO لعام 2026',
+                    desc: 'دليل شامل للسيو التقني وCore Web Vitals وإشارات E-E-A-T.',
+                    cta: 'ابدأ القراءة'
+                }
+            },
+            cta: {
+                title: 'جاهز للانطلاق؟',
+                cards: {
+                    pricing: {
+                        title: 'الأسعار',
+                        desc: 'عرض الباقات'
+                    },
+                    services: {
+                        title: 'الخدمات',
+                        desc: 'حلولنا'
+                    },
+                    projects: {
+                        title: 'المشاريع',
+                        desc: 'أمثلة مباشرة'
+                    },
+                    contact: {
+                        title: 'تواصل',
+                        desc: 'احصل على عرض'
+                    }
+                },
+                floating: 'الأسعار'
+            }
+        },
+        audit: {
+            title: 'تدقيق SEO مجاني للموقع',
+            subtitle: 'احصل على تقرير مخصص مع تحسينات سريعة لزيادة العملاء المحتملين',
+            cards: {
+                scope: {
+                    title: 'ما الذي ستحصل عليه',
+                    desc: 'Core Web Vitals والسرعة وSEO الداخلي واحتكاك UX وأولويات الإصلاح.'
+                },
+                trust: {
+                    title: 'عناصر الثقة',
+                    desc: 'مشاريع حقيقية وشهادات SEO وسياسة بدون إزعاج. 100% مجاني.'
+                },
+                delivery: {
+                    title: 'التسليم',
+                    desc: 'ملخص التدقيق خلال 24-48 ساعة مع توصيات الخطوة التالية.'
+                }
+            },
+            form: {
+                title: 'اطلب تدقيقك',
+                name: 'اسمك',
+                email: 'بريدك الإلكتروني',
+                website: 'رابط الموقع',
+                projectType: 'نوع المشروع (مثل بورتفوليو، SaaS)',
+                submit: 'احصل على التدقيق المجاني',
+                note: 'بإرسال النموذج، توافق على التواصل بشأن التدقيق. بدون رسائل مزعجة.'
+            },
+            quick: {
+                text: 'تفضل الدردشة؟',
+                cta: 'واتساب'
+            },
+            social: {
+                title: 'أعمال بارزة واعتمادات'
+            },
+            cta: {
+                title: 'بعد التدقيق',
+                cards: {
+                    pricing: {
+                        title: 'الأسعار',
+                        desc: 'اصلح المشاكل الآن'
+                    },
+                    services: {
+                        title: 'الخدمات',
+                        desc: 'حلول كاملة'
+                    },
+                    success: {
+                        title: 'قصص نجاح',
+                        desc: 'شاهد النتائج'
+                    },
+                    tips: {
+                        title: 'نصائح SEO',
+                        desc: 'تعلّم المزيد'
+                    }
+                },
+                floating: 'الأسعار'
+            }
         },
         services: {
             title: 'خدماتي',
             subtitle: 'ما أقدمه لمساعدة عملك على النمو',
             webDev: {
                 title: 'تطوير المواقع',
-                desc: 'إنشاء مواقع ويب متجاوبة وحديثة باستخدام أحدث التقنيات. من الصفحات المقصودة إلى تطبيقات الويب المعقدة، أقدم حلولاً عالية الجودة مصممة خصيصاً لاحتياجاتك.',
+                desc: 'إنشاء مواقع ويب متجاوبة وحديثة باستخدام أحدث التقنيات. من صفحات الهبوط إلى تطبيقات الويب المعقدة، أقدم حلولًا عالية الجودة مصممة خصيصًا لاحتياجاتك.',
                 feat1: 'تصميم متجاوب',
                 feat2: 'تقنيات حديثة',
                 feat3: 'أداء سريع'
             },
             uiux: {
-                title: 'تصميم واجهات المستخدم',
-                desc: 'تصميم واجهات مستخدم جميلة وبديهية توفر تجارب استخدام استثنائية. أركز على إنشاء تصاميم جمالية ووظيفية في آن واحد.',
+                title: 'تصميم UI/UX',
+                desc: 'تصميم واجهات مستخدم جميلة وبديهية تقدم تجربة استخدام استثنائية. أركز على تصميمات تجمع بين الجمال والوظيفة.',
                 feat1: 'بحث المستخدم',
-                feat2: 'النماذج الأولية',
-                feat3: 'التصميم البصري'
+                feat2: 'نماذج أولية وتخطيط',
+                feat3: 'تصميم بصري'
             },
             seo: {
                 title: 'تحسين محركات البحث',
-                desc: 'تحسين ظهور موقعك في محركات البحث لزيادة الزيارات العضوية. أطبق استراتيجيات SEO مثبتة لمساعدة عملك على التصدر.',
+                desc: 'تحسين ظهور موقعك في محركات البحث لزيادة الزيارات العضوية. أطبق استراتيجيات SEO مثبتة لمساعدة عملك على التصدّر.',
                 feat1: 'بحث الكلمات المفتاحية',
                 feat2: 'تحسين داخلي',
                 feat3: 'SEO تقني'
             },
             marketing: {
                 title: 'التسويق الرقمي',
-                desc: 'استراتيجيات تسويق رقمي شاملة لتنمية تواجدك على الإنترنت. من وسائل التواصل الاجتماعي إلى حملات البريد الإلكتروني، أساعدك في الوصول إلى جمهورك المستهدف بفعالية.',
-                feat1: 'تسويق وسائل التواصل',
-                feat2: 'استراتيجية المحتوى',
-                feat3: 'التسويق بالبريد'
+                desc: 'استراتيجيات تسويق رقمي شاملة لتنمية وجودك على الإنترنت. من وسائل التواصل الاجتماعي إلى حملات البريد الإلكتروني، أساعدك على الوصول لجمهورك المستهدف بفاعلية.',
+                feat1: 'تسويق عبر الشبكات',
+                feat2: 'استراتيجية محتوى',
+                feat3: 'تسويق بالبريد'
             },
             brand: {
                 title: 'الهوية التجارية',
-                desc: 'بناء هويات تجارية قوية تتناغم مع جمهورك. أنشئ هويات بصرية متماسكة تشمل الشعارات والألوان وإرشادات العلامة التجارية.',
-                feat1: 'تصميم الشعار',
-                feat2: 'إرشادات العلامة',
-                feat3: 'الهوية البصرية'
+                desc: 'بناء هويات تجارية قوية تتناغم مع جمهورك. أقدم هويات بصرية متماسكة تشمل الشعارات والألوان وإرشادات العلامة التجارية.',
+                feat1: 'تصميم شعار',
+                feat2: 'دليل العلامة',
+                feat3: 'هوية بصرية'
             },
             maintenance: {
                 title: 'صيانة المواقع',
-                desc: 'الحفاظ على موقعك يعمل بسلاسة مع التحديثات والدعم المنتظم. أضمن أن يظل موقعك آمناً وسريعاً ومحدثاً بأحدث الميزات.',
+                desc: 'الحفاظ على موقعك يعمل بسلاسة عبر تحديثات ودعم منتظم. أضمن أن يبقى موقعك آمنًا وسريعًا ومحدّثًا بأحدث الميزات.',
                 feat1: 'تحديثات منتظمة',
                 feat2: 'مراقبة الأمان',
                 feat3: 'تحسين الأداء'
             },
             learnMore: 'اعرف المزيد',
-            ctaTitle: 'مستعد لبدء مشروعك؟',
-            ctaDesc: 'لنعمل معاً لتحويل أفكارك إلى واقع',
-            ctaBtn: 'تواصل معي'
+            ctaTitle: 'جاهز لبدء مشروعك؟',
+            ctaDesc: 'دعنا نعمل معًا لتحويل أفكارك إلى واقع',
+            ctaBtn: 'تواصل معي',
+            internalCta: {
+                title: 'خطوتك التالية',
+                cards: {
+                    pricing: {
+                        title: 'الأسعار',
+                        desc: 'تعرف على الباقات'
+                    },
+                    work: {
+                        title: 'أعمالي',
+                        desc: 'شاهد مشاريع حية'
+                    },
+                    audit: {
+                        title: 'تدقيق مجاني',
+                        desc: 'تحليل سيو سريع'
+                    },
+                    contact: {
+                        title: 'تواصل',
+                        desc: 'ابدأ مشروعك'
+                    }
+                }
+            }
+        },
+        portfolio: {
+            title: 'معرض أعمالي',
+            subtitle: 'اطّلع على أحدث مشاريعي وأعمالي',
+            viewLive: 'عرض مباشر',
+            items: {
+                anubis: {
+                    title: 'متحف أنوبيس',
+                    desc: 'موقع متحف تفاعلي يعرض الآثار وتاريخ مصر القديمة.',
+                    cta: 'متحف أنوبيس'
+                },
+                cv: {
+                    title: 'مشروع سيرة ذاتية ثلاثي الأبعاد',
+                    desc: 'موقع حديث ومتجاوب مبني بـ HTML وCSS وJavaScript مع تصميم أنيق وحركات سلسة لعرض سيرتك الذاتية باحتراف.'
+                },
+                rgbClock: {
+                    title: 'مشروع ساعة RGB',
+                    desc: 'مشروع ساعة رقمية مبني بـ HTML وCSS وJavaScript يعرض الوقت بألوان RGB.'
+                },
+                creativeLanding: {
+                    title: 'صفحة هبوط إبداعية',
+                    desc: 'صفحة هبوط حديثة ومتجاوبة مبنية بـ HTML وCSS وJavaScript مع تصميم أنيق وحركات سلسة لعرض نشاطك أو منتجك.'
+                },
+                pos: {
+                    title: 'نظام كاشير (POS)',
+                    desc: 'نظام نقاط بيع مبني بـ HTML وCSS وJavaScript وReact لمعالجة المعاملات وإدارة المخزون بكفاءة.'
+                },
+                domzi: {
+                    title: 'متجر دومزي الفني',
+                    desc: 'موقع تجارة إلكترونية حديث لمتجر فني مبني بـ HTML وCSS وJavaScript مع تصميم متجاوب وعرض للمنتجات.'
+                },
+                clinic: {
+                    title: 'عيادة بيرفكت',
+                    desc: 'موقع عيادة حديث مبني بـ HTML وCSS وJavaScript مع تصميم متجاوب ونظام لحجز المواعيد.'
+                },
+                samsung: {
+                    title: 'صفحة هبوط سامسونج للذكاء الاصطناعي',
+                    desc: 'صفحة هبوط متجاوبة لمنتجات سامسونج الذكية مبنية بـ HTML وCSS وJavaScript.'
+                },
+                xbet: {
+                    title: 'صفحة هبوط وكلاء 1xBet',
+                    desc: 'صفحة هبوط متجاوبة لوكلاء 1xBet مبنية بـ HTML وCSS وJavaScript.'
+                },
+                miraj: {
+                    title: 'ميراج',
+                    desc: 'صفحة هبوط متجاوبة لميراج مبنية بـ HTML وCSS وJavaScript.'
+                },
+                mrx: {
+                    title: 'شات بوت MR-X',
+                    desc: 'صفحة هبوط متجاوبة لشات بوت MR-X مبنية بـ HTML وCSS وJavaScript (عرض تجريبي).'
+                }
+            },
+            cta: {
+                title: 'هل أعجبك ما ترى؟',
+                cards: {
+                    getStarted: {
+                        title: 'ابدأ الآن',
+                        desc: 'اختر خطتك'
+                    },
+                    services: {
+                        title: 'الخدمات',
+                        desc: 'ما الذي نقدمه'
+                    },
+                    learn: {
+                        title: 'تعلّم',
+                        desc: 'دروس مجانية'
+                    },
+                    discuss: {
+                        title: 'ناقش',
+                        desc: 'مشروعك'
+                    }
+                }
+            },
+            pricingBtn: 'الأسعار'
         },
         pricing: {
             title: 'اختر باقتك',
@@ -755,7 +1723,7 @@ const translations = {
             free: {
                 name: 'الباقة المجانية',
                 price: '0',
-                period: '/مجاناً للأبد',
+                period: '/مجانا للأبد',
                 feat1: 'تصفح الأعمال',
                 feat2: 'قراءة مقالات المدونة',
                 feat3: 'تدقيق SEO مجاني',
@@ -775,7 +1743,7 @@ const translations = {
                 feat5: 'نموذج اتصال',
                 feat6: '3 تعديلات',
                 feat7: 'دعم مجاني لمدة شهر',
-                feat8: 'كود المصدر متضمن',
+                feat8: 'الكود المصدري متضمن',
                 feat9: 'التسليم 7-10 أيام',
                 btn: 'اختر الفضية'
             },
@@ -791,7 +1759,7 @@ const translations = {
                 feat6: 'جاهز للتجارة الإلكترونية',
                 feat7: 'تعديلات غير محدودة',
                 feat8: 'دعم مجاني 3 أشهر',
-                feat9: 'دعم ذو أولوية 24/7',
+                feat9: 'دعم أولوية 24/7',
                 feat10: 'إعداد استضافة مجاني',
                 feat11: 'تكامل التحليلات',
                 feat12: 'التسليم 14-21 يوم',
@@ -799,13 +1767,49 @@ const translations = {
             },
             faqTitle: 'الأسئلة الشائعة',
             faq1Q: 'ما هي طرق الدفع المقبولة؟',
-            faq1A: 'نقبل PayPal والتحويلات البنكية والعملات الرقمية.',
-            faq2Q: 'هل يمكنني الترقية لاحقاً؟',
+            faq1A: 'نقبل إنستا باي وفودافون كاش وفوري باي.',
+            faq2Q: 'هل يمكنني الترقية لاحقًا؟',
             faq2A: 'نعم! يمكنك الترقية في أي وقت ودفع الفرق فقط.',
             faq3Q: 'هل تقدمون استرداد الأموال؟',
-            faq3A: 'نقدم ضمان استرداد الأموال لمدة 14 يوماً إذا لم تكن راضياً.',
+            faq3A: 'نقدم ضمان استرداد الأموال لمدة 14 يومًا إذا لم تكن راضيًا.',
             faq4Q: 'ماذا لو احتجت ميزات مخصصة؟',
-            faq4A: 'تواصل معنا للحصول على عرض سعر مخصص لاحتياجاتك.'
+            faq4A: 'تواصل معنا للحصول على عرض سعر مخصص لاحتياجاتك.',
+            cta: {
+                title: 'جاهز للانطلاق؟',
+                desc: 'اختر باقتك وابدأ بناء موقعك الآن باحتراف.',
+                btnContact: 'تواصل معنا',
+                btnPortfolio: 'شاهد أعمالنا'
+            }
+        },
+        payment: {
+            title: 'خيارات دفع احترافية',
+            subtitle: 'اختر الطريقة المناسبة، أرسل الإيصال، وسنؤكد بسرعة.',
+            instapay: {
+                title: 'إنستا باي',
+                desc: 'تحويل سريع على نفس الرقم'
+            },
+            vodafone: {
+                title: 'فودافون كاش',
+                desc: 'تحويل فوري من المحفظة إلى هذا الرقم',
+                directTitle: 'كود فودافون كاش المباشر',
+                directDesc: 'أدخل المبلغ واضغط الزر لفتح شاشة الاتصال بالكود جاهزًا.',
+                amountLabel: 'المبلغ (جنيه)',
+                amountPlaceholder: 'أدخل المبلغ',
+                directBtn: 'ادفع بفودافون كاش',
+                directNote: 'الكود المستخدم: *9*7*01017358087*المبلغ# وسيتم فتح شاشة الاتصال تلقائيًا.'
+            },
+            fawry: {
+                title: 'فوري باي',
+                desc: 'متاح عند الطلب',
+                badge: 'اطلب الكود'
+            },
+            steps: {
+                one: 'اختر إنستا باي أو فودافون كاش أو فوري باي.',
+                two: 'أرسل الإيصال عبر واتساب للتأكيد الفوري.'
+            },
+            notePrefix: 'بعد الدفع، أرسل الإيصال عبر',
+            noteOr: 'أو',
+            noteSuffix: '.'
         },
         footer: 'جميع الحقوق محفوظة © 2023 إبراهيم كساب'
     }
@@ -839,7 +1843,7 @@ function toggleLanguage() {
 }
 
 function loadLanguage() {
-    const savedLang = localStorage.getItem('language') || 'en';
+    const savedLang = localStorage.getItem('language') || 'ar';
     const html = document.documentElement;
     
     html.setAttribute('lang', savedLang);
@@ -853,19 +1857,57 @@ function loadLanguage() {
     updatePageContent(savedLang);
 }
 
+function getTranslationValue(obj, path) {
+    return path.split('.').reduce((acc, part) => {
+        if (acc && Object.prototype.hasOwnProperty.call(acc, part)) {
+            return acc[part];
+        }
+        return undefined;
+    }, obj);
+}
+
 function updatePageContent(lang) {
     const t = translations[lang];
     
+    const i18nElements = document.querySelectorAll('[data-i18n]');
+    i18nElements.forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        const value = getTranslationValue(t, key);
+        if (typeof value === 'string') {
+            el.textContent = value;
+        }
+    });
+
+    const i18nAttrElements = document.querySelectorAll('[data-i18n-attr]');
+    i18nAttrElements.forEach((el) => {
+        const attrList = el.getAttribute('data-i18n-attr');
+        if (!attrList) return;
+        const key = el.getAttribute('data-i18n') || el.getAttribute('data-i18n-key');
+        if (!key) return;
+        const value = getTranslationValue(t, key);
+        if (typeof value !== 'string') return;
+        attrList.split(',').map((attr) => attr.trim()).filter(Boolean).forEach((attr) => {
+            el.setAttribute(attr, value);
+        });
+    });
+
+    syncProjectPickerSelection();
+
     // Update navigation
     const navLinks = document.querySelectorAll('.nav-links li a');
-    if (navLinks.length >= 7) {
+    if (navLinks.length >= 6) {
         navLinks[0].textContent = t.nav.home;
         navLinks[1].textContent = t.nav.about;
         navLinks[2].textContent = t.nav.portfolio;
         navLinks[3].textContent = t.nav.services;
-        navLinks[4].textContent = t.nav.pricing;
-        navLinks[5].textContent = t.nav.blog;
-        navLinks[6].textContent = t.nav.contact;
+        if (navLinks.length >= 7) {
+            navLinks[4].textContent = t.nav.pricing;
+            navLinks[5].textContent = t.nav.blog;
+            navLinks[6].textContent = t.nav.contact;
+        } else {
+            navLinks[4].textContent = t.nav.blog;
+            navLinks[5].textContent = t.nav.contact;
+        }
     }
     
     // Update home page content
@@ -878,21 +1920,23 @@ function updatePageContent(lang) {
     if (homeSubtitle) homeSubtitle.textContent = t.home.subtitle;
     if (homeDesc) homeDesc.textContent = t.home.description;
     
-    if (btns.length >= 3) {
+    if (btns.length >= 2) {
         btns[0].textContent = t.home.btn1;
         btns[1].textContent = t.home.btn2;
-        btns[2].textContent = t.home.btn3;
+        if (btns[2]) {
+            btns[2].textContent = t.home.btn3;
+        }
     }
     
     // Update services page content
-    const servicesTitle = document.querySelector('.section-header h2');
-    const servicesSubtitle = document.querySelector('.section-header p');
-    
-    if (servicesTitle) servicesTitle.textContent = t.services.title;
-    if (servicesSubtitle) servicesSubtitle.textContent = t.services.subtitle;
-    
     const serviceCards = document.querySelectorAll('.service-card');
     if (serviceCards.length >= 6) {
+        const servicesTitle = document.querySelector('.section-header h2');
+        const servicesSubtitle = document.querySelector('.section-header p');
+        
+        if (servicesTitle) servicesTitle.textContent = t.services.title;
+        if (servicesSubtitle) servicesSubtitle.textContent = t.services.subtitle;
+
         // Web Development
         serviceCards[0].querySelector('h3').textContent = t.services.webDev.title;
         serviceCards[0].querySelector('p').textContent = t.services.webDev.desc;

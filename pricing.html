@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +10,16 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" class="logo">Portfolio.</a>
+        <a href="index.html" class="logo">IbrahemKassap</a>
         <div class="menu-icon"><i class='bx bx-menu'></i></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
+            <li class="active"><a href="pricing.html">Pricing</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li class="active"><a href="pricing.html">Pricing</a></li>
         </ul>
         <div class="navbar-controls">
             <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode">
@@ -141,7 +141,7 @@
                 <div class="faq-grid">
                     <div class="faq-item">
                         <h4><i class='bx bx-help-circle'></i> What payment methods do you accept?</h4>
-                        <p>We accept PayPal, bank transfers, and cryptocurrency payments.</p>
+                        <p>We accept InstaPay, Vodafone Cash, and Fawry Pay.</p>
                     </div>
                     <div class="faq-item">
                         <h4><i class='bx bx-help-circle'></i> Can I upgrade my plan later?</h4>
@@ -160,55 +160,77 @@
 
             <!-- Payment Methods -->
             <div class="payment-methods">
-                <h3>Available Payment Methods</h3>
-                <p class="payment-subtitle">Choose your preferred payment method</p>
+                <h3 data-i18n="pricing.payment.title">خيارات دفع احترافية</h3>
+                <p class="payment-subtitle" data-i18n="pricing.payment.subtitle">اختر الطريقة المناسبة، أرسل الإيصال، وسنؤكد بسرعة.</p>
                 <div class="payment-grid">
                     <div class="payment-card">
-                        <div class="payment-icon etisalat">
-                            <i class='bx bx-mobile-alt'></i>
+                        <div class="payment-icon instapay" aria-hidden="true">
+                            <span class="payment-icon-text" data-i18n="pricing.payment.instapay.title">إنستا باي</span>
                         </div>
-                        <h4>Etisalat Cash</h4>
-                        <p>اتصالات كاش</p>
+                        <h4 data-i18n="pricing.payment.instapay.title">إنستا باي</h4>
+                        <p data-i18n="pricing.payment.instapay.desc">تحويل سريع على نفس الرقم</p>
                         <span class="payment-number">01017358087</span>
                     </div>
                     <div class="payment-card">
-                        <div class="payment-icon vodafone">
-                            <i class='bx bx-mobile-alt'></i>
+                        <div class="payment-icon vodafone" aria-hidden="true">
+                            <span class="payment-icon-text" data-i18n="pricing.payment.vodafone.title">فودافون كاش</span>
                         </div>
-                        <h4>Vodafone Cash</h4>
-                        <p>فودافون كاش</p>
+                        <h4 data-i18n="pricing.payment.vodafone.title">فودافون كاش</h4>
+                        <p data-i18n="pricing.payment.vodafone.desc">تحويل فوري من المحفظة إلى هذا الرقم</p>
                         <span class="payment-number">01017358087</span>
                     </div>
                     <div class="payment-card">
-                        <div class="payment-icon orange">
-                            <i class='bx bx-mobile-alt'></i>
+                        <div class="payment-icon fawry" aria-hidden="true">
+                            <span class="payment-icon-text" data-i18n="pricing.payment.fawry.title">فوري باي</span>
                         </div>
-                        <h4>Orange Cash</h4>
-                        <p>أورانج كاش</p>
-                        <span class="payment-number">01017358087</span>
-                    </div>
-                    <div class="payment-card">
-                        <div class="payment-icon instapay">
-                            <i class='bx bx-credit-card'></i>
-                        </div>
-                        <h4>InstaPay</h4>
-                        <p>إنستا باي</p>
-                        <span class="payment-number">01017358087</span>
+                        <h4 data-i18n="pricing.payment.fawry.title">فوري باي</h4>
+                        <p data-i18n="pricing.payment.fawry.desc">متاح عند الطلب</p>
+                        <span class="payment-number" data-i18n="pricing.payment.fawry.badge">اطلب الكود</span>
                     </div>
                 </div>
+                <div class="payment-direct">
+                    <div class="payment-direct-content">
+                        <h4 data-i18n="pricing.payment.vodafone.directTitle">كود فودافون كاش المباشر</h4>
+                        <p data-i18n="pricing.payment.vodafone.directDesc">أدخل المبلغ واضغط الزر لفتح شاشة الاتصال بالكود جاهزًا.</p>
+                    </div>
+                    <div class="payment-direct-form">
+                        <label for="vodafoneAmount" data-i18n="pricing.payment.vodafone.amountLabel">المبلغ (جنيه)</label>
+                        <div class="payment-direct-row">
+                            <input id="vodafoneAmount" class="payment-input" type="number" min="1" step="1" inputmode="numeric" data-i18n="pricing.payment.vodafone.amountPlaceholder" data-i18n-attr="placeholder" placeholder="أدخل المبلغ">
+                            <a id="vodafoneCashBtn" class="payment-direct-btn" href="tel:*9*7*01017358087*%23">
+                                <i class='bx bx-phone-call'></i>
+                                <span data-i18n="pricing.payment.vodafone.directBtn">ادفع بفودافون كاش</span>
+                            </a>
+                        </div>
+                        <p class="payment-direct-note" data-i18n="pricing.payment.vodafone.directNote">الكود المستخدم: *9*7*01017358087*المبلغ# وسيتم فتح شاشة الاتصال تلقائيًا.</p>
+                    </div>
+                </div>
+                <ol class="payment-steps">
+                    <li data-i18n="pricing.payment.steps.one">اختر إنستا باي أو فودافون كاش أو فوري باي.</li>
+                    <li>
+                        <a class="payment-step-btn" href="https://wa.me/201016040576?text=%D8%A3%D8%B1%D8%B3%D9%84%20%D8%A7%D8%B3%D9%83%D8%B1%D9%8A%D9%86%20%D8%B4%D9%88%D8%AA%20%D9%84%D8%A5%D9%8A%D8%B5%D8%A7%D9%84%20%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D9%84%D8%AA%D8%A3%D9%83%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D9%87%2C%20%D8%B4%D9%83%D8%B1%D8%A7%20%D9%84%D8%AA%D9%81%D9%87%D9%85%D9%83." target="_blank" data-i18n="pricing.payment.steps.two">
+                            أرسل الإيصال عبر واتساب للتأكيد الفوري.
+                        </a>
+                    </li>
+                </ol>
                 <div class="payment-note">
                     <i class='bx bx-info-circle'></i>
-                    <p>After payment, please send the receipt via <a href="https://wa.me/+201017358087" target="_blank">WhatsApp</a> or <a href="mailto:ibrahem.kassap@gmail.com">Email</a></p>
+                    <p>
+                        <span data-i18n="pricing.payment.notePrefix">بعد الدفع، أرسل الإيصال عبر</span>
+                        <a href="https://wa.me/+201017358087" target="_blank">WhatsApp</a>
+                        <span data-i18n="pricing.payment.noteOr">أو</span>
+                        <a href="mailto:ibrahem.kassap@gmail.com">Email</a><span data-i18n="pricing.payment.noteSuffix">.</span>
+                    </p>
                 </div>
             </div>
 
             <!-- CTA Section -->
             <div class="pricing-cta-section">
-                <h3>Ready to Get Started?</h3>
-                <p>Choose your plan and start building your dream website today</p>
+                <h3 data-i18n="pricing.cta.title">جاهز للانطلاق؟</h3>
+                <p data-i18n="pricing.cta.desc">اختر باقتك وابدأ بناء موقعك الآن باحتراف.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn">Contact Us</a>
-                    <a href="portfolio.html" class="btn btn-secondary">View Our Work</a>
+                    <a href="contact.html" class="btn" data-i18n="pricing.cta.btnContact">تواصل معنا</a>
+                    <a href="portfolio.html" class="btn btn-secondary" data-i18n="pricing.cta.btnPortfolio">شاهد أعمالنا</a>
                 </div>
             </div>
         </div>
