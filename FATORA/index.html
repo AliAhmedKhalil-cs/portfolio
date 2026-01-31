@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فاتورة</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <div class="toolbar no-print">
+      <button id="addRow" type="button">إضافة سطر</button>
+      <button id="printInvoice" type="button">طباعة</button>
+    </div>
+
+    <section id="invoice" class="invoice screen-only">
+      <header class="invoice-header">
+        <div class="brand-lines">
+          <div class="brand-line">السلام للادوات الكهربائيه W:M</div>
+          <div class="brand-line">وحWAHEEDيد</div>
+          <div class="brand-line">العنوان: السلام شارع الضغط العالي اول شارع الايمن</div>
+          <div class="brand-line">هاتف: 01080479466</div>
+        </div>
+        <div class="header-divider"></div>
+      </header>
+
+      <h1 class="title">فاتورة</h1>
+
+      <div class="meta">
+        <div class="meta-field">
+          <label>فاتورة رقم:</label>
+          <input id="invoiceNumber" type="text" inputmode="numeric" />
+        </div>
+        <div class="meta-field">
+          <label>تاريخ الفاتورة:</label>
+          <input id="invoiceDate" type="date" />
+        </div>
+      </div>
+
+      <div class="supplier">
+        <label>اسم التاجر/المورد:</label>
+        <span class="fixed-text">نادي الكهربائي</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th class="col-idx">م</th>
+              <th class="col-item">الصنف</th>
+              <th class="col-qty">الكمية</th>
+              <th class="col-price">السعر</th>
+              <th class="col-total">الإجمالي</th>
+              <th class="col-actions no-print">حذف</th>
+            </tr>
+          </thead>
+          <tbody id="itemsBody">
+            <tr>
+              <td class="cell-idx">1</td>
+              <td><input type="text" class="item" placeholder="" /></td>
+              <td><input type="number" class="qty" min="0" step="1" /></td>
+              <td><input type="number" class="price" min="0" step="0.01" /></td>
+              <td class="cell-total">0.00</td>
+              <td class="no-print"><button type="button" class="remove-row">حذف</button></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="total-row">
+              <td class="total-label" colspan="4">الإجمالي</td>
+              <td class="total-value" id="grandTotal">0.00</td>
+              <td class="no-print"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <footer class="invoice-footer">
+        <div class="footer-line">السلام للادوات الكهربائيه W:M</div>
+        <div class="footer-line">وحWAHEEDيد</div>
+        <div class="footer-line">العنوان: السلام شارع الضغط العالي اول شارع الايمن</div>
+        <div class="footer-line">هاتف01080479466:</div>
+      </footer>
+    </section>
+
+    <div id="printPages" class="print-only"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
