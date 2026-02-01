@@ -832,3 +832,77 @@ img {
   .gallery { column-count: 1; }
   .hero-actions { flex-direction: column; }
 }
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+  body {
+    background: #ffffff;
+    color: #111111;
+    background-image: none;
+  }
+  .site-header,
+  .scroll-progress,
+  .back-to-top,
+  .toast,
+  .nav-toggle,
+  .theme-toggle,
+  .diagnostic-toggle,
+  .filter-group,
+  .search,
+  .lightbox {
+    display: none !important;
+  }
+  .section {
+    padding: 36px 6vw;
+    page-break-inside: avoid;
+  }
+  .hero {
+    padding: 40px 6vw 20px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .hero-media {
+    width: 220px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    margin-inline: 0;
+  }
+  .hero-media::after {
+    display: none;
+  }
+  .card-grid,
+  .skills-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .gallery {
+    column-count: 2;
+  }
+  .gallery-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #e2e2e2;
+  }
+  .overlay {
+    display: none;
+  }
+  .diagnostics {
+    display: none !important;
+  }
+  .contact-form {
+    display: none;
+  }
+  a {
+    color: #111111;
+    text-decoration: none;
+  }
+  .whatsapp-link,
+  .call-link,
+  .copy-btn {
+    border: 1px solid #dcdcdc;
+  }
+}
