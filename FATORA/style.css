@@ -4,6 +4,8 @@
   --header-bg: #9dbbd3;
   --paper: #fff;
   --sheet: #f1f1f1;
+  --gap: 12px;
+  --gap-sm: 8px;
 }
 
 * {
@@ -16,23 +18,25 @@ body {
   background: var(--sheet);
   color: var(--ink);
   overflow-x: hidden;
+  font-size: clamp(14px, 1.8vw, 16px);
 }
 
 .page {
-  width: 210mm;
-  min-height: 297mm;
-  padding: 12mm;
+  width: min(100%, 900px);
+  min-height: auto;
+  padding: 16px;
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--gap);
 }
 
 .toolbar {
   display: flex;
-  gap: 8px;
+  gap: var(--gap);
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .toolbar button {
@@ -50,9 +54,9 @@ body {
 
 .invoice {
   width: 100%;
-  min-height: 297mm;
+  min-height: auto;
   background: var(--paper);
-  padding: 6mm 6mm 8mm;
+  padding: 16px;
   border: 1px solid #ccc;
 }
 
@@ -76,17 +80,16 @@ body {
 
 .title {
   text-align: center;
-  margin: 4mm 0 6mm;
-  font-size: 22px;
+  margin: 12px 0 16px;
+  font-size: clamp(20px, 2.4vw, 24px);
   font-weight: 700;
 }
 
 .meta {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5mm;
-  gap: 8px;
-  font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+  margin-bottom: 16px;
 }
 
 .meta-field {
@@ -110,8 +113,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 6mm;
-  font-size: 14px;
+  margin-bottom: 16px;
 }
 
 .fixed-text {
@@ -128,7 +130,7 @@ body {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  font-size: 13px;
+  font-size: clamp(13px, 1.6vw, 14px);
 }
 
 .invoice-table th,
@@ -152,6 +154,11 @@ body {
   background: transparent;
   text-align: center;
   font-size: 13px;
+}
+
+.cell-value {
+  display: block;
+  text-align: center;
 }
 
 .col-item {
@@ -194,12 +201,12 @@ body {
 }
 
 .invoice-footer {
-  margin-top: 12mm;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 2px;
   align-items: center;
-  font-size: 13px;
+  font-size: clamp(12px, 1.6vw, 13px);
   font-weight: 600;
 }
 
@@ -239,26 +246,126 @@ body {
     border: 0;
     width: 100%;
     min-height: 297mm;
-    padding: 6mm 6mm 8mm;
+    padding: 12mm;
   }
 
   .page-break {
     page-break-after: always;
   }
+
+  .invoice-table,
+  .invoice-table thead,
+  .invoice-table tbody,
+  .invoice-table tr,
+  .invoice-table td {
+    display: table;
+    width: auto;
+  }
+
+  .invoice-table thead {
+    display: table-header-group;
+  }
+
+  .invoice-table tbody {
+    display: table-row-group;
+  }
+
+  .invoice-table tr {
+    display: table-row;
+  }
+
+  .invoice-table td {
+    display: table-cell;
+  }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .page {
     width: 100%;
   }
 
   .invoice {
     width: 100%;
-    min-height: auto;
   }
 
   .meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 12px;
+    gap: var(--gap-sm);
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar button {
+    width: 100%;
+  }
+
+  .meta {
+    gap: var(--gap-sm);
+  }
+
+  .meta-field,
+  .supplier {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .meta-field input {
+    width: 100%;
+  }
+
+  .invoice-table,
+  .invoice-table thead,
+  .invoice-table tbody,
+  .invoice-table tr,
+  .invoice-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .invoice-table thead {
+    display: none;
+  }
+
+  .invoice-table tr {
+    border: 1px solid var(--grid);
+    margin-bottom: 10px;
+    padding: 6px;
+  }
+
+  .invoice-table td {
+    border: 0;
+    padding: 6px 4px;
+    display: grid;
+    grid-template-columns: 38% 1fr;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .invoice-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .invoice-table td input {
+    text-align: right;
+  }
+
+  .cell-value {
+    text-align: right;
+  }
+
+  .total-row {
+    border: 1px solid var(--grid);
   }
 }

@@ -29,21 +29,33 @@ function updateTotals() {
     const price = parseNumber(row.querySelector(".price")?.value);
     const rowTotal = qty * price;
     const totalCell = row.querySelector(".cell-total");
-    if (totalCell) totalCell.textContent = rowTotal.toFixed(2);
+    if (totalCell) {
+      const valueEl = totalCell.querySelector(".cell-value");
+      if (valueEl) {
+        valueEl.textContent = rowTotal.toFixed(2);
+      } else {
+        totalCell.textContent = rowTotal.toFixed(2);
+      }
+    }
     total += rowTotal;
   });
-  grandTotalEl.textContent = total.toFixed(2);
+  const grandValue = grandTotalEl.querySelector(".cell-value");
+  if (grandValue) {
+    grandValue.textContent = total.toFixed(2);
+  } else {
+    grandTotalEl.textContent = total.toFixed(2);
+  }
 }
 
 function createRow() {
   const row = document.createElement("tr");
   row.innerHTML = `
-    <td class="cell-idx"></td>
-    <td><input type="text" class="item" placeholder="" /></td>
-    <td><input type="number" class="qty" min="0" step="1" /></td>
-    <td><input type="number" class="price" min="0" step="0.01" /></td>
-    <td class="cell-total">0.00</td>
-    <td class="no-print"><button type="button" class="remove-row">حذف</button></td>
+    <td class="cell-idx" data-label="م"></td>
+    <td data-label="الصنف"><input type="text" class="item" placeholder="" /></td>
+    <td data-label="الكمية"><input type="number" class="qty" min="0" step="1" /></td>
+    <td data-label="السعر"><input type="number" class="price" min="0" step="0.01" /></td>
+    <td class="cell-total" data-label="الإجمالي"><span class="cell-value">0.00</span></td>
+    <td class="no-print" data-label="حذف"><button type="button" class="remove-row">حذف</button></td>
   `;
   return row;
 }
@@ -65,11 +77,13 @@ function removeRow(row) {
 function getRowData() {
   const rows = itemsBody.querySelectorAll("tr");
   return Array.from(rows).map((row) => {
+    const totalCell = row.querySelector(".cell-total");
+    const valueEl = totalCell?.querySelector(".cell-value");
     return {
       item: row.querySelector(".item")?.value || "",
       qty: row.querySelector(".qty")?.value || "",
       price: row.querySelector(".price")?.value || "",
-      total: row.querySelector(".cell-total")?.textContent || "0.00",
+      total: valueEl?.textContent || totalCell?.textContent || "0.00",
     };
   });
 }
