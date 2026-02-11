@@ -2,90 +2,180 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>فاتورة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>نظام إدارة فلاتر السيارات</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="page">
-    <div class="toolbar no-print">
-      <button id="addRow" type="button">إضافة سطر</button>
-      <button id="printInvoice" type="button">طباعة</button>
-    </div>
-
-    <section id="invoice" class="invoice screen-only">
-      <header class="invoice-header">
-        <div class="brand-lines">
-          <div class="brand-line">السلام للادوات الكهربائيه W:M</div>
-          <div class="brand-line">وحWAHEEDيد</div>
-          <div class="brand-line">العنوان: السلام شارع الضغط العالي اول شارع الايمن</div>
-          <div class="brand-line">هاتف01080479466:</div>
-        </div>
-        <div class="header-divider"></div>
-      </header>
-
-      <h1 class="title">فاتورة</h1>
-
-      <div class="meta">
-        <div class="meta-field">
-          <label>فاتورة رقم:</label>
-          <input id="invoiceNumber" type="text" inputmode="numeric" />
-        </div>
-        <div class="meta-field">
-          <label>تاريخ الفاتورة:</label>
-          <input id="invoiceDate" type="date" />
-        </div>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">نظام شامل للفواتير والمخزون</p>
+        <h1>إدارة موردين، عملاء، ومخزون فلاتر السيارات</h1>
+        <p class="subtitle">سجّل عمليات الشراء والبيع، تابع المستحقات، وراقب حركة المخزون من نفس لوحة التحكم.</p>
       </div>
-
-      <div class="supplier">
-        <label>اسم التاجر/المورد:</label>
-        <span class="fixed-text">نادي الكهربائي</span>
+      <div class="header-meta">
+        <span>تاريخ اليوم</span>
+        <strong id="todayDate"></strong>
       </div>
+    </header>
 
-      <div class="table-wrap">
-        <table class="invoice-table">
-          <thead>
-            <tr>
-              <th class="col-idx">م</th>
-              <th class="col-item">الصنف</th>
-              <th class="col-qty">الكمية</th>
-              <th class="col-price">السعر</th>
-              <th class="col-total">الإجمالي</th>
-              <th class="col-actions no-print">حذف</th>
-            </tr>
-          </thead>
-          <tbody id="itemsBody">
-            <tr>
-              <td class="cell-idx" data-label="م">1</td>
-              <td data-label="الصنف"><input type="text" class="item" placeholder="" /></td>
-              <td data-label="الكمية"><input type="number" class="qty" min="0" step="1" /></td>
-              <td data-label="السعر"><input type="number" class="price" min="0" step="0.01" /></td>
-              <td class="cell-total" data-label="الإجمالي"><span class="cell-value">0.00</span></td>
-              <td class="no-print" data-label="حذف"><button type="button" class="remove-row">حذف</button></td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr class="total-row">
-              <td class="total-label" data-label="الإجمالي" colspan="4">الإجمالي</td>
-              <td class="total-value" data-label="الإجمالي" id="grandTotal"><span class="cell-value">0.00</span></td>
-              <td class="no-print"></td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
+    <nav class="top-tabs no-print" aria-label="أقسام النظام">
+      <button type="button" class="top-tab active" data-tab="suppliers">حسابات الموردين</button>
+      <button type="button" class="top-tab" data-tab="customers">حسابات العملاء</button>
+      <button type="button" class="top-tab" data-tab="inventory">إدارة المخزون</button>
+    </nav>
 
-      <footer class="invoice-footer">
-        <div class="footer-line">السلام للادوات الكهربائيه W:M</div>
-        <div class="footer-line">وحWAHEEDيد</div>
-        <div class="footer-line">العنوان: السلام شارع الضغط العالي اول شارع الايمن</div>
-        <div class="footer-line">هاتف01080479466:</div>
-      </footer>
+    <section id="ledgerWorkspace" class="workspace ledger-workspace">
+      <aside class="accounts-panel panel-card">
+        <div class="panel-head">
+          <h2 id="accountsPanelTitle">حسابات الموردين</h2>
+          <p id="accountsPanelSub">أنشئ حسابًا لكل مورد وتابع حالة السداد.</p>
+        </div>
+
+        <form id="accountForm" class="account-form no-print">
+          <label id="accountNameLabel" for="accountNameInput">اسم المورد الجديد</label>
+          <div class="account-form-row">
+            <input id="accountNameInput" type="text" placeholder="مثال: محمد عبدالله" required />
+            <button type="submit" id="addAccountBtn">إضافة حساب</button>
+          </div>
+        </form>
+
+        <ul id="accountsList" class="account-list"></ul>
+      </aside>
+
+      <main class="ledger-panel panel-card">
+        <div class="ledger-head">
+          <div>
+            <h2 id="activeAccountTitle">لا يوجد حساب محدد</h2>
+            <p id="activeAccountSub">أضف حسابًا جديدًا من القائمة الجانبية للبدء.</p>
+            <p class="ledger-hint" id="ledgerHint">لإضافة دفعة جديدة لنفس الصنف: أضف سطرًا بتاريخ جديد واكتب نفس الصنف وقيمة المدفوع.</p>
+          </div>
+          <div class="ledger-actions no-print">
+            <button id="addRow" type="button" disabled>إضافة حركة</button>
+            <button id="printLedger" type="button" disabled>طباعة الحساب</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th>م</th>
+                <th>التاريخ</th>
+                <th>الصنف</th>
+                <th>كمية</th>
+                <th id="headingQtyType">نوع الكمية</th>
+                <th>سعر الوحدة</th>
+                <th id="headingTotal">إجمالي الشراء</th>
+                <th id="headingPaid">مدفوع</th>
+                <th id="headingAdvance">عربون خامات</th>
+                <th id="headingRemain">باقي الصنف</th>
+                <th>حالة السداد</th>
+                <th class="no-print">حذف</th>
+              </tr>
+            </thead>
+            <tbody id="rowsBody"></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6" class="summary-label" id="summaryMainLabel">إجمالي المشتريات</td>
+                <td id="summaryMain">0.00</td>
+                <td colspan="5"></td>
+              </tr>
+              <tr>
+                <td colspan="7" class="summary-label" id="summaryPaidLabel">إجمالي المدفوع</td>
+                <td id="summaryPaid">0.00</td>
+                <td colspan="4"></td>
+              </tr>
+              <tr id="summaryAdvanceRow">
+                <td colspan="8" class="summary-label" id="summaryAdvanceLabel">إجمالي عربون الخامات</td>
+                <td id="summaryAdvance">0.00</td>
+                <td colspan="3"></td>
+              </tr>
+              <tr>
+                <td colspan="9" class="summary-label" id="summaryRemainLabel">إجمالي المتبقي</td>
+                <td id="summaryRemain">0.00</td>
+                <td colspan="2"></td>
+              </tr>
+              <tr>
+                <td colspan="10" class="summary-label">الحالة النهائية للحساب</td>
+                <td id="summaryStatus" colspan="2"><span class="status-pill pending">غير مكتمل</span></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <section id="mobileSummaryCard" class="mobile-summary panel-card">
+          <h3>ملخص الحساب</h3>
+          <div class="mobile-summary-row">
+            <span id="mobileSummaryMainLabel">إجمالي المشتريات</span>
+            <strong id="mobileSummaryMain">0.00</strong>
+          </div>
+          <div class="mobile-summary-row">
+            <span id="mobileSummaryPaidLabel">إجمالي المدفوع</span>
+            <strong id="mobileSummaryPaid">0.00</strong>
+          </div>
+          <div id="mobileSummaryAdvanceRow" class="mobile-summary-row">
+            <span id="mobileSummaryAdvanceLabel">إجمالي العربون</span>
+            <strong id="mobileSummaryAdvance">0.00</strong>
+          </div>
+          <div class="mobile-summary-row">
+            <span id="mobileSummaryRemainLabel">إجمالي المتبقي</span>
+            <strong id="mobileSummaryRemain">0.00</strong>
+          </div>
+          <div class="mobile-summary-status">
+            <span>الحالة النهائية</span>
+            <div id="mobileSummaryStatus"><span class="status-pill pending">غير مكتمل</span></div>
+          </div>
+        </section>
+
+        <div id="emptyState" class="empty-state">
+          لا توجد حركات مسجلة بعد. اضغط "إضافة حركة" للبدء.
+        </div>
+      </main>
     </section>
 
-    <div id="printPages" class="print-only"></div>
+    <section id="inventoryWorkspace" class="workspace inventory-workspace is-hidden">
+      <section class="inventory-grid-card panel-card">
+        <div class="panel-head">
+          <h2>أصناف المخزون الحالية</h2>
+          <p>اختر أيقونة الصنف لفتح تفاصيله وتحديث الكمية يدويًا.</p>
+        </div>
+        <div id="inventoryGrid" class="inventory-grid"></div>
+      </section>
+
+      <section class="inventory-detail-card panel-card">
+        <div class="inventory-detail-head">
+          <img id="inventoryImage" class="inventory-image" src="" alt="" />
+          <div>
+            <h2 id="inventoryTitle">اختر صنفًا من الأيقونات</h2>
+            <p id="inventorySub">تابع الكمية المتاحة يدويًا مع تنبيه للمخزون القليل.</p>
+          </div>
+        </div>
+
+        <div class="inventory-form no-print">
+          <label>المخزون الحالي (تعديل يدوي)</label>
+          <div class="inventory-form-grid">
+            <div class="inventory-input-group">
+              <span>العدد المتاح</span>
+              <input id="inventoryCurrentCount" type="number" min="0" step="0.01" disabled />
+            </div>
+            <div class="inventory-input-group">
+              <span>الوزن المتاح (كجم)</span>
+              <input id="inventoryCurrentWeight" type="number" min="0" step="0.01" disabled />
+            </div>
+          </div>
+          <button id="saveInventoryQty" type="button" disabled>حفظ المخزون</button>
+          <p class="inventory-threshold">تنبيه أحمر تلقائي عند مخزون أقل من 10 عدد أو أقل من 10 كجم.</p>
+          <p id="inventorySaveMsg" class="inventory-save-msg"></p>
+        </div>
+      </section>
+    </section>
   </div>
 
   <script src="script.js"></script>
