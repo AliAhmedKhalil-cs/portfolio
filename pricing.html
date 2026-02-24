@@ -1,9 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans | Ibrahem Kassap</title>
+    <meta name="description" content="Transparent pricing for SaaS and e-commerce website development. Choose your plan and book a free consultation.">
+    <link rel="canonical" href="https://ibrahemkassap.tech/pricing.html">
+    <meta property="og:title" content="Pricing Plans | Ibrahem Kassap">
+    <meta property="og:description" content="Clear website packages for launch, growth, and scale.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ibrahemkassap.tech/pricing.html">
+    <meta property="og:image" content="https://ibrahemkassap.tech/home.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="pricing.css">
@@ -11,154 +19,152 @@
 <body>
     <nav class="navbar">
         <a href="index.html" class="logo">IbrahemKassap</a>
-        <div class="menu-icon"><i class='bx bx-menu'></i></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li class="active"><a href="pricing.html">Pricing</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        <button class="menu-icon" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false"><i class='bx bx-menu'></i></button>
+        <ul class="nav-links" id="primary-navigation">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li class="active"><a href="pricing.html" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+            <li><a href="facebook-posts.html" data-i18n="nav.facebook">Facebook</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <div class="navbar-controls">
-            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode" type="button">
                 <i class='bx bx-moon'></i>
             </button>
-            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language">
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language" type="button">
                 <span class="lang-text">AR</span>
             </button>
         </div>
     </nav>
 
-    <!-- Promo Banner -->
     <div class="promo-banner">
         <div class="promo-content">
             <i class='bx bx-gift'></i>
-            <p><strong>Limited Offer:</strong> Get 10% off on Silver & Gold plans this month! <a href="#pricing-grid">View Plans</a></p>
+            <p>
+                <strong data-i18n="pricing.promo.label">عرض محدود:</strong>
+                <span data-i18n="pricing.promo.text">خصم 10% على الباقة الفضية والذهبية هذا الشهر!</span>
+                <a href="#pricing-grid" data-i18n="pricing.promo.link">عرض الباقات</a>
+            </p>
         </div>
     </div>
 
     <section class="pricing-section" id="pricing-grid">
         <div class="pricing-container">
-            <!-- Breadcrumbs -->
             <div class="breadcrumbs">
-                <a href="index.html"><i class='bx bx-home'></i> Home</a>
+                <a href="index.html"><i class='bx bx-home'></i> <span data-i18n="pricing.breadcrumb.home">الرئيسية</span></a>
                 <i class='bx bx-chevron-right'></i>
-                <span>Pricing</span>
+                <span data-i18n="pricing.breadcrumb.current">الباقات</span>
             </div>
 
             <div class="section-header">
-                <h2>Choose Your Plan</h2>
-                <p>Select the perfect package for your needs</p>
+                <h2 data-i18n="pricing.title">اختر باقتك</h2>
+                <p data-i18n="pricing.subtitle">اختر الباقة المثالية لاحتياجاتك</p>
             </div>
 
             <div class="pricing-grid">
-                <!-- Free Plan -->
                 <div class="pricing-card free">
-                    <div class="plan-badge">Free</div>
+                    <div class="plan-badge" data-i18n="pricing.badges.free">مجاناً</div>
                     <div class="plan-icon">
                         <i class='bx bx-gift'></i>
                     </div>
-                    <h3 class="plan-name">Free Plan</h3>
+                    <h3 class="plan-name">الباقة المجانية</h3>
                     <div class="plan-price">
                         <span class="currency">$</span>
                         <span class="amount">0</span>
-                        <span class="period">/forever</span>
+                        <span class="period">/مجانا للأبد</span>
                     </div>
                     <ul class="plan-features">
-                        <li><i class='bx bx-check'></i> Browse Portfolio</li>
-                        <li><i class='bx bx-check'></i> Read Blog Articles</li>
-                        <li><i class='bx bx-check'></i> Free SEO Audit</li>
-                        <li><i class='bx bx-check'></i> Email Support</li>
-                        <li><i class='bx bx-check'></i> Community Access</li>
-                        <li class="disabled"><i class='bx bx-x'></i> Priority Support</li>
-                        <li class="disabled"><i class='bx bx-x'></i> Custom Development</li>
+                        <li><i class='bx bx-check'></i> تصفح الأعمال</li>
+                        <li><i class='bx bx-check'></i> قراءة مقالات المدونة</li>
+                        <li><i class='bx bx-check'></i> تدقيق SEO مجاني</li>
+                        <li><i class='bx bx-check'></i> دعم عبر البريد</li>
+                        <li><i class='bx bx-check'></i> الوصول للمجتمع</li>
+                        <li class="disabled"><i class='bx bx-x'></i> دعم أولوية</li>
+                        <li class="disabled"><i class='bx bx-x'></i> تطوير مخصص</li>
                     </ul>
-                    <a href="contact.html" class="plan-btn">Get Started</a>
+                    <a href="contact.html" class="plan-btn">ابدأ الآن</a>
                 </div>
 
-                <!-- Silver Plan -->
                 <div class="pricing-card silver popular">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="plan-badge">Silver</div>
+                    <div class="popular-badge">الأكثر شعبية</div>
+                    <div class="plan-badge" data-i18n="pricing.badges.silver">فضية</div>
                     <div class="plan-icon">
                         <i class='bx bx-medal'></i>
                     </div>
-                    <h3 class="plan-name">Silver Plan</h3>
+                    <h3 class="plan-name">الباقة الفضية</h3>
                     <div class="plan-price">
                         <span class="currency">EGP</span>
                         <span class="amount">2,500</span>
-                        <span class="period">/one-time</span>
+                        <span class="period">/دفعة واحدة</span>
                     </div>
                     <ul class="plan-features">
-                        <li><i class='bx bx-check'></i> 1 Landing Page</li>
-                        <li><i class='bx bx-check'></i> Responsive Design</li>
-                        <li><i class='bx bx-check'></i> SEO Optimized</li>
-                        <li><i class='bx bx-check'></i> Fast Loading Speed</li>
-                        <li><i class='bx bx-check'></i> Contact Form Integration</li>
-                        <li><i class='bx bx-check'></i> 3 Revisions</li>
-                        <li><i class='bx bx-check'></i> 1 Month Free Support</li>
-                        <li><i class='bx bx-check'></i> Source Code Included</li>
-                        <li><i class='bx bx-check'></i> 7-10 Days Delivery</li>
+                        <li><i class='bx bx-check'></i> صفحة هبوط واحدة</li>
+                        <li><i class='bx bx-check'></i> تصميم متجاوب</li>
+                        <li><i class='bx bx-check'></i> محسن لمحركات البحث</li>
+                        <li><i class='bx bx-check'></i> سرعة تحميل عالية</li>
+                        <li><i class='bx bx-check'></i> نموذج اتصال</li>
+                        <li><i class='bx bx-check'></i> 3 تعديلات</li>
+                        <li><i class='bx bx-check'></i> دعم مجاني لمدة شهر</li>
+                        <li><i class='bx bx-check'></i> الكود المصدري متضمن</li>
+                        <li><i class='bx bx-check'></i> التسليم 7-10 أيام</li>
                     </ul>
-                    <a href="contact.html" class="plan-btn">Choose Silver</a>
+                    <a href="contact.html" class="plan-btn">اختر الفضية</a>
                 </div>
 
-                <!-- Gold Plan -->
                 <div class="pricing-card gold">
-                    <div class="plan-badge">Gold</div>
+                    <div class="plan-badge" data-i18n="pricing.badges.gold">ذهبية</div>
                     <div class="plan-icon">
                         <i class='bx bx-crown'></i>
                     </div>
-                    <h3 class="plan-name">Gold Plan</h3>
+                    <h3 class="plan-name">الباقة الذهبية</h3>
                     <div class="plan-price">
                         <span class="currency">EGP</span>
                         <span class="amount">10,000</span>
-                        <span class="period">/one-time</span>
+                        <span class="period">/دفعة واحدة</span>
                     </div>
                     <ul class="plan-features">
-                        <li><i class='bx bx-check'></i> Full Website (5-10 Pages)</li>
-                        <li><i class='bx bx-check'></i> Custom Design</li>
-                        <li><i class='bx bx-check'></i> Advanced SEO Setup</li>
-                        <li><i class='bx bx-check'></i> Performance Optimization</li>
-                        <li><i class='bx bx-check'></i> CMS Integration</li>
-                        <li><i class='bx bx-check'></i> E-commerce Ready</li>
-                        <li><i class='bx bx-check'></i> Unlimited Revisions</li>
-                        <li><i class='bx bx-check'></i> 3 Months Free Support</li>
-                        <li><i class='bx bx-check'></i> Priority Support 24/7</li>
-                        <li><i class='bx bx-check'></i> Free Hosting Setup</li>
-                        <li><i class='bx bx-check'></i> Analytics Integration</li>
-                        <li><i class='bx bx-check'></i> 14-21 Days Delivery</li>
+                        <li><i class='bx bx-check'></i> موقع كامل (5-10 صفحات)</li>
+                        <li><i class='bx bx-check'></i> تصميم مخصص</li>
+                        <li><i class='bx bx-check'></i> إعداد SEO متقدم</li>
+                        <li><i class='bx bx-check'></i> تحسين الأداء</li>
+                        <li><i class='bx bx-check'></i> تكامل CMS</li>
+                        <li><i class='bx bx-check'></i> جاهز للتجارة الإلكترونية</li>
+                        <li><i class='bx bx-check'></i> تعديلات غير محدودة</li>
+                        <li><i class='bx bx-check'></i> دعم مجاني 3 أشهر</li>
+                        <li><i class='bx bx-check'></i> دعم أولوية 24/7</li>
+                        <li><i class='bx bx-check'></i> إعداد استضافة مجاني</li>
+                        <li><i class='bx bx-check'></i> تكامل التحليلات</li>
+                        <li><i class='bx bx-check'></i> التسليم 14-21 يوم</li>
                     </ul>
-                    <a href="contact.html" class="plan-btn">Choose Gold</a>
+                    <a href="contact.html" class="plan-btn">اختر الذهبية</a>
                 </div>
             </div>
 
-            <!-- FAQ Section -->
             <div class="pricing-faq">
-                <h3>Frequently Asked Questions</h3>
+                <h3>الأسئلة الشائعة</h3>
                 <div class="faq-grid">
                     <div class="faq-item">
-                        <h4><i class='bx bx-help-circle'></i> What payment methods do you accept?</h4>
-                        <p>We accept InstaPay, Vodafone Cash, and Fawry Pay.</p>
+                        <h4><i class='bx bx-help-circle'></i> ما هي طرق الدفع المقبولة؟</h4>
+                        <p>نقبل إنستا باي وفودافون كاش وفوري باي.</p>
                     </div>
                     <div class="faq-item">
-                        <h4><i class='bx bx-help-circle'></i> Can I upgrade my plan later?</h4>
-                        <p>Yes! You can upgrade anytime and pay only the difference.</p>
+                        <h4><i class='bx bx-help-circle'></i> هل يمكنني الترقية لاحقًا؟</h4>
+                        <p>نعم! يمكنك الترقية في أي وقت ودفع الفرق فقط.</p>
                     </div>
                     <div class="faq-item">
-                        <h4><i class='bx bx-help-circle'></i> Do you offer refunds?</h4>
-                        <p>We offer a 14-day money-back guarantee if you're not satisfied.</p>
+                        <h4><i class='bx bx-help-circle'></i> هل تقدمون استرداد الأموال؟</h4>
+                        <p>نقدم ضمان استرداد الأموال لمدة 14 يومًا إذا لم تكن راضيًا.</p>
                     </div>
                     <div class="faq-item">
-                        <h4><i class='bx bx-help-circle'></i> What if I need custom features?</h4>
-                        <p>Contact us for a custom quote tailored to your specific needs.</p>
+                        <h4><i class='bx bx-help-circle'></i> ماذا لو احتجت ميزات مخصصة؟</h4>
+                        <p>تواصل معنا للحصول على عرض سعر مخصص لاحتياجاتك.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Payment Methods -->
             <div class="payment-methods">
                 <h3 data-i18n="pricing.payment.title">خيارات دفع احترافية</h3>
                 <p class="payment-subtitle" data-i18n="pricing.payment.subtitle">اختر الطريقة المناسبة، أرسل الإيصال، وسنؤكد بسرعة.</p>
@@ -208,7 +214,7 @@
                 <ol class="payment-steps">
                     <li data-i18n="pricing.payment.steps.one">اختر إنستا باي أو فودافون كاش أو فوري باي.</li>
                     <li>
-                        <a class="payment-step-btn" href="https://wa.me/201016040576?text=%D8%A3%D8%B1%D8%B3%D9%84%20%D8%A7%D8%B3%D9%83%D8%B1%D9%8A%D9%86%20%D8%B4%D9%88%D8%AA%20%D9%84%D8%A5%D9%8A%D8%B5%D8%A7%D9%84%20%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D9%84%D8%AA%D8%A3%D9%83%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D9%87%2C%20%D8%B4%D9%83%D8%B1%D8%A7%20%D9%84%D8%AA%D9%81%D9%87%D9%85%D9%83." target="_blank" data-i18n="pricing.payment.steps.two">
+                        <a class="payment-step-btn" href="https://wa.me/201016040576?text=%D8%A3%D8%B1%D8%B3%D9%84%20%D8%A7%D8%B3%D9%83%D8%B1%D9%8A%D9%86%20%D8%B4%D9%88%D8%AA%20%D9%84%D8%A5%D9%8A%D8%B5%D8%A7%D9%84%20%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D9%84%D8%AA%D8%A3%D9%83%D9%8A%D8%AF%20%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D9%87%2C%20%D8%B4%D9%83%D8%B1%D8%A7%20%D9%84%D8%AA%D9%81%D9%87%D9%85%D9%83." target="_blank" rel="noopener noreferrer" data-i18n="pricing.payment.steps.two">
                             أرسل الإيصال عبر واتساب للتأكيد الفوري.
                         </a>
                     </li>
@@ -217,14 +223,13 @@
                     <i class='bx bx-info-circle'></i>
                     <p>
                         <span data-i18n="pricing.payment.notePrefix">بعد الدفع، أرسل الإيصال عبر</span>
-                        <a href="https://wa.me/+201017358087" target="_blank">WhatsApp</a>
+                        <a href="https://wa.me/+201017358087" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                         <span data-i18n="pricing.payment.noteOr">أو</span>
                         <a href="mailto:ibrahem.kassap@gmail.com">Email</a><span data-i18n="pricing.payment.noteSuffix">.</span>
                     </p>
                 </div>
             </div>
 
-            <!-- CTA Section -->
             <div class="pricing-cta-section">
                 <h3 data-i18n="pricing.cta.title">جاهز للانطلاق؟</h3>
                 <p data-i18n="pricing.cta.desc">اختر باقتك وابدأ بناء موقعك الآن باحتراف.</p>
@@ -236,30 +241,29 @@
         </div>
     </section>
 
-    <!-- Related Pages -->
     <section class="internal-cta">
         <div class="container">
-            <h3>Explore More</h3>
+            <h3 data-i18n="pricing.internal.title">استكشف المزيد</h3>
             <div class="quick-links">
                 <a href="services.html" class="quick-link-card">
                     <i class='bx bx-briefcase'></i>
-                    <h4>Our Services</h4>
-                    <p>What we offer</p>
+                    <h4 data-i18n="pricing.internal.cards.services.title">الخدمات</h4>
+                    <p data-i18n="pricing.internal.cards.services.desc">ماذا نقدم</p>
                 </a>
                 <a href="portfolio.html" class="quick-link-card">
                     <i class='bx bx-folder-open'></i>
-                    <h4>Portfolio</h4>
-                    <p>View projects</p>
+                    <h4 data-i18n="pricing.internal.cards.portfolio.title">الأعمال</h4>
+                    <p data-i18n="pricing.internal.cards.portfolio.desc">شاهد المشاريع</p>
                 </a>
                 <a href="blog.html" class="quick-link-card">
                     <i class='bx bx-book-open'></i>
-                    <h4>Blog</h4>
-                    <p>Learn more</p>
+                    <h4 data-i18n="pricing.internal.cards.blog.title">المدونة</h4>
+                    <p data-i18n="pricing.internal.cards.blog.desc">تعلم أكثر</p>
                 </a>
                 <a href="contact.html" class="quick-link-card">
                     <i class='bx bx-message-dots'></i>
-                    <h4>Contact</h4>
-                    <p>Get started</p>
+                    <h4 data-i18n="pricing.internal.cards.contact.title">تواصل</h4>
+                    <p data-i18n="pricing.internal.cards.contact.desc">ابدأ الآن</p>
                 </a>
             </div>
         </div>
@@ -267,7 +271,7 @@
 
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+            <p data-i18n="footer">Copyright © 2023 by Ibrahem Kassap | All Rights Reserved.</p>
         </div>
         <div class="footer-iconTop">
             <a href="#"><i class='bx bx-up-arrow-alt'></i></a>

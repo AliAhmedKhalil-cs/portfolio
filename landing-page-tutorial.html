@@ -1,27 +1,26 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل شامل: كيفية إنشاء صفحة هبوط احترافية | Ibrahem Kassap</title>
+    <title>Ø¯Ù„ÙŠÙ„ Ø´Ø§Ù…Ù„: ÙƒÙŠÙÙŠØ© Ø¥Ù†Ø´Ø§Ø¡ ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· Ø§Ø­ØªØ±Ø§ÙÙŠØ© | Ibrahem Kassap</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="blog-arabic.css">
-    <meta name="description" content="تعلم كيفية إنشاء صفحة هبوط احترافية خطوة بخطوة باستخدام HTML و CSS و JavaScript">
+    <meta name="description" content="ØªØ¹Ù„Ù… ÙƒÙŠÙÙŠØ© Ø¥Ù†Ø´Ø§Ø¡ ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· Ø§Ø­ØªØ±Ø§ÙÙŠØ© Ø®Ø·ÙˆØ© Ø¨Ø®Ø·ÙˆØ© Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… HTML Ùˆ CSS Ùˆ JavaScript">
 </head>
 <body>
     <nav class="navbar">
         <a href="index.html" class="logo">IbrahemKassap</a>
-        <div class="menu-icon">
-            <i class='bx bx-menu'></i>
-        </div>
-        <ul class="nav-links">
+        <button class="menu-icon" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false"><i class='bx bx-menu'></i></button>
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="pricing.html">Pricing</a></li>
             <li class="active"><a href="blog.html">Blog</a></li>
+            <li><a href="facebook-posts.html">Facebook</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -29,39 +28,39 @@
     <div class="arabic-container">
         <article class="arabic-article">
             <header class="article-header">
-                <h1>دليل شامل: كيفية إنشاء صفحة هبوط احترافية</h1>
+                <h1>Ø¯Ù„ÙŠÙ„ Ø´Ø§Ù…Ù„: ÙƒÙŠÙÙŠØ© Ø¥Ù†Ø´Ø§Ø¡ ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· Ø§Ø­ØªØ±Ø§ÙÙŠØ©</h1>
                 <div class="article-meta">
-                    <span><i class='bx bx-calendar'></i> 14 يناير 2026</span>
-                    <span><i class='bx bx-time'></i> 15 دقيقة قراءة</span>
-                    <span><i class='bx bx-user'></i> إبراهيم كساب</span>
+                    <span><i class='bx bx-calendar'></i> 14 ÙŠÙ†Ø§ÙŠØ± 2026</span>
+                    <span><i class='bx bx-time'></i> 15 Ø¯Ù‚ÙŠÙ‚Ø© Ù‚Ø±Ø§Ø¡Ø©</span>
+                    <span><i class='bx bx-user'></i> Ø¥Ø¨Ø±Ø§Ù‡ÙŠÙ… ÙƒØ³Ø§Ø¨</span>
                 </div>
             </header>
 
             <div class="article-intro">
-                <p>في هذا الدرس الشامل، سنتعلم كيفية إنشاء صفحة هبوط (Landing Page) احترافية من الصفر باستخدام HTML و CSS و JavaScript. سنقوم ببناء الصفحة خطوة بخطوة مع شرح تفصيلي لكل جزء من الكود.</p>
+                <p>ÙÙŠ Ù‡Ø°Ø§ Ø§Ù„Ø¯Ø±Ø³ Ø§Ù„Ø´Ø§Ù…Ù„ØŒ Ø³Ù†ØªØ¹Ù„Ù… ÙƒÙŠÙÙŠØ© Ø¥Ù†Ø´Ø§Ø¡ ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· (Landing Page) Ø§Ø­ØªØ±Ø§ÙÙŠØ© Ù…Ù† Ø§Ù„ØµÙØ± Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… HTML Ùˆ CSS Ùˆ JavaScript. Ø³Ù†Ù‚ÙˆÙ… Ø¨Ø¨Ù†Ø§Ø¡ Ø§Ù„ØµÙØ­Ø© Ø®Ø·ÙˆØ© Ø¨Ø®Ø·ÙˆØ© Ù…Ø¹ Ø´Ø±Ø­ ØªÙØµÙŠÙ„ÙŠ Ù„ÙƒÙ„ Ø¬Ø²Ø¡ Ù…Ù† Ø§Ù„ÙƒÙˆØ¯.</p>
             </div>
 
             <div class="table-of-contents">
-                <h3><i class='bx bx-list-ul'></i> محتويات الدرس</h3>
+                <h3><i class='bx bx-list-ul'></i> Ù…Ø­ØªÙˆÙŠØ§Øª Ø§Ù„Ø¯Ø±Ø³</h3>
                 <ul>
-                    <li><a href="#step1">الخطوة 1: إنشاء هيكل HTML الأساسي</a></li>
-                    <li><a href="#step2">الخطوة 2: تصميم الصفحة باستخدام CSS</a></li>
-                    <li><a href="#step3">الخطوة 3: إضافة التفاعلية بـ JavaScript</a></li>
-                    <li><a href="#step4">الخطوة 4: جعل الصفحة متجاوبة</a></li>
-                    <li><a href="#final">الكود النهائي الكامل</a></li>
+                    <li><a href="#step1">Ø§Ù„Ø®Ø·ÙˆØ© 1: Ø¥Ù†Ø´Ø§Ø¡ Ù‡ÙŠÙƒÙ„ HTML Ø§Ù„Ø£Ø³Ø§Ø³ÙŠ</a></li>
+                    <li><a href="#step2">Ø§Ù„Ø®Ø·ÙˆØ© 2: ØªØµÙ…ÙŠÙ… Ø§Ù„ØµÙØ­Ø© Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… CSS</a></li>
+                    <li><a href="#step3">Ø§Ù„Ø®Ø·ÙˆØ© 3: Ø¥Ø¶Ø§ÙØ© Ø§Ù„ØªÙØ§Ø¹Ù„ÙŠØ© Ø¨Ù€ JavaScript</a></li>
+                    <li><a href="#step4">Ø§Ù„Ø®Ø·ÙˆØ© 4: Ø¬Ø¹Ù„ Ø§Ù„ØµÙØ­Ø© Ù…ØªØ¬Ø§ÙˆØ¨Ø©</a></li>
+                    <li><a href="#final">Ø§Ù„ÙƒÙˆØ¯ Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠ Ø§Ù„ÙƒØ§Ù…Ù„</a></li>
                 </ul>
             </div>
 
             <!-- Step 1 -->
             <section id="step1" class="tutorial-step">
-                <h2><span class="step-number">1</span> إنشاء هيكل HTML الأساسي</h2>
-                <p>أول خطوة هي إنشاء ملف HTML وبناء الهيكل الأساسي للصفحة. سنقوم بإنشاء قسم الهيدر، القسم الرئيسي، وقسم الفوتر.</p>
+                <h2><span class="step-number">1</span> Ø¥Ù†Ø´Ø§Ø¡ Ù‡ÙŠÙƒÙ„ HTML Ø§Ù„Ø£Ø³Ø§Ø³ÙŠ</h2>
+                <p>Ø£ÙˆÙ„ Ø®Ø·ÙˆØ© Ù‡ÙŠ Ø¥Ù†Ø´Ø§Ø¡ Ù…Ù„Ù HTML ÙˆØ¨Ù†Ø§Ø¡ Ø§Ù„Ù‡ÙŠÙƒÙ„ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠ Ù„Ù„ØµÙØ­Ø©. Ø³Ù†Ù‚ÙˆÙ… Ø¨Ø¥Ù†Ø´Ø§Ø¡ Ù‚Ø³Ù… Ø§Ù„Ù‡ÙŠØ¯Ø±ØŒ Ø§Ù„Ù‚Ø³Ù… Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØŒ ÙˆÙ‚Ø³Ù… Ø§Ù„ÙÙˆØªØ±.</p>
 
                 <div class="code-block">
                     <div class="code-header">
                         <span class="code-title"><i class='bx bx-code-alt'></i> index.html</span>
                         <button class="copy-btn" onclick="copyCode(this)">
-                            <i class='bx bx-copy'></i> نسخ الكود
+                            <i class='bx bx-copy'></i> Ù†Ø³Ø® Ø§Ù„ÙƒÙˆØ¯
                         </button>
                     </div>
                     <pre><code class="language-html">&lt;!DOCTYPE html&gt;
@@ -69,18 +68,18 @@
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;صفحة هبوط احترافية&lt;/title&gt;
+    &lt;title&gt;ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· Ø§Ø­ØªØ±Ø§ÙÙŠØ©&lt;/title&gt;
     &lt;link rel="stylesheet" href="style.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;!-- Header Section --&gt;
     &lt;header class="header"&gt;
         &lt;nav class="navbar"&gt;
-            &lt;div class="logo"&gt;شعار الموقع&lt;/div&gt;
+            &lt;div class="logo"&gt;Ø´Ø¹Ø§Ø± Ø§Ù„Ù…ÙˆÙ‚Ø¹&lt;/div&gt;
             &lt;ul class="nav-menu"&gt;
-                &lt;li&gt;&lt;a href="#home"&gt;الرئيسية&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#features"&gt;المميزات&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#contact"&gt;تواصل معنا&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#features"&gt;Ø§Ù„Ù…Ù…ÙŠØ²Ø§Øª&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contact"&gt;ØªÙˆØ§ØµÙ„ Ù…Ø¹Ù†Ø§&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
         &lt;/nav&gt;
     &lt;/header&gt;
@@ -88,34 +87,34 @@
     &lt;!-- Hero Section --&gt;
     &lt;section class="hero" id="home"&gt;
         &lt;div class="hero-content"&gt;
-            &lt;h1&gt;مرحباً بك في موقعنا&lt;/h1&gt;
-            &lt;p&gt;نقدم لك أفضل الحلول الرقمية لتطوير أعمالك&lt;/p&gt;
-            &lt;button class="cta-btn"&gt;ابدأ الآن&lt;/button&gt;
+            &lt;h1&gt;Ù…Ø±Ø­Ø¨Ø§Ù‹ Ø¨Ùƒ ÙÙŠ Ù…ÙˆÙ‚Ø¹Ù†Ø§&lt;/h1&gt;
+            &lt;p&gt;Ù†Ù‚Ø¯Ù… Ù„Ùƒ Ø£ÙØ¶Ù„ Ø§Ù„Ø­Ù„ÙˆÙ„ Ø§Ù„Ø±Ù‚Ù…ÙŠØ© Ù„ØªØ·ÙˆÙŠØ± Ø£Ø¹Ù…Ø§Ù„Ùƒ&lt;/p&gt;
+            &lt;button class="cta-btn"&gt;Ø§Ø¨Ø¯Ø£ Ø§Ù„Ø¢Ù†&lt;/button&gt;
         &lt;/div&gt;
     &lt;/section&gt;
 
     &lt;!-- Features Section --&gt;
     &lt;section class="features" id="features"&gt;
-        &lt;h2&gt;مميزاتنا&lt;/h2&gt;
+        &lt;h2&gt;Ù…Ù…ÙŠØ²Ø§ØªÙ†Ø§&lt;/h2&gt;
         &lt;div class="features-grid"&gt;
             &lt;div class="feature-card"&gt;
-                &lt;h3&gt;سرعة عالية&lt;/h3&gt;
-                &lt;p&gt;نضمن لك أداء سريع وفعال&lt;/p&gt;
+                &lt;h3&gt;Ø³Ø±Ø¹Ø© Ø¹Ø§Ù„ÙŠØ©&lt;/h3&gt;
+                &lt;p&gt;Ù†Ø¶Ù…Ù† Ù„Ùƒ Ø£Ø¯Ø§Ø¡ Ø³Ø±ÙŠØ¹ ÙˆÙØ¹Ø§Ù„&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class="feature-card"&gt;
-                &lt;h3&gt;تصميم عصري&lt;/h3&gt;
-                &lt;p&gt;تصاميم حديثة تناسب جميع الأجهزة&lt;/p&gt;
+                &lt;h3&gt;ØªØµÙ…ÙŠÙ… Ø¹ØµØ±ÙŠ&lt;/h3&gt;
+                &lt;p&gt;ØªØµØ§Ù…ÙŠÙ… Ø­Ø¯ÙŠØ«Ø© ØªÙ†Ø§Ø³Ø¨ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø£Ø¬Ù‡Ø²Ø©&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class="feature-card"&gt;
-                &lt;h3&gt;دعم فني&lt;/h3&gt;
-                &lt;p&gt;فريق دعم متاح على مدار الساعة&lt;/p&gt;
+                &lt;h3&gt;Ø¯Ø¹Ù… ÙÙ†ÙŠ&lt;/h3&gt;
+                &lt;p&gt;ÙØ±ÙŠÙ‚ Ø¯Ø¹Ù… Ù…ØªØ§Ø­ Ø¹Ù„Ù‰ Ù…Ø¯Ø§Ø± Ø§Ù„Ø³Ø§Ø¹Ø©&lt;/p&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/section&gt;
 
     &lt;!-- Footer --&gt;
     &lt;footer class="footer"&gt;
-        &lt;p&gt;&copy; 2026 جميع الحقوق محفوظة&lt;/p&gt;
+        &lt;p&gt;&copy; 2026 Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø­Ù‚ÙˆÙ‚ Ù…Ø­ÙÙˆØ¸Ø©&lt;/p&gt;
     &lt;/footer&gt;
 
     &lt;script src="script.js"&gt;&lt;/script&gt;
@@ -124,28 +123,28 @@
                 </div>
 
                 <div class="explanation-box">
-                    <h4><i class='bx bx-info-circle'></i> شرح الكود</h4>
+                    <h4><i class='bx bx-info-circle'></i> Ø´Ø±Ø­ Ø§Ù„ÙƒÙˆØ¯</h4>
                     <ul>
-                        <li><strong>DOCTYPE:</strong> يحدد نوع المستند كـ HTML5</li>
-                        <li><strong>lang="ar" dir="rtl":</strong> يحدد اللغة العربية واتجاه النص من اليمين لليسار</li>
-                        <li><strong>meta viewport:</strong> يجعل الصفحة متجاوبة مع جميع الأجهزة</li>
-                        <li><strong>header:</strong> يحتوي على شريط التنقل الرئيسي</li>
-                        <li><strong>hero section:</strong> القسم الرئيسي الذي يظهر أولاً للزائر</li>
-                        <li><strong>features section:</strong> قسم عرض المميزات</li>
+                        <li><strong>DOCTYPE:</strong> ÙŠØ­Ø¯Ø¯ Ù†ÙˆØ¹ Ø§Ù„Ù…Ø³ØªÙ†Ø¯ ÙƒÙ€ HTML5</li>
+                        <li><strong>lang="ar" dir="rtl":</strong> ÙŠØ­Ø¯Ø¯ Ø§Ù„Ù„ØºØ© Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© ÙˆØ§ØªØ¬Ø§Ù‡ Ø§Ù„Ù†Øµ Ù…Ù† Ø§Ù„ÙŠÙ…ÙŠÙ† Ù„Ù„ÙŠØ³Ø§Ø±</li>
+                        <li><strong>meta viewport:</strong> ÙŠØ¬Ø¹Ù„ Ø§Ù„ØµÙØ­Ø© Ù…ØªØ¬Ø§ÙˆØ¨Ø© Ù…Ø¹ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø£Ø¬Ù‡Ø²Ø©</li>
+                        <li><strong>header:</strong> ÙŠØ­ØªÙˆÙŠ Ø¹Ù„Ù‰ Ø´Ø±ÙŠØ· Ø§Ù„ØªÙ†Ù‚Ù„ Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠ</li>
+                        <li><strong>hero section:</strong> Ø§Ù„Ù‚Ø³Ù… Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠ Ø§Ù„Ø°ÙŠ ÙŠØ¸Ù‡Ø± Ø£ÙˆÙ„Ø§Ù‹ Ù„Ù„Ø²Ø§Ø¦Ø±</li>
+                        <li><strong>features section:</strong> Ù‚Ø³Ù… Ø¹Ø±Ø¶ Ø§Ù„Ù…Ù…ÙŠØ²Ø§Øª</li>
                     </ul>
                 </div>
             </section>
 
             <!-- Step 2 -->
             <section id="step2" class="tutorial-step">
-                <h2><span class="step-number">2</span> تصميم الصفحة باستخدام CSS</h2>
-                <p>الآن سنقوم بتصميم الصفحة وجعلها جذابة باستخدام CSS. سنضيف الألوان، المسافات، والتأثيرات.</p>
+                <h2><span class="step-number">2</span> ØªØµÙ…ÙŠÙ… Ø§Ù„ØµÙØ­Ø© Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… CSS</h2>
+                <p>Ø§Ù„Ø¢Ù† Ø³Ù†Ù‚ÙˆÙ… Ø¨ØªØµÙ…ÙŠÙ… Ø§Ù„ØµÙØ­Ø© ÙˆØ¬Ø¹Ù„Ù‡Ø§ Ø¬Ø°Ø§Ø¨Ø© Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… CSS. Ø³Ù†Ø¶ÙŠÙ Ø§Ù„Ø£Ù„ÙˆØ§Ù†ØŒ Ø§Ù„Ù…Ø³Ø§ÙØ§ØªØŒ ÙˆØ§Ù„ØªØ£Ø«ÙŠØ±Ø§Øª.</p>
 
                 <div class="code-block">
                     <div class="code-header">
                         <span class="code-title"><i class='bx bxl-css3'></i> style.css</span>
                         <button class="copy-btn" onclick="copyCode(this)">
-                            <i class='bx bx-copy'></i> نسخ الكود
+                            <i class='bx bx-copy'></i> Ù†Ø³Ø® Ø§Ù„ÙƒÙˆØ¯
                         </button>
                     </div>
                     <pre><code class="language-css">* {
@@ -308,28 +307,28 @@ body {
                 </div>
 
                 <div class="explanation-box">
-                    <h4><i class='bx bx-info-circle'></i> شرح الكود</h4>
+                    <h4><i class='bx bx-info-circle'></i> Ø´Ø±Ø­ Ø§Ù„ÙƒÙˆØ¯</h4>
                     <ul>
-                        <li><strong>Reset CSS:</strong> إزالة الهوامش والحشو الافتراضي</li>
-                        <li><strong>Fixed Header:</strong> جعل الهيدر ثابت في الأعلى</li>
-                        <li><strong>Flexbox:</strong> لترتيب العناصر بشكل مرن</li>
-                        <li><strong>Grid:</strong> لإنشاء شبكة متجاوبة للمميزات</li>
-                        <li><strong>Animations:</strong> حركات سلسة عند ظهور العناصر</li>
-                        <li><strong>Hover Effects:</strong> تأثيرات عند التمرير على العناصر</li>
+                        <li><strong>Reset CSS:</strong> Ø¥Ø²Ø§Ù„Ø© Ø§Ù„Ù‡ÙˆØ§Ù…Ø´ ÙˆØ§Ù„Ø­Ø´Ùˆ Ø§Ù„Ø§ÙØªØ±Ø§Ø¶ÙŠ</li>
+                        <li><strong>Fixed Header:</strong> Ø¬Ø¹Ù„ Ø§Ù„Ù‡ÙŠØ¯Ø± Ø«Ø§Ø¨Øª ÙÙŠ Ø§Ù„Ø£Ø¹Ù„Ù‰</li>
+                        <li><strong>Flexbox:</strong> Ù„ØªØ±ØªÙŠØ¨ Ø§Ù„Ø¹Ù†Ø§ØµØ± Ø¨Ø´ÙƒÙ„ Ù…Ø±Ù†</li>
+                        <li><strong>Grid:</strong> Ù„Ø¥Ù†Ø´Ø§Ø¡ Ø´Ø¨ÙƒØ© Ù…ØªØ¬Ø§ÙˆØ¨Ø© Ù„Ù„Ù…Ù…ÙŠØ²Ø§Øª</li>
+                        <li><strong>Animations:</strong> Ø­Ø±ÙƒØ§Øª Ø³Ù„Ø³Ø© Ø¹Ù†Ø¯ Ø¸Ù‡ÙˆØ± Ø§Ù„Ø¹Ù†Ø§ØµØ±</li>
+                        <li><strong>Hover Effects:</strong> ØªØ£Ø«ÙŠØ±Ø§Øª Ø¹Ù†Ø¯ Ø§Ù„ØªÙ…Ø±ÙŠØ± Ø¹Ù„Ù‰ Ø§Ù„Ø¹Ù†Ø§ØµØ±</li>
                     </ul>
                 </div>
             </section>
 
             <!-- Step 3 -->
             <section id="step3" class="tutorial-step">
-                <h2><span class="step-number">3</span> إضافة التفاعلية بـ JavaScript</h2>
-                <p>سنضيف بعض التفاعلية للصفحة مثل التمرير السلس والتأثيرات عند الضغط على الأزرار.</p>
+                <h2><span class="step-number">3</span> Ø¥Ø¶Ø§ÙØ© Ø§Ù„ØªÙØ§Ø¹Ù„ÙŠØ© Ø¨Ù€ JavaScript</h2>
+                <p>Ø³Ù†Ø¶ÙŠÙ Ø¨Ø¹Ø¶ Ø§Ù„ØªÙØ§Ø¹Ù„ÙŠØ© Ù„Ù„ØµÙØ­Ø© Ù…Ø«Ù„ Ø§Ù„ØªÙ…Ø±ÙŠØ± Ø§Ù„Ø³Ù„Ø³ ÙˆØ§Ù„ØªØ£Ø«ÙŠØ±Ø§Øª Ø¹Ù†Ø¯ Ø§Ù„Ø¶ØºØ· Ø¹Ù„Ù‰ Ø§Ù„Ø£Ø²Ø±Ø§Ø±.</p>
 
                 <div class="code-block">
                     <div class="code-header">
                         <span class="code-title"><i class='bx bxl-javascript'></i> script.js</span>
                         <button class="copy-btn" onclick="copyCode(this)">
-                            <i class='bx bx-copy'></i> نسخ الكود
+                            <i class='bx bx-copy'></i> Ù†Ø³Ø® Ø§Ù„ÙƒÙˆØ¯
                         </button>
                     </div>
                     <pre><code class="language-javascript">// Smooth Scrolling
@@ -349,7 +348,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // CTA Button Click
 const ctaBtn = document.querySelector('.cta-btn');
 ctaBtn.addEventListener('click', () => {
-    alert('شكراً لاهتمامك! سنتواصل معك قريباً');
+    alert('Ø´ÙƒØ±Ø§Ù‹ Ù„Ø§Ù‡ØªÙ…Ø§Ù…Ùƒ! Ø³Ù†ØªÙˆØ§ØµÙ„ Ù…Ø¹Ùƒ Ù‚Ø±ÙŠØ¨Ø§Ù‹');
 });
 
 // Scroll Animation for Feature Cards
@@ -387,26 +386,26 @@ window.addEventListener('scroll', () => {
                 </div>
 
                 <div class="explanation-box">
-                    <h4><i class='bx bx-info-circle'></i> شرح الكود</h4>
+                    <h4><i class='bx bx-info-circle'></i> Ø´Ø±Ø­ Ø§Ù„ÙƒÙˆØ¯</h4>
                     <ul>
-                        <li><strong>Smooth Scrolling:</strong> التمرير السلس عند الضغط على الروابط</li>
-                        <li><strong>Event Listeners:</strong> الاستماع لأحداث المستخدم</li>
-                        <li><strong>Intersection Observer:</strong> لإظهار العناصر عند التمرير</li>
-                        <li><strong>Scroll Event:</strong> تغيير خلفية الهيدر عند التمرير</li>
+                        <li><strong>Smooth Scrolling:</strong> Ø§Ù„ØªÙ…Ø±ÙŠØ± Ø§Ù„Ø³Ù„Ø³ Ø¹Ù†Ø¯ Ø§Ù„Ø¶ØºØ· Ø¹Ù„Ù‰ Ø§Ù„Ø±ÙˆØ§Ø¨Ø·</li>
+                        <li><strong>Event Listeners:</strong> Ø§Ù„Ø§Ø³ØªÙ…Ø§Ø¹ Ù„Ø£Ø­Ø¯Ø§Ø« Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…</li>
+                        <li><strong>Intersection Observer:</strong> Ù„Ø¥Ø¸Ù‡Ø§Ø± Ø§Ù„Ø¹Ù†Ø§ØµØ± Ø¹Ù†Ø¯ Ø§Ù„ØªÙ…Ø±ÙŠØ±</li>
+                        <li><strong>Scroll Event:</strong> ØªØºÙŠÙŠØ± Ø®Ù„ÙÙŠØ© Ø§Ù„Ù‡ÙŠØ¯Ø± Ø¹Ù†Ø¯ Ø§Ù„ØªÙ…Ø±ÙŠØ±</li>
                     </ul>
                 </div>
             </section>
 
             <!-- Step 4 -->
             <section id="step4" class="tutorial-step">
-                <h2><span class="step-number">4</span> جعل الصفحة متجاوبة (Responsive)</h2>
-                <p>سنضيف Media Queries لجعل الصفحة تعمل بشكل مثالي على جميع الأجهزة.</p>
+                <h2><span class="step-number">4</span> Ø¬Ø¹Ù„ Ø§Ù„ØµÙØ­Ø© Ù…ØªØ¬Ø§ÙˆØ¨Ø© (Responsive)</h2>
+                <p>Ø³Ù†Ø¶ÙŠÙ Media Queries Ù„Ø¬Ø¹Ù„ Ø§Ù„ØµÙØ­Ø© ØªØ¹Ù…Ù„ Ø¨Ø´ÙƒÙ„ Ù…Ø«Ø§Ù„ÙŠ Ø¹Ù„Ù‰ Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø£Ø¬Ù‡Ø²Ø©.</p>
 
                 <div class="code-block">
                     <div class="code-header">
                         <span class="code-title"><i class='bx bxl-css3'></i> responsive.css</span>
                         <button class="copy-btn" onclick="copyCode(this)">
-                            <i class='bx bx-copy'></i> نسخ الكود
+                            <i class='bx bx-copy'></i> Ù†Ø³Ø® Ø§Ù„ÙƒÙˆØ¯
                         </button>
                     </div>
                     <pre><code class="language-css">/* Tablet */
@@ -455,29 +454,29 @@ window.addEventListener('scroll', () => {
 
             <!-- Final Code -->
             <section id="final" class="tutorial-step">
-                <h2><i class='bx bx-check-circle'></i> الكود النهائي الكامل</h2>
-                <p>يمكنك الآن نسخ جميع الأكواد وتجربتها. تأكد من إنشاء ثلاث ملفات: index.html و style.css و script.js</p>
+                <h2><i class='bx bx-check-circle'></i> Ø§Ù„ÙƒÙˆØ¯ Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠ Ø§Ù„ÙƒØ§Ù…Ù„</h2>
+                <p>ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„Ø¢Ù† Ù†Ø³Ø® Ø¬Ù…ÙŠØ¹ Ø§Ù„Ø£ÙƒÙˆØ§Ø¯ ÙˆØªØ¬Ø±Ø¨ØªÙ‡Ø§. ØªØ£ÙƒØ¯ Ù…Ù† Ø¥Ù†Ø´Ø§Ø¡ Ø«Ù„Ø§Ø« Ù…Ù„ÙØ§Øª: index.html Ùˆ style.css Ùˆ script.js</p>
                 
                 <div class="success-box">
-                    <h4><i class='bx bx-trophy'></i> تهانينا!</h4>
-                    <p>لقد أنشأت صفحة هبوط احترافية كاملة. يمكنك الآن تخصيصها حسب احتياجاتك.</p>
+                    <h4><i class='bx bx-trophy'></i> ØªÙ‡Ø§Ù†ÙŠÙ†Ø§!</h4>
+                    <p>Ù„Ù‚Ø¯ Ø£Ù†Ø´Ø£Øª ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· Ø§Ø­ØªØ±Ø§ÙÙŠØ© ÙƒØ§Ù…Ù„Ø©. ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„Ø¢Ù† ØªØ®ØµÙŠØµÙ‡Ø§ Ø­Ø³Ø¨ Ø§Ø­ØªÙŠØ§Ø¬Ø§ØªÙƒ.</p>
                 </div>
 
                 <div class="tips-box">
-                    <h4><i class='bx bx-bulb'></i> نصائح إضافية</h4>
+                    <h4><i class='bx bx-bulb'></i> Ù†ØµØ§Ø¦Ø­ Ø¥Ø¶Ø§ÙÙŠØ©</h4>
                     <ul>
-                        <li>استخدم صور عالية الجودة في القسم الرئيسي</li>
-                        <li>أضف المزيد من الأقسام حسب احتياجك</li>
-                        <li>اختبر الصفحة على أجهزة مختلفة</li>
-                        <li>استخدم أدوات مثل Google PageSpeed لقياس الأداء</li>
-                        <li>أضف نموذج اتصال في نهاية الصفحة</li>
+                        <li>Ø§Ø³ØªØ®Ø¯Ù… ØµÙˆØ± Ø¹Ø§Ù„ÙŠØ© Ø§Ù„Ø¬ÙˆØ¯Ø© ÙÙŠ Ø§Ù„Ù‚Ø³Ù… Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠ</li>
+                        <li>Ø£Ø¶Ù Ø§Ù„Ù…Ø²ÙŠØ¯ Ù…Ù† Ø§Ù„Ø£Ù‚Ø³Ø§Ù… Ø­Ø³Ø¨ Ø§Ø­ØªÙŠØ§Ø¬Ùƒ</li>
+                        <li>Ø§Ø®ØªØ¨Ø± Ø§Ù„ØµÙØ­Ø© Ø¹Ù„Ù‰ Ø£Ø¬Ù‡Ø²Ø© Ù…Ø®ØªÙ„ÙØ©</li>
+                        <li>Ø§Ø³ØªØ®Ø¯Ù… Ø£Ø¯ÙˆØ§Øª Ù…Ø«Ù„ Google PageSpeed Ù„Ù‚ÙŠØ§Ø³ Ø§Ù„Ø£Ø¯Ø§Ø¡</li>
+                        <li>Ø£Ø¶Ù Ù†Ù…ÙˆØ°Ø¬ Ø§ØªØµØ§Ù„ ÙÙŠ Ù†Ù‡Ø§ÙŠØ© Ø§Ù„ØµÙØ­Ø©</li>
                     </ul>
                 </div>
             </section>
 
             <div class="article-footer">
                 <div class="share-section">
-                    <h4>شارك هذا الدرس</h4>
+                    <h4>Ø´Ø§Ø±Ùƒ Ù‡Ø°Ø§ Ø§Ù„Ø¯Ø±Ø³</h4>
                     <div class="share-buttons">
                         <a href="#" class="share-btn facebook"><i class='bx bxl-facebook'></i></a>
                         <a href="#" class="share-btn twitter"><i class='bx bxl-twitter'></i></a>
@@ -502,3 +501,5 @@ window.addEventListener('scroll', () => {
     <script src="blog-arabic.js"></script>
 </body>
 </html>
+
+

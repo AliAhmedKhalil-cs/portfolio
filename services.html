@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -31,17 +31,16 @@
         <a href="index.html" class="logo">IbrahemKassap</a>
         
         <!-- Hamburger Menu Icon for Mobile -->
-        <div class="menu-icon">
-            <i class='bx bx-menu'></i>
-        </div>
+        <button class="menu-icon" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false"><i class='bx bx-menu'></i></button>
         
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li class="active"><a href="services.html">Services</a></li>
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="facebook-posts.html">Facebook</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         
@@ -157,6 +156,40 @@
                 </div>
             </div>
 
+            <div class="section-header section-header-left" style="margin-top: 70px;">
+                <h3 data-i18n="home.packages.title">Service Packages Preview</h3>
+                <p data-i18n="home.packages.subtitle">Clear offers designed for launch, growth, and scale</p>
+            </div>
+            <div class="packages-grid">
+                <article class="package-card">
+                    <p class="package-tier" data-i18n="home.packages.items.launch.name">Launch Sprint</p>
+                    <h3 data-i18n="home.packages.items.launch.price">From 2,500 EGP</h3>
+                    <ul>
+                        <li data-i18n="home.packages.items.launch.feat1">One high-converting landing page</li>
+                        <li data-i18n="home.packages.items.launch.feat2">Technical SEO baseline setup</li>
+                        <li data-i18n="home.packages.items.launch.feat3">Mobile-first performance optimization</li>
+                    </ul>
+                </article>
+                <article class="package-card package-card-featured">
+                    <p class="package-tier" data-i18n="home.packages.items.growth.name">Growth Engine</p>
+                    <h3 data-i18n="home.packages.items.growth.price">From 10,000 EGP</h3>
+                    <ul>
+                        <li data-i18n="home.packages.items.growth.feat1">Multi-page SaaS or e-commerce build</li>
+                        <li data-i18n="home.packages.items.growth.feat2">Conversion-focused UX structure</li>
+                        <li data-i18n="home.packages.items.growth.feat3">Analytics and tracking readiness</li>
+                    </ul>
+                </article>
+                <article class="package-card">
+                    <p class="package-tier" data-i18n="home.packages.items.scale.name">Scale Partner</p>
+                    <h3 data-i18n="home.packages.items.scale.price">Custom Retainer</h3>
+                    <ul>
+                        <li data-i18n="home.packages.items.scale.feat1">Ongoing CRO and UX iteration</li>
+                        <li data-i18n="home.packages.items.scale.feat2">Performance and SEO growth roadmap</li>
+                        <li data-i18n="home.packages.items.scale.feat3">Priority support and release cycles</li>
+                    </ul>
+                </article>
+            </div>
+
             <!-- Call to Action -->
             <div class="services-cta">
                 <h3>Ready to Start Your Project?</h3>
@@ -213,3 +246,7 @@
     <script src="main.js"></script>
 </body>
 </html>
+
+
+
+

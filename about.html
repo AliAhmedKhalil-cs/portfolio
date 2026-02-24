@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -19,17 +19,16 @@
         <a href="index.html" class="logo">IbrahemKassap</a>
         
         <!-- Hamburger Menu Icon for Mobile -->
-        <div class="menu-icon">
-            <i class='bx bx-menu'></i>
-        </div>
+        <button class="menu-icon" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false"><i class='bx bx-menu'></i></button>
         
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="facebook-posts.html">Facebook</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
         
@@ -56,10 +55,10 @@
         <div class="home-info">
             <h1>Ibrahem Kassap</h1>
             <h2 style="position: relative; min-height: 40px; display: inline-block;" data-i18n="about.hero.roleIntro">I'm a
-                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 0s;" data-text="Frontend Developer" data-i18n="about.hero.roles.frontend" data-i18n-attr="data-text">Frontend Developer</span>
-                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 3s;" data-text="Ui/Ux Designer" data-i18n="about.hero.roles.uiux" data-i18n-attr="data-text">Ui/Ux Designer</span>
-                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 6s;" data-text="SEO Specialist" data-i18n="about.hero.roles.seo" data-i18n-attr="data-text">SEO Specialist</span>
-                <span style="position: absolute; left: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 9s;" data-text="Digital Marketing" data-i18n="about.hero.roles.marketing" data-i18n-attr="data-text">Digital Marketing</span>
+                <span style="position: absolute; inset-inline-start: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 0s;" data-text="Frontend Developer" data-i18n="about.hero.roles.frontend" data-i18n-attr="data-text">Frontend Developer</span>
+                <span style="position: absolute; inset-inline-start: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 3s;" data-text="Ui/Ux Designer" data-i18n="about.hero.roles.uiux" data-i18n-attr="data-text">Ui/Ux Designer</span>
+                <span style="position: absolute; inset-inline-start: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 6s;" data-text="SEO Specialist" data-i18n="about.hero.roles.seo" data-i18n-attr="data-text">SEO Specialist</span>
+                <span style="position: absolute; inset-inline-start: 60px; color: var(--accent-blue); font-weight: 600; opacity: 0; animation: textRotate 12s infinite; animation-delay: 9s;" data-text="Digital Marketing" data-i18n="about.hero.roles.marketing" data-i18n-attr="data-text">Digital Marketing</span>
             </h2>
             <p data-i18n="about.hero.desc">I graduated from the Sadat Academy for Administrative Sciences in Cairo with a Bachelor's degree in Information Technology Systems. I have specialized in programming, particularly front-end development, and I am currently working on developing my skills to move into back-end development.
 
@@ -67,11 +66,11 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
             <div class="btn-sci">
                 <a href="https://drive.google.com/file/d/10dO_xzsQHa2JJQtEXlFGaPLb3-wSzB8F/view?usp=sharing" class="btn" data-i18n="about.hero.cta">Download CV</a>
                 <div class="sci">
-                    <a href="https://github.com/ibrahemkassap" target="_blank"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.linkedin.com/in/ibrahem-kassap/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-                    <a href="https://www.facebook.com/ibrahemka55ap" target="_blank"><i class='bx bxl-facebook-square'></i></a>
-                    <a href="https://wa.me/+201017358087/" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-                    <a href="https://www.instagram.com/ibrahemka55ap/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/ibrahemkassap" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/ibrahem-kassap/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://www.facebook.com/ibrahemka55ap" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="https://wa.me/+201017358087/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="https://www.instagram.com/ibrahemka55ap/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
                 </div>
             </div>
         </div>
@@ -95,7 +94,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
             <!-- About Content -->
             <div class="about-content">
                 <div class="about-text">
-                    <div class="about-kicker" data-i18n="about.highlights.kicker">5+ Years • 50+ Projects • 100+ Clients</div>
+                    <div class="about-kicker" data-i18n="about.highlights.kicker">5+ Years | 50+ Projects | 100+ Clients</div>
                     <h3 data-i18n="about.section.whoTitle">Who Am I?</h3>
                     <p data-i18n="about.section.whoDesc1">I graduated from the Sadat Academy for Administrative Sciences in Cairo with a Bachelor's degree in Information Technology Systems. I specialize in front-end development, with strong expertise in performance, UX, and SEO. I work on GitHub, and all my projects are freelance; I am not affiliated with any company.</p>
                     <p data-i18n="about.section.whoDesc2">I build fast, conversion-focused websites with clean structure, modern UI, and scalable code. My focus is delivering reliable results and long-term maintainability for every client.</p>
@@ -274,7 +273,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                             <i class='bx bxs-award'></i>
                         </div>
                         <h3>Using AI IN MARKETING</h3>
-                        <p class="cert-issuer">التسويق بالذكاء الاصطناعي</p>
+                        <p class="cert-issuer">Ø§Ù„ØªØ³ÙˆÙŠÙ‚ Ø¨Ø§Ù„Ø°ÙƒØ§Ø¡ Ø§Ù„Ø§ØµØ·Ù†Ø§Ø¹ÙŠ</p>
                         <p class="cert-date">2025</p>
                     </div>
                 </div>
@@ -292,7 +291,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                             <i class='bx bxs-award'></i>
                         </div>
                         <h3>FUNDAMENTALS OF SALES MANAGEMENT</h3>
-                        <p class="cert-issuer">المهارات الأساسية للبائع المحترف</p>
+                        <p class="cert-issuer">Ø§Ù„Ù…Ù‡Ø§Ø±Ø§Øª Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ© Ù„Ù„Ø¨Ø§Ø¦Ø¹ Ø§Ù„Ù…Ø­ØªØ±Ù</p>
                         <p class="cert-date">2022</p>
                     </div>
                 </div>
@@ -310,7 +309,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                             <i class='bx bxs-award'></i>
                         </div>
                         <h3>SEO OPTIMIZATION WITH AI</h3>
-                        <p class="cert-issuer">تحسين ظهورك على محركات البحث باستخدام الذكاء الاصطناعي</p>
+                        <p class="cert-issuer">ØªØ­Ø³ÙŠÙ† Ø¸Ù‡ÙˆØ±Ùƒ Ø¹Ù„Ù‰ Ù…Ø­Ø±ÙƒØ§Øª Ø§Ù„Ø¨Ø­Ø« Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø§Ù„Ø°ÙƒØ§Ø¡ Ø§Ù„Ø§ØµØ·Ù†Ø§Ø¹ÙŠ</p>
                         <p class="cert-date">2025</p>
                     </div>
                 </div>
@@ -328,7 +327,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                             <i class='bx bxs-award'></i>
                         </div>
                         <h3>TOT</h3>
-                        <p class="cert-issuer">تدريب المدربين</p>
+                        <p class="cert-issuer">ØªØ¯Ø±ÙŠØ¨ Ø§Ù„Ù…Ø¯Ø±Ø¨ÙŠÙ†</p>
                         <p class="cert-date">2022</p>
                     </div>
                 </div>
@@ -346,7 +345,7 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
                             <i class='bx bxs-award'></i>
                         </div>
                         <h3>INTRODUCTION TO CYBERSECURITY</h3>
-                        <p class="cert-issuer">مقدمة في الأمن السيبراني</p>
+                        <p class="cert-issuer">Ù…Ù‚Ø¯Ù…Ø© ÙÙŠ Ø§Ù„Ø£Ù…Ù† Ø§Ù„Ø³ÙŠØ¨Ø±Ø§Ù†ÙŠ</p>
                         <p class="cert-date">2023</p>
                     </div>
                 </div>
@@ -421,3 +420,9 @@ I work on GitHub, and all my projects are freelance; I am not affiliated with an
     
 </body>
 </html>
+
+
+
+
+
+

@@ -4,12 +4,6 @@
     min-height: 100vh;
 }
 
-/* Pricing Section */
-.pricing-section {
-    padding: 120px 5% 80px;
-    min-height: 100vh;
-}
-
 /* Promo Banner */
 .promo-banner {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -522,8 +516,9 @@
 
 .payment-direct-row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: 1fr;
     gap: 12px;
+    align-items: stretch;
 }
 
 .payment-input {
@@ -544,6 +539,7 @@
 .payment-direct-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 12px 18px;
     border-radius: 10px;
@@ -552,7 +548,17 @@
     font-weight: 600;
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
+    min-height: 48px;
+    line-height: 1.2;
+}
+
+.payment-direct-btn span {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    writing-mode: horizontal-tb;
 }
 
 .payment-direct-btn:hover {
@@ -652,8 +658,14 @@
     text-align: right;
 }
 
-[dir="rtl"] .payment-direct-row {
-    grid-template-columns: auto minmax(0, 1fr);
+@media (min-width: 769px) {
+    .payment-direct-row {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, max-content);
+    }
+
+    [dir="rtl"] .payment-direct-row {
+        grid-template-columns: minmax(220px, max-content) minmax(0, 1fr);
+    }
 }
 
 /* Pricing CTA Section */
@@ -730,13 +742,10 @@
         padding: 40px 20px;
     }
 
-    .payment-direct-row {
-        grid-template-columns: 1fr;
-    }
-
     .payment-direct-btn {
         justify-content: center;
         width: 100%;
+        min-height: 46px;
     }
     
     .payment-grid {
@@ -785,5 +794,10 @@
     
     .payment-methods h3 {
         font-size: 26px;
+    }
+
+    .payment-direct-btn {
+        font-size: 14px;
+        padding: 12px 14px;
     }
 }

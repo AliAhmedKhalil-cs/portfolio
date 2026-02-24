@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,17 +15,16 @@
     <nav class="navbar">
         <a href="index.html" class="logo">IbrahemKassap</a>
         
-        <div class="menu-icon">
-            <i class='bx bx-menu'></i>
-        </div>
+        <button class="menu-icon" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false"><i class='bx bx-menu'></i></button>
         
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="pricing.html">Pricing</a></li>
             <li class="active"><a href="blog.html">Blog</a></li>
+            <li><a href="facebook-posts.html">Facebook</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -34,7 +33,7 @@
         <article class="article-content">
             <header>
                 <h1 class="section-title" style="margin-bottom: 20px; text-align: left;">Article Title Here</h1>
-                <p style="color: var(--text-secondary); margin-bottom: 40px;">Published on Date • Read Time</p>
+                <p style="color: var(--text-secondary); margin-bottom: 40px;">Published on Date â€¢ Read Time</p>
             </header>
 
             <p class="lead">Introduction paragraph goes here. Hook the reader.</p>
@@ -107,3 +106,5 @@ const example = "Hello World";
     <script src="main.js"></script>
 </body>
 </html>
+
+

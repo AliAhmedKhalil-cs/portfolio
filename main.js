@@ -1,27 +1,44 @@
-// ==================== MOBILE MENU TOGGLE ====================
+﻿// ==================== MOBILE MENU TOGGLE ====================
 const menuIcon = document.querySelector('.menu-icon');
 const navMenu = document.querySelector('.navbar ul');
 
+function closeMobileMenu() {
+    if (!menuIcon || !navMenu) return;
+    menuIcon.classList.remove('active');
+    navMenu.classList.remove('active');
+    menuIcon.setAttribute('aria-expanded', 'false');
+
+    const icon = menuIcon.querySelector('i');
+    if (icon) {
+        icon.classList.replace('bx-x', 'bx-menu');
+    }
+}
+
 if (menuIcon && navMenu) {
-    // Ensure menu icon is always visible on mobile
     const checkMenuIcon = () => {
         if (window.innerWidth <= 768) {
             menuIcon.style.display = 'flex';
+        } else {
+            menuIcon.style.display = '';
+            closeMobileMenu();
         }
     };
-    
+
+    menuIcon.setAttribute('aria-expanded', 'false');
     checkMenuIcon();
     window.addEventListener('resize', checkMenuIcon);
-    
+
     menuIcon.addEventListener('click', (e) => {
         e.stopPropagation();
         menuIcon.classList.toggle('active');
         navMenu.classList.toggle('active');
-        
-        // Toggle Icon
+
+        const isOpen = menuIcon.classList.contains('active');
+        menuIcon.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
         const icon = menuIcon.querySelector('i');
         if (icon) {
-            if (menuIcon.classList.contains('active')) {
+            if (isOpen) {
                 icon.classList.replace('bx-menu', 'bx-x');
             } else {
                 icon.classList.replace('bx-x', 'bx-menu');
@@ -29,32 +46,14 @@ if (menuIcon && navMenu) {
         }
     });
 
-    // Close menu when clicking on a link
     const navLinks = document.querySelectorAll('.navbar ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menuIcon.classList.remove('active');
-            navMenu.classList.remove('active');
-            
-            // Reset Icon
-            const icon = menuIcon.querySelector('i');
-            if (icon) {
-                icon.classList.replace('bx-x', 'bx-menu');
-            }
-        });
+    navLinks.forEach((link) => {
+        link.addEventListener('click', closeMobileMenu);
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!menuIcon.contains(e.target) && !navMenu.contains(e.target)) {
-            menuIcon.classList.remove('active');
-            navMenu.classList.remove('active');
-            
-            // Reset Icon
-            const icon = menuIcon.querySelector('i');
-            if (icon) {
-                icon.classList.replace('bx-x', 'bx-menu');
-            }
+            closeMobileMenu();
         }
     });
 }
@@ -63,24 +62,25 @@ if (menuIcon && navMenu) {
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        navbar.style.transform = 'translateY(-100%)';
-        navbar.style.transition = 'transform 0.3s ease-in-out';
-    } 
-    else if (currentScroll < lastScroll) {
-        navbar.style.transform = 'translateY(0)';
-        navbar.style.transition = 'transform 0.3s ease-in-out';
-    }
-    
-    if (currentScroll <= 0) {
-        navbar.style.transform = 'translateY(0)';
-    }
-    
-    lastScroll = currentScroll;
-});
+if (navbar) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            navbar.style.transform = 'translateY(-100%)';
+            navbar.style.transition = 'transform 0.3s ease-in-out';
+        } else if (currentScroll < lastScroll) {
+            navbar.style.transform = 'translateY(0)';
+            navbar.style.transition = 'transform 0.3s ease-in-out';
+        }
+
+        if (currentScroll <= 0) {
+            navbar.style.transform = 'translateY(0)';
+        }
+
+        lastScroll = currentScroll;
+    });
+}
 
 // ==================== EMAILJS INITIALIZATION ====================
 if (typeof emailjs !== 'undefined') {
@@ -553,10 +553,17 @@ function initProjectPicker() {
             const lang = document.documentElement.getAttribute('lang') || 'en';
 
             const lines = [];
-            lines.push('تفاصيل المشروع:');
-            lines.push(`1- نوع الموقع: ${typeValue || 'غير محدد'}`);
-            lines.push(`2- وصف الموقع: ${finalDesc || 'لم يتم إضافة وصف'}`);
-            lines.push('3- مع إرفاق الصورة المرسلة من العميل');
+            if (lang === 'ar') {
+                lines.push('تفاصيل المشروع:');
+                lines.push(`1- نوع الموقع: ${typeValue || 'غير محدد'}`);
+                lines.push(`2- وصف الموقع: ${finalDesc || 'لم يتم إضافة وصف'}`);
+                lines.push('3- مع إرفاق الصورة المرسلة من العميل');
+            } else {
+                lines.push('Project Details:');
+                lines.push(`1- Website type: ${typeValue || 'Not selected'}`);
+                lines.push(`2- Project brief: ${finalDesc || 'No description added'}`);
+                lines.push('3- I will attach the reference image manually on WhatsApp');
+            }
 
             const message = lines.join('\n');
             const phone = '201016040576';
@@ -579,11 +586,12 @@ function initVodafoneCashDialer() {
 
     const updateDialer = () => {
         const raw = amountInput ? amountInput.value.trim() : '';
-        const clean = raw.replace(/[^\d.]/g, '');
+        const clean = raw.replace(/\D/g, '');
         const code = clean ? `${base}${clean}${suffix}` : `${base}${suffix}`;
         const dialCode = clean ? `${base}${clean}${encodedSuffix}` : `${base}${encodedSuffix}`;
         btn.setAttribute('href', `tel:${dialCode}`);
         btn.setAttribute('data-code', code);
+        btn.setAttribute('aria-label', `Vodafone Cash code ${code}`);
     };
 
     if (amountInput) {
@@ -604,26 +612,26 @@ function syncProjectPickerSelection() {
     }
 }
 
-window.onload = function() {
-    var badge = document.getElementById('notificationBadge');
-    if (badge) {
-        badge.style.display = 'none';
-        window.setTimeout(function() {
-            if (!chatState.isOpen) {
-                badge.style.display = 'flex';
-            }
-        }, 3000);
-    }
-    
-    // Load saved theme
+function initApp() {
     loadTheme();
-    // Load saved language
     loadLanguage();
-    // Initialize project picker interactions
     initProjectPicker();
-    // Initialize Vodafone Cash dialer
     initVodafoneCashDialer();
-};
+}
+
+document.addEventListener('DOMContentLoaded', initApp);
+
+window.addEventListener('load', () => {
+    const badge = document.getElementById('notificationBadge');
+    if (!badge) return;
+
+    badge.style.display = 'none';
+    window.setTimeout(() => {
+        if (!chatState.isOpen) {
+            badge.style.display = 'flex';
+        }
+    }, 3000);
+});
 
 // ==================== THEME TOGGLE ====================
 function toggleTheme() {
@@ -661,15 +669,128 @@ const translations = {
             services: 'Services',
             pricing: 'Pricing',
             blog: 'Blog',
+            facebook: 'Facebook',
             contact: 'Contact'
         },
         home: {
+            kicker: 'SaaS & E-commerce Conversion Engineer',
             title: 'Ibrahem Kassap',
-            subtitle: 'High-performance websites that turn visitors into clients',
-            description: 'I build fast, conversion-focused websites with clean code, modern UI, and SEO-ready structure. Let’s launch your project quickly and professionally.',
-            btn1: 'Work With Me',
-            btn2: 'View Recent Work',
-            btn3: "Let's Build Your Project",
+            subtitle: 'Web experiences built to convert traffic into revenue',
+            description: 'I design and develop high-performance SaaS and e-commerce websites with conversion architecture, technical SEO, and clean scalable code.',
+            bullets: {
+                one: 'Fast launch cycles with production-ready code',
+                two: 'UX optimized for lead quality and checkout completion',
+                three: 'Technical SEO and Core Web Vitals built in from day one'
+            },
+            btn1: 'Book a Free Consultation',
+            btn2: 'View Case Studies',
+            btn3: 'See Pricing Preview',
+            trust: {
+                experience: {
+                    value: '5+',
+                    label: 'Years Experience'
+                },
+                projects: {
+                    value: '50+',
+                    label: 'Delivered Projects'
+                },
+                stack: {
+                    value: '20+',
+                    label: 'Technologies Used'
+                },
+                focus: {
+                    value: '100%',
+                    label: 'SaaS & E-commerce Focus'
+                }
+            },
+            testimonials: {
+                title: 'Client Feedback',
+                subtitle: 'What business owners say after launch',
+                items: {
+                    one: {
+                        quote: '"Our SaaS landing page started generating qualified demos within the first week."',
+                        author: 'SaaS Founder',
+                        role: 'B2B Software'
+                    },
+                    two: {
+                        quote: '"Checkout drop-off decreased after the UX and speed optimization sprint."',
+                        author: 'E-commerce Manager',
+                        role: 'Retail Brand'
+                    },
+                    three: {
+                        quote: '"The delivery process was clear, fast, and highly professional from start to finish."',
+                        author: 'Marketing Director',
+                        role: 'Service Company'
+                    }
+                }
+            },
+            caseStudies: {
+                title: 'Featured Case Studies',
+                subtitle: 'Real projects structured by challenge, solution, and measurable outcome',
+                challengeLabel: 'Challenge:',
+                solutionLabel: 'Solution:',
+                resultLabel: 'Result:',
+                viewCase: 'View Live Case',
+                items: {
+                    one: {
+                        tag: 'Healthcare SaaS',
+                        title: 'Perfect Clinic Platform',
+                        challenge: 'Slow site and weak appointment conversion.',
+                        solution: 'Rebuilt UX flow, improved mobile speed, and clarified CTA paths.',
+                        result: 'Higher booking intent and faster interaction performance.'
+                    },
+                    two: {
+                        tag: 'Travel E-commerce',
+                        title: 'Miraj Travel Experience',
+                        challenge: 'Complex user journey with low clarity on service options.',
+                        solution: 'Created structured packages, clearer navigation, and stronger intent CTAs.',
+                        result: 'Improved lead quality and smoother booking exploration.'
+                    },
+                    three: {
+                        tag: 'Brand Experience',
+                        title: 'ANUBIS Museum Site',
+                        challenge: 'Needed immersive storytelling without sacrificing performance.',
+                        solution: 'Balanced visual depth with optimized frontend structure and loading behavior.',
+                        result: 'Stronger engagement and a premium brand perception.'
+                    }
+                }
+            },
+            packages: {
+                title: 'Service Packages Preview',
+                subtitle: 'Clear offers designed for launch, growth, and scale',
+                cta: 'View Full Pricing',
+                primaryCta: 'Book a Free Consultation',
+                secondaryCta: 'Discuss Custom Scope',
+                items: {
+                    launch: {
+                        name: 'Launch Sprint',
+                        price: 'From 2,500 EGP',
+                        feat1: 'One high-converting landing page',
+                        feat2: 'Technical SEO baseline setup',
+                        feat3: 'Mobile-first performance optimization'
+                    },
+                    growth: {
+                        name: 'Growth Engine',
+                        price: 'From 10,000 EGP',
+                        feat1: 'Multi-page SaaS or e-commerce build',
+                        feat2: 'Conversion-focused UX structure',
+                        feat3: 'Analytics and tracking readiness'
+                    },
+                    scale: {
+                        name: 'Scale Partner',
+                        price: 'Custom Retainer',
+                        feat1: 'Ongoing CRO and UX iteration',
+                        feat2: 'Performance and SEO growth roadmap',
+                        feat3: 'Priority support and release cycles'
+                    }
+                }
+            },
+            consultation: {
+                title: 'Book a Free Consultation',
+                desc: 'Get a focused action plan for your SaaS or e-commerce project, including structure, performance priorities, and conversion opportunities.',
+                primary: 'Book Now',
+                secondary: 'Chat on WhatsApp'
+            },
             picker: {
                 badge: 'Pick Your Website Type',
                 title: 'Tell me what you need, I’ll handle the rest',
@@ -993,28 +1114,28 @@ const translations = {
             }
         },
         services: {
-            title: 'My Services',
-            subtitle: 'What I offer to help your business grow',
+            title: 'SaaS & E-commerce Services',
+            subtitle: 'Execution focused on measurable growth, conversion, and performance',
             webDev: {
-                title: 'Web Development',
-                desc: 'Creating responsive and modern websites using the latest technologies. From landing pages to complex web applications, I deliver high-quality solutions tailored to your needs.',
-                feat1: 'Responsive Design',
-                feat2: 'Modern Technologies',
-                feat3: 'Fast Performance'
+                title: 'SaaS Frontend Development',
+                desc: 'Conversion-first SaaS websites and product marketing pages with clean architecture, responsive UI, and launch-ready performance.',
+                feat1: 'Scalable component architecture',
+                feat2: 'Product-led landing experiences',
+                feat3: 'Fast Core Web Vitals delivery'
             },
             uiux: {
-                title: 'UI/UX Design',
-                desc: 'Designing beautiful and intuitive user interfaces that provide exceptional user experiences. I focus on creating designs that are both aesthetic and functional.',
-                feat1: 'User Research',
-                feat2: 'Wireframing & Prototyping',
-                feat3: 'Visual Design'
+                title: 'E-commerce UX Optimization',
+                desc: 'User journeys engineered to improve add-to-cart, checkout completion, and customer confidence across desktop and mobile.',
+                feat1: 'Friction audit and UX redesign',
+                feat2: 'Checkout and funnel optimization',
+                feat3: 'Mobile shopping experience tuning'
             },
             seo: {
-                title: 'SEO Optimization',
-                desc: 'Improving your website\'s visibility on search engines to drive organic traffic. I implement proven SEO strategies to help your business rank higher.',
-                feat1: 'Keyword Research',
-                feat2: 'On-Page SEO',
-                feat3: 'Technical SEO'
+                title: 'Technical SEO & Performance',
+                desc: 'Technical SEO implementation and performance hardening to improve discoverability, quality traffic, and conversion-ready page speed.',
+                feat1: 'Structured data and indexing setup',
+                feat2: 'On-page architecture and metadata',
+                feat3: 'Performance diagnostics and fixes'
             },
             marketing: {
                 title: 'Digital Marketing',
@@ -1038,9 +1159,9 @@ const translations = {
                 feat3: 'Performance Optimization'
             },
             learnMore: 'Learn More',
-            ctaTitle: 'Ready to Start Your Project?',
-            ctaDesc: 'Let\'s work together to bring your ideas to life',
-            ctaBtn: 'Get In Touch',
+            ctaTitle: 'Need a Growth-Focused Build?',
+            ctaDesc: 'Book a free consultation and get a clear SaaS or e-commerce execution plan.',
+            ctaBtn: 'Book a Free Consultation',
             internalCta: {
                 title: 'Next Steps',
                 cards: {
@@ -1112,6 +1233,18 @@ const translations = {
                 mrx: {
                     title: 'MR-X AI Chatbot',
                     desc: 'A responsive landing page for MR-X AI Chatbot built with HTML, CSS, and JavaScript (Demo View).'
+                },
+                ahmedCV: {
+                    title: 'Ahmed Kassab CV',
+                    desc: 'A professional CV website designed for clear personal branding and recruiter-friendly browsing.'
+                },
+                emadArafat: {
+                    title: 'Emad Arafat',
+                    desc: 'A business-focused website with strong service presentation and lead generation structure.'
+                },
+                fatora: {
+                    title: 'Smart Invoice System',
+                    desc: 'An invoicing and account-management solution built to simplify billing and operational tracking.'
                 }
             },
             cta: {
@@ -1140,6 +1273,20 @@ const translations = {
         pricing: {
             title: 'Choose Your Plan',
             subtitle: 'Select the perfect package for your needs',
+            promo: {
+                label: 'Limited Offer:',
+                text: 'Get 10% off on Silver & Gold plans this month!',
+                link: 'View Plans'
+            },
+            breadcrumb: {
+                home: 'Home',
+                current: 'Pricing'
+            },
+            badges: {
+                free: 'Free',
+                silver: 'Silver',
+                gold: 'Gold'
+            },
             free: {
                 name: 'Free Plan',
                 price: '0',
@@ -1199,6 +1346,27 @@ const translations = {
                 desc: 'Choose your plan and start building your dream website today.',
                 btnContact: 'Contact Us',
                 btnPortfolio: 'View Our Work'
+            },
+            internal: {
+                title: 'Explore More',
+                cards: {
+                    services: {
+                        title: 'Our Services',
+                        desc: 'What we offer'
+                    },
+                    portfolio: {
+                        title: 'Portfolio',
+                        desc: 'View projects'
+                    },
+                    blog: {
+                        title: 'Blog',
+                        desc: 'Learn more'
+                    },
+                    contact: {
+                        title: 'Contact',
+                        desc: 'Get started'
+                    }
+                }
             }
         },
         payment: {
@@ -1231,6 +1399,11 @@ const translations = {
             noteOr: 'or',
             noteSuffix: '.'
         },
+        facebookPage: {
+            title: 'Facebook Posts',
+            subtitle: 'Display your latest page posts directly inside your website',
+            note: 'You can update the links in `data-href` for each embed to show your newest page content.'
+        },
         footer: 'Copyright © 2023 by Ibrahem Kassap | All Rights Reserved.'
     },
     ar: {
@@ -1241,15 +1414,128 @@ const translations = {
             services: 'الخدمات',
             pricing: 'الباقات',
             blog: 'المدونة',
+            facebook: 'فيسبوك',
             contact: 'تواصل'
         },
         home: {
+            kicker: 'متخصص تحويلات SaaS والمتاجر الإلكترونية',
             title: 'إبراهيم كساب',
-            subtitle: 'مواقع عالية الأداء تحوّل الزائر إلى عميل',
-            description: 'أبني مواقع سريعة تركز على التحويل بكود نظيف وواجهة حديثة وتجهيز كامل للسيو. لنطلق مشروعك بسرعة وباحتراف.',
-            btn1: 'اعمل معي الآن',
-            btn2: 'شاهد أحدث الأعمال',
-            btn3: 'لنبدأ مشروعك',
+            subtitle: 'تجارب ويب مصممة لتحويل الزيارات إلى إيرادات',
+            description: 'أصمم وأطور مواقع SaaS ومتاجر إلكترونية عالية الأداء بهيكل تحويل واضح وسيو تقني وكود نظيف قابل للتوسع.',
+            bullets: {
+                one: 'إطلاق سريع بكود جاهز للإنتاج',
+                two: 'تجربة مستخدم محسنة لجودة العملاء وإكمال الشراء',
+                three: 'SEO تقني وCore Web Vitals من اليوم الأول'
+            },
+            btn1: 'احجز استشارة مجانية',
+            btn2: 'شاهد دراسات الحالة',
+            btn3: 'راجع الأسعار',
+            trust: {
+                experience: {
+                    value: '5+',
+                    label: 'سنوات خبرة'
+                },
+                projects: {
+                    value: '50+',
+                    label: 'مشروع تم تسليمه'
+                },
+                stack: {
+                    value: '20+',
+                    label: 'تقنية مستخدمة'
+                },
+                focus: {
+                    value: '100%',
+                    label: 'تركيز على SaaS والمتاجر'
+                }
+            },
+            testimonials: {
+                title: 'آراء العملاء',
+                subtitle: 'ماذا يقول أصحاب الأعمال بعد الإطلاق',
+                items: {
+                    one: {
+                        quote: '"صفحة SaaS بدأت تجيب طلبات ديمو مؤهلة خلال أول أسبوع."',
+                        author: 'مؤسس SaaS',
+                        role: 'برمجيات B2B'
+                    },
+                    two: {
+                        quote: '"انخفاض واضح في ترك سلة الشراء بعد تحسين السرعة وتجربة المستخدم."',
+                        author: 'مدير متجر إلكتروني',
+                        role: 'علامة تجارية للبيع بالتجزئة'
+                    },
+                    three: {
+                        quote: '"خطوات العمل كانت واضحة وسريعة واحترافية من البداية للنهاية."',
+                        author: 'مدير تسويق',
+                        role: 'شركة خدمات'
+                    }
+                }
+            },
+            caseStudies: {
+                title: 'دراسات حالة مميزة',
+                subtitle: 'مشاريع حقيقية مبنية على التحدي والحل والنتيجة',
+                challengeLabel: 'التحدي:',
+                solutionLabel: 'الحل:',
+                resultLabel: 'النتيجة:',
+                viewCase: 'شاهد المشروع',
+                items: {
+                    one: {
+                        tag: 'SaaS طبي',
+                        title: 'منصة Perfect Clinic',
+                        challenge: 'موقع بطيء وتحويل ضعيف في حجز المواعيد.',
+                        solution: 'إعادة بناء رحلة المستخدم وتحسين سرعة الموبايل وتوضيح مسارات CTA.',
+                        result: 'تحسن نية الحجز وسرعة التفاعل بالموقع.'
+                    },
+                    two: {
+                        tag: 'تجارة إلكترونية للسفر',
+                        title: 'Miraj Travel Experience',
+                        challenge: 'رحلة مستخدم معقدة وضعف وضوح خيارات الخدمة.',
+                        solution: 'هيكلة الباقات وتوضيح التنقل وتعزيز CTA الموجهة للنية.',
+                        result: 'تحسن جودة العملاء المحتملين وسلاسة تصفح الحجز.'
+                    },
+                    three: {
+                        tag: 'تجربة علامة تجارية',
+                        title: 'موقع متحف ANUBIS',
+                        challenge: 'تصميم بصري غني بدون التضحية بالأداء.',
+                        solution: 'موازنة العمق البصري مع بنية Frontend محسنة وسلوك تحميل أفضل.',
+                        result: 'زيادة التفاعل وإحساس أقوى بقيمة العلامة.'
+                    }
+                }
+            },
+            packages: {
+                title: 'معاينة باقات الخدمات',
+                subtitle: 'عروض واضحة للإطلاق والنمو والتوسع',
+                cta: 'عرض كامل الأسعار',
+                primaryCta: 'احجز استشارة مجانية',
+                secondaryCta: 'ناقش نطاقًا مخصصًا',
+                items: {
+                    launch: {
+                        name: 'باقة الإطلاق السريع',
+                        price: 'تبدأ من 2500 جنيه',
+                        feat1: 'صفحة هبوط عالية التحويل',
+                        feat2: 'إعداد أساسي للسيو التقني',
+                        feat3: 'تحسين أداء الموبايل'
+                    },
+                    growth: {
+                        name: 'باقة محرك النمو',
+                        price: 'تبدأ من 10000 جنيه',
+                        feat1: 'موقع SaaS أو متجر متعدد الصفحات',
+                        feat2: 'هيكل UX يركز على التحويل',
+                        feat3: 'جاهزية التحليلات والتتبع'
+                    },
+                    scale: {
+                        name: 'باقة شريك التوسع',
+                        price: 'اشتراك مخصص',
+                        feat1: 'تحسين مستمر للتحويل وتجربة المستخدم',
+                        feat2: 'خارطة نمو للأداء والسيو',
+                        feat3: 'دعم أولوية ودورات إطلاق منتظمة'
+                    }
+                }
+            },
+            consultation: {
+                title: 'احجز استشارة مجانية',
+                desc: 'احصل على خطة تنفيذ واضحة لمشروع SaaS أو المتجر الإلكتروني تشمل الهيكل والأداء وفرص التحويل.',
+                primary: 'احجز الآن',
+                secondary: 'تحدث عبر واتساب'
+            },
             picker: {
                 badge: 'اختر نوع موقعك',
                 title: 'اختر النوع وسأتولى الباقي',
@@ -1573,28 +1859,28 @@ const translations = {
             }
         },
         services: {
-            title: 'خدماتي',
-            subtitle: 'ما أقدمه لمساعدة عملك على النمو',
+            title: 'خدمات SaaS والمتاجر الإلكترونية',
+            subtitle: 'تنفيذ يركز على النمو والتحويل والأداء القابل للقياس',
             webDev: {
-                title: 'تطوير المواقع',
-                desc: 'إنشاء مواقع ويب متجاوبة وحديثة باستخدام أحدث التقنيات. من صفحات الهبوط إلى تطبيقات الويب المعقدة، أقدم حلولًا عالية الجودة مصممة خصيصًا لاحتياجاتك.',
-                feat1: 'تصميم متجاوب',
-                feat2: 'تقنيات حديثة',
-                feat3: 'أداء سريع'
+                title: 'تطوير واجهات SaaS',
+                desc: 'مواقع SaaS وصفحات تسويقية مبنية على التحويل، بهيكل نظيف وواجهة متجاوبة وأداء جاهز للإطلاق.',
+                feat1: 'هيكل مكونات قابل للتوسع',
+                feat2: 'صفحات تسويقية موجهة للمنتج',
+                feat3: 'تحقيق Core Web Vitals بسرعة'
             },
             uiux: {
-                title: 'تصميم UI/UX',
-                desc: 'تصميم واجهات مستخدم جميلة وبديهية تقدم تجربة استخدام استثنائية. أركز على تصميمات تجمع بين الجمال والوظيفة.',
-                feat1: 'بحث المستخدم',
-                feat2: 'نماذج أولية وتخطيط',
-                feat3: 'تصميم بصري'
+                title: 'تحسين UX للمتاجر الإلكترونية',
+                desc: 'رحلات مستخدم مصممة لرفع الإضافة للسلة وإتمام الدفع وبناء ثقة العميل على الموبايل والديسكتوب.',
+                feat1: 'تدقيق نقاط الاحتكاك وإعادة التصميم',
+                feat2: 'تحسين مسار الشراء والتحويل',
+                feat3: 'ضبط تجربة التسوق على الموبايل'
             },
             seo: {
-                title: 'تحسين محركات البحث',
-                desc: 'تحسين ظهور موقعك في محركات البحث لزيادة الزيارات العضوية. أطبق استراتيجيات SEO مثبتة لمساعدة عملك على التصدّر.',
-                feat1: 'بحث الكلمات المفتاحية',
-                feat2: 'تحسين داخلي',
-                feat3: 'SEO تقني'
+                title: 'SEO تقني وأداء',
+                desc: 'تنفيذ SEO تقني وتحسين أداء الموقع لزيادة الظهور، وجذب زيارات مؤهلة، ورفع جاهزية الصفحات للتحويل.',
+                feat1: 'تهيئة البيانات المنظمة والفهرسة',
+                feat2: 'تحسين هيكل الصفحة والميتا',
+                feat3: 'تشخيص الأداء وتنفيذ التحسينات'
             },
             marketing: {
                 title: 'التسويق الرقمي',
@@ -1618,9 +1904,9 @@ const translations = {
                 feat3: 'تحسين الأداء'
             },
             learnMore: 'اعرف المزيد',
-            ctaTitle: 'جاهز لبدء مشروعك؟',
-            ctaDesc: 'دعنا نعمل معًا لتحويل أفكارك إلى واقع',
-            ctaBtn: 'تواصل معي',
+            ctaTitle: 'تريد تنفيذًا يركز على النمو؟',
+            ctaDesc: 'احجز استشارة مجانية واحصل على خطة تنفيذ واضحة لمشروع SaaS أو متجر إلكتروني.',
+            ctaBtn: 'احجز استشارة مجانية',
             internalCta: {
                 title: 'خطوتك التالية',
                 cards: {
@@ -1692,6 +1978,18 @@ const translations = {
                 mrx: {
                     title: 'شات بوت MR-X',
                     desc: 'صفحة هبوط متجاوبة لشات بوت MR-X مبنية بـ HTML وCSS وJavaScript (عرض تجريبي).'
+                },
+                ahmedCV: {
+                    title: 'سيرة أحمد كساب',
+                    desc: 'موقع سيرة ذاتية احترافي بهيكل واضح للهوية الشخصية وسهولة تصفح لأصحاب التوظيف.'
+                },
+                emadArafat: {
+                    title: 'عماد عرفات',
+                    desc: 'موقع أعمال يركز على عرض الخدمات وبناء مسار واضح لتوليد العملاء المحتملين.'
+                },
+                fatora: {
+                    title: 'نظام فاتورة ذكي',
+                    desc: 'حل للفوترة وإدارة الحسابات لتبسيط عمليات التحصيل ومتابعة التشغيل.'
                 }
             },
             cta: {
@@ -1720,6 +2018,20 @@ const translations = {
         pricing: {
             title: 'اختر باقتك',
             subtitle: 'اختر الباقة المثالية لاحتياجاتك',
+            promo: {
+                label: 'عرض محدود:',
+                text: 'خصم 10% على الباقة الفضية والذهبية هذا الشهر!',
+                link: 'عرض الباقات'
+            },
+            breadcrumb: {
+                home: 'الرئيسية',
+                current: 'الباقات'
+            },
+            badges: {
+                free: 'مجاناً',
+                silver: 'فضية',
+                gold: 'ذهبية'
+            },
             free: {
                 name: 'الباقة المجانية',
                 price: '0',
@@ -1779,6 +2091,27 @@ const translations = {
                 desc: 'اختر باقتك وابدأ بناء موقعك الآن باحتراف.',
                 btnContact: 'تواصل معنا',
                 btnPortfolio: 'شاهد أعمالنا'
+            },
+            internal: {
+                title: 'استكشف المزيد',
+                cards: {
+                    services: {
+                        title: 'الخدمات',
+                        desc: 'ماذا نقدم'
+                    },
+                    portfolio: {
+                        title: 'الأعمال',
+                        desc: 'شاهد المشاريع'
+                    },
+                    blog: {
+                        title: 'المدونة',
+                        desc: 'تعلم أكثر'
+                    },
+                    contact: {
+                        title: 'تواصل',
+                        desc: 'ابدأ الآن'
+                    }
+                }
             }
         },
         payment: {
@@ -1810,6 +2143,11 @@ const translations = {
             notePrefix: 'بعد الدفع، أرسل الإيصال عبر',
             noteOr: 'أو',
             noteSuffix: '.'
+        },
+        facebookPage: {
+            title: 'منشورات فيسبوك',
+            subtitle: 'اعرض أحدث المنشورات من صفحتك داخل موقعك بسهولة',
+            note: 'يمكنك تحديث الروابط داخل `data-href` لكل منشور لإظهار أحدث محتوى من صفحتك.'
         },
         footer: 'جميع الحقوق محفوظة © 2023 إبراهيم كساب'
     }
@@ -1866,13 +2204,25 @@ function getTranslationValue(obj, path) {
     }, obj);
 }
 
+function resolveTranslationValue(bundle, key) {
+    let value = getTranslationValue(bundle, key);
+
+    // Backward compatibility for pricing payment keys in HTML.
+    if (typeof value === 'undefined' && key.startsWith('pricing.payment.')) {
+        value = getTranslationValue(bundle, key.replace('pricing.', ''));
+    }
+
+    return value;
+}
+
 function updatePageContent(lang) {
-    const t = translations[lang];
+    const t = translations[lang] || translations.en;
     
     const i18nElements = document.querySelectorAll('[data-i18n]');
     i18nElements.forEach((el) => {
         const key = el.getAttribute('data-i18n');
-        const value = getTranslationValue(t, key);
+        if (!key) return;
+        const value = resolveTranslationValue(t, key);
         if (typeof value === 'string') {
             el.textContent = value;
         }
@@ -1884,10 +2234,13 @@ function updatePageContent(lang) {
         if (!attrList) return;
         const key = el.getAttribute('data-i18n') || el.getAttribute('data-i18n-key');
         if (!key) return;
-        const value = getTranslationValue(t, key);
+        const value = resolveTranslationValue(t, key);
         if (typeof value !== 'string') return;
         attrList.split(',').map((attr) => attr.trim()).filter(Boolean).forEach((attr) => {
             el.setAttribute(attr, value);
+            if (attr === 'value' && 'value' in el) {
+                el.value = value;
+            }
         });
     });
 
@@ -1895,25 +2248,22 @@ function updatePageContent(lang) {
 
     // Update navigation
     const navLinks = document.querySelectorAll('.nav-links li a');
-    if (navLinks.length >= 6) {
-        navLinks[0].textContent = t.nav.home;
-        navLinks[1].textContent = t.nav.about;
-        navLinks[2].textContent = t.nav.portfolio;
-        navLinks[3].textContent = t.nav.services;
-        if (navLinks.length >= 7) {
-            navLinks[4].textContent = t.nav.pricing;
-            navLinks[5].textContent = t.nav.blog;
-            navLinks[6].textContent = t.nav.contact;
-        } else {
-            navLinks[4].textContent = t.nav.blog;
-            navLinks[5].textContent = t.nav.contact;
-        }
-    }
+    navLinks.forEach((link) => {
+        const href = link.getAttribute('href') || '';
+        if (href.includes('index.html')) link.textContent = t.nav.home;
+        if (href.includes('about.html')) link.textContent = t.nav.about;
+        if (href.includes('portfolio.html')) link.textContent = t.nav.portfolio;
+        if (href.includes('services.html')) link.textContent = t.nav.services;
+        if (href.includes('pricing.html')) link.textContent = t.nav.pricing;
+        if (href.includes('blog.html')) link.textContent = t.nav.blog;
+        if (href.includes('facebook-posts.html')) link.textContent = t.nav.facebook;
+        if (href.includes('contact.html')) link.textContent = t.nav.contact;
+    });
     
     // Update home page content
-    const homeTitle = document.querySelector('.home-info h1');
-    const homeSubtitle = document.querySelector('.home-info h2');
-    const homeDesc = document.querySelector('.home-info p');
+    const homeTitle = document.querySelector('[data-i18n="home.title"]');
+    const homeSubtitle = document.querySelector('[data-i18n="home.subtitle"]');
+    const homeDesc = document.querySelector('[data-i18n="home.description"]');
     const btns = document.querySelectorAll('.btn-sci .btn');
     
     if (homeTitle) homeTitle.textContent = t.home.title;
@@ -2105,3 +2455,4 @@ function updatePageContent(lang) {
         faqItems[3].querySelector('p').textContent = t.pricing.faq4A;
     }
 }
+

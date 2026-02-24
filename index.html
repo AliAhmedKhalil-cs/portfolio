@@ -1,21 +1,33 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Ibrahem Kassap | Freelance Web Developer & SEO Specialist</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahem Kassap | SaaS & E-commerce Web Developer</title>
+    <meta name="description" content="SaaS and e-commerce websites engineered for speed, conversion, and SEO. Book a free consultation and get a growth-focused execution plan.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="author" content="Ibrahem Kassap">
     <link rel="canonical" href="https://ibrahemkassap.tech/">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0071e3">
-    <meta name="description" content="Hire a Freelance Web Developer and SEO Specialist. Fast, mobile-first websites that convert. Get a free website audit to boost qualified leads.">
-    <meta property="og:title" content="Ibrahem Kassap | Web Developer & SEO Specialist">
-    <meta property="og:description" content="Conversion-focused websites, performance optimization, and technical SEO.">
+    <link rel="preload" as="image" href="home.png" fetchpriority="high">
+
+    <meta property="og:title" content="Ibrahem Kassap | SaaS & E-commerce Web Developer">
+    <meta property="og:description" content="Conversion-focused websites, technical SEO, and scalable frontend systems for serious growth.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ibrahemkassap.tech/">
+    <meta property="og:image" content="https://ibrahemkassap.tech/home.png">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ibrahem Kassap | SaaS & E-commerce Web Developer">
+    <meta name="twitter:description" content="High-performance websites that turn traffic into qualified leads and paying customers.">
+    <meta name="twitter:image" content="https://ibrahemkassap.tech/home.png">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -25,12 +37,11 @@
           "name": "Ibrahem Kassap",
           "url": "https://ibrahemkassap.tech/",
           "image": "https://ibrahemkassap.tech/home.png",
-          "jobTitle": "Frontend Developer",
+          "jobTitle": "SaaS & E-commerce Frontend Developer",
           "sameAs": [
             "https://github.com/ibrahemkassap",
             "https://www.linkedin.com/in/ibrahem-kassap/",
             "https://www.facebook.com/ibrahemka55ap",
-            "https://wa.me/+201017358087",
             "https://www.instagram.com/ibrahemka55ap/"
           ],
           "address": {
@@ -40,134 +51,320 @@
           }
         },
         {
-          "@type": "Website",
-          "name": "Ibrahem Kassap Portfolio",
-          "url": "https://ibrahemkassap.tech/",
-          "inLanguage": "en"
-        },
-        {
           "@type": "ProfessionalService",
-          "name": "Website Development Services",
+          "name": "SaaS & E-commerce Website Development",
+          "url": "https://ibrahemkassap.tech/services.html",
           "provider": {
             "@type": "Person",
             "name": "Ibrahem Kassap"
           },
           "areaServed": "Global",
-          "url": "https://ibrahemkassap.tech/services.html",
-          "serviceType": "Web Development, UI/UX, Technical SEO"
+          "serviceType": [
+            "SaaS Website Development",
+            "E-commerce UX & Frontend",
+            "Technical SEO",
+            "Conversion Optimization"
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Website Service Packages",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Launch Sprint",
+              "priceCurrency": "EGP",
+              "price": "2500"
+            },
+            {
+              "@type": "Offer",
+              "name": "Growth Engine",
+              "priceCurrency": "EGP",
+              "price": "10000"
+            },
+            {
+              "@type": "Offer",
+              "name": "Scale Partner",
+              "priceCurrency": "EGP",
+              "price": "20000"
+            }
+          ]
         }
       ]
     }
     </script>
 </head>
-
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <nav class="navbar">
-        <a href="index.html" class="logo">IbrahemKassap</a>
-        
-        <div class="menu-icon">
+    <nav class="navbar" aria-label="Primary navigation">
+        <a href="index.html" class="logo" aria-label="Ibrahem Kassap Home">IbrahemKassap</a>
+
+        <button class="menu-icon" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
             <i class='bx bx-menu'></i>
-        </div>
-        
-        <ul class="nav-links">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+        </button>
+
+        <ul class="nav-links" id="primary-navigation">
+            <li class="active"><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="pricing.html" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+            <li><a href="facebook-posts.html" data-i18n="nav.facebook">Facebook</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
         </ul>
-        
+
         <div class="navbar-controls">
-            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle Dark Mode" type="button" aria-label="Toggle dark mode">
                 <i class='bx bx-moon'></i>
             </button>
-            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language">
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Switch Language" type="button" aria-label="Switch language">
                 <span class="lang-text">AR</span>
             </button>
         </div>
     </nav>
 
-    <section class="home">
-        <div class="home-info">
-            <h1 data-i18n="home.title">Ibrahem Kassap</h1>
-            <h2 data-i18n="home.subtitle">High-performance websites that turn visitors into clients</h2>
-            <p data-i18n="home.description">I build fast, conversion-focused websites with clean code, modern UI, and SEO-ready structure. Let’s launch your project quickly and professionally.</p>
-            <div class="btn-sci">
-                <a href="contact.html" class="btn" data-i18n="home.btn1">Work With Me</a>
-                <a href="portfolio.html" class="btn" style="margin-left:12px;" data-i18n="home.btn2">View Recent Work</a>
-                <div class="sci">
-                    <a href="https://github.com/ibrahemkassap" target="_blank"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.linkedin.com/in/ibrahem-kassap/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-                    <a href="https://www.facebook.com/ibrahemka55ap" target="_blank"><i class='bx bxl-facebook-square'></i></a>
-                    <a href="https://wa.me/+201017358087/" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-                    <a href="https://www.instagram.com/ibrahemka55ap/" target="_blank"><i class='bx bxl-instagram'></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="home-img">
-            <div class="img-box">
-                <div class="img-item">
-                    <img src="home.png" alt="Ibrahem Kassap">
-                </div>
-            </div>
-        </div>
-    </section>
+    <main id="main-content">
+        <section class="home">
+            <div class="home-info">
+                <p class="hero-kicker" data-i18n="home.kicker">SaaS & E-commerce Conversion Engineer</p>
+                <h1 data-i18n="home.title">Ibrahem Kassap</h1>
+                <h2 data-i18n="home.subtitle">Web experiences built to convert traffic into revenue</h2>
+                <p data-i18n="home.description">I design and develop high-performance SaaS and e-commerce websites with conversion architecture, technical SEO, and clean scalable code.</p>
 
-    <!-- Project Type Picker -->
-    <section class="project-picker" id="project-type">
-        <div class="container">
-            <div class="picker-header">
-                <span class="picker-badge" data-i18n="home.picker.badge">Pick Your Website Type</span>
-                <h3 data-i18n="home.picker.title">Tell me what you need, I’ll handle the rest</h3>
-                <p data-i18n="home.picker.subtitle">Select your project type and I’ll guide you to the best solution.</p>
-            </div>
-            <div class="picker-grid">
-                <button class="picker-card" data-project-value="Online Store" data-i18n="home.picker.cards.store" type="button">Online Store</button>
-                <button class="picker-card" data-project-value="B2B Web" data-i18n="home.picker.cards.b2b" type="button">B2B Web</button>
-                <button class="picker-card" data-project-value="E-Commerce" data-i18n="home.picker.cards.ecommerce" type="button">E-Commerce</button>
-                <button class="picker-card" data-project-value="Portfolio" data-i18n="home.picker.cards.portfolio" type="button">Portfolio</button>
-                <button class="picker-card" data-project-value="Landing Page" data-i18n="home.picker.cards.landing" type="button">Landing Page</button>
-                <button class="picker-card" data-project-value="Web App" data-i18n="home.picker.cards.webapp" type="button">Web App</button>
-            </div>
-            <div class="picker-form">
-                <label class="picker-label" for="projectTypeInput" data-i18n="home.picker.form.typeLabel">Selected project type</label>
-                <input class="picker-input" id="projectTypeInput" name="projectType" type="text" data-i18n="home.picker.form.typePlaceholder" data-i18n-attr="placeholder" placeholder="Select a project type above" readonly>
-                <label class="picker-label" for="projectDescInput" data-i18n="home.picker.form.descLabel">Project description</label>
-                <textarea class="picker-textarea" id="projectDescInput" name="projectDesc" rows="4" data-i18n="home.picker.form.descDefault" data-i18n-attr="placeholder,data-default-text,value" placeholder="Tell me a bit about your project goals, pages, or features."></textarea>
-            </div>
-            <div class="picker-cta">
-                <p data-i18n="home.picker.ctaText">Ready to start? I reply fast and help you choose the right plan.</p>
-                <div class="picker-actions">
-                    <button class="btn btn-secondary picker-send-btn" id="pickerSendBtn" type="button">
-                        <i class='bx bxl-whatsapp'></i>
-                        <span data-i18n="home.picker.sendBtn">Send to WhatsApp</span>
-                    </button>
+                <ul class="hero-proof-list" aria-label="Core value points">
+                    <li data-i18n="home.bullets.one">Fast launch cycles with production-ready code</li>
+                    <li data-i18n="home.bullets.two">UX optimized for lead quality and checkout completion</li>
+                    <li data-i18n="home.bullets.three">Technical SEO and Core Web Vitals built in from day one</li>
+                </ul>
+
+                <div class="btn-sci">
+                    <a href="contact.html" class="btn" data-i18n="home.btn1">Book a Free Consultation</a>
+                    <a href="#case-studies" class="btn btn-secondary" data-i18n="home.btn2">View Case Studies</a>
+                    <a href="pricing.html" class="btn btn-secondary" data-i18n="home.btn3">See Pricing Preview</a>
+                    <div class="sci" aria-label="Social links">
+                        <a href="https://github.com/ibrahemkassap" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/ibrahem-kassap/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="https://www.facebook.com/ibrahemka55ap" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="https://wa.me/+201017358087/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="https://www.instagram.com/ibrahemka55ap/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    </div>
                 </div>
             </div>
-            <p class="picker-note" data-i18n="home.picker.form.uploadNote">After WhatsApp opens, please attach your image manually.</p>
-        </div>
-    </section>
+            <div class="home-img">
+                <div class="img-box">
+                    <div class="img-item">
+                        <img src="home.png" alt="Ibrahem Kassap, SaaS and e-commerce web developer" width="640" height="640" decoding="async" fetchpriority="high">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Chatbot Widget -->
-    <div class="chatbot-container">
-        <!-- Chat Toggle Button -->
-        <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()">
+        <section class="trust-strip" aria-label="Trust indicators">
+            <div class="container">
+                <ul class="trust-grid">
+                    <li class="trust-card">
+                        <span class="trust-value" data-i18n="home.trust.experience.value">5+</span>
+                        <span class="trust-label" data-i18n="home.trust.experience.label">Years Experience</span>
+                    </li>
+                    <li class="trust-card">
+                        <span class="trust-value" data-i18n="home.trust.projects.value">50+</span>
+                        <span class="trust-label" data-i18n="home.trust.projects.label">Delivered Projects</span>
+                    </li>
+                    <li class="trust-card">
+                        <span class="trust-value" data-i18n="home.trust.stack.value">20+</span>
+                        <span class="trust-label" data-i18n="home.trust.stack.label">Technologies Used</span>
+                    </li>
+                    <li class="trust-card">
+                        <span class="trust-value" data-i18n="home.trust.focus.value">100%</span>
+                        <span class="trust-label" data-i18n="home.trust.focus.label">SaaS & E-commerce Focus</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="testimonials" aria-labelledby="testimonialsTitle">
+            <div class="container">
+                <div class="section-header section-header-left">
+                    <h2 id="testimonialsTitle" data-i18n="home.testimonials.title">Client Feedback</h2>
+                    <p data-i18n="home.testimonials.subtitle">What business owners say after launch</p>
+                </div>
+                <div class="testimonial-grid">
+                    <article class="testimonial-card">
+                        <p data-i18n="home.testimonials.items.one.quote">"Our SaaS landing page started generating qualified demos within the first week."</p>
+                        <h3 data-i18n="home.testimonials.items.one.author">SaaS Founder</h3>
+                        <span data-i18n="home.testimonials.items.one.role">B2B Software</span>
+                    </article>
+                    <article class="testimonial-card">
+                        <p data-i18n="home.testimonials.items.two.quote">"Checkout drop-off decreased after the UX and speed optimization sprint."</p>
+                        <h3 data-i18n="home.testimonials.items.two.author">E-commerce Manager</h3>
+                        <span data-i18n="home.testimonials.items.two.role">Retail Brand</span>
+                    </article>
+                    <article class="testimonial-card">
+                        <p data-i18n="home.testimonials.items.three.quote">"The delivery process was clear, fast, and highly professional from start to finish."</p>
+                        <h3 data-i18n="home.testimonials.items.three.author">Marketing Director</h3>
+                        <span data-i18n="home.testimonials.items.three.role">Service Company</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-studies" id="case-studies" aria-labelledby="caseStudiesTitle">
+            <div class="container">
+                <div class="section-header section-header-left">
+                    <h2 id="caseStudiesTitle" data-i18n="home.caseStudies.title">Featured Case Studies</h2>
+                    <p data-i18n="home.caseStudies.subtitle">Real projects structured by challenge, solution, and measurable outcome</p>
+                </div>
+
+                <div class="case-studies-grid">
+                    <article class="case-study-card">
+                        <img src="Perfect-Clinic/clinic-portfolio.png" alt="Clinic website case study" loading="lazy" decoding="async" width="720" height="405">
+                        <div class="case-study-content">
+                            <p class="case-tag" data-i18n="home.caseStudies.items.one.tag">Healthcare SaaS</p>
+                            <h3 data-i18n="home.caseStudies.items.one.title">Perfect Clinic Platform</h3>
+                            <ul class="case-list">
+                                <li><strong data-i18n="home.caseStudies.challengeLabel">Challenge:</strong> <span data-i18n="home.caseStudies.items.one.challenge">Slow site and weak appointment conversion.</span></li>
+                                <li><strong data-i18n="home.caseStudies.solutionLabel">Solution:</strong> <span data-i18n="home.caseStudies.items.one.solution">Rebuilt UX flow, improved mobile speed, and clarified CTA paths.</span></li>
+                                <li><strong data-i18n="home.caseStudies.resultLabel">Result:</strong> <span data-i18n="home.caseStudies.items.one.result">Higher booking intent and faster interaction performance.</span></li>
+                            </ul>
+                            <a href="Perfect-Clinic/index.html" target="_blank" rel="noopener noreferrer" class="case-link" data-i18n="home.caseStudies.viewCase">View Live Case</a>
+                        </div>
+                    </article>
+
+                    <article class="case-study-card">
+                        <img src="Miraj/miraj-portfolio.png" alt="Travel website case study" loading="lazy" decoding="async" width="720" height="405">
+                        <div class="case-study-content">
+                            <p class="case-tag" data-i18n="home.caseStudies.items.two.tag">Travel E-commerce</p>
+                            <h3 data-i18n="home.caseStudies.items.two.title">Miraj Travel Experience</h3>
+                            <ul class="case-list">
+                                <li><strong data-i18n="home.caseStudies.challengeLabel">Challenge:</strong> <span data-i18n="home.caseStudies.items.two.challenge">Complex user journey with low clarity on service options.</span></li>
+                                <li><strong data-i18n="home.caseStudies.solutionLabel">Solution:</strong> <span data-i18n="home.caseStudies.items.two.solution">Created structured packages, clearer navigation, and stronger intent CTAs.</span></li>
+                                <li><strong data-i18n="home.caseStudies.resultLabel">Result:</strong> <span data-i18n="home.caseStudies.items.two.result">Improved lead quality and smoother booking exploration.</span></li>
+                            </ul>
+                            <a href="Miraj/index.html" target="_blank" rel="noopener noreferrer" class="case-link" data-i18n="home.caseStudies.viewCase">View Live Case</a>
+                        </div>
+                    </article>
+
+                    <article class="case-study-card">
+                        <img src="ANUBIS/anubis-portfolio.png" alt="Museum website case study" loading="lazy" decoding="async" width="720" height="405">
+                        <div class="case-study-content">
+                            <p class="case-tag" data-i18n="home.caseStudies.items.three.tag">Brand Experience</p>
+                            <h3 data-i18n="home.caseStudies.items.three.title">ANUBIS Museum Site</h3>
+                            <ul class="case-list">
+                                <li><strong data-i18n="home.caseStudies.challengeLabel">Challenge:</strong> <span data-i18n="home.caseStudies.items.three.challenge">Needed immersive storytelling without sacrificing performance.</span></li>
+                                <li><strong data-i18n="home.caseStudies.solutionLabel">Solution:</strong> <span data-i18n="home.caseStudies.items.three.solution">Balanced visual depth with optimized frontend structure and loading behavior.</span></li>
+                                <li><strong data-i18n="home.caseStudies.resultLabel">Result:</strong> <span data-i18n="home.caseStudies.items.three.result">Stronger engagement and a premium brand perception.</span></li>
+                            </ul>
+                            <a href="ANUBIS/index.html" target="_blank" rel="noopener noreferrer" class="case-link" data-i18n="home.caseStudies.viewCase">View Live Case</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-packages" aria-labelledby="packagesTitle">
+            <div class="container">
+                <div class="section-header section-header-left">
+                    <h2 id="packagesTitle" data-i18n="home.packages.title">Service Packages Preview</h2>
+                    <p data-i18n="home.packages.subtitle">Clear offers designed for launch, growth, and scale</p>
+                </div>
+
+                <div class="packages-grid">
+                    <article class="package-card">
+                        <p class="package-tier" data-i18n="home.packages.items.launch.name">Launch Sprint</p>
+                        <h3 data-i18n="home.packages.items.launch.price">From 2,500 EGP</h3>
+                        <ul>
+                            <li data-i18n="home.packages.items.launch.feat1">One high-converting landing page</li>
+                            <li data-i18n="home.packages.items.launch.feat2">Technical SEO baseline setup</li>
+                            <li data-i18n="home.packages.items.launch.feat3">Mobile-first performance optimization</li>
+                        </ul>
+                        <a href="pricing.html" class="btn btn-secondary" data-i18n="home.packages.cta">View Full Pricing</a>
+                    </article>
+                    <article class="package-card package-card-featured">
+                        <p class="package-tier" data-i18n="home.packages.items.growth.name">Growth Engine</p>
+                        <h3 data-i18n="home.packages.items.growth.price">From 10,000 EGP</h3>
+                        <ul>
+                            <li data-i18n="home.packages.items.growth.feat1">Multi-page SaaS or e-commerce build</li>
+                            <li data-i18n="home.packages.items.growth.feat2">Conversion-focused UX structure</li>
+                            <li data-i18n="home.packages.items.growth.feat3">Analytics and tracking readiness</li>
+                        </ul>
+                        <a href="contact.html" class="btn" data-i18n="home.packages.primaryCta">Book a Free Consultation</a>
+                    </article>
+                    <article class="package-card">
+                        <p class="package-tier" data-i18n="home.packages.items.scale.name">Scale Partner</p>
+                        <h3 data-i18n="home.packages.items.scale.price">Custom Retainer</h3>
+                        <ul>
+                            <li data-i18n="home.packages.items.scale.feat1">Ongoing CRO and UX iteration</li>
+                            <li data-i18n="home.packages.items.scale.feat2">Performance and SEO growth roadmap</li>
+                            <li data-i18n="home.packages.items.scale.feat3">Priority support and release cycles</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary" data-i18n="home.packages.secondaryCta">Discuss Custom Scope</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-picker" id="project-type" aria-labelledby="projectPickerTitle">
+            <div class="container">
+                <div class="picker-header">
+                    <span class="picker-badge" data-i18n="home.picker.badge">Pick Your Website Type</span>
+                    <h3 id="projectPickerTitle" data-i18n="home.picker.title">Tell me what you need, I’ll handle the rest</h3>
+                    <p data-i18n="home.picker.subtitle">Select your project type and I’ll guide you to the best solution.</p>
+                </div>
+                <div class="picker-grid">
+                    <button class="picker-card" data-project-value="Online Store" data-i18n="home.picker.cards.store" type="button">Online Store</button>
+                    <button class="picker-card" data-project-value="B2B Web" data-i18n="home.picker.cards.b2b" type="button">B2B Web</button>
+                    <button class="picker-card" data-project-value="E-Commerce" data-i18n="home.picker.cards.ecommerce" type="button">E-Commerce</button>
+                    <button class="picker-card" data-project-value="Portfolio" data-i18n="home.picker.cards.portfolio" type="button">Portfolio</button>
+                    <button class="picker-card" data-project-value="Landing Page" data-i18n="home.picker.cards.landing" type="button">Landing Page</button>
+                    <button class="picker-card" data-project-value="Web App" data-i18n="home.picker.cards.webapp" type="button">Web App</button>
+                </div>
+                <div class="picker-form">
+                    <label class="picker-label" for="projectTypeInput" data-i18n="home.picker.form.typeLabel">Selected project type</label>
+                    <input class="picker-input" id="projectTypeInput" name="projectType" type="text" data-i18n="home.picker.form.typePlaceholder" data-i18n-attr="placeholder" placeholder="Select a project type above" readonly>
+                    <label class="picker-label" for="projectDescInput" data-i18n="home.picker.form.descLabel">Project description</label>
+                    <textarea class="picker-textarea" id="projectDescInput" name="projectDesc" rows="4" data-i18n="home.picker.form.descDefault" data-i18n-attr="placeholder,data-default-text,value" placeholder="Tell me a bit about your project goals, pages, or features."></textarea>
+                </div>
+                <div class="picker-cta">
+                    <p data-i18n="home.picker.ctaText">Ready to start? I reply fast and help you choose the right plan.</p>
+                    <div class="picker-actions">
+                        <button class="btn btn-secondary picker-send-btn" id="pickerSendBtn" type="button">
+                            <i class='bx bxl-whatsapp'></i>
+                            <span data-i18n="home.picker.sendBtn">Send to WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+                <p class="picker-note" data-i18n="home.picker.form.uploadNote">After WhatsApp opens, please attach your image manually.</p>
+            </div>
+        </section>
+
+        <section class="consultation-cta" aria-labelledby="consultationTitle">
+            <div class="container consultation-inner">
+                <div>
+                    <h2 id="consultationTitle" data-i18n="home.consultation.title">Book a Free Consultation</h2>
+                    <p data-i18n="home.consultation.desc">Get a focused action plan for your SaaS or e-commerce project, including structure, performance priorities, and conversion opportunities.</p>
+                </div>
+                <div class="consultation-actions">
+                    <a href="contact.html" class="btn" data-i18n="home.consultation.primary">Book Now</a>
+                    <a href="https://wa.me/201017358087" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="home.consultation.secondary">Chat on WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="chatbot-container" aria-live="polite">
+        <button class="chat-toggle-btn" id="chatToggle" onclick="toggleChat()" type="button" aria-label="Open assistant chat">
             <i class='bx bx-bot' id="toggleIcon"></i>
             <span class="notification-badge" id="notificationBadge">1</span>
         </button>
 
-        <!-- Floating Pricing Button -->
-        <a href="pricing.html" class="floating-pricing-btn" title="View Pricing">
+        <a href="pricing.html" class="floating-pricing-btn" title="View Pricing" aria-label="View pricing">
             <i class='bx bx-purchase-tag'></i>
-            <span>Pricing</span>
+            <span data-i18n="nav.pricing">Pricing</span>
         </a>
 
-        <!-- Chat Window -->
-        <div class="chat-window" id="chatWindow">
-            <!-- Chat Header -->
+        <div class="chat-window" id="chatWindow" role="dialog" aria-label="Assistant chatbot">
             <div class="chat-header">
                 <div class="bot-avatar">
                     <i class='bx bx-bot'></i>
@@ -176,45 +373,32 @@
                     <h3>Assistant Bot</h3>
                     <p><span class="status-dot"></span>Online</p>
                 </div>
-                <button class="close-chat-btn" onclick="toggleChat()">
+                <button class="close-chat-btn" onclick="toggleChat()" type="button" aria-label="Close chat">
                     <i class='bx bx-x'></i>
                 </button>
             </div>
 
-            <!-- Chat Messages -->
             <div class="chat-messages" id="chatMessages">
                 <div class="message bot">
                     <div class="message-avatar">
                         <i class='bx bx-bot'></i>
                     </div>
                     <div class="message-content">
-                        <h3>Assistant Bot</h3>
-                        <p><span class="status-dot"></span>Online</p>
-                        Hi there! 👋 I'm Ibrahem's assistant. How can I help you today?
+                        Hi there! I'm Ibrahem's assistant. How can I help you today?
                     </div>
                 </div>
             </div>
 
-            <!-- Quick Replies -->
             <div class="quick-replies" id="quickReplies">
-                <button class="quick-reply-btn" onclick="sendQuickReply('الخدمات والأسعار')">
-                    💼 الخدمات
-                </button>
-                <button class="quick-reply-btn" onclick="sendQuickReply('أعمالي السابقة')">
-                    📁 الأعمال
-                </button>
-                <button class="quick-reply-btn" onclick="sendQuickReply('طرق التواصل')">
-                    📧 تواصل
-                </button>
-                <button class="quick-reply-btn" onclick="sendQuickReply('الدروس التعليمية')">
-                    📚 دروس
-                </button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('الخدمات والأسعار')" type="button">الخدمات</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('أعمالي السابقة')" type="button">الأعمال</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('طرق التواصل')" type="button">تواصل</button>
+                <button class="quick-reply-btn" onclick="sendQuickReply('الدروس التعليمية')" type="button">دروس</button>
             </div>
 
-            <!-- Chat Input -->
             <div class="chat-input">
-                <input type="text" id="messageInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
-                <button class="send-btn" onclick="sendMessage()">
+                <input type="text" id="messageInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)" aria-label="Type your message">
+                <button class="send-btn" onclick="sendMessage()" type="button" aria-label="Send message">
                     <i class='bx bx-send'></i>
                 </button>
             </div>
@@ -223,14 +407,14 @@
 
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2023 by Ibrahem Kassap | All Rights Reserved.</p>
+            <p data-i18n="footer">Copyright © 2023 by Ibrahem Kassap | All Rights Reserved.</p>
         </div>
         <div class="footer-iconTop">
-            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+            <a href="#" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
 
     <script src="main.js"></script>
 </body>
-
 </html>
+
